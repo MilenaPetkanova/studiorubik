@@ -1,0 +1,59 @@
+// Container, wrappers and common layout rules & utilities
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* Now 10px = 1rem! */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+header {
+    position: relative;
+    display: block;
+}
+
+main {
+    position: relative;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    // max-width: 120rem;
+    // /** 1200px **/
+    // width: 95%;
+    margin: 0 auto;
+}
+
+/** Utilities **/
+.text-center {
+    text-align: center;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
