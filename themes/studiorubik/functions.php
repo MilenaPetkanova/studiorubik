@@ -12,11 +12,9 @@ function studiorubik_menus(){
 function studiorubik_scripts() {
 
     // Stylesheets
-    // wp_enqueue_style('normalize', get_template_directory_uri() . '/old/vendors/normalize/normalize.min.css', array(), '8.0.1'); //Normalize CSS
+    wp_enqueue_style('normalize', get_template_directory_uri() . '/vendors/normalize/normalize.min.css', array(), '8.0.1'); //Normalize CSS
 
     wp_enqueue_style('style', get_stylesheet_uri(), array(), '1.0.0'); // Wordpress Stylesheet
-
-    // wp_enqueue_style('main', get_template_directory_uri() . '/old/scss/main.min.css', array(), '1.0.0'); //Main Style Sheet
 
     wp_enqueue_style('bundlecss', get_template_directory_uri() . '/dist/bundle.css', array(), '1.0.0'); //Main Style Bundle
 

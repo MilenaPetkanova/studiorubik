@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 
 @import '../global/variables.scss';
+@import '../global/mixins.scss';
 
 .site-header {
     background-color: yellow;
@@ -13,24 +14,6 @@
 
 // Clean me up
 
-@mixin transition($duration, $timing-func) {
-    -webkit-transition: $duration $timing-func all;
-    -moz-transition: $duration $timing-func all;
-    transition: $duration $timing-func all;
-}
-
-@mixin scale($size) {
-    -webkit-transform: scale($size);
-    -moz-transform: scale($size);
-    transform: scale($size);
-}
-
-@mixin rotate($deg) {
-    -webkit-transform: rotate($deg);
-    -moz-transform: rotate($deg);
-    transform: rotate($deg);
-}
-
 $menu-bg: rgba(33, 33, 33, 0.95);
 $menu-links: rgba(255, 255, 255, 0.5);
 $size: 5em;
@@ -39,7 +22,7 @@ $degree: 135deg;
 $timing: ease;
 
 #toggle {
-    position: fixed;
+    position: absolute;
     z-index: 3;
     width: $size / 1.75;
     height: $size / 1.75;
@@ -122,6 +105,7 @@ $timing: ease;
 
         li {
             display: block;
+            margin: 0 auto;
             width: 90%;
             height: 65px;
 

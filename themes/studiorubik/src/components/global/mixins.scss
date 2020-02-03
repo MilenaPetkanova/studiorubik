@@ -1,0 +1,19 @@
+// Burger Menu Mixins
+
+@mixin transition($duration, $timing-func) {
+    -webkit-transition: $duration $timing-func all;
+    -moz-transition: $duration $timing-func all;
+    transition: $duration $timing-func all;
+}
+
+@mixin scale($size) {
+    -webkit-transform: scale($size);
+    -moz-transform: scale($size);
+    transform: scale($size);
+}
+
+@mixin rotate($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    transform: rotate($deg);
+}
