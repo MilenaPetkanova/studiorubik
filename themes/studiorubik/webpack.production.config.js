@@ -23,7 +23,10 @@ module.exports = {
         publicPath: ''
     },
 
-    mode: 'production',
+    mode: 'development',
+
+    watch: true,
+
 
     optimization: {
         splitChunks: {

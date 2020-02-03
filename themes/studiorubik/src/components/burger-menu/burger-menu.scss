@@ -1,0 +1,164 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the navigation of the site/application.
+// -----------------------------------------------------------------------------
+
+@import '../global/variables.scss';
+
+.site-header {
+    background-color: yellow;
+    position: relative;
+    display: block;
+}
+
+
+// Clean me up
+
+@mixin transition($duration, $timing-func) {
+    -webkit-transition: $duration $timing-func all;
+    -moz-transition: $duration $timing-func all;
+    transition: $duration $timing-func all;
+}
+
+@mixin scale($size) {
+    -webkit-transform: scale($size);
+    -moz-transform: scale($size);
+    transform: scale($size);
+}
+
+@mixin rotate($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+$menu-bg: rgba(33, 33, 33, 0.95);
+$menu-links: rgba(255, 255, 255, 0.5);
+$size: 5em;
+$time: 350ms;
+$degree: 135deg;
+$timing: ease;
+
+#toggle {
+    position: fixed;
+    z-index: 3;
+    width: $size / 1.75;
+    height: $size / 1.75;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+
+    span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: $size / 25;
+        margin: $size / 4 0 0 0;
+        background: $black;
+        @include transition($time, $timing);
+
+        &:before,
+        &:after {
+            content: " ";
+            position: absolute;
+            width: 100%;
+            height: $size / 25;
+            background: $black;
+            @include transition($time, $timing);
+        }
+
+        &:before {
+            margin: -$size / 5 0 0 0;
+        }
+
+        &:after {
+            margin: $size / 5 0 0 0;
+        }
+    }
+
+    &.open {
+        span {
+            background-color: transparent;
+
+            &:before,
+            &:after {
+                margin: 0;
+                background: $white;
+            }
+
+            &:before {
+                @include rotate($degree);
+            }
+
+            &:after {
+                @include rotate(-$degree);
+            }
+        }
+    }
+}
+
+#main-menu {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background: $menu-bg;
+    @include scale(1.5);
+    @include transition($time, $timing);
+
+    &.opened {
+        visibility: visible;
+        opacity: 1;
+        @include scale(1);
+        @include transition($time, $timing);
+    }
+
+    ul {
+        margin: 0 auto;
+
+        li {
+            display: block;
+            width: 90%;
+            height: 65px;
+
+            &:after {
+                content: " ";
+                position: absolute;
+                width: 0%;
+                height: 4px;
+                margin: 0 0 0 5%;
+                left: 0;
+                background: $white;
+                @include transition($time, $timing);
+            }
+
+            &:hover {
+                &:after {
+                    width: 90%;
+                }
+            }
+
+            a {
+                position: relative;
+                z-index: 4;
+                display: block;
+                width: 100%;
+                height: 65px;
+                line-height: 65px;
+                margin: 0 auto;
+                color: $menu-links;
+                text-decoration: none;
+                @include transition($time, $timing);
+
+                &:hover {
+                    color: $white;
+
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,13 @@
 import './burger-menu.scss';
 
-function helloBurgerMenu() {
+function burgerMenu() {
 
-    console.log('hello world from the burger menu');
+    $("#toggle").click(function () {
+        $(this).toggleClass("open");
+        $("#menu").toggleClass("opened");
+        $("#main-menu").toggleClass("opened");
+    });
+
 }
 
-export default helloBurgerMenu;
+export default burgerMenu;
