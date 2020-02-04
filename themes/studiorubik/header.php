@@ -8,7 +8,8 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> >
+<body <?php body_class(); ?>>
+
     <!-- Site Header -->
     <header class="site-header">
 
@@ -20,15 +21,57 @@
         <!-- Toggle the Burger Menu -->
         <div id="toggle"><span></span></div>
 
-        <!-- Call the navigation -->
-        <?php
-        $args = array(
-            'theme_location' => 'main-menu',
-            'container' => 'nav',
-            'container_class' => 'main-menu text-upper',
-            'container_id' => 'main-menu'
-        );
-        wp_nav_menu($args);
-        ?>
+        <!-- Burger Menu Container -->
+        <nav class="text-upper" id="burger-menu-container">
 
+            <!-- Call the Navigation Menu -->
+            <?php
+                $args = array(
+                    'theme_location' => 'main-menu',
+                    'container' => 'div',
+                    'container_class' => 'main-menu text-right'
+                );
+                wp_nav_menu($args);
+            ?>
+
+            <div class="nav-contacts text-left">
+
+                <div class="">
+                    <p>Address</p>
+                    <span>
+                        <p>Bulevard "Knyaginya Maria Luiza" 126,</p>
+                    </span>
+                    <span>
+                        <p>1233 Orlandovtsi, Sofia</p>
+                    </span>
+                </div>
+
+                <div class="">
+                    <p>contacts</p>
+                    <span>
+                        <p>
+                            <a href="mailto:ask@studiorubik.com">ask@studiorubik.com</a>
+                        </p>
+                    </span>
+                    <span>
+                        <p>
+                            <a href="tel:+359123456">+359 123 456</a>
+                        </p>
+                    </span>
+                </div>
+
+                <!-- Call the social menu -->
+                <?php
+                $args = array(
+                    'theme_location' => 'social-menu',
+                    'container' => 'div',
+                    'container_class' => 'social-menu',
+                    'link_before' => '<span class="hidden">',
+                    'link_after' => '</span>',
+                );
+                wp_nav_menu($args);
+            ?>
+
+            </div>
+            </div>
     </header>

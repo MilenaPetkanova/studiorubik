@@ -26,7 +26,9 @@ module.exports = {
     mode: 'development',
 
     watch: true,
-
+    watchOptions: {
+        aggregateTimeout: 1000
+    },
 
     optimization: {
         splitChunks: {
@@ -38,42 +40,51 @@ module.exports = {
 
     module: {
 
-        rules:
-            [
-                {
-                    test: /\.(png|jpg)$/,
-                    use: [
-                        'file-loader'
-                    ]
-                },
+        rules: [{
+                test: /\.(png|jpg)$/,
+                use: [
+                    'file-loader'
+                ]
+            },
 
-                {
-                    test: /\.css$/,
-                    use: [
-                        MiniCssExtractPlugin.loader, 'css-loader'
-                    ]
-                },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader, 'css-loader'
+                ]
+            },
 
-                {
-                    test: /\.scss$/,
-                    use: [
-                        MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
-                    ]
-                },
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
+                ]
+            },
 
-                {
-                    test: /\.js$/,
-                    exclude: /node_modules/,
-                    use: {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['@babel/env'],
-                            plugins: ['transform-class-properties']
-                        }
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/env'],
+                        plugins: ['transform-class-properties']
                     }
-                },
-            ]
+                }
+            }, {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                    }
+                }]
+            }
+
+        ]
     },
+
     plugins: [
 
         new MiniCssExtractPlugin({

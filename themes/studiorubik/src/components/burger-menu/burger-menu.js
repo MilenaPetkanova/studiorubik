@@ -4,8 +4,7 @@ function burgerMenu() {
 
     $("#toggle").click(function () {
         $(this).toggleClass("open");
-        $("#menu").toggleClass("opened");
-        $("#main-menu").toggleClass("opened");
+        $("#burger-menu-container").toggleClass("opened");
     });
 
 }

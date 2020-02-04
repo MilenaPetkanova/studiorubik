@@ -1,0 +1,72 @@
+// Soho  Gothic Regular
+@font-face {
+    font-family: "SohoGothicPro-Regular";
+    font-weight: 400;
+    src: url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Regular.woff2") format("woff2"),
+        url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Regular.woff") format("woff");
+}
+
+// Soho  Gothic Medium
+@font-face {
+    font-family: "SohoGothicPro-Medium";
+    font-weight: 500;
+    src: url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Medium.woff2") format("woff2"),
+        url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Medium.woff") format("woff");
+}
+
+// Soho  Gothic Bold
+@font-face {
+    font-family: "SohoGothicPro-Bold";
+    font-weight: 700;
+    src: url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Bold.woff2") format("woff2"),
+        url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Bold.woff") format("woff");
+}
+
+
+body {
+    font-family: "SohoGothicPro-Regular";
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.text-lower {
+    text-transform: lowercase;
+}
+
+
+.bold {
+    font-weight: 700;
+}
+
+
+.soho-regular {
+    font-family: "SohoGothicPro-Regular";
+    font-weight: 400;
+}
+
+.soho-medium {
+    font-family: "SohoGothicPro-Medium";
+    font-weight: 500;
+}
+
+.soho-bold {
+    font-family: "SohoGothicPro-Bold";
+    font-weight: 700;
+}

@@ -1,5 +1,5 @@
 const path = require('path');
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
@@ -31,6 +31,8 @@ module.exports = {
         port: 5555
 
     },
+
+    watch: true,
 
     optimization: {
         splitChunks: {
@@ -76,6 +78,7 @@ module.exports = {
             },
         ]
     },
+
     plugins: [
 
         // new MiniCssExtractPlugin({

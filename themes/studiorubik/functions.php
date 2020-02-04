@@ -5,6 +5,7 @@ function studiorubik_menus(){
     //Wordpress function
     register_nav_menus(array(
         'main-menu' => 'Main Menu',
+        'social-menu' => 'Social Menu'
     ));
 }
 
@@ -12,7 +13,12 @@ function studiorubik_menus(){
 function studiorubik_scripts() {
 
     // Stylesheets
+
+    wp_enqueue_style('googlefont' , 'https: //fonts.googleapis.com/css?family=Montserrat:900&display=swap&subset=cyrillic-ext', array(), '1.0.0'); //Montserrat Font Family
+
     wp_enqueue_style('normalize', get_template_directory_uri() . '/vendors/normalize/normalize.min.css', array(), '8.0.1'); //Normalize CSS
+
+    wp_enqueue_style('fontawesome', get_template_directory_uri() . '/vendors/fonts/fontawesome/font-awesome.min.css', array(), '4.7.0');
 
     wp_enqueue_style('style', get_stylesheet_uri(), array(), '1.0.0'); // Wordpress Stylesheet
 
@@ -24,14 +30,11 @@ function studiorubik_scripts() {
 
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true); //jQuery
 
-    // wp_enqueue_script('navigationjs', get_template_directory_uri() . '/old/js/helpers/nav.js', array('jquery'), '1.0.0', true); // Navigation JS
-
     // if( is_front_page() ):
     //     // Call cube.js only on the Front Page
     //     wp_enqueue_script('cubejs', get_template_directory_uri() . '/old/js/helpers/cube.js', array('jquery'), true, '1.0.0', ); // 3D Cube JS
     // endif;
 
-    wp_enqueue_script('scripts', get_template_directory_uri() . '/old/js/main.js', array('jquery', 'navigationjs' ), '1.0.0', true); // Main JS
 
     wp_enqueue_script('bundlejs', get_template_directory_uri() . '/dist/bundle.js', array(), null, true); //jQuery
 
