@@ -1,8 +1,85 @@
+@import './../../global/variables.scss';
+
 footer.site-footer {
-    background-color: magenta;
+    background-image: url('./giphy.gif');
 
     #menu-social-menu-1 li {
         display: block;
+    }
+}
+
+/** Footer Menu Areas **/
+.site-footer__menu {
+    display: flex;
+    flex-wrap: wrap;
+    color: $white;
+
+    // Menu List
+    .site-footer__menu__list {
+        flex: 0 0 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        display: block;
+
+        // Heading Title
+        h5 {
+            font-size: 1.6rem;
+            font-family: "SohoGothicPro-Bold";
+            background-color: $black;
+            max-width: 150px;
+            padding: 0.2rem 1rem;
+        }
+
+        // Menu List Item
+        li {
+            background-color: black;
+            max-width: 150px;
+            font-size: 1.2rem;
+            padding: 0.2rem 1rem;
+            margin-bottom: 0.5rem;
+
+            //Hover dash animation
+            &:hover {
+
+                a::after {
+                    width: 100%;
+                }
+
+            }
+
+            a {
+                display: inline-block;
+
+                &:after {
+                    content: '';
+                    width: 0px;
+                    height: 1px;
+                    display: block;
+                    background: $white;
+                    transition: 300ms;
+                }
+            }
+        }
+
 
     }
+
+    &.logo {
+        background-color: transparent;
+
+    }
+}
+
+
+@media (min-width: 768px) {
+    .site-footer__menu .site-footer__menu__list {
+        flex: 0 0 16.6666%;
+    }
+}
+
+.tnp-field label {
+    display: none;
 }

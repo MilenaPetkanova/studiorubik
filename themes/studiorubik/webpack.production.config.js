@@ -41,7 +41,7 @@ module.exports = {
     module: {
 
         rules: [{
-                test: /\.(png|jpg)$/,
+                test: /\.(png|jpe?g|gif)$/i,
                 use: [
                     'file-loader'
                 ]
@@ -92,7 +92,7 @@ module.exports = {
             // filename: '[name].[contenthash].css'
         }),
 
-        new CleanWebpackPlugin()
+        // new CleanWebpackPlugin()
 
     ]
 

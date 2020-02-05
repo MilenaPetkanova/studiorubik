@@ -5,7 +5,11 @@ function studiorubik_menus(){
     //Wordpress function
     register_nav_menus(array(
         'main-menu' => 'Main Menu',
-        'social-menu' => 'Social Menu'
+        'social-menu' => 'Social Menu',
+        'services' => 'Services Footer Menu',
+        'the-studio' => 'The Studio Footer Menu',
+        'legal' => 'Legals Menu'
+
     ));
 }
 
@@ -59,6 +63,17 @@ function studiorubik_setup() {
     // add_image_size('square', 450, 450, true);
 
 }
+
+//Create the Widget Zone
+function gymfitness_widgets() {
+    register_sidebar(array(
+        'name' => 'Sidebar',
+        'id' => 'sidebar',
+        'before_title' => '<h5 class="text-upper">',
+        'after_title' => '</h5>'
+    ));
+}
+add_action('widgets_init', 'gymfitness_widgets');
 
 //When the theme is activated and ready!
 add_action('after_setup_theme', 'studiorubik_setup');

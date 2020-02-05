@@ -2,12 +2,11 @@
 <?php get_header() ?>
 
 <!-- front-page.php Main element -->
-<main class=" page section with-sidebar">
+<main class="page section with-sidebar">
 
    <section>
        <h1>video</h1>
    </section>
-
 
    <section class="portfolio">
 
