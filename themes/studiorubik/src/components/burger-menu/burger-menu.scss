@@ -17,65 +17,7 @@ $timing: ease;
     background-color: yellow;
     position: relative;
     display: block;
-}
-
-//Toggle Button
-#toggle {
-    position: fixed;
-    z-index: 3;
-    width: $size / 1.75;
-    height: $size / 1.75;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-
-    span {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: $size / 25;
-        margin: $size / 4 0 0 0;
-        background: $black;
-        @include transition($time, $timing);
-
-        &:before,
-        &:after {
-            content: " ";
-            position: absolute;
-            width: 100%;
-            height: $size / 25;
-            background: $black;
-            @include transition($time, $timing);
-        }
-
-        &:before {
-            margin: -$size / 5 0 0 0;
-        }
-
-        &:after {
-            margin: $size / 5 0 0 0;
-        }
-    }
-
-    &.open {
-        span {
-            background-color: transparent;
-
-            &:before,
-            &:after {
-                margin: 0;
-                background: $white;
-            }
-
-            &:before {
-                @include rotate($degree);
-            }
-
-            &:after {
-                @include rotate(-$degree);
-            }
-        }
-    }
+    padding-top: 10rem;
 }
 
 // Burger Menu
@@ -99,6 +41,12 @@ $timing: ease;
     background: $menu-bg;
     @include scale(1.5);
     @include transition($time, $timing);
+
+    .social-menu {
+        ul li a:hover:after {
+            display: none;
+        }
+    }
 
     &.opened {
         visibility: visible;
@@ -143,7 +91,7 @@ $timing: ease;
                     color: $white;
 
                     &:after {
-                        width: 155%;
+                        width: 115%;
                     }
                 }
             }
@@ -162,6 +110,8 @@ $timing: ease;
 .main-menu {
     border-right: 4px solid $white;
     padding: 40px 0px;
+    position: relative;
+    right: -2px;
 }
 
 .nav-contacts {
@@ -174,8 +124,8 @@ $timing: ease;
         line-height: 0.7;
     }
 
-    div {
-        margin-bottom: 1rem;
+    >div {
+        margin-bottom: 4.5rem;
     }
 }
 
@@ -185,19 +135,23 @@ $timing: ease;
     li {
         display: inline;
 
-        a::before {
-            font-family: 'FontAwesome';
-            font-weight: normal;
-            display: inline-block;
-            vertical-align: top;
-            padding: 0 5px;
-            content: '\f08e';
-            font-size: 30px;
-            -webkit-font-smoothing: antialiazed;
+        a {
+
+            &:before {
+                font-family: 'FontAwesome';
+                font-weight: normal;
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 5px;
+                content: '\f08e';
+                font-size: 30px;
+                -webkit-font-smoothing: antialiazed;
+            }
         }
     }
 
-    #menu-social-menu li {
+    #menu-social-menu li,
+    #menu-social-menu-1 li {
         display: inline;
 
         &::after {

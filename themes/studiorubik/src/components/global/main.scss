@@ -42,11 +42,13 @@ img {
 }
 
 .container {
-    // max-width: 120rem;
-    // /** 1200px **/
-    // width: 95%;
+    max-width: 144rem;
+    // /** 1440px **/
+    width: 95%;
     margin: 0 auto;
 }
+
+
 
 /** Utilities **/
 .hidden {
@@ -54,3 +56,7 @@ img {
     visibility: hidden;
     opacity: 0;
 }
+
+
+
+@import './../footer/footer-menu/footer-menu.scss'

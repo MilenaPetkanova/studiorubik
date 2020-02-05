@@ -1,9 +1,10 @@
+import './burger-button.scss';
 import './burger-menu.scss';
 
 function burgerMenu() {
 
     $("#toggle").click(function () {
-        $(this).toggleClass("open");
+        $(this).toggleClass("is-active");
         $("#burger-menu-container").toggleClass("opened");
     });
 

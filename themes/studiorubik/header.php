@@ -11,15 +11,18 @@
 <body <?php body_class(); ?>>
 
     <!-- Site Header -->
-    <header class="site-header">
+    <header class="site-header container">
 
         <!-- Get the Logo -->
         <a href="<?php echo esc_url(home_url('/')); ?>">
             <img src="<?php echo get_template_directory_uri() . "/img/header-logo.svg"; ?>" alt="logo">
         </a>
 
-        <!-- Toggle the Burger Menu -->
-        <div id="toggle"><span></span></div>
+        <div id="toggle" class="hamburger hamburger--spin">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
 
         <!-- Burger Menu Container -->
         <nav class="text-upper" id="burger-menu-container">
@@ -38,26 +41,33 @@
 
                 <div class="">
                     <p>Address</p>
+
                     <span>
                         <p>Bulevard "Knyaginya Maria Luiza" 126,</p>
                     </span>
+
                     <span>
                         <p>1233 Orlandovtsi, Sofia</p>
                     </span>
+
                 </div>
 
                 <div class="">
+
                     <p>contacts</p>
+
                     <span>
                         <p>
                             <a href="mailto:ask@studiorubik.com">ask@studiorubik.com</a>
                         </p>
                     </span>
+
                     <span>
                         <p>
                             <a href="tel:+359123456">+359 123 456</a>
                         </p>
                     </span>
+
                 </div>
 
                 <!-- Call the social menu -->
@@ -65,6 +75,7 @@
                 $args = array(
                     'theme_location' => 'social-menu',
                     'container' => 'div',
+                    'container_id' => 'social-menu',
                     'container_class' => 'social-menu',
                     'link_before' => '<span class="hidden">',
                     'link_after' => '</span>',
