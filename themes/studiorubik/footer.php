@@ -62,7 +62,7 @@
         </div>
 
         <!-- Footer Services -->
-        <div class="site-footer__menu__list">
+        <div class="site-footer__menu__list footer-services">
             <h5 class="text-upper">Services</h5>
             <?php
                     $args = array(
@@ -74,7 +74,7 @@
         </div>
 
         <!-- Footer Studio Navigation -->
-        <div class="site-footer__menu__list">
+        <div class="site-footer__menu__list footer-studio">
             <h5 class="text-upper">The Studio</h5>
             <?php
                     $args = array(
@@ -86,7 +86,7 @@
         </div>
 
         <!-- Footer Legal Navigation -->
-        <div class="site-footer__menu__list">
+        <div class="site-footer__menu__list footer-legal">
             <h5 class="text-upper">Legals</h5>
             <?php
                 $args = array(
@@ -98,14 +98,15 @@
         </div>
 
         <!-- Footer Newsletter -->
-        <div class="site-footer__menu__list">
+        <div class="site-footer__menu__list footer-newsletter">
+               <h5 class="text-upper">Newsletter</h5>
 
             <?php get_sidebar(); ?>
 
         </div>
 
         <!-- Footer Social Navigation -->
-        <div class="site-footer__menu__list">
+        <div class="site-footer__menu__list footer-social">
             <?php
             $args = array(
                 'theme_location' => 'social-menu',
@@ -118,6 +119,10 @@
             ?>
         </div>
 
+    </section>
+
+    <section class="copywrite text-center">
+        <p>&copy;studiorubik.com | all rights reserved</p>
     </section>
 
 </footer>

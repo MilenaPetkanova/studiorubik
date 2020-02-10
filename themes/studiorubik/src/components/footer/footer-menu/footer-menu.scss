@@ -5,6 +5,17 @@ footer.site-footer {
 
     #menu-social-menu-1 li {
         display: block;
+        max-width: 50px;
+        padding: 0;
+
+        a {
+            display: block;
+            text-align: center;
+
+            &::after {
+                display: none;
+            }
+        }
     }
 }
 
@@ -30,6 +41,7 @@ footer.site-footer {
             font-family: "SohoGothicPro-Bold";
             background-color: $black;
             max-width: 150px;
+            margin-top: 0;
             padding: 0.2rem 1rem;
         }
 
@@ -64,22 +76,81 @@ footer.site-footer {
             }
         }
 
+        &.logo {
+            background-color: transparent;
+            display: flex;
+            align-self: center;
+        }
 
     }
 
-    &.logo {
-        background-color: transparent;
 
-    }
 }
 
 
 @media (min-width: 768px) {
-    .site-footer__menu .site-footer__menu__list {
-        flex: 0 0 16.6666%;
+
+    .site-footer__menu {
+        padding: 7.5rem 0 4rem 0;
+
+        .site-footer__menu__list {
+            flex: 0 0 18%;
+        }
+
+        //Social Menu flex width
+        .footer-social {
+            flex: 0 0 5%;
+        }
+
+        .footer-newsletter {
+            flex: 0 0 23%;
+
+            h5 {
+                max-width: 23rem;
+                margin-bottom: 0.5rem;
+            }
+
+            li {
+                max-width: 30rem;
+                background-color: transparent;
+
+                .tnp-field-email input {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 3px solid $white;
+                }
+
+                input.tnp-email {
+                    height: 3rem;
+                    max-width: 23rem;
+                    width: 100%;
+                }
+            }
+
+            #newsletterwidget-2 {
+                padding: 0;
+
+                input.tnp-submit {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
     }
+
 }
 
 .tnp-field label {
     display: none;
+}
+
+.copywrite {
+    background-color: $black;
+    color: $white;
+    font-size: 1rem;
+    padding: 0;
+
+    p {
+        margin: 0;
+        padding: 0.8rem 0;
+    }
 }

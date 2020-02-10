@@ -61,7 +61,6 @@ function studiorubik_setup() {
 
     //Register new image size
     // add_image_size('square', 450, 450, true);
-
 }
 
 //Create the Widget Zone

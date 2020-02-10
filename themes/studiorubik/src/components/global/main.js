@@ -1,5 +1,6 @@
 import './../global/variables.scss';
 import './../global/mixins.scss';
+import './../global/buttons.scss';
 import './main.scss';
 import './../footer/footer-menu/footer-menu.scss';
 
