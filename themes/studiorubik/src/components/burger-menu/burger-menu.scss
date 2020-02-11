@@ -7,10 +7,30 @@
 
 //Header
 .site-header {
-    background-color: yellow;
-    position: relative;
-    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 8;
     padding-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.show-nav {
+        .hamburger {
+            opacity: 1;
+            transition: opacity .5s cubic-bezier(.694, .048, .335, 1);
+        }
+    }
+
+
+    &.hide-nav {
+        .hamburger {
+            opacity: 0;
+            transition: opacity .5s cubic-bezier(.694, .048, .335, 1);
+        }
+    }
 }
 
 // Burger Menu
@@ -175,4 +195,16 @@
 
 .social-menu li a[href*="youtube.com"]::before {
     content: '\f167';
+}
+
+
+// Hide header on scroll
+.burger-visible {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.burger-invisible {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 }

@@ -10,6 +10,10 @@ html {
     font-family: SohoGothicPro Bold;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 *,
 *:before,
 *:after {
@@ -62,6 +66,12 @@ button {
     display: none;
     visibility: hidden;
     opacity: 0;
+}
+
+
+.video-section {
+    width: 100vw;
+    height: 100vh;
 }
 
 

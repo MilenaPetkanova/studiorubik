@@ -4,8 +4,11 @@
 <!-- front-page.php Main element -->
 <main class="page section with-sidebar">
 
-   <section>
-       <h1>video</h1>
+   <section class="video-section">
+
+      <img  src="https://i.ibb.co/6PfZnH2/landing-video.png
+" alt="">
+
    </section>
 
    <section class="portfolio">

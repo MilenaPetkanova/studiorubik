@@ -14,7 +14,7 @@
     <header class="site-header container">
 
         <!-- Get the Logo -->
-        <a href="<?php echo esc_url(home_url('/')); ?>">
+        <a id="header-logo" href="<?php echo esc_url(home_url('/')); ?>">
             <img src="<?php echo get_template_directory_uri() . "/img/header-logo.svg"; ?>" alt="logo">
         </a>
 
@@ -86,3 +86,5 @@
             </div>
             </div>
     </header>
+
+

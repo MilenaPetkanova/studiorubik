@@ -14,7 +14,7 @@
 // ==================================================
 $hamburger-padding-x : 0 !default;
 $hamburger-padding-y : 30px !default;
-$hamburger-layer-width : 43px !default;
+$hamburger-layer-width : 34px !default;
 $hamburger-layer-height : 4px !default;
 $hamburger-layer-spacing : 4px !default;
 $hamburger-layer-color : #000 !default;
@@ -44,6 +44,9 @@ $hamburger-types: (spin) !default;
     transition-property: opacity, filter;
     transition-duration: 0.15s;
     transition-timing-function: linear;
+    opacity: 1;
+
+
 
     // Normalize (<button>)
     font: inherit;
@@ -138,6 +141,10 @@ $hamburger-types: (spin) !default;
 
 .hamburger--spin .hamburger-inner::after {
     transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active {
+    opacity: 1 !important;
 }
 
 .hamburger--spin.is-active .hamburger-inner {
