@@ -68,12 +68,39 @@ button {
     opacity: 0;
 }
 
+// Section Headings
+.section-heading {
+    position: relative;
+    margin: 15rem auto 5rem auto;
 
-// .hero-section {
-//     width: 100vw;
-//     height: 100vh;
-// }
+    h3 {
+        font-family: "SohoGothicPro-Bold";
+        font-size: 4.5rem;
+        color: $black;
+        letter-spacing: 3.8px;
+        line-height: 1;
+        margin: 0;
+        @include centerY;
+    }
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 12rem;
+        line-height: 0.8;
+        letter-spacing: 10.2px;
+        color: rgba(35, 35, 35, 0.1);
+        position: relative;
+        margin: 0;
+        left: -2rem;
+    }
+}
 
 
+//Buttons
+
+.button {
+    text-transform: uppercase;
+}
 
 @import './../footer/footer-menu/footer-menu.scss'

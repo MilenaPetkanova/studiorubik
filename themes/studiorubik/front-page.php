@@ -19,13 +19,21 @@
    </section>
 
    <!-- Portfolio Section -->
-   <section class="portfolio" id="portfolio-cube">
+   <section class="portfolio container" id="portfolio-cube">
 
       <!-- Portoflio Section Heading -->
-      <h2>
-         <?php the_field('portfolio_section_heading')?>
+      <div class="section-heading text-upper">
 
-      </h2>
+         <h3>
+            <?php the_field('portfolio_section_heading')?>
+         </h3>
+
+         <h2>
+            <?php the_field('portfolio_section_heading')?>
+         </h2>
+
+      </div>
+
 
       <!-- Portfolio Cube ACF Varibales -->
       <?php
@@ -67,6 +75,11 @@
 
       <!--Cube Visualisation-->
       <div id="my3Dsurface" class="js3dsurface" data-facewidth="450"></div>
+
+      <!-- Button for the Projects Page -->
+      <div class="button-container">
+         <a class="button" href="<?php echo get_permalink(get_page_by_title('Classes')); ?>">more projects</a>
+      </div>
 
    </section>
 
