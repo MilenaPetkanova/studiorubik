@@ -9,7 +9,6 @@ function studiorubik_menus(){
         'services' => 'Services Footer Menu',
         'the-studio' => 'The Studio Footer Menu',
         'legal' => 'Legals Menu'
-
     ));
 }
 
@@ -59,8 +58,10 @@ function studiorubik_setup() {
     // Add Featured Image
     add_theme_support('post-thumbnails');
 
-    //Register new image size
-    // add_image_size('square', 450, 450, true);
+    // Register new image size
+    add_image_size('square', 450, 450, true);
+    add_image_size('mediumSize', 700, 400, true);
+
 }
 
 //Create the Widget Zone

@@ -1,5 +1,25 @@
-// Burger Menu Mixins
+//Layout Mixins
 
+@mixin centerX {
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+}
+
+@mixin centerY {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin centerXY {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+// Burger Menu Mixins
 @mixin transition($duration, $timing-func) {
     -webkit-transition: $duration $timing-func all;
     -moz-transition: $duration $timing-func all;
@@ -26,7 +46,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.5s 0.5s,
-        opacity 0.5s linear;
+    opacity 0.5s linear;
 }
 
 //Fade In

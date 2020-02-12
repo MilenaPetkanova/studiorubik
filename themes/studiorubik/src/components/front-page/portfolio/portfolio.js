@@ -1,7 +1,8 @@
-// Cube.js
 import './portfolio.scss';
 
 function portfolioCube() {
+
+
     function Js3DSurface(id, faces) {
         this._surfaceId = id;
         this._backSurface = document.getElementById(id);
@@ -377,16 +378,27 @@ function portfolioCube() {
 
     var mouseisdown = false;
 
+    // var recipeName = '<?php echo the_field("recipe_name"); ?>'
+
+
+
     $(document).ready(function () {
+
+
+        $('#demo').html(area1);
+
 
         let faces = new Array();
 
-        faces.push('<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="https://via.placeholder.com/450" /></a>');
-        faces.push('<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="https://via.placeholder.com/450" /></a>');
-        faces.push('<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="https://via.placeholder.com/450" /></a>');
-        faces.push('<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="https://via.placeholder.com/450" /></a>');
-        faces.push('<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="https://via.placeholder.com/450" /></a>');
-        faces.push('<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="https://via.placeholder.com/450" /></a>');
+
+        // Faces of 3D cube, who get values from acf, the variables are ine front-page.php
+        faces.push(area1);
+        faces.push(area2);
+        faces.push(area3);
+        faces.push(area4);
+        faces.push(area5);
+        faces.push(area6);
+
 
         cube = new Js3DSurface("my3Dsurface", faces);
 
