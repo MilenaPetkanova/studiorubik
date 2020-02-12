@@ -1,21 +1,19 @@
 <!-- Get the header function -->
-<?php get_header() ?>
-
+<?php get_header()?>
 
 <?php while (have_posts()): the_post();?>
-
 <!-- front-page.php Main element -->
 <main class="page section with-sidebar">
+
    <!-- Hero Section -->
    <section class="hero-section">
 
       <!-- Slider Revolution Video ACF -->
       <?php
-            if (get_field('slider_revolution_shortcode_-_hero_video')) {
-               echo do_shortcode(get_field('slider_revolution_shortcode_-_hero_video'));
-            }
-         ?>
-
+         if (get_field('slider_revolution_shortcode_-_hero_video')) {
+            echo do_shortcode(get_field('slider_revolution_shortcode_-_hero_video'));
+         }
+      ?>
    </section>
 
    <!-- Portfolio Section -->
@@ -33,7 +31,6 @@
          </h2>
 
       </div>
-
 
       <!-- Portfolio Cube ACF Varibales -->
       <?php
@@ -60,17 +57,16 @@
          //Sixth Area
          $area6 = get_field('area_6');
          $image6 = wp_get_attachment_image_src($area6['area_image'], 'square')[0];
-
       ?>
 
       <!-- push the PHP Variables into Javascript Variables -->
       <script>
-         const area1 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image1 ?>" /><p class="area-description"><?php echo $area1['area_name'] ?></p></a>';
-         const area2 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image2 ?>" /><p class="area-description" ><?php echo $area2['area_name'] ?></p></a>';
-         const area3 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image3 ?>" /><p class="area-description"><?php echo $area3['area_name'] ?></p></a>';
-         const area4 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image4 ?>" /><p class="area-description"><?php echo $area4['area_name'] ?></p></a>';
-         const area5 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image5 ?>" /><p class="area-description"><?php echo $area5['area_name'] ?></p></a>';
-         const area6 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image6 ?>" /><p class="area-description"><?php echo $area6['area_name'] ?></p></a>';
+         const area1 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image1 ?>"/><p class="area-description"><?php echo $area1['area_name'] ?></p></a>';
+         const area2 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image2 ?>"/><p class="area-description"><?php echo $area2['area_name'] ?></p></a>';
+         const area3 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image3 ?>"/><p class="area-description"><?php echo $area3['area_name'] ?></p></a>';
+         const area4 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image4 ?>"/><p class="area-description"><?php echo $area4['area_name'] ?></p></a>';
+         const area5 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image5 ?>"/><p class="area-description"><?php echo $area5['area_name'] ?></p></a>';
+         const area6 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image6 ?>"/><p class="area-description"><?php echo $area6['area_name'] ?></p></a>';
       </script>
 
       <!--Cube Visualisation-->
@@ -78,20 +74,24 @@
 
       <!-- Button for the Projects Page -->
       <div class="button-container">
-         <a class="button" href="<?php echo get_permalink(get_page_by_title('Classes')); ?>">more projects</a>
+         
+         <!-- Button with fill -->
+         <a href="/projects" title="more projects" class="button button--fill">more projects</a>  
+         
       </div>
 
    </section>
-
+   
+   <!-- Page Content Block -->
    <section>
+
       <!-- Content Render -->
       <?php the_content();?>
+      
    </section>
 
-
 </main>
-
 <?php endwhile;?>
 
 <!-- Get the footer function -->
-<?php get_footer() ?>
+<?php get_footer()?>
