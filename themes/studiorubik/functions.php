@@ -16,21 +16,14 @@ function studiorubik_menus(){
 function studiorubik_scripts() {
 
     // Stylesheets
-
     wp_enqueue_style('googlefont' , 'https: //fonts.googleapis.com/css?family=Montserrat:900&display=swap&subset=cyrillic-ext', array(), '1.0.0'); //Montserrat Font Family
-
     wp_enqueue_style('normalize', get_template_directory_uri() . '/vendors/normalize/normalize.min.css', array(), '8.0.1'); //Normalize CSS
-
     wp_enqueue_style('fontawesome', get_template_directory_uri() . '/vendors/fonts/fontawesome/font-awesome.min.css', array(), '4.7.0');
-
     wp_enqueue_style('style', get_stylesheet_uri(), array(), '1.0.0'); // Wordpress Stylesheet
-
     wp_enqueue_style('bundlecss', get_template_directory_uri() . '/dist/bundle.css', array(), '1.0.0'); //Main Style Bundle
-
 
     // JavaScript
     wp_deregister_script('jquery');
-
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true); //jQuery
 
     // if( is_front_page() ):
@@ -38,13 +31,10 @@ function studiorubik_scripts() {
     //     wp_enqueue_script('cubejs', get_template_directory_uri() . '/old/js/helpers/cube.js', array('jquery'), true, '1.0.0', ); // 3D Cube JS
     // endif;
 
-
     wp_enqueue_script('bundlejs', get_template_directory_uri() . '/dist/bundle.js', array(), null, true); //jQuery
 
 }
-
 add_action('wp_enqueue_scripts', 'studiorubik_scripts');
-
 
 //Enable custom features
 function studiorubik_setup() {
@@ -77,6 +67,5 @@ add_action('widgets_init', 'gymfitness_widgets');
 
 //When the theme is activated and ready!
 add_action('after_setup_theme', 'studiorubik_setup');
-
 
 ?>

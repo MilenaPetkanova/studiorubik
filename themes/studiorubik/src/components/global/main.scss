@@ -30,6 +30,10 @@ main {
     display: block;
 }
 
+ul {
+    list-style: none;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -60,7 +64,6 @@ button {
 }
 
 
-
 /** Utilities **/
 .hidden {
     display: none;
@@ -71,7 +74,7 @@ button {
 // Section Headings
 .section-heading {
     position: relative;
-    margin: 15rem auto 5rem auto;
+    margin: 15rem auto 6rem;
 
     h3 {
         font-family: "SohoGothicPro-Bold";
@@ -88,8 +91,8 @@ button {
         font-weight: 900;
         font-size: 12rem;
         line-height: 0.8;
-        letter-spacing: 10.2px;
-        color: rgba(35, 35, 35, 0.1);
+        letter-spacing: 1.2rem;
+        color: $gray;
         position: relative;
         margin: 0;
         left: -2rem;
@@ -97,10 +100,11 @@ button {
 }
 
 
-//Buttons
+// Buttons
 
 .button {
     text-transform: uppercase;
 }
 
+@import './../../components/front-page/expertise/expertise';
 @import './../footer/footer-menu/footer-menu.scss'
