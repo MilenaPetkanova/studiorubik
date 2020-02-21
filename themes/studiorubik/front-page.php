@@ -269,15 +269,17 @@
       </div>
 
    </section>
-
+   
+   <!-- First Parallax -->
    <section class="parallax">
 
-        <!-- Slider Revolution First Parallax ACF -->
-        <?php
+      <!-- Slider Revolution First Parallax ACF -->
+      <?php
          if (get_field('parallax_shortcode')) {
-             echo do_shortcode(get_field('parallax_shortcode'));
+            echo do_shortcode(get_field('parallax_shortcode'));
          }
       ?>
+
    </section>
    
    <!-- Clients Section -->
@@ -551,6 +553,18 @@
          <a href="/clients" title="all clients" class="button button--fill">all clients</a>   
       </div>
    
+   </section>
+
+   <!-- Second Parallax -->
+   <section class="parallax">
+
+      <!-- Slider Revolution First Parallax ACF -->
+      <?php
+         if (get_field('parallax_shortcode_2')) {
+            echo do_shortcode(get_field('parallax_shortcode_2'));
+         }
+      ?>
+      
    </section>
    
    <!-- Page Content Block -->
