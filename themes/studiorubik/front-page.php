@@ -276,7 +276,7 @@
       <!-- Slider Revolution First Parallax ACF -->
       <?php
          if (get_field('parallax_shortcode')) {
-            echo do_shortcode(get_field('parallax_shortcode'));
+             echo do_shortcode(get_field('parallax_shortcode'));
          }
       ?>
 
@@ -285,7 +285,7 @@
    <!-- Clients Section -->
    <section class="clients">
 
-      <!-- Portoflio Section Headings -->
+      <!-- Clients Section Headings -->
       <div class="section-heading text-upper container">
          <h3><?php the_field('clients_section_heading')?></h3>
          <h2><?php the_field('clients_section_heading')?></h2>
@@ -561,10 +561,21 @@
       <!-- Slider Revolution First Parallax ACF -->
       <?php
          if (get_field('parallax_shortcode_2')) {
-            echo do_shortcode(get_field('parallax_shortcode_2'));
+             echo do_shortcode(get_field('parallax_shortcode_2'));
          }
       ?>
-      
+
+   </section>
+
+   <!-- Testimonials Section -->
+   <section class="testimonials container">
+
+      <!-- Testemonials Section Headings -->
+      <div class="section-heading text-upper container">
+         <h3><?php the_field('testimonials_section_heading')?></h3>
+         <h2><?php the_field('testimonials_section_heading')?></h2>
+      </div>
+
    </section>
    
    <!-- Page Content Block -->
