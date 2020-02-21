@@ -32,13 +32,8 @@ app/sql/
 /plugins/index.php
 /themes/index.php
 /upgrade
-/plugins/all-in-one-wp-migration
-/plugins/wordpress-importer
 /uploads/
 index.php
-plugins/contact-form-7/
 plugins/newsletter/
 plugins/newsletter/
 plugins/newsletter-extensions/
-plugins/export-media-library/
-plugins/svg-support/
