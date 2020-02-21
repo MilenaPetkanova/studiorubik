@@ -1,0 +1,21 @@
+.clients__grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5rem;
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+
+    a {
+        display: none;
+    }
+}
+
+.clients {
+
+    .button--fill {
+        @include centerX;
+    }
+
+    margin-bottom: 15rem;
+}

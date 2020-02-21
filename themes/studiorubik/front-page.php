@@ -266,12 +266,291 @@
 
          </div>
          
-
-
-
-
       </div>
 
+   </section>
+
+   <section class="parallax">
+
+        <!-- Slider Revolution First Parallax ACF -->
+        <?php
+         if (get_field('parallax_shortcode')) {
+             echo do_shortcode(get_field('parallax_shortcode'));
+         }
+      ?>
+   </section>
+   
+   <!-- Clients Section -->
+   <section class="clients">
+
+      <!-- Portoflio Section Headings -->
+      <div class="section-heading text-upper container">
+         <h3><?php the_field('clients_section_heading')?></h3>
+         <h2><?php the_field('clients_section_heading')?></h2>
+      </div>
+
+      <!-- Clients Grid -->
+      <div class="clients__grid container">
+
+         <!-- Grid Item 1 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+
+         </div>
+
+         <!-- Grid Item 2 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_2'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+
+          <!-- Grid Item 3 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_3'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+
+          <!-- Grid Item 4 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_4'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+
+          <!-- Grid Item 5 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_5'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+
+          <!-- Grid Item 6 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_6'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+
+          <!-- Grid Item 7 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_7'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+
+          <!-- Grid Item 8 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_8'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+          <!-- Grid Item 9 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_9'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+
+          <!-- Grid Item 10 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_10'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+
+          <!-- Grid Item 11 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_11'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+
+          <!-- Grid Item 12 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_12'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+
+          <!-- Grid Item 13 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_13'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+
+          <!-- Grid Item 14 -->
+         <div class="clients__grid-item">
+
+            <?php
+               $clients_grid = get_field('clients_grid');
+               $logo = wp_get_attachment_image_src($clients_grid['client_image_14'], 'full')[0];
+            ?>
+
+            <!-- Grid ItemImage -->
+            <figure>
+               <img class="" src="<?php echo $logo ?>"/>
+               <a href="#">
+                 <h5 class="text-upper">see projects</h5>
+               </a>
+            </figure>
+            
+         </div>
+      </div>
+
+      <!-- Button for the Clients Page -->
+      <div class="button-container container">
+   
+         <!-- Button with fill -->
+         <a href="/clients" title="all clients" class="button button--fill">all clients</a>   
+      </div>
+   
    </section>
    
    <!-- Page Content Block -->

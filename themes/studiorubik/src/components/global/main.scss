@@ -50,6 +50,10 @@ img {
     height: auto;
 }
 
+figure {
+    margin: 0 auto;
+}
+
 input,
 button {
     border: none;
@@ -107,4 +111,5 @@ button {
 }
 
 @import './../../components/front-page/expertise/expertise';
+@import './../../components/front-page/clients/clients';
 @import './../footer/footer-menu/footer-menu.scss'
