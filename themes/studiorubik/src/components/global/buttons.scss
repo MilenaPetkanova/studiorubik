@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './mixins.scss';
 
 input.tnp-submit {
     font-family: "SohoGothicPro-Bold";
@@ -125,4 +126,42 @@ input.tnp-submit {
             opacity: 1;
         }
     }
+}
+
+//Back to top
+.back-to-top.container {
+    margin: 10rem auto 5rem auto;
+}
+
+.hexagon {
+    position: relative;
+    width: 51px;
+    height: 29.44px;
+    background-color: #000000;
+    margin: 14.72px 0;
+
+    svg {
+        position: absolute;
+        @include centerXY;
+    }
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 25.5px solid transparent;
+    border-right: 25.5px solid transparent;
+}
+
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 14.72px solid #000000;
+}
+
+.hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 14.72px solid #000000;
 }
