@@ -15,4 +15,16 @@ $(document).ready(function () {
 
     portfolioCube();
 
+    // Init testimonials only on the landing page
+    if ($('body.home').length) {
+        //Init the bxSlider library on testimonials
+        $('.testimonials-list').bxSlider({
+            auto: true,
+            slideWidth:480,
+            minSlides: 2,
+            maxSlides: 5,
+            controls: false
+        });
+    }
+
 });

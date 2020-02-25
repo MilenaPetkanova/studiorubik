@@ -14,7 +14,9 @@
 .clients {
 
     .button--fill {
-        @include centerX;
+        position: relative;
+        margin: 0 auto;
+        display: block;
     }
 
     margin-bottom: 15rem;

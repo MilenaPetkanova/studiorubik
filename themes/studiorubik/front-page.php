@@ -14,7 +14,7 @@
              echo do_shortcode(get_field('slider_revolution_shortcode_-_hero_video'));
          }
       ?>
-      
+
    </section>
 
    <!-- Portfolio Section -->
@@ -57,12 +57,24 @@
 
       <!-- Push images from ACF into Javascript Variables -->
       <script>
-         const area1 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image1 ?>"/><p class="area-description"><?php echo $area1['area_name'] ?></p></a>';
-         const area2 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image2 ?>"/><p class="area-description"><?php echo $area2['area_name'] ?></p></a>';
-         const area3 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image3 ?>"/><p class="area-description"><?php echo $area3['area_name'] ?></p></a>';
-         const area4 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image4 ?>"/><p class="area-description"><?php echo $area4['area_name'] ?></p></a>';
-         const area5 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image5 ?>"/><p class="area-description"><?php echo $area5['area_name'] ?></p></a>';
-         const area6 ='<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image6 ?>"/><p class="area-description"><?php echo $area6['area_name'] ?></p></a>';
+         const area1 =
+            '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image1 ?>"/><p class="area-description"><?php echo $area1['
+         area_name '] ?></p></a>';
+         const area2 =
+            '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image2 ?>"/><p class="area-description"><?php echo $area2['
+         area_name '] ?></p></a>';
+         const area3 =
+            '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image3 ?>"/><p class="area-description"><?php echo $area3['
+         area_name '] ?></p></a>';
+         const area4 =
+            '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image4 ?>"/><p class="area-description"><?php echo $area4['
+         area_name '] ?></p></a>';
+         const area5 =
+            '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image5 ?>"/><p class="area-description"><?php echo $area5['
+         area_name '] ?></p></a>';
+         const area6 =
+            '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image6 ?>"/><p class="area-description"><?php echo $area6['
+         area_name '] ?></p></a>';
       </script>
 
       <!--Cube Visualisation-->
@@ -70,10 +82,10 @@
 
       <!-- Button for the Projects Page -->
       <div class="button-container">
-         
+
          <!-- Button with fill -->
-         <a href="/projects" title="more projects" class="button button--fill">more projects</a>  
-         
+         <a href="/projects" title="more projects" class="button button--fill">more projects</a>
+
       </div>
 
    </section>
@@ -88,10 +100,10 @@
          <h2><?php the_field('expertise_section_heading')?></h2>
 
       </div>
-      
+
       <!-- Workflow Headings -->
       <div class="expertise__workflow">
-        
+
          <!-- Get the Expertise Field and register the SVG Divider -->
          <?php
             $expertise_workflow = get_field('expertise_workflow');
@@ -102,29 +114,40 @@
          <ul class="workflow__list text-upper">
 
             <!-- Heading -->
-            <li class="workflow__list-item"><h4><?php echo $expertise_workflow['first_heading'] ?></h4></li>
+            <li class="workflow__list-item">
+               <h4><?php echo $expertise_workflow['first_heading'] ?></h4>
+            </li>
 
             <!-- Divider -->
-            <li class="workflow__list-item svg-test"><img class="style-svg" alt="divider" src="<?php echo $divider_icon ?>" /></li>
+            <li class="workflow__list-item svg-test"><img class="style-svg" alt="divider"
+                  src="<?php echo $divider_icon ?>" /></li>
 
             <!-- Heading -->
-            <li class="workflow__list-item"><h4><?php echo $expertise_workflow['second_heading'] ?></h4></li>
+            <li class="workflow__list-item">
+               <h4><?php echo $expertise_workflow['second_heading'] ?></h4>
+            </li>
 
             <!-- Divider -->
-            <li class="workflow__list-item"><img class="style-svg" alt="divider" src="<?php echo $divider_icon ?>" /></li>
+            <li class="workflow__list-item"><img class="style-svg" alt="divider" src="<?php echo $divider_icon ?>" />
+            </li>
 
             <!-- Heading -->
-            <li class="workflow__list-item"><h4><?php echo $expertise_workflow['third_heading'] ?></h4></li>
+            <li class="workflow__list-item">
+               <h4><?php echo $expertise_workflow['third_heading'] ?></h4>
+            </li>
 
             <!-- Divider -->
-            <li class="workflow__list-item"><img class="style-svg" alt="divider" src="<?php echo $divider_icon ?>" /></li>
-            
+            <li class="workflow__list-item"><img class="style-svg" alt="divider" src="<?php echo $divider_icon ?>" />
+            </li>
+
             <!-- Heading -->
-            <li class="workflow__list-item"><h4><?php echo $expertise_workflow['fourth_heading'] ?></h4></li>
+            <li class="workflow__list-item">
+               <h4><?php echo $expertise_workflow['fourth_heading'] ?></h4>
+            </li>
          </ul>
-         
+
       </div>
-      
+
       <!-- Expertise Grid -->
       <div class="expertise__grid container">
 
@@ -138,7 +161,7 @@
 
             <!-- Grid Item Icon & Heading -->
             <figure>
-               <img class="style-svg" src="<?php echo $icon ?>"/>
+               <img class="style-svg" src="<?php echo $icon ?>" />
                <figcaption>
                   <h5><?php echo $first_grid_item['grid_item_heading'] ?></h5>
                </figcaption>
@@ -161,7 +184,7 @@
 
             <!-- Grid Item Icon & Heading -->
             <figure>
-               <img class="style-svg" src="<?php echo $icon ?>"/>
+               <img class="style-svg" src="<?php echo $icon ?>" />
                <figcaption>
                   <h5><?php echo $second_grid_item['grid_item_heading'] ?></h5>
                </figcaption>
@@ -184,7 +207,7 @@
 
             <!-- Grid Item Icon & Heading -->
             <figure>
-               <img class="style-svg" src="<?php echo $icon ?>"/>
+               <img class="style-svg" src="<?php echo $icon ?>" />
                <figcaption>
                   <h5><?php echo $third_grid_item['grid_item_heading'] ?></h5>
                </figcaption>
@@ -207,7 +230,7 @@
 
             <!-- Grid Item Icon & Heading -->
             <figure>
-               <img class="style-svg"  src="<?php echo $icon ?>"/>
+               <img class="style-svg" src="<?php echo $icon ?>" />
                <figcaption>
                   <h5><?php echo $fourth_grid_item['grid_item_heading'] ?></h5>
                </figcaption>
@@ -220,7 +243,7 @@
 
          </div>
 
-          <!-- Grid Item 5 -->
+         <!-- Grid Item 5 -->
          <div class="expertise__grid-item-5">
 
             <?php
@@ -230,7 +253,7 @@
 
             <!-- Grid Item Icon & Heading -->
             <figure>
-               <img class="style-svg"  src="<?php echo $icon ?>"/>
+               <img class="style-svg" src="<?php echo $icon ?>" />
                <figcaption>
                   <h5><?php echo $fifth_grid_item['grid_item_heading'] ?></h5>
                </figcaption>
@@ -243,7 +266,7 @@
 
          </div>
 
-          <!-- Grid Item 6 -->
+         <!-- Grid Item 6 -->
          <div class="expertise__grid-item-6">
 
             <?php
@@ -253,7 +276,7 @@
 
             <!-- Grid Item Icon & Heading -->
             <figure>
-               <img class="style-svg"  src="<?php echo $icon ?>"/>
+               <img class="style-svg" src="<?php echo $icon ?>" />
                <figcaption>
                   <h5><?php echo $sixth_grid_item['grid_item_heading'] ?></h5>
                </figcaption>
@@ -265,11 +288,11 @@
             </div>
 
          </div>
-         
+
       </div>
 
    </section>
-   
+
    <!-- First Parallax -->
    <section class="parallax">
 
@@ -281,7 +304,7 @@
       ?>
 
    </section>
-   
+
    <!-- Clients Section -->
    <section class="clients">
 
@@ -304,9 +327,9 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
 
@@ -322,15 +345,15 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
 
-          <!-- Grid Item 3 -->
+         <!-- Grid Item 3 -->
          <div class="clients__grid-item">
 
             <?php
@@ -340,15 +363,15 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
 
-          <!-- Grid Item 4 -->
+         <!-- Grid Item 4 -->
          <div class="clients__grid-item">
 
             <?php
@@ -358,15 +381,15 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
 
-          <!-- Grid Item 5 -->
+         <!-- Grid Item 5 -->
          <div class="clients__grid-item">
 
             <?php
@@ -376,15 +399,15 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
 
-          <!-- Grid Item 6 -->
+         <!-- Grid Item 6 -->
          <div class="clients__grid-item">
 
             <?php
@@ -394,15 +417,15 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
 
-          <!-- Grid Item 7 -->
+         <!-- Grid Item 7 -->
          <div class="clients__grid-item">
 
             <?php
@@ -412,15 +435,15 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
 
-          <!-- Grid Item 8 -->
+         <!-- Grid Item 8 -->
          <div class="clients__grid-item">
 
             <?php
@@ -430,14 +453,14 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
-          <!-- Grid Item 9 -->
+         <!-- Grid Item 9 -->
          <div class="clients__grid-item">
 
             <?php
@@ -447,15 +470,15 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
 
-          <!-- Grid Item 10 -->
+         <!-- Grid Item 10 -->
          <div class="clients__grid-item">
 
             <?php
@@ -465,15 +488,15 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
 
-          <!-- Grid Item 11 -->
+         <!-- Grid Item 11 -->
          <div class="clients__grid-item">
 
             <?php
@@ -483,15 +506,15 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
 
-          <!-- Grid Item 12 -->
+         <!-- Grid Item 12 -->
          <div class="clients__grid-item">
 
             <?php
@@ -501,15 +524,15 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
 
-          <!-- Grid Item 13 -->
+         <!-- Grid Item 13 -->
          <div class="clients__grid-item">
 
             <?php
@@ -519,15 +542,15 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
 
-          <!-- Grid Item 14 -->
+         <!-- Grid Item 14 -->
          <div class="clients__grid-item">
 
             <?php
@@ -537,22 +560,22 @@
 
             <!-- Grid ItemImage -->
             <figure>
-               <img class="" src="<?php echo $logo ?>"/>
+               <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                 <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper">see projects</h5>
                </a>
             </figure>
-            
+
          </div>
       </div>
 
       <!-- Button for the Clients Page -->
       <div class="button-container container">
-   
+
          <!-- Button with fill -->
-         <a href="/clients" title="all clients" class="button button--fill">all clients</a>   
+         <a href="/clients" title="all clients" class="button button--fill">all clients</a>
       </div>
-   
+
    </section>
 
    <!-- Second Parallax -->
@@ -576,8 +599,39 @@
          <h2><?php the_field('testimonials_section_heading')?></h2>
       </div>
 
+      <!-- Testimonials Container -->
+      <ul class="testimonials-list">
+
+         <?php
+            // Query the Testimonaials
+            $args = array(
+               'post_type' => 'testimonials',
+               'posts_per_page' => 10
+            );
+            $testimonials = new WP_Query($args);
+            while($testimonials->have_posts()): $testimonials->the_post();
+         ?>
+
+         <!-- Single Testimonial render -->
+         <li class="slide testimonial text-center">
+
+            <blockquote>
+               <?php the_content(); ?>
+            </blockquote>
+
+            <footer class="testimonial-footer">
+               <?php the_post_thumbnail('thumbnail') ?>
+               <h3 class="text-upper"><?php the_title(); ?></h3>
+               <a href="#" title="see project" class="button button--fill">see project</a>
+            </footer>
+
+         </li>
+
+         <?php endwhile; wp_reset_postdata(); ?>
+      </ul>
+
    </section>
-   
+
    <!-- Page Content Block -->
    <section>
 
