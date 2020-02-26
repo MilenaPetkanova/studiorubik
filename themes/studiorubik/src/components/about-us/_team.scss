@@ -24,7 +24,7 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
     flex: 0 1 $hexagon-width;
     max-width: $hexagon-width;
     height: $hexagon-height;
-    margin: $hexagon-height/2.1 $hexagon-margin/2 $hexagon-margin;
+    margin: $hexagon-height/2.1 auto $hexagon-height/2.1;
     position: relative;
     // padding: 0.5em;
 
@@ -49,7 +49,7 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
         font-size: 2.4rem;
         margin: 0 auto;
         letter-spacing: 2px;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
 
       .description {
@@ -116,4 +116,9 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
   .honeycomb-cell {
     margin: #{$hexagon-margin/2 + $hexagon-height/2} $hexagon-margin;
   }
+}
+
+
+.team .three-column__grid-item{
+    margin-bottom: 7.5rem;
 }

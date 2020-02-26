@@ -258,21 +258,231 @@ get_header() ?>
             </div>
 
             <!-- Grid Item 2 -->
+            <div class="three-column__grid-item">
+
+                <?php
+
+                $second_grid_item = get_field('team_2nd_grid_item');
+                $team_video = $second_grid_item['grid_item_video_mp4'];
+                $poster_image = $second_grid_item['grid_item_poster_image'];
+                $person_name = $second_grid_item['grid_item_heading'];
+                $person_description = $second_grid_item['gird_item_description'];
+
+                if( $second_grid_item  ): ?>
+                                    
+                    <div class="honeycomb-cell">
+
+                        <!-- Video Element -->
+                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                        
+                        <!-- Name & Title -->
+                        <div class="honeycomb-cell__title text-upper">
+                            <p class="name"><?php echo $person_name ?></p>
+                            <p class="description"><?php echo $person_description ?></p>
+                        </div>
+                </div>
+                    
+                <?php endif;?>
+
+
+            </div>
        
             <!-- Grid Item 3 -->
+            <div class="three-column__grid-item">
+
+                <?php
+
+                $third_grid_item = get_field('team_3rd_grid_item');
+                $team_video = $third_grid_item['grid_item_video_mp4'];
+                $poster_image = $third_grid_item['grid_item_poster_image'];
+                $person_name = $third_grid_item['grid_item_heading'];
+                $person_description = $third_grid_item['gird_item_description'];
+
+                if( $third_grid_item ): ?>
+                                    
+                    <div class="honeycomb-cell">
+
+                        <!-- Video Element -->
+                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                        
+                        <!-- Name & Title -->
+                        <div class="honeycomb-cell__title text-upper">
+                            <p class="name"><?php echo $person_name ?></p>
+                            <p class="description"><?php echo $person_description ?></p>
+                        </div>
+                </div>
+                    
+                <?php endif;?>
+
+            </div>
       
-            <!-- Grid Item 4 -->
+            <!-- Grid Item 4 -->            
+            <div class="three-column__grid-item">
+
+                <?php
+
+                $fourth_grid_item = get_field('team_4th_grid_item');
+                $team_video = $fourth_grid_item['grid_item_video_mp4'];
+                $poster_image = $fourth_grid_item['grid_item_poster_image'];
+                $person_name = $fourth_grid_item['grid_item_heading'];
+                $person_description = $fourth_grid_item['gird_item_description'];
+
+                if( $fourth_grid_item ): ?>
+                    
+                    <div class="honeycomb-cell">
+
+                        <!-- Video Element -->
+                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                        
+                        <!-- Name & Title -->
+                        <div class="honeycomb-cell__title text-upper">
+                            <p class="name"><?php echo $person_name ?></p>
+                            <p class="description"><?php echo $person_description ?></p>
+                        </div>
+                    </div>
+    
+                <?php endif;?>
+            </div>
 
             <!-- Grid Item 5 -->
-        
+            <div class="three-column__grid-item">
+
+                <?php
+
+                $fifth_grid_item = get_field('team_5th_grid_item');
+                $team_video = $fifth_grid_item['grid_item_video_mp4'];
+                $poster_image = $fifth_grid_item['grid_item_poster_image'];
+                $person_name = $fifth_grid_item['grid_item_heading'];
+                $person_description = $fifth_grid_item['gird_item_description'];
+
+                if( $fifth_grid_item ): ?>
+                    
+                    <div class="honeycomb-cell">
+
+                        <!-- Video Element -->
+                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                        
+                        <!-- Name & Title -->
+                        <div class="honeycomb-cell__title text-upper">
+                            <p class="name"><?php echo $person_name ?></p>
+                            <p class="description"><?php echo $person_description ?></p>
+                        </div>
+                    </div>
+
+                <?php endif;?>
+            </div>
+
             <!-- Grid Item 6 -->
+            <div class="three-column__grid-item">
 
+                <?php
+
+                $sixth_grid_item = get_field('team_6th_grid_item');
+                $team_video = $sixth_grid_item['grid_item_video_mp4'];
+                $poster_image = $sixth_grid_item['grid_item_poster_image'];
+                $person_name = $sixth_grid_item['grid_item_heading'];
+                $person_description = $sixth_grid_item['gird_item_description'];
+
+                if( $sixth_grid_item ): ?>
+                    
+                    <div class="honeycomb-cell">
+
+                        <!-- Video Element -->
+                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                        
+                        <!-- Name & Title -->
+                        <div class="honeycomb-cell__title text-upper">
+                            <p class="name"><?php echo $person_name ?></p>
+                            <p class="description"><?php echo $person_description ?></p>
+                        </div>
+                    </div>
+
+                <?php endif;?>
+            </div>
+            
             <!-- Grid Item 7 -->
+            <div class="three-column__grid-item">
 
+                <?php
+
+                $seventh_grid_item = get_field('team_7th_grid_item');
+                $team_video = $seventh_grid_item['grid_item_video_mp4'];
+                $poster_image = $seventh_grid_item['grid_item_poster_image'];
+                $person_name = $seventh_grid_item['grid_item_heading'];
+                $person_description = $seventh_grid_item['gird_item_description'];
+
+                if( $seventh_grid_item ): ?>
+                    
+                    <div class="honeycomb-cell">
+
+                        <!-- Video Element -->
+                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                        
+                        <!-- Name & Title -->
+                        <div class="honeycomb-cell__title text-upper">
+                            <p class="name"><?php echo $person_name ?></p>
+                            <p class="description"><?php echo $person_description ?></p>
+                        </div>
+                    </div>
+
+                <?php endif;?>
+            </div>
+            
             <!-- Grid Item 8 -->
+            <div class="three-column__grid-item">
+
+                <?php
+
+                $eight_grid_item = get_field('team_8th_grid_item');
+                $team_video = $eight_grid_item['grid_item_video_mp4'];
+                $poster_image = $eight_grid_item['grid_item_poster_image'];
+                $person_name = $eight_grid_item['grid_item_heading'];
+                $person_description = $eight_grid_item['gird_item_description'];
+
+                if( $eight_grid_item ): ?>
+                    
+                    <div class="honeycomb-cell">
+
+                        <!-- Video Element -->
+                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                        
+                        <!-- Name & Title -->
+                        <div class="honeycomb-cell__title text-upper">
+                            <p class="name"><?php echo $person_name ?></p>
+                            <p class="description"><?php echo $person_description ?></p>
+                        </div>
+                    </div>
+
+                <?php endif;?>
+            </div>       
 
             <!-- Grid Item 9 -->
+            <div class="three-column__grid-item">
+
+                <?php
+
+                $ninth_grid_item = get_field('team_9th_grid_item');
+                $team_video = $ninth_grid_item['grid_item_video_mp4'];
+                $poster_image = $ninth_grid_item['grid_item_poster_image'];
+                $person_name = $ninth_grid_item['grid_item_heading'];
+                $person_description = $ninth_grid_item['gird_item_description'];
+
+                if( $ninth_grid_item ): ?>
                     
+                    <div class="honeycomb-cell">
+
+                        <!-- Video Element -->
+                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                        
+                        <!-- Name & Title -->
+                        <div class="honeycomb-cell__title text-upper">
+                            <p class="name"><?php echo $person_name ?></p>
+                            <p class="description"><?php echo $person_description ?></p>
+                        </div>
+                    </div>
+
+                <?php endif;?>
+            </div>    
         </div>
 
     </section>
