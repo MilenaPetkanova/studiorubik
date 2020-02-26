@@ -1,9 +1,14 @@
-<!-- Get the header function -->
-<?php get_header()?>
+<?php 
+/* 
+Template Name: Front Page Template
+*/
+
+//  Get the header function 
+get_header()?>
 
 <?php while (have_posts()): the_post();?>
 <!-- front-page.php Main element -->
-<main class="page section with-sidebar">
+<main class="landing-page section">
 
    <!-- Hero Section -->
    <section class="hero-section">
@@ -149,10 +154,10 @@
       </div>
 
       <!-- Expertise Grid -->
-      <div class="expertise__grid container">
+      <div class="three-column__grid container text-center">
 
          <!-- Grid Item 1 -->
-         <div class="expertise__grid-item-1">
+         <div class="three-column__grid-item">
 
             <?php
                $first_grid_item = get_field('first_grid_item');
@@ -175,7 +180,7 @@
          </div>
 
          <!-- Grid Item 2 -->
-         <div class="expertise__grid-item-2">
+         <div class="three-column__grid-item">
 
             <?php
                $second_grid_item = get_field('second_grid_item');
@@ -198,7 +203,7 @@
          </div>
 
          <!-- Grid Item 3 -->
-         <div class="expertise__grid-item-3">
+         <div class="three-column__grid-item">
 
             <?php
                $third_grid_item = get_field('third_grid_item');
@@ -221,7 +226,7 @@
          </div>
 
          <!-- Grid Item 4 -->
-         <div class="expertise__grid-item-4">
+         <div class="three-column__grid-item">
 
             <?php
                $fourth_grid_item = get_field('fourth_grid_item');
@@ -244,7 +249,7 @@
          </div>
 
          <!-- Grid Item 5 -->
-         <div class="expertise__grid-item-5">
+         <div class="three-column__grid-item">
 
             <?php
                $fifth_grid_item = get_field('fifth_grid_item');
@@ -267,7 +272,7 @@
          </div>
 
          <!-- Grid Item 6 -->
-         <div class="expertise__grid-item-6">
+         <div class="three-column__grid-item">
 
             <?php
                $sixth_grid_item = get_field('sixth_grid_item');
@@ -581,7 +586,7 @@
    <!-- Second Parallax -->
    <section class="parallax">
 
-      <!-- Slider Revolution First Parallax ACF -->
+      <!-- Slider Revolution Second Parallax ACF -->
       <?php
          if (get_field('parallax_shortcode_2')) {
              echo do_shortcode(get_field('parallax_shortcode_2'));

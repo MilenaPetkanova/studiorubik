@@ -12,6 +12,13 @@ function studiorubik_menus(){
     ));
 }
 
+// // Mediaelement.js Settins
+// add_action( 'wp_enqueue_scripts', 'my_mediaelement_settings' );
+// function my_mediaelement_settings() {
+//     wp_deregister_script( 'wp-mediaelement' );
+//     wp_register_script( 'wp-mediaelement', get_stylesheet_directory_uri() . "/vendors/mediaelement/wp-mediaelement.js", array( 'mediaelement' ), false, true );
+// }
+
 // Add Stylesheets and Javascript files
 function studiorubik_scripts() {
 
@@ -23,7 +30,7 @@ function studiorubik_scripts() {
     // Bx Slider Stylesheet
     if (is_front_page()):
         // Call Bx Slider only on the Front Page
-        wp_enqueue_style('bxslidercss', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12', ); // Bx Slider
+        wp_enqueue_style('bxslidercss', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12'); // Bx Slider
     endif;
 
 
@@ -34,10 +41,10 @@ function studiorubik_scripts() {
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true); //jQuery
 
-    // Bx Slider JavaScript
+    // // Bx Slider JavaScript
     if (is_front_page()):
         // Call Bx Slider only on the Front Page
-        wp_enqueue_script('bxsliderjs', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array(), '4.2.12', ); // Bx Slider
+        wp_enqueue_script('bxsliderjs', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array(), '4.2.12' );  
     endif;
 
 
@@ -45,6 +52,7 @@ function studiorubik_scripts() {
 
 }
 add_action('wp_enqueue_scripts', 'studiorubik_scripts');
+
 
 //Enable custom features
 function studiorubik_setup() {
@@ -61,7 +69,7 @@ function studiorubik_setup() {
     // Register new image size
     add_image_size('square', 450, 450, true);
     add_image_size('mediumSize', 700, 400, true);
-
+    add_image_size('portrait', 350, 724, true);
 }
 
 //Create the Widget Zone
@@ -77,5 +85,11 @@ add_action('widgets_init', 'gymfitness_widgets');
 
 //When the theme is activated and ready!
 add_action('after_setup_theme', 'studiorubik_setup');
+
+
+
+@ini_set( 'upload_max_size' , '350M' );
+@ini_set( 'post_max_size', '50M');
+@ini_set( 'max_execution_time', '300' );
 
 ?>

@@ -75,7 +75,7 @@ button {
     opacity: 0;
 }
 
-// Section Headings
+// Section Headings on the Landing Page
 .section-heading {
     position: relative;
     margin: 15rem auto 6rem;
@@ -103,6 +103,14 @@ button {
     }
 }
 
+
+// Section Headings on the Page
+.inner-page .section-heading {
+    h2 {
+        left: 0;
+    }
+}
+
 .cf:before,
 .cf:after {
     content: " ";
@@ -113,13 +121,49 @@ button {
     clear: both;
 }
 
-// Buttons
-
-.button {
-    text-transform: uppercase;
+// Remove empty paragraph tags
+p:empty {
+    @extend .hidden;
 }
+
+// Page Template
+.two-column-content {
+    column-count: 2;
+    width: 100%
+}
+
+// Parallax global style rules
+.fixed-image-attribute {
+    rs-sbg {
+        background-attachment: fixed;
+    }
+
+}
+
+// About Us Page Template
+article p {
+    margin: 0 auto;
+}
+
+
+//About Us Team
+
+
+// Media Element JS
+.mejs-container .mejs-controls, .mejs-overlay-play {
+    display: none!important;
+    @extend .hidden;
+}
+// Team Section Videos
+.team-video:hover {
+    transition: filter 0.5s ease-in-out;
+    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(0%); /* FF 35+ */
+}
+
 
 @import './../../components/front-page/expertise/expertise';
 @import './../../components/front-page/clients/clients';
 @import './../../components/front-page/testimonials/testimonials';
+@import './../../components/about-us/team';
 @import './../footer/footer-menu/footer-menu.scss'

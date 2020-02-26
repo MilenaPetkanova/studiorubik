@@ -6,6 +6,8 @@ import burgerMenu from './components/burger-menu/burger-menu';
 
 import portfolioCube from './components/front-page/portfolio/portfolio';
 
+import teamProfiles from './components/about-us/team';
+
 $('#return-to-top').click(function () { // When arrow is clicked
     $('body,html').animate({
         scrollTop: 0
@@ -16,13 +18,17 @@ $('#return-to-top').click(function () { // When arrow is clicked
 $(document).ready(function () {
 
     // helloWorld();
-
+    
     burgerMenu();
 
-    portfolioCube();
 
-    // Init testimonials only on the landing page
+
+    // Init only on the landing page
     if ($('body.home').length) {
+        
+        //Init the 3D Cube on the Landing Page
+        portfolioCube();
+
         //Init the bxSlider library on testimonials
         $('.testimonials-list').bxSlider({
             auto: true,
@@ -31,6 +37,17 @@ $(document).ready(function () {
             maxSlides: 5,
             controls: false
         });
+
     }
 
+    // Init only on the About Us page
+    if ($('body.page-template-page-about-us').length) {
+
+        //Init the 3D Cube on the Landing Page
+        teamProfiles();
+    }
+
+
+
 });
+

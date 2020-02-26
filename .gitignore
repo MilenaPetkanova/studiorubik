@@ -38,3 +38,11 @@ plugins/newsletter/
 plugins/newsletter/
 plugins/newsletter-extensions/
 .idea/
+plugins/all-in-one-wp-migration/
+plugins/duplicator/
+plugins/export-media-library/
+plugins/revslider-explodinglayers-addon/
+plugins/revslider-particles-addon/
+plugins/revslider-404-addon/
+plugins/revslider-duotonefilters-addon/
+

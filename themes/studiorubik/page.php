@@ -1,8 +1,11 @@
 <!-- Get the header function -->
 <?php get_header() ?>
 
-<!-- page.php Main element -->
-<main class="container page section no-sidebars">
+<!-- Main element -->
+<main class="inner-page">
+
+    <!-- This template part gets blog-loop.php from the template-parts folder and inserts it in the given page -->
+    <?php get_template_part('template-parts/page','loop'); ?>
     <p>Hello from page.php</p>
 
 </main>
