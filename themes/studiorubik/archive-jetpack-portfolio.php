@@ -9,11 +9,13 @@ get_header()?>
 <!-- Main element -->
 <main class="inner-page portfolio-page-template">
 
-    <ul id="filters">
+    <!-- Portfolio Filters -->
+    <section class="portfolio-filters">
+        <ul id="filters">
             <?php
                 $terms = get_terms("jetpack-portfolio-type"); //change to a different POST TYPE (Jetpack Portfolio Project/Category Type)
                 $count = count($terms);
-                    echo '<li><a href="javascript:void(0)" title="All" data-filter=".all" class="active">All</a></li>'; //default "All"
+                echo '<li><a href="javascript:void(0)" title="All" data-filter=".all" class="active">All</a></li>'; //default "All"
                 if ( $count > 0 ){
 
                     foreach ( $terms as $term ) {
@@ -24,46 +26,62 @@ get_header()?>
                     }
                 }
             ?>
-    </ul>
+        </ul>
+    </section>
 
-    <!-- Let's list our Portfolio Projects-->
-    <div id="portfolio">
+    <!-- Display The Content -->
+    <section class="container">
+
+    </section>
+
+    <!-- Isotope Grid -->
+    <section id="portfolio">
+
+        <!-- Sizing element for isotope.js -->
+        <div class="portfolio-sizer"></div>
 
         <?php
-        $args = array( 'post_type' => 'jetpack-portfolio', 'posts_per_page' => -1 ); //list all projects from Jetpack Portfolio
+
+        //list all projects from Jetpack Portfolio
+        $args = array( 'post_type' => 'jetpack-portfolio', 'posts_per_page' => -1 );
         $loop = new WP_Query( $args );
-            while ( $loop->have_posts() ) : $loop->the_post();
+        while ( $loop->have_posts() ) : $loop->the_post();
 
-        $terms = get_the_terms( $post->ID, 'jetpack-portfolio-type' );	//get our portfolio categories to a single project
-                if ( $terms && ! is_wp_error( $terms ) ) :
+            //get our portfolio categories to a single project
+            $terms = get_the_terms( $post->ID, 'jetpack-portfolio-type' );
+            if ( $terms && ! is_wp_error( $terms ) ) :
 
-                    $links = array();
+                $links = array();
 
-                    foreach ( $terms as $term ) {
-                        $links[] = $term->name;
-                    }
+                foreach ( $terms as $term ) {
+                    $links[] = $term->name;
+                }
 
-                    $tax_links = join( " ", str_replace(' ', '-', $links));
-                    $tax = strtolower($tax_links);
-                else :
-                $tax = '';
-                endif;
+                $tax_links = join( " ", str_replace(' ', '-', $links));
+                $tax = strtolower($tax_links);
+                else : $tax = '';
+            endif;
 
-                //Style our single project
-                echo '<div class="all portfolio-item '. $tax .'">'; //Important! Without the correct tax your filters won't work! This MUST be your Project CATEGORY!
+            //Style our single project
+            echo '<div class="all portfolio-item '. $tax .'">'; //This MUST Project CATEGORY!
+
+                // Article Tag with ID
                 echo '<article id="post-'.get_the_ID().'">';
-                if ( has_post_thumbnail() ) {the_post_thumbnail();}
-                    echo '<div class="mask">
-                    <h2><a href=" '.get_the_permalink().'">'.get_the_title().'</a></h2>
-                    <p class="category">'.get_the_term_list($post->ID, 'jetpack-portfolio-type', '', ' / ', '').'
-                    </p>
-                    <span class="date">'.get_the_modified_date().'</span></p>
-                    </div>';
-                    echo '</article>';
-                    echo '</div>';
+
+                    // Echo the figure containing the image and the caption
+                    echo '<figure class="grid-item-figure">';
+
+                        if ( has_post_thumbnail() ) { the_post_thumbnail();}
+                        // The Figure Caption Containing the heading element
+                        echo '<figcaption><h2><a href=" ' . get_the_permalink() . '">' . get_the_title() . '</a></h2></figcaption>';
+
+                    echo '</figure>';
+
+                echo '</article>';
+            echo '</div>';
         endwhile; ?>
 
-    </div><!-- #portfolio -->
+    </section><!-- #portfolio -->
 
 
 </main>

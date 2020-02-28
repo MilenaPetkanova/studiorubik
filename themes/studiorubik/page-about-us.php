@@ -505,7 +505,7 @@ get_header() ?>
         <?php get_template_part('template-parts/page','loop'); ?>
     </div>
 
-    <!-- Display the Sidebar -->
+    <!-- Display the Sidebar --> 
     <?php get_sidebar(); ?>
 
 </main>

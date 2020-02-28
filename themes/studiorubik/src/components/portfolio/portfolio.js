@@ -12,9 +12,11 @@ function portfolioPage() {
         $container.imagesLoaded(function () {
             $container.isotope({
                 itemSelector: '.portfolio-item',
+                percentPosition: true,
                 layoutMode: 'masonry',
                 masonry: {
-                    gutter: 15
+                    gutter: 0,
+                    columnWidth: '.portfolio-sizer'
                 }
             });
         });
