@@ -1,9 +1,9 @@
-<?php 
-/* 
+<?php
+/*
 Template Name: Front Page Template
 */
 
-//  Get the header function 
+//  Get the header function
 get_header()?>
 
 <?php while (have_posts()): the_post();?>
@@ -89,7 +89,7 @@ get_header()?>
       <div class="button-container">
 
          <!-- Button with fill -->
-         <a href="/projects" title="more projects" class="button button--fill">more projects</a>
+         <a href="/portfolio" title="more projects" class="button button--fill">more projects</a>
 
       </div>
 
@@ -636,7 +636,7 @@ get_header()?>
       </ul>
 
    </section>
-   
+
    <!-- Page Content Block -->
    <section>
 

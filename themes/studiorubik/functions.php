@@ -12,13 +12,6 @@ function studiorubik_menus(){
     ));
 }
 
-// // Mediaelement.js Settins
-// add_action( 'wp_enqueue_scripts', 'my_mediaelement_settings' );
-// function my_mediaelement_settings() {
-//     wp_deregister_script( 'wp-mediaelement' );
-//     wp_register_script( 'wp-mediaelement', get_stylesheet_directory_uri() . "/vendors/mediaelement/wp-mediaelement.js", array( 'mediaelement' ), false, true );
-// }
-
 // Add Stylesheets and Javascript files
 function studiorubik_scripts() {
 
@@ -41,12 +34,17 @@ function studiorubik_scripts() {
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true); //jQuery
 
-    // // Bx Slider JavaScript
+    // Bx Slider JavaScript
     if (is_front_page()):
         // Call Bx Slider only on the Front Page
-        wp_enqueue_script('bxsliderjs', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array(), '4.2.12' );  
+        wp_enqueue_script('bxsliderjs', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array(), '4.2.12' );
     endif;
 
+    // IsotopeJS
+    if (is_post_type_archive('jetpack-portfolio') || is_home() || is_front_page()) {
+        wp_enqueue_script('isotope', get_template_directory_uri() .'./vendors/isotope/isotope.pkgd.min.js', array(), '3.0.6', true);
+        wp_enqueue_script('imagesloaded',  get_template_directory_uri() .'./vendors/isotope/imagesloaded.pkgd.min.js', array(), '4.1.4', true);
+    }
 
     wp_enqueue_script('bundlejs', get_template_directory_uri() . '/dist/bundle.js', array(), null, true); //jQuery
 

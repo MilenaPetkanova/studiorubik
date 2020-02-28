@@ -5,7 +5,7 @@ import helloWorld from './components/global/main';
 import burgerMenu from './components/burger-menu/burger-menu';
 
 import portfolioCube from './components/front-page/portfolio/portfolio';
-
+import portfolioPage from './components/portfolio/portfolio';
 import teamProfiles from './components/about-us/team';
 
 $('#return-to-top').click(function () { // When arrow is clicked
@@ -17,15 +17,14 @@ $('#return-to-top').click(function () { // When arrow is clicked
 // Run this when the document has finished loading
 $(document).ready(function () {
 
-    // helloWorld();
-    
+    // Initiate the Burger Menu
     burgerMenu();
 
 
 
     // Init only on the landing page
     if ($('body.home').length) {
-        
+
         //Init the 3D Cube on the Landing Page
         portfolioCube();
 
@@ -47,7 +46,9 @@ $(document).ready(function () {
         teamProfiles();
     }
 
-
-
+    // Init only on the Portfolio Page
+    if ($('.portfolio-page-template').length) {
+        //Init the Isotope Grid
+        portfolioPage();
+    }
 });
-
