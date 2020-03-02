@@ -78,7 +78,7 @@ button {
 // Section Headings on the Landing Page
 .section-heading {
     position: relative;
-    margin: 15rem auto 6rem;
+    margin: 15rem auto 6rem auto;
 
     h3 {
         font-family: "SohoGothicPro-Bold";
@@ -101,8 +101,28 @@ button {
         margin: 0;
         left: -2rem;
     }
+
+    p {
+        text-transform: initial;
+        max-width: 50%;
+    }
 }
 
+.portfolio__text{
+    max-width: 50%;
+}
+
+.about-us__article {
+    margin-bottom: 15rem;
+}
+
+.two-column-content p {
+    padding-right: 2rem;
+}
+
+// .inner-page {
+//     background-color: magenta!important;
+// }
 
 // Section Headings on the Page
 .inner-page .section-heading {

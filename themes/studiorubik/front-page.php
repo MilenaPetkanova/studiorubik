@@ -1,10 +1,12 @@
 <?php
+
 /*
 Template Name: Front Page Template
 */
 
 //  Get the header function
-get_header()?>
+get_header('front');
+?>
 
 <?php while (have_posts()): the_post();?>
 <!-- front-page.php Main element -->
@@ -16,7 +18,7 @@ get_header()?>
       <!-- Slider Revolution Video ACF -->
       <?php
          if (get_field('slider_revolution_shortcode_-_hero_video')) {
-             echo do_shortcode(get_field('slider_revolution_shortcode_-_hero_video'));
+            echo do_shortcode(get_field('slider_revolution_shortcode_-_hero_video'));
          }
       ?>
 
@@ -31,6 +33,11 @@ get_header()?>
          <h3><?php the_field('portfolio_section_heading')?></h3>
          <h2><?php the_field('portfolio_section_heading')?></h2>
 
+      </div>
+
+      <!-- Portfolio Section Text -->
+      <div class="portfolio__text">
+         <p><?php the_field('portfolio_section_text')?></p>
       </div>
 
       <!-- Portfolio Cube ACF Varibales -->

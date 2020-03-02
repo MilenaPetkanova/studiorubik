@@ -11,18 +11,18 @@ get_header()?>
 
     <!-- Portfolio Filters -->
     <section class="portfolio-filters">
-        <ul id="filters">
+        <ul id="filters" class="container text-upper">
             <?php
                 $terms = get_terms("jetpack-portfolio-type"); //change to a different POST TYPE (Jetpack Portfolio Project/Category Type)
                 $count = count($terms);
-                echo '<li><a href="javascript:void(0)" title="All" data-filter=".all" class="active">All</a></li>'; //default "All"
+                echo '<li class="portfolio-filter-item"><a class="inner-filter" href="javascript:void(0)" title="All" data-filter=".all" class="active">All projects</a></li>'; //default "All"
                 if ( $count > 0 ){
 
                     foreach ( $terms as $term ) {
 
                         $termname = strtolower($term->name);
                         $termname = str_replace(' ', '-', $termname);
-                        echo '<li><a href="javascript:void(0)" data-filter=".'.$termname.'">'.$term->name.'</a></li>'; //show our custom post type categories
+                        echo '<li class="portfolio-filter-item"><a class="inner-filter" href="javascript:void(0)" data-filter=".'.$termname.'">'.$term->name.'</a></li>'; //show our custom post type categories
                     }
                 }
             ?>
@@ -31,6 +31,18 @@ get_header()?>
 
     <!-- Display The Content -->
     <section class="container">
+
+        <!-- Headings -->
+        <div class="section-heading text-upper">
+            <h3>The Process</h3>
+            <h2>The Process</h2>
+        </div>
+
+        <!-- Portfolio Section Text -->
+        <article class="about-us__article two-column-content container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet. </p>
+            <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </article>
 
     </section>
 

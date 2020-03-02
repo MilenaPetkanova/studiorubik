@@ -12,10 +12,9 @@
     left: 0;
     right: 0;
     z-index: 8;
-    padding-top: 10rem;
     margin-left: auto;
     margin-right: auto;
-
+    padding: 5rem 0;
     &.show-nav {
         .hamburger {
             opacity: 1;
@@ -30,6 +29,10 @@
             transition: opacity .5s cubic-bezier(.694, .048, .335, 1);
         }
     }
+}
+
+.inner-page-header {
+    position: relative;
 }
 
 // Burger Menu

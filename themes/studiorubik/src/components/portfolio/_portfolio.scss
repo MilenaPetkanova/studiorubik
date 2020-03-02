@@ -1,11 +1,11 @@
+@import '../global/typography.scss';
+@import '../global/variables.scss';
+@import '../global/mixins.scss';
 /* force scrollbar, prevents initial gap */
 html {
     overflow-y: scroll;
 }
 
-.inner-page {
-    background-color: magenta!important;
-}
 /* ---- grid ---- */
 
 /* clear fix */
@@ -24,12 +24,8 @@ html {
 }
 
 .portfolio-item {
+    margin-bottom: 7rem;
     float: left;
-}
-
-// IDO StyleSheets
-
-.portfolio-item {
     figure {
         overflow: hidden;
         cursor: pointer;
@@ -37,6 +33,7 @@ html {
 
         img {
             width: 100%;
+            transform: scale3d(1.02, 1.02, 1);
         }
 
         figcaption {
@@ -78,7 +75,7 @@ html {
 
             &:hover {
                 img {
-                    transform: scale3d(1.05, 1.05, 1);
+                    transform: scale3d(1.1, 1.1, 1);
                     transition: transform 0.35s;
                 }
 
@@ -105,3 +102,29 @@ html {
         }
     }
 }
+
+.portfolio-filter-item {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-family: "SohoGothicPro-Medium";
+    color:#8b8a8d;
+    max-width: 14rem;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 7rem;
+}
+
+// #filters {
+//     display: table;
+// }
+
+.portfolio-filters {
+    background-color: $gray;
+    padding: 2.3rem 0;
+
+}
+
+.portfolio-filter-item-active {
+    color:$black;
+}
+

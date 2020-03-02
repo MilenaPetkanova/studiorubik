@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
 
     <!-- Site Header -->
-    <header class="site-header container inner-page-header">
+    <header class="site-header container front-page-header">
 
         <!-- Get the Logo -->
         <a id="header-logo" href="<?php echo esc_url(home_url('/')); ?>">

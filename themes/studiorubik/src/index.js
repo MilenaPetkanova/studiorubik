@@ -20,7 +20,12 @@ $(document).ready(function () {
     // Initiate the Burger Menu
     burgerMenu();
 
-
+    $('.inner-filter').each(function () {
+        console.log($(this).text());
+        var text = $(this).text().replace('&amp', '&');
+        $(this).text(text);
+        console.log('changed HTML');
+    });
 
     // Init only on the landing page
     if ($('body.home').length) {
@@ -51,4 +56,6 @@ $(document).ready(function () {
         //Init the Isotope Grid
         portfolioPage();
     }
+
+
 });
