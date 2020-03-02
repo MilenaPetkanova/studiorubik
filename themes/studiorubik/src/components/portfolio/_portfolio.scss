@@ -24,7 +24,6 @@ html {
 }
 
 .portfolio-item {
-    margin-bottom: 7rem;
     float: left;
     figure {
         overflow: hidden;
@@ -41,6 +40,7 @@ html {
 
             h2 {
                 font-size: 2.5rem;
+                margin: 0 auto;
 
                 span {
                     font-weight: 700;

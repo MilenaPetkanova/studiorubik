@@ -15,7 +15,7 @@ get_header()?>
             <?php
                 $terms = get_terms("jetpack-portfolio-type"); //change to a different POST TYPE (Jetpack Portfolio Project/Category Type)
                 $count = count($terms);
-                echo '<li class="portfolio-filter-item"><a class="inner-filter" href="javascript:void(0)" title="All" data-filter=".all" class="active">All projects</a></li>'; //default "All"
+                echo '<li class="portfolio-filter-item"><a class="inner-filte-r" href="javascript:void(0)" title="All" data-filter=".all" class="active">All projects</a></li>'; //default "All"
                 if ( $count > 0 ){
 
                     foreach ( $terms as $term ) {
@@ -91,11 +91,11 @@ get_header()?>
 
                 echo '</article>';
             echo '</div>';
-        endwhile; ?>
-
-    </section><!-- #portfolio -->
+        endwhile; wp_reset_query(); ?>
 
 
+
+        </section><!-- #portfolio -->
 </main>
 
 <!-- Get the footer function -->
