@@ -93,8 +93,6 @@ get_header()?>
             echo '</div>';
         endwhile; wp_reset_query(); ?>
 
-
-
         </section><!-- #portfolio -->
 </main>
 

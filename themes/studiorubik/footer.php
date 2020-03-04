@@ -108,7 +108,7 @@
 
         <!-- Footer Newsletter -->
         <div class="site-footer__menu__list footer-newsletter">
-               <h5 class="text-upper">Newsletter</h5>
+            <h5 class="text-upper">Newsletter</h5>
 
             <?php get_sidebar(); ?>
 

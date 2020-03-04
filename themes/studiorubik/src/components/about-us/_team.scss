@@ -1,12 +1,17 @@
+@import '../global/typography.scss';
+@import '../global/variables.scss';
+@import '../global/mixins.scss';
 $hexagon-width: 295px;
 $hexagon-height: $hexagon-width*.585;
 $hexagon-margin: 0;
-$hexagon-title-color: #fff;
-$hexagon-border-color: #fff;
+$hexagon-title-color: $black;
+$hexagon-border-color:$white;
 $hexagon-image-color: rgba(255, 255, 255, 1);
-$viewport-thereshold: $hexagon-width + $hexagon-margin;
+$viewport-thereshold: $hexagon-width+$hexagon-margin;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -27,7 +32,6 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
     margin: $hexagon-height/2.1 auto $hexagon-height/2.1;
     position: relative;
     // padding: 0.5em;
-
     text-align: center;
     z-index: 1;
 
@@ -41,12 +45,12 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
       word-break: break-word;
       text-transform: uppercase;
       color: #fff;
-      opacity:0;
+      opacity: 0;
       transition: opacity 350ms;
 
       .name {
         font-family: "SohoGothicPro-Bold", sans-serif;
-        font-size: 2.4rem;
+        font-size: 1.8rem;
         margin: 0 auto;
         letter-spacing: 2px;
         margin-bottom: 0.5rem;
@@ -54,22 +58,26 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
 
       .description {
         font-family: "SohoGothicPro-regular", sans-serif;
-        font-size: 2.2rem;
+        font-size: 1.6rem;
         margin: 0 auto;
+        letter-spacing: 0.72px;
       }
-      
+
     }
 
     &__video {
       object-fit: cover;
       object-position: center;
     }
-    
-    &::before, &::after {
+
+    &::before,
+    &::after {
       content: '';
     }
 
-    &::before, &::after, &__video {
+    &::before,
+    &::after,
+    &__video {
       top: -50%;
       left: 0;
       width: 100%;
@@ -86,39 +94,57 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
     }
 
     &::after {
-      background: $hexagon-image-color;
+      background: $black;
       opacity: 0;
       transition: opacity 350ms;
     }
 
     &:hover {
-      
+
       .honeycomb-cell__title {
-        opacity:1;
+        opacity: 1;
         transition: opacity 350ms;
       }
-      
+
       &::after {
-        opacity: 0.6;
+        opacity: 0.5;
       }
     }
   }
 
-  &__placeholder{
-    display:none;
+  &__placeholder {
+    display: none;
     opacity: 0;
     width: $hexagon-width;
     margin: 0 $hexagon-margin/2;
   }
 }
 
-@media (max-width:#{2*$viewport-thereshold}){
+@media (max-width:#{2*$viewport-thereshold}) {
   .honeycomb-cell {
     margin: #{$hexagon-margin/2 + $hexagon-height/2} $hexagon-margin;
   }
 }
 
 
-.team .three-column__grid-item{
-    margin-bottom: 7.5rem;
+.team .three-column__grid-item {
+  margin-bottom: 7.5rem;
+}
+
+// Last Hexagon in the about us page
+.team .three-column__grid-item:last-of-type {
+  //  Custom Background color for the last hexagon
+
+  .honeycomb-cell::before {
+    background-color: $black;
+  }
+
+  // Visible description
+  .honeycomb-cell__title {
+    opacity: 1;
+
+    .description {
+      font-family: "SohoGothicPro-Bold";
+    }
+  }
 }

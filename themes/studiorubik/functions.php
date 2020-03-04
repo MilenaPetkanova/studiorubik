@@ -1,5 +1,9 @@
 <?php
 
+// Link to the classes file in /inc
+require get_template_directory() . '/inc/queries.php';
+
+
 // Creates and add the menus
 function studiorubik_menus(){
     //Wordpress function
@@ -71,7 +75,7 @@ function studiorubik_setup() {
 }
 
 //Create the Widget Zone
-function gymfitness_widgets() {
+function studiorubik_widgets() {
     register_sidebar(array(
         'name' => 'Sidebar',
         'id' => 'sidebar',
@@ -79,7 +83,7 @@ function gymfitness_widgets() {
         'after_title' => '</h5>'
     ));
 }
-add_action('widgets_init', 'gymfitness_widgets');
+add_action('widgets_init', 'studiorubik_widgets');
 
 //When the theme is activated and ready!
 add_action('after_setup_theme', 'studiorubik_setup');

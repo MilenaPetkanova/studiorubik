@@ -480,7 +480,7 @@ get_header() ?>
                         <!-- Name & Title -->
                         <div class="honeycomb-cell__title text-upper">
                             <p class="name"><?php echo $person_name ?></p>
-                            <p class="description"><?php echo $person_description ?></p>
+                           <a href="/careers"><p class="description"><?php echo $person_description ?></p></a>
                         </div>
                     </div>
 
@@ -505,7 +505,7 @@ get_header() ?>
         <?php get_template_part('template-parts/page','loop'); ?>
     </div>
 
-    <!-- Display the Sidebar --> 
+    <!-- Display the Sidebar -->
     <?php get_sidebar(); ?>
 
 </main>
