@@ -2,7 +2,7 @@
 <?php get_header() ?>
 
 <!-- Main element -->
-<main class="inner-page">
+<main class="inner-page clients-inner-page">
 
     <section class="clients">
 
@@ -16,8 +16,6 @@
         <?php studiorubik_clients_list(); ?>
 
     </section>
-
-
 
 </main>
 

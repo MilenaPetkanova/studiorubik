@@ -341,7 +341,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -359,7 +359,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -377,7 +377,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -395,7 +395,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -413,7 +413,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -431,7 +431,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -449,7 +449,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -467,7 +467,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -484,7 +484,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -502,7 +502,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -520,7 +520,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -538,7 +538,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -556,7 +556,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 
@@ -574,7 +574,7 @@ get_header('front');
             <figure>
                <img class="" src="<?php echo $logo ?>" />
                <a href="#">
-                  <h5 class="text-upper">see projects</h5>
+                  <h5 class="text-upper text-center">see <br> projects</h5>
                </a>
             </figure>
 

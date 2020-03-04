@@ -17,8 +17,8 @@
 					<figure>
 						<!-- Get Client Post Image Thumbnail -->
 	                	<?php the_post_thumbnail('mediumSize');?>
-						<a href="<?php the_permalink();?>">
-							<h5><?php the_title();?></h5>
+						<a class="text-center text-upper" href="<?php the_permalink();?>">
+							<h5>See <br> Projects</h5>
 						</a>
 					</figure>
 
