@@ -2,9 +2,9 @@
 Contributors: yani.iliev, bangelov, pimjitsawang
 Tags: move, transfer, copy, migrate, backup, clone, restore, db migration, wordpress migration, website migration, database export, database import, apoyo, sauvegarde, di riserva, バックアップ
 Requires at least: 3.3
-Tested up to: 5.3
+Tested up to: 5.2
 Requires PHP: 5.2.17
-Stable tag: 7.17
+Stable tag: 7.5
 License: GPLv2 or later
 
 Move, transfer, copy, migrate, and backup a site with 1-click. Quick, easy, and reliable.
@@ -15,7 +15,7 @@ Upload your site to a different location with a drag and drop in to WordPress.
 There is an option to apply an unlimited number of find and replace operations on your database during the export process. The plugin will also fix any
 serialisation problems that occur during the find/replace operation.
 
-Mobile device compatible: All-in-One WP Migration is the first plugin to offer true mobile experience on WordPress versions 3.3 and up.
+Mobile device compatible: All in One WP Plugin is the first plugin to offer true mobile experience on WordPress versions 3.3 and up.
 
 = No limitations on host or operating system =
 * We have tested the plugin on the major Linux distributions, MacOS and Microsoft Windows.
@@ -63,7 +63,6 @@ Mobile device compatible: All-in-One WP Migration is the first plugin to offer t
 * [pCloud](https://servmask.com/products/pcloud-extension)
 * [WebDAV](https://servmask.com/products/webdav-extension)
 * [S3 Client](https://servmask.com/products/s3-client-extension)
-* [Direct](https://servmask.com/products/direct-extension)
 
 = Supported hosting providers =
 **The plugin does not have any dependencies, making it compatible with all PHP hosting providers. We support a vast range of hosting providers. Some of the most popular include:**
@@ -72,6 +71,7 @@ Mobile device compatible: All-in-One WP Migration is the first plugin to offer t
 * Bluehost
 * InMotion
 * Web Hosting Hub
+* Siteground
 * Pagely
 * Dreamhost
 * Justhost
@@ -108,84 +108,6 @@ Alternatively you can download the plugin using the download button on this page
 All-in-One WP Migration **asks for your consent** to collect **requester's email address** when filling plugin's contact form. [GDPR Compliant Privacy Policy](https://www.iubenda.com/privacy-policy/946881)
 
 == Changelog ==
-= 7.17 =
-**Fixed**
-
-* Compatibility with Apache v2.4 .htaccess. Thanks Pieter Daalder for reporting it.
-
-= 7.16 =
-**Added**
-
-* Store upload_path in the backup
-
-= 7.15 =
-**Added**
-
-* Exclude web.config and .htaccess direct access from each other
-
-**Fixed**
-
-* Long backup names break download button layout
-
-= 7.14 =
-**Added**
-
-* Display a message when disk space is not enough while importing a file
-
-**Changed**
-
-* Text improvements during import
-
-= 7.13 =
-**Added**
-
-* Support for Freemius framework
-* Include table views between migrations
-
-= 7.12 =
-**Added**
-
-* Display a message when MySQL server [exceeds a limit](https://help.servmask.com/knowledgebase/mysql-error-codes/)
-
-= 7.11 =
-**Added**
-
-* Support for Webba Booking plugin
-* Support for utf8mb4_0900_ai_ci collation in MySQL v8.0.1+
-
-= 7.10 =
-**Added**
-
-* Better support for WP Engine platform
-
-= 7.9 =
-**Added**
-
-* Uploads, plugins, and themes path to the backup
-
-**Removed**
-
-* Sorting of active plugins on import
-
-= 7.8 =
-**Added**
-
-* Better support for Elementor plugin
-
-**Fixed**
-
-* Skip files from wp-content when exporting only database
-
-= 7.7 =
-**Changed**
-
-* Enhanced support for old versions of revslider plugin
-
-= 7.6 =
-**Added**
-
-* Direct Extension
-
 = 7.5 =
 **Changed**
 

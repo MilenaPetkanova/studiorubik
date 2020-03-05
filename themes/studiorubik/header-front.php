@@ -10,6 +10,9 @@
 
 <body <?php body_class(); ?>>
 
+    <!-- Call the page Loader -->
+    <?php get_template_part('template-parts/page', 'loader'); ?>
+
     <!-- Site Header -->
     <header class="site-header container front-page-header">
 

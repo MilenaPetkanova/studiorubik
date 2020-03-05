@@ -55,5 +55,12 @@ $(document).ready(function () {
         });
     }
 
+    // $('.loader-container').fadeOut();
 
 });
+
+// Run this when everything is ready loading ( images,  styles, etc)
+window.onload = function () {
+    // Loader fade out
+    $('.loader-container').fadeOut();
+}

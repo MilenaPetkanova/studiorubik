@@ -311,7 +311,7 @@ get_header('front');
       <!-- Slider Revolution First Parallax ACF -->
       <?php
          if (get_field('parallax_shortcode')) {
-             echo do_shortcode(get_field('parallax_shortcode'));
+            echo do_shortcode(get_field('parallax_shortcode'));
          }
       ?>
 
