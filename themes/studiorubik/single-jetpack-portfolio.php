@@ -15,9 +15,9 @@
     </section>
 
     <!-- Section Containing: Client Name / Year / Services Provided & Video Lightbox-->
-    <section class="container misc-section">
+    <section class="misc-section text-upper">
         <!-- Misc. -->
-        <div class="">
+        <div class="container ">
             <?php
                 $misc = get_field('misc_section');
                 $client = $misc['client'];
@@ -27,9 +27,9 @@
 
                 if ($misc): ?>
 
-            <p>client:<?php echo $client ?></p>
-            <p>year:<?php echo $year ?></p>
-            <p>services:<?php echo $services ?></p>
+                <p><b>client: </b><?php echo $client ?> <b>&nbsp;|&nbsp;</b></p>
+                <p><b>year: </b><?php echo $year ?> <b>&nbsp;|&nbsp;</b> </p>
+                <p><b>services: </b><?php echo $services ?></p>
 
             <?php endif;?>
 
@@ -116,7 +116,7 @@
         <?php get_template_part('template-parts/page','loop'); ?>
     </div>
 
-    <section class="container post-navigation cf">
+    <section class="container post-navigation text-upper cf">
         <?php previous_post_link('<strong class="fleft">%link</strong>');?>
         <?php next_post_link('<strong class="fright">%link</strong>');?>
     </section>
