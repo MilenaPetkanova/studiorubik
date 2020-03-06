@@ -480,6 +480,34 @@ get_header() ?>
                         <!-- Name & Title -->
                         <div class="honeycomb-cell__title text-upper">
                             <p class="name"><?php echo $person_name ?></p>
+                            <p class="description"><?php echo $person_description ?></p>
+                        </div>
+                    </div>
+
+                <?php endif;?>
+            </div>
+
+            <!-- Grid Item 10 -->
+            <div class="three-column__grid-item">
+
+                <?php
+
+                $tenth_grid_item = get_field('team_10th_grid_item');
+                $team_video = $tenth_grid_item['grid_item_video_mp4'];
+                $poster_image = $tenth_grid_item['grid_item_poster_image'];
+                $person_name = $tenth_grid_item['grid_item_heading'];
+                $person_description = $tenth_grid_item['gird_item_description'];
+
+                if( $tenth_grid_item ): ?>
+
+                    <div class="honeycomb-cell">
+
+                        <!-- Video Element -->
+                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+
+                        <!-- Name & Title -->
+                        <div class="honeycomb-cell__title text-upper">
+                            <p class="name"><?php echo $person_name ?></p>
                            <a href="/careers"><p class="description"><?php echo $person_description ?></p></a>
                         </div>
                     </div>

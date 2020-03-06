@@ -17,7 +17,23 @@
    </section>
 
    <!-- Section Containing: Client Name / Year / Services Provided -->
-   <section class="about-section">
+   <section class="misc-section" style="background-color:magenta;">
+        <?php
+        $misc = get_field('misc_section');
+        $client = $misc['client'];
+        $year = $misc['year'];
+        $services = $misc['services'];
+
+        if( $misc  ): ?>
+
+            <p><?php echo $client ?></p>
+            <p><?php echo $year ?></p>
+            <p><?php echo $services ?></p>
+
+        <?php endif;?>
+   </section>
+
+   <section class>
 
    </section>
 

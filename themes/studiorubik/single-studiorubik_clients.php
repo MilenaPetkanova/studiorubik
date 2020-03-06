@@ -19,12 +19,13 @@
     </section>
 
     <section class="">
-    <?php
-        if (get_field('client_section_portfolio_grid_shortcode')) {
-            echo do_shortcode(get_field('client_section_portfolio_grid_shortcode'));
-        }
-    ?>
+        <?php
+            if (get_field('client_section_portfolio_grid_shortcode')) {
+                echo do_shortcode(get_field('client_section_portfolio_grid_shortcode'));
+            }
+        ?>
     </section>
+
 </main>
 
 <!-- Get the footer function -->

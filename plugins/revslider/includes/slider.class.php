@@ -1075,7 +1075,6 @@ class RevSliderSlider extends RevSliderFunctions {
 			}
 		}
 		
-		
 		//change the javascript api ID to the correct one
 		$c_slider	= new RevSliderSlider();
 		$c_slider->init_by_id($slider_last_id);
@@ -2163,7 +2162,7 @@ class RevSliderSlider extends RevSliderFunctions {
 		}
 		
 		$this->slides = $_slides;
-
+		
 		return $this->slides;
 	}
 	
