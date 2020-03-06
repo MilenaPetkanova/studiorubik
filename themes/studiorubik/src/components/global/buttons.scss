@@ -91,6 +91,7 @@ input.tnp-submit {
 
 .button--transparent-white {
     border: 0.4rem solid $white;
+
     // Top element(transparent)
     &:before {
         color: $white;
@@ -102,8 +103,51 @@ input.tnp-submit {
 
     // Bottom element(black)
     &:after {
-        color:$black;
+        color: $black;
         background-color: $white;
+        transform: rotateX(-90deg);
+        transition-delay: 0s;
+        transition-duration: .25s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+    }
+
+    // Hovers
+    &:hover {
+
+        &:before {
+            transform: rotateX(90deg);
+            transition-delay: 0s;
+            transition-duration: .25s;
+            transition-timing-function: ease-out;
+            opacity: 0;
+        }
+
+        &:after {
+            transform: rotateX(0);
+            transition-duration: .75s;
+            transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+            opacity: 1;
+        }
+    }
+}
+
+.button--transparent-black {
+    border: 0.4rem solid $black;
+
+    // Top element(transparent)
+    &:before {
+        color: $black;
+        transition-duration: .75s;
+        transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+        transition-delay: .1s;
+        opacity: 1;
+    }
+
+    // Bottom element(black)
+    &:after {
+        color: $white;
+        background-color: $black;
         transform: rotateX(-90deg);
         transition-delay: 0s;
         transition-duration: .25s;

@@ -74,6 +74,16 @@ button {
     visibility: hidden;
     opacity: 0;
 }
+.fleft {
+    float: left;
+}
+
+.fright {
+    float:right;
+}
+.margin-bottom {
+    margin-bottom: 7rem;
+}
 
 // Section Headings on the Landing Page
 .section-heading {
@@ -108,7 +118,7 @@ button {
     }
 }
 
-.portfolio__text{
+.portfolio__text {
     max-width: 50%;
 }
 
@@ -170,15 +180,19 @@ article p {
 
 
 // Media Element JS
-.mejs-container .mejs-controls, .mejs-overlay-play {
-    display: none!important;
+.mejs-container .mejs-controls,
+.mejs-overlay-play {
+    display: none !important;
     @extend .hidden;
 }
+
 // Team Section Videos
 .team-video:hover {
     transition: filter 0.5s ease-in-out;
-    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(0%); /* FF 35+ */
+    -webkit-filter: grayscale(0%);
+    /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(0%);
+    /* FF 35+ */
 }
 
 
