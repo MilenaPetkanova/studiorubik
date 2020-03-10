@@ -1,11 +1,11 @@
 <?php
 
-/*
-Template Name: Front Page Template
-*/
+   /*
+   Template Name: Front Page Template
+   */
 
-//  Get the header function
-get_header('front');
+   //  Get the header function
+   get_header('front');
 ?>
 
 <?php while (have_posts()): the_post();?>

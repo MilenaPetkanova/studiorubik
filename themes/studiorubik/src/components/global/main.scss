@@ -34,6 +34,10 @@ ul {
     list-style: none;
 }
 
+ul.hexagon-list {
+    list-style-image: url('./img/custom-li.svg');
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -74,13 +78,15 @@ button {
     visibility: hidden;
     opacity: 0;
 }
+
 .fleft {
     float: left;
 }
 
 .fright {
-    float:right;
+    float: right;
 }
+
 .margin-bottom {
     margin-bottom: 7rem;
 }
@@ -123,7 +129,7 @@ button {
 }
 
 .about-us__article {
-    margin-bottom: 15rem;
+    // margin-bottom: 15rem;
 }
 
 .two-column-content p {
@@ -159,7 +165,13 @@ p:empty {
 // Page Template
 .two-column-content {
     column-count: 2;
-    width: 100%
+    width: 100%;
+
+    ul {
+        list-style-image: url('./img/custom-li.svg');
+        max-width: 66rem;
+        font-size: 1.6rem;
+    }
 }
 
 // Parallax global style rules
@@ -195,10 +207,44 @@ article p {
     /* FF 35+ */
 }
 
+.wp-block-image {
+    margin-bottom: 0;
+}
+
+//Single Page Styles
+
+.hero-section__content {
+    position: absolute;
+    top: 5%;
+    color: $white;
+    @include centerX;
+
+    h1 {
+        font-family: "SohoGothicPro-Bold", sans-serif;
+        font-size: 3.5rem;
+
+        br {
+            display: none;
+        }
+    }
+
+    p {
+        max-width: 70rem;
+    }
+}
+
+.wp-block-separator {
+    border: none;
+    margin: 0;
+    padding: 1.75rem 0;
+}
+
+
 
 @import './../../components/front-page/expertise/expertise';
 @import './../../components/front-page/clients/clients';
 @import './../../components/front-page/testimonials/testimonials';
 @import './../../components/about-us/team';
 @import './../../components/clients-page/clients';
+@import './../../components/careers-page/careers';
 @import './../footer/footer-menu/footer-menu.scss'
