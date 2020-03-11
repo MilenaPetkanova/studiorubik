@@ -21,7 +21,7 @@
 
         <div class="hero-section__content container">
 
-            <p><?php get_template_part('template-parts/page','loop'); ?></p>
+            <p><?php the_field('hero_text')?></p>
         </div>
 
     </section>
