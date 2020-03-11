@@ -4,7 +4,9 @@
     Template Name: Contact Page
     */
 
-    get_header() ?>
+    get_header();
+
+?>
 
 <!-- Main element -->
 <main class="inner-page contacts">

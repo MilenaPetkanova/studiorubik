@@ -98,7 +98,7 @@ add_action('widgets_init', 'studiorubik_widgets');
 //When the theme is activated and ready!
 add_action('after_setup_theme', 'studiorubik_setup');
 
-@ini_set( 'upload_max_size' , '512M' );
+@ini_set( 'upload_max_size' , '1024M' );
 @ini_set( 'post_max_size', '50M');
 @ini_set( 'max_execution_time', '300' );
 
