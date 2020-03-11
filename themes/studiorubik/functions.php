@@ -54,7 +54,7 @@ function studiorubik_scripts() {
     if (basename(get_page_template()) === 'contacts-page.php'):
 
         //Google Maps Scripts
-        wp_enqueue_script('googleapikey', 'https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY', array(), '1.1.1',true);
+        wp_enqueue_script('googleapikey', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA6d0WAlGXpG9XRGySXBMk8ojaqvnYhqqQ', array(), '1.1.1',true);
         wp_enqueue_script('googleapi', 'https: //maps.googleapis.com/maps/api/js', array(), '1.1.1',true);
 
     endif;
