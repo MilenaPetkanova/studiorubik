@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2019 ServMask Inc.
+ * Copyright (C) 2014-2020 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -101,16 +101,24 @@ class Ai1wm_Import_Content {
 		foreach ( $blogs as $blog ) {
 			if ( ai1wm_main_site( $blog['Old']['BlogID'] ) === false ) {
 				if ( defined( 'UPLOADBLOGSDIR' ) ) {
-					// Old sites dir style
+					// Old files dir style
 					$old_paths[] = ai1wm_files_path( $blog['Old']['BlogID'] );
 					$new_paths[] = ai1wm_files_path( $blog['New']['BlogID'] );
+
+					// Old blogs.dir style
+					$old_paths[] = ai1wm_blogsdir_path( $blog['Old']['BlogID'] );
+					$new_paths[] = ai1wm_blogsdir_path( $blog['New']['BlogID'] );
 
 					// New sites dir style
 					$old_paths[] = ai1wm_sites_path( $blog['Old']['BlogID'] );
 					$new_paths[] = ai1wm_files_path( $blog['New']['BlogID'] );
 				} else {
-					// Old sites dir style
+					// Old files dir style
 					$old_paths[] = ai1wm_files_path( $blog['Old']['BlogID'] );
+					$new_paths[] = ai1wm_sites_path( $blog['New']['BlogID'] );
+
+					// Old blogs.dir style
+					$old_paths[] = ai1wm_blogsdir_path( $blog['Old']['BlogID'] );
 					$new_paths[] = ai1wm_sites_path( $blog['New']['BlogID'] );
 
 					// New sites dir style
@@ -124,16 +132,24 @@ class Ai1wm_Import_Content {
 		foreach ( $blogs as $blog ) {
 			if ( ai1wm_main_site( $blog['Old']['BlogID'] ) === true ) {
 				if ( defined( 'UPLOADBLOGSDIR' ) ) {
-					// Old sites dir style
+					// Old files dir style
 					$old_paths[] = ai1wm_files_path( $blog['Old']['BlogID'] );
 					$new_paths[] = ai1wm_files_path( $blog['New']['BlogID'] );
+
+					// Old blogs.dir style
+					$old_paths[] = ai1wm_blogsdir_path( $blog['Old']['BlogID'] );
+					$new_paths[] = ai1wm_blogsdir_path( $blog['New']['BlogID'] );
 
 					// New sites dir style
 					$old_paths[] = ai1wm_sites_path( $blog['Old']['BlogID'] );
 					$new_paths[] = ai1wm_files_path( $blog['New']['BlogID'] );
 				} else {
-					// Old sites dir style
+					// Old files dir style
 					$old_paths[] = ai1wm_files_path( $blog['Old']['BlogID'] );
+					$new_paths[] = ai1wm_sites_path( $blog['New']['BlogID'] );
+
+					// Old blogs.dir style
+					$old_paths[] = ai1wm_blogsdir_path( $blog['Old']['BlogID'] );
 					$new_paths[] = ai1wm_sites_path( $blog['New']['BlogID'] );
 
 					// New sites dir style
@@ -150,12 +166,18 @@ class Ai1wm_Import_Content {
 			$exclude_files = array_keys( _get_dropins() );
 
 			// Exclude plugin files
-			$exclude_files = array_merge( $exclude_files, array(
-				AI1WM_PACKAGE_NAME,
-				AI1WM_MULTISITE_NAME,
-				AI1WM_DATABASE_NAME,
-				AI1WM_MUPLUGINS_NAME,
-			) );
+			$exclude_files = array_merge(
+				$exclude_files,
+				array(
+					AI1WM_PACKAGE_NAME,
+					AI1WM_MULTISITE_NAME,
+					AI1WM_DATABASE_NAME,
+					AI1WM_MUPLUGINS_NAME,
+				)
+			);
+
+			// Exclude Elementor files
+			$exclude_files = array_merge( $exclude_files, array( AI1WM_ELEMENTOR_CSS_NAME ) );
 
 			// Exclude content extensions
 			$exclude_extensions = array( AI1WM_LESS_CACHE_NAME );

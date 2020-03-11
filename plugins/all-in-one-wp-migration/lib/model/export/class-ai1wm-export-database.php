@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2019 ServMask Inc.
+ * Copyright (C) 2014-2020 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -128,6 +128,11 @@ class Ai1wm_Export_Database {
 			}
 		}
 
+		// Include table prefixes (Webba Booking)
+		foreach ( array( 'wbk_services', 'wbk_days_on_off', 'wbk_locked_time_slots', 'wbk_appointments', 'wbk_cancelled_appointments', 'wbk_email_templates', 'wbk_service_categories', 'wbk_gg_calendars', 'wbk_coupons' ) as $table_name ) {
+			$include_table_prefixes[] = $table_name;
+		}
+
 		// Set database options
 		$mysql->set_old_table_prefixes( $old_table_prefixes )
 			->set_new_table_prefixes( $new_table_prefixes )
@@ -137,7 +142,7 @@ class Ai1wm_Export_Database {
 			->set_exclude_table_prefixes( $exclude_table_prefixes );
 
 		// Exclude site options
-		$mysql->set_table_where_clauses( ai1wm_table_prefix() . 'options', array( sprintf( "`option_name` NOT IN ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')", AI1WM_ACTIVE_PLUGINS, AI1WM_ACTIVE_TEMPLATE, AI1WM_ACTIVE_STYLESHEET, AI1WM_STATUS, AI1WM_SECRET_KEY, AI1WM_AUTH_USER, AI1WM_AUTH_PASSWORD, AI1WM_BACKUPS_LABELS ) ) );
+		$mysql->set_table_where_clauses( ai1wm_table_prefix() . 'options', array( sprintf( "`option_name` NOT IN ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')", AI1WM_ACTIVE_PLUGINS, AI1WM_ACTIVE_TEMPLATE, AI1WM_ACTIVE_STYLESHEET, AI1WM_STATUS, AI1WM_SECRET_KEY, AI1WM_AUTH_USER, AI1WM_AUTH_PASSWORD, AI1WM_BACKUPS_LABELS, AI1WM_SITES_LINKS ) ) );
 
 		// Replace table prefix on columns
 		$mysql->set_table_prefix_columns( ai1wm_table_prefix() . 'options', array( 'option_name' ) )
