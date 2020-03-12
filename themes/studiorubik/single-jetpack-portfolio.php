@@ -60,9 +60,9 @@
 
         <!-- The Brief Slider Revolution Video ACF -->
         <?php
-        if (get_field('the_brief_slider_revolution_shortcode')) {
-        echo do_shortcode(get_field('the_brief_slider_revolution_shortcode'));
-        }
+            if (get_field('the_brief_slider_revolution_shortcode')) {
+                echo do_shortcode(get_field('the_brief_slider_revolution_shortcode'));
+            }
         ?>
 
     </section>
