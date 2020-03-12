@@ -2,13 +2,9 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 5rem;
+    grid-gap: 4rem;
     padding: 4rem 0;
     margin-bottom: 4rem;
-
-    a {
-        display: none;
-    }
 }
 
 .clients {
@@ -21,3 +17,33 @@
 
     margin-bottom: 15rem;
 }
+
+.clients__grid-item {
+    position: relative;
+    min-height: 13rem;
+
+
+    figure {
+        @include centerY;
+
+        a {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: $white;
+            font-family: "SohoGothicPro-Bold";
+            letter-spacing: 0.9px;
+            font-size: 2rem;
+            width: 100%;
+            position: absolute;
+            @include centerXY;
+            opacity: 0;
+            transition: opacity 350ms;
+
+            &:hover {
+                opacity: 1;
+                transition: opacity 350ms;
+            }
+        }
+    }
+
+}
+

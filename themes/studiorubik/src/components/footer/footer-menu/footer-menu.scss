@@ -148,13 +148,15 @@ footer.site-footer {
 }
 
 .copywrite {
-    background-color: $black;
+
     color: $white;
     font-size: 1rem;
     padding: 0;
 
     p {
         margin: 0;
-        padding: 0.8rem 0;
+        padding: 0.8rem;
+        background-color: $black;
+        display:inline-block
     }
 }

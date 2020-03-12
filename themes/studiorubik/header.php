@@ -10,8 +10,11 @@
 
 <body <?php body_class(); ?>>
 
+    <!-- Call the page Loader -->
+    <?php get_template_part('template-parts/page', 'loader'); ?>
+
     <!-- Site Header -->
-    <header class="site-header container">
+    <header class="site-header container inner-page-header">
 
         <!-- Get the Logo -->
         <a id="header-logo" href="<?php echo esc_url(home_url('/')); ?>">

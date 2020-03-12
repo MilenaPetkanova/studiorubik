@@ -2,3 +2,5 @@
 /dist
 rm-7
 -extensions
+-wp-migration
+-wp-migration-file-extension

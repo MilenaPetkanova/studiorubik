@@ -1,10 +1,10 @@
-<?php 
-/* 
-Template Name: Page About Us
-*/
+<?php
+    /*
+    Template Name: Page About Us
+    */
 
-//  Get the header function
-get_header() ?>
+    get_header();
+?>
 
 <!-- Main element -->
 <main class="inner-page section about-us">
@@ -25,8 +25,8 @@ get_header() ?>
 
         <!-- About Us Section Headings -->
         <div class="section-heading text-upper container">
-            <h3><?php the_field('about_section_heading')?></h3>
             <h2><?php the_field('about_section_heading')?></h2>
+            <p class="background-text"><?php the_field('about_section_heading')?></p>
         </div>
 
         <!-- About Us Section Content -->
@@ -45,6 +45,7 @@ get_header() ?>
                 echo do_shortcode(get_field('parallax_shortcode'));
             }
         ?>
+
     </section>
 
     <!-- Mission & Vision Section -->
@@ -52,8 +53,8 @@ get_header() ?>
 
         <!-- Mission & Vision Section Headings -->
         <div class="section-heading text-upper container">
-            <h3><?php the_field('mission_-_vission_section_heading')?></h3>
             <h2><?php the_field('mission_-_vission_section_heading')?></h2>
+            <p class="background-text"><?php the_field('mission_-_vission_section_heading')?></p>
         </div>
 
         <!-- Mission & Vision Section Content -->
@@ -67,8 +68,8 @@ get_header() ?>
     <section class="values">
         <!-- Our Values Section Headings -->
         <div class="section-heading text-upper container">
-            <h3><?php the_field('our_values_section_heading')?></h3>
             <h2><?php the_field('our_values_section_heading')?></h2>
+            <p class="background-text"><?php the_field('our_values_section_heading')?></p>
         </div>
 
         <!-- Our Values Section Grid -->
@@ -218,13 +219,21 @@ get_header() ?>
 
     <!-- Team Section -->
     <section class="team">
+
         <!-- Team Section Headings -->
         <div class="section-heading text-upper container">
-            <h3><?php the_field('team_section_heading')?></h3>
             <h2><?php the_field('team_section_heading')?></h2>
+            <p class="background-text"><?php the_field('team_section_heading')?></p>
         </div>
 
-        <!-- Our Values Section Grid -->
+        <!-- Team Section Content -->
+        <div class="container ">
+            <div class="two-column-content container">
+                <p><?php the_field('team_section_text_area')?></p>
+            </div>
+        </div>
+
+        <!-- Team Section Grid -->
         <div class="three-column__grid container text-center">
 
             <!-- Grid Item 1 -->
@@ -239,21 +248,21 @@ get_header() ?>
                 $person_description = $first_grid_item['gird_item_description'];
 
                 if( $first_grid_item  ): ?>
-                                    
-                    <div class="honeycomb-cell">
 
-                        <!-- Video Element -->
-                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
-                        
-                        <!-- Name & Title -->
-                        <div class="honeycomb-cell__title text-upper">
-                            <p class="name"><?php echo $person_name ?></p>
-                            <p class="description"><?php echo $person_description ?></p>
-                        </div>
+                <div class="honeycomb-cell">
+
+                    <!-- Video Element -->
+                    <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video"
+                        src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+
+                    <!-- Name & Title -->
+                    <div class="honeycomb-cell__title text-upper">
+                        <p class="name"><?php echo $person_name ?></p>
+                        <p class="description"><?php echo $person_description ?></p>
+                    </div>
                 </div>
-                    
-                <?php endif;?>
 
+                <?php endif;?>
 
             </div>
 
@@ -269,24 +278,25 @@ get_header() ?>
                 $person_description = $second_grid_item['gird_item_description'];
 
                 if( $second_grid_item  ): ?>
-                                    
-                    <div class="honeycomb-cell">
 
-                        <!-- Video Element -->
-                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
-                        
-                        <!-- Name & Title -->
-                        <div class="honeycomb-cell__title text-upper">
-                            <p class="name"><?php echo $person_name ?></p>
-                            <p class="description"><?php echo $person_description ?></p>
-                        </div>
+                <div class="honeycomb-cell">
+
+                    <!-- Video Element -->
+                    <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video"
+                        src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+
+                    <!-- Name & Title -->
+                    <div class="honeycomb-cell__title text-upper">
+                        <p class="name"><?php echo $person_name ?></p>
+                        <p class="description"><?php echo $person_description ?></p>
+                    </div>
+
                 </div>
-                    
+
                 <?php endif;?>
 
-
             </div>
-       
+
             <!-- Grid Item 3 -->
             <div class="three-column__grid-item">
 
@@ -299,24 +309,25 @@ get_header() ?>
                 $person_description = $third_grid_item['gird_item_description'];
 
                 if( $third_grid_item ): ?>
-                                    
-                    <div class="honeycomb-cell">
 
-                        <!-- Video Element -->
-                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
-                        
-                        <!-- Name & Title -->
-                        <div class="honeycomb-cell__title text-upper">
-                            <p class="name"><?php echo $person_name ?></p>
-                            <p class="description"><?php echo $person_description ?></p>
-                        </div>
+                <div class="honeycomb-cell">
+
+                    <!-- Video Element -->
+                    <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video"
+                        src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+
+                    <!-- Name & Title -->
+                    <div class="honeycomb-cell__title text-upper">
+                        <p class="name"><?php echo $person_name ?></p>
+                        <p class="description"><?php echo $person_description ?></p>
+                    </div>
                 </div>
-                    
+
                 <?php endif;?>
 
             </div>
-      
-            <!-- Grid Item 4 -->            
+
+            <!-- Grid Item 4 -->
             <div class="three-column__grid-item">
 
                 <?php
@@ -328,19 +339,21 @@ get_header() ?>
                 $person_description = $fourth_grid_item['gird_item_description'];
 
                 if( $fourth_grid_item ): ?>
-                    
-                    <div class="honeycomb-cell">
 
-                        <!-- Video Element -->
-                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
-                        
-                        <!-- Name & Title -->
-                        <div class="honeycomb-cell__title text-upper">
-                            <p class="name"><?php echo $person_name ?></p>
-                            <p class="description"><?php echo $person_description ?></p>
-                        </div>
+                <div class="honeycomb-cell">
+
+                    <!-- Video Element -->
+                    <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video"
+                        src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+
+                    <!-- Name & Title -->
+                    <div class="honeycomb-cell__title text-upper">
+                        <p class="name"><?php echo $person_name ?></p>
+                        <p class="description"><?php echo $person_description ?></p>
+
                     </div>
-    
+                </div>
+
                 <?php endif;?>
             </div>
 
@@ -356,20 +369,23 @@ get_header() ?>
                 $person_description = $fifth_grid_item['gird_item_description'];
 
                 if( $fifth_grid_item ): ?>
-                    
-                    <div class="honeycomb-cell">
 
-                        <!-- Video Element -->
-                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
-                        
-                        <!-- Name & Title -->
-                        <div class="honeycomb-cell__title text-upper">
-                            <p class="name"><?php echo $person_name ?></p>
-                            <p class="description"><?php echo $person_description ?></p>
-                        </div>
+                <div class="honeycomb-cell">
+
+                    <!-- Video Element -->
+                    <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video"
+                        src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+
+                    <!-- Name & Title -->
+                    <div class="honeycomb-cell__title text-upper">
+                        <p class="name"><?php echo $person_name ?></p>
+                        <p class="description"><?php echo $person_description ?></p>
                     </div>
 
+                </div>
+
                 <?php endif;?>
+
             </div>
 
             <!-- Grid Item 6 -->
@@ -384,22 +400,23 @@ get_header() ?>
                 $person_description = $sixth_grid_item['gird_item_description'];
 
                 if( $sixth_grid_item ): ?>
-                    
-                    <div class="honeycomb-cell">
 
-                        <!-- Video Element -->
-                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
-                        
-                        <!-- Name & Title -->
-                        <div class="honeycomb-cell__title text-upper">
-                            <p class="name"><?php echo $person_name ?></p>
-                            <p class="description"><?php echo $person_description ?></p>
-                        </div>
+                <div class="honeycomb-cell">
+
+                    <!-- Video Element -->
+                    <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video"
+                        src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+
+                    <!-- Name & Title -->
+                    <div class="honeycomb-cell__title text-upper">
+                        <p class="name"><?php echo $person_name ?></p>
+                        <p class="description"><?php echo $person_description ?></p>
                     </div>
+                </div>
 
                 <?php endif;?>
             </div>
-            
+
             <!-- Grid Item 7 -->
             <div class="three-column__grid-item">
 
@@ -412,22 +429,23 @@ get_header() ?>
                 $person_description = $seventh_grid_item['gird_item_description'];
 
                 if( $seventh_grid_item ): ?>
-                    
-                    <div class="honeycomb-cell">
 
-                        <!-- Video Element -->
-                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
-                        
-                        <!-- Name & Title -->
-                        <div class="honeycomb-cell__title text-upper">
-                            <p class="name"><?php echo $person_name ?></p>
-                            <p class="description"><?php echo $person_description ?></p>
-                        </div>
+                <div class="honeycomb-cell">
+
+                    <!-- Video Element -->
+                    <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video"
+                        src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+
+                    <!-- Name & Title -->
+                    <div class="honeycomb-cell__title text-upper">
+                        <p class="name"><?php echo $person_name ?></p>
+                        <p class="description"><?php echo $person_description ?></p>
                     </div>
+                </div>
 
                 <?php endif;?>
             </div>
-            
+
             <!-- Grid Item 8 -->
             <div class="three-column__grid-item">
 
@@ -440,21 +458,22 @@ get_header() ?>
                 $person_description = $eight_grid_item['gird_item_description'];
 
                 if( $eight_grid_item ): ?>
-                    
-                    <div class="honeycomb-cell">
 
-                        <!-- Video Element -->
-                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
-                        
-                        <!-- Name & Title -->
-                        <div class="honeycomb-cell__title text-upper">
-                            <p class="name"><?php echo $person_name ?></p>
-                            <p class="description"><?php echo $person_description ?></p>
-                        </div>
+                <div class="honeycomb-cell">
+
+                    <!-- Video Element -->
+                    <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video"
+                        src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+
+                    <!-- Name & Title -->
+                    <div class="honeycomb-cell__title text-upper">
+                        <p class="name"><?php echo $person_name ?></p>
+                        <p class="description"><?php echo $person_description ?></p>
                     </div>
+                </div>
 
                 <?php endif;?>
-            </div>       
+            </div>
 
             <!-- Grid Item 9 -->
             <div class="three-column__grid-item">
@@ -468,41 +487,80 @@ get_header() ?>
                 $person_description = $ninth_grid_item['gird_item_description'];
 
                 if( $ninth_grid_item ): ?>
-                    
-                    <div class="honeycomb-cell">
 
-                        <!-- Video Element -->
-                        <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video" src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
-                        
-                        <!-- Name & Title -->
-                        <div class="honeycomb-cell__title text-upper">
-                            <p class="name"><?php echo $person_name ?></p>
-                            <p class="description"><?php echo $person_description ?></p>
-                        </div>
+                <div class="honeycomb-cell">
+
+                    <!-- Video Element -->
+                    <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video"
+                        src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+
+                    <!-- Name & Title -->
+                    <div class="honeycomb-cell__title text-upper">
+                        <p class="name"><?php echo $person_name ?></p>
+                        <p class="description"><?php echo $person_description ?></p>
                     </div>
+                </div>
 
                 <?php endif;?>
-            </div>    
+            </div>
+
+            <!-- Grid Item 10 -->
+            <div class="three-column__grid-item">
+
+                <?php
+
+                $tenth_grid_item = get_field('team_10th_grid_item');
+                $team_video = $tenth_grid_item['grid_item_video_mp4'];
+                $poster_image = $tenth_grid_item['grid_item_poster_image'];
+                $person_name = $tenth_grid_item['grid_item_heading'];
+                $person_description = $tenth_grid_item['gird_item_description'];
+
+                if( $tenth_grid_item ): ?>
+
+                <div class="honeycomb-cell">
+
+                    <!-- Video Element -->
+                    <video loop="true" poster="<?php echo $poster_image ?>" class="myvideos honeycomb-cell__video"
+                        src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+
+                    <!-- Name & Title -->
+                    <div class="honeycomb-cell__title text-upper">
+                        <p class="name"><?php echo $person_name ?></p>
+                        <a href="/careers">
+                            <p class="description"><?php echo $person_description ?></p>
+                        </a>
+                    </div>
+                </div>
+
+                <?php endif;?>
+            </div>
         </div>
 
     </section>
 
     <!-- Second Parallax -->
-   <section class="parallax">
+    <section class="parallax">
 
-    <!-- Slider Revolution Second Parallax ACF -->
-    <?php
-        if (get_field('parallax_shortcode_2')) {
-            echo do_shortcode(get_field('parallax_shortcode_2'));
-        }
-    ?>
+        <!-- Creative Space Headings -->
+        <div class="section-heading text-upper container">
+            <h2><?php the_field('creative_space_heading')?></h2>
+            <p class="background-text"><?php the_field('creative_space_heading')?></p>
+        </div>
 
-</section>
+        <!-- Creative Space Content -->
+        <div class="container ">
+            <div class="two-column-content container">
+                <p><?php the_field('creative_space_text_area')?></p>
+            </div>
+        </div>
 
-
-   </section>
-
-    
+        <!-- Slider Revolution Second Parallax ACF -->
+        <?php
+            if (get_field('parallax_shortcode_2')) {
+                echo do_shortcode(get_field('parallax_shortcode_2'));
+            }
+        ?>
+    </section>
 
     <!-- Page Content Loop -->
     <div class="page-content">
@@ -513,8 +571,6 @@ get_header() ?>
     <?php get_sidebar(); ?>
 
 </main>
-
-
 
 <!-- Get the footer function -->
 <?php get_footer() ?>

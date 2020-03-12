@@ -53,6 +53,19 @@ class RevSliderFunctions extends RevSliderData {
 		return apply_filters('rs_get_global_settings', $gs);
 	}
 	
+	
+	/**
+	 * get all additions from the update checks
+	 * @since: 6.2.0
+	 **/
+	public function get_addition($key = ''){
+		$additions = (array)get_option('revslider-additions', array());
+		$additions = (!is_array($additions)) ? json_decode($additions, true) : $additions;
+		
+		return (empty($key)) ? $additions : $this->get_val($additions, $key);
+	}
+	
+	
 	/**
 	 * update general settings
 	 * @before: RevSliderOperations::updateGeneralSettings()
@@ -868,6 +881,14 @@ class RevSliderFunctions extends RevSliderData {
 		
 		$gs = $this->get_global_settings();
 		$fdl = $this->get_val($gs, 'fontdownload', 'off');
+		
+		if(!empty($revslider_fonts['queue'])){
+			foreach($revslider_fonts['queue'] as $f_n => $f_s){
+				if(!isset($f_s['url'])) continue; //if url is not set, continue
+				
+				$ret .= '<link href="'.esc_html($f_s['url']).'" rel="stylesheet" property="stylesheet" media="all" type="text/css" >'."\n";
+			}
+		}
 		
 		if($fdl === 'disable') return $ret;
 		

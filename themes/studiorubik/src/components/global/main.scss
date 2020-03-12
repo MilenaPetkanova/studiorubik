@@ -34,6 +34,10 @@ ul {
     list-style: none;
 }
 
+ul.hexagon-list {
+    list-style-image: url('./img/custom-li.svg');
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -75,14 +79,26 @@ button {
     opacity: 0;
 }
 
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.margin-bottom {
+    margin-bottom: 7rem;
+}
+
 // Section Headings on the Landing Page
 .section-heading {
     position: relative;
-    margin: 15rem auto 6rem;
+    margin: 15rem auto 6rem auto;
 
-    h3 {
+    h2 {
         font-family: "SohoGothicPro-Bold";
-        font-size: 4.5rem;
+        font-size: 3.5rem;
         color: $black;
         letter-spacing: 3.8px;
         line-height: 1;
@@ -90,19 +106,43 @@ button {
         @include centerY;
     }
 
-    h2 {
+    .background-text {
+        display: inline;
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 12rem;
+        font-size: 9.6rem;
         line-height: 0.8;
         letter-spacing: 1.2rem;
         color: $gray;
         position: relative;
         margin: 0;
         left: -2rem;
+        text-transform: uppercase;
+
+    }
+
+    p {
+        text-transform: initial;
+        max-width: 50%;
     }
 }
 
+.portfolio__text {
+    max-width: 50%;
+}
+
+.about-us__article {
+    // margin-bottom: 15rem;
+}
+
+.two-column-content p {
+    padding-right: 2rem;
+    margin-top: 0;
+}
+
+// .inner-page {
+//     background-color: magenta!important;
+// }
 
 // Section Headings on the Page
 .inner-page .section-heading {
@@ -129,7 +169,13 @@ p:empty {
 // Page Template
 .two-column-content {
     column-count: 2;
-    width: 100%
+    width: 100%;
+
+    ul {
+        list-style-image: url('./img/custom-li.svg');
+        max-width: 66rem;
+        font-size: 1.6rem;
+    }
 }
 
 // Parallax global style rules
@@ -150,20 +196,73 @@ article p {
 
 
 // Media Element JS
-.mejs-container .mejs-controls, .mejs-overlay-play {
-    display: none!important;
+.mejs-container .mejs-controls,
+.mejs-overlay-play {
+    display: none !important;
     @extend .hidden;
 }
+
 // Team Section Videos
 .team-video:hover {
     transition: filter 0.5s ease-in-out;
-    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(0%); /* FF 35+ */
+    -webkit-filter: grayscale(0%);
+    /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(0%);
+    /* FF 35+ */
 }
 
+.wp-block-image {
+    margin-bottom: 0;
+}
+
+//Single Page Styles
+
+.hero-section__content {
+    position: absolute;
+    top: 5%;
+    color: $white;
+    @include centerX;
+
+    h1 {
+        font-family: "SohoGothicPro-Bold", sans-serif;
+        font-size: 3.5rem;
+
+        br {
+            display: none;
+        }
+    }
+
+    p {
+        max-width: 70rem;
+    }
+}
+
+.wp-block-separator {
+    border: none;
+    margin: 0;
+    padding: 1.75rem 0;
+}
+
+/* Create two equal columns that floats next to each other */
+.col-2 {
+    float: left;
+    width: 50%;
+
+    &.content {
+        padding-left: 5%;
+    }
+}
+
+// Contact Page
+#map {
+    width: 100%;
+    height: 600px;
+}
 
 @import './../../components/front-page/expertise/expertise';
 @import './../../components/front-page/clients/clients';
 @import './../../components/front-page/testimonials/testimonials';
 @import './../../components/about-us/team';
+@import './../../components/clients-page/clients';
+@import './../../components/careers-page/careers';
 @import './../footer/footer-menu/footer-menu.scss'

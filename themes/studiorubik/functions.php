@@ -1,5 +1,9 @@
 <?php
 
+// Link to the classes file in /inc
+require get_template_directory() . '/inc/queries.php';
+
+
 // Creates and add the menus
 function studiorubik_menus(){
     //Wordpress function
@@ -34,10 +38,25 @@ function studiorubik_scripts() {
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true); //jQuery
 
-    // // Bx Slider JavaScript
+    // Bx Slider JavaScript
     if (is_front_page()):
         // Call Bx Slider only on the Front Page
-        wp_enqueue_script('bxsliderjs', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array(), '4.2.12' );  
+        wp_enqueue_script('bxsliderjs', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array(), '4.2.12' );
+    endif;
+
+    // IsotopeJS
+    if (is_post_type_archive('jetpack-portfolio') || is_home() || is_front_page()) {
+        wp_enqueue_script('isotope', get_template_directory_uri() .'./vendors/isotope/isotope.pkgd.min.js', array(), '3.0.6', true);
+        wp_enqueue_script('imagesloaded',  get_template_directory_uri() .'./vendors/isotope/imagesloaded.pkgd.min.js', array(), '4.1.4', true);
+    }
+
+    // Runs only on Contact Page
+    if (basename(get_page_template()) === 'contacts-page.php'):
+
+        //Google Maps Scripts
+        wp_enqueue_script('googleapikey', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA6d0WAlGXpG9XRGySXBMk8ojaqvnYhqqQ', array(), '1.1.1',true);
+        wp_enqueue_script('googleapi', 'https: //maps.googleapis.com/maps/api/js', array(), '1.1.1',true);
+
     endif;
 
 
@@ -66,7 +85,7 @@ function studiorubik_setup() {
 }
 
 //Create the Widget Zone
-function gymfitness_widgets() {
+function studiorubik_widgets() {
     register_sidebar(array(
         'name' => 'Sidebar',
         'id' => 'sidebar',
@@ -74,14 +93,12 @@ function gymfitness_widgets() {
         'after_title' => '</h5>'
     ));
 }
-add_action('widgets_init', 'gymfitness_widgets');
+add_action('widgets_init', 'studiorubik_widgets');
 
 //When the theme is activated and ready!
 add_action('after_setup_theme', 'studiorubik_setup');
 
-
-
-@ini_set( 'upload_max_size' , '350M' );
+@ini_set( 'upload_max_size' , '1024M' );
 @ini_set( 'post_max_size', '50M');
 @ini_set( 'max_execution_time', '300' );
 

@@ -1,0 +1,56 @@
+.misc-section {
+    p {
+        font-family: "SohoGothicPro-Bold", sans-serif;
+        display: inline-block;
+        color: #8b8a8d;
+        font-size: 2rem;
+    }
+
+    b {
+        color: #000000;
+    }
+
+    .button {
+        display: block;
+        margin-top: 5rem;
+    }
+}
+
+.post-navigation {
+    strong {
+        font-size: 1.8rem;
+        font-family: "SohoGothicPro-Bold", sans-serif;
+        color: #8b8a8d;
+
+        &:first-of-type {
+            &:before {
+                content: url("./prev_project.svg");
+                vertical-align: middle;
+                padding-right: 1.5rem;
+            }
+        }
+
+        &:last-of-type {
+            &:after {
+                content: url("./next_project.svg");
+                vertical-align: middle;
+                padding-left: 1.5rem;
+            }
+        }
+    }
+}
+
+.loader-container {
+    position: fixed;
+    z-index: 999;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+
+    video {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -60%);
+    }
+}
