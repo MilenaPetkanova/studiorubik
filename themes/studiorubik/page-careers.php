@@ -8,8 +8,8 @@
 
         <!-- Clients Section Headings -->
         <div class="section-heading text-upper container">
-            <h3><?php the_field('careers_section_heading')?></h3>
             <h2><?php the_field('careers_section_heading')?></h2>
+            <p class="background-text"><?php the_field('careers_section_heading')?></p>
         </div>
 
         <!-- Render The clietns Grid -->

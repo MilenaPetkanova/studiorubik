@@ -25,8 +25,8 @@
 
         <!-- Tasks Section Headings -->
         <div class="section-heading text-upper container">
-            <h3><?php the_field('tasks_heading')?></h3>
             <h2><?php the_field('tasks_heading')?></h2>
+            <p class="background-text"><?php the_field('tasks_heading')?></p>
         </div>
 
         <!-- About Us Section Content -->
@@ -41,8 +41,8 @@
 
         <!-- Skills Section Headings -->
         <div class="section-heading text-upper container">
-            <h3><?php the_field('skills_heading')?></h3>
             <h2><?php the_field('skills_heading')?></h2>
+            <p class="background-text"><?php the_field('skills_heading')?></p>
         </div>
 
         <!-- Skills Section Content -->
@@ -57,8 +57,8 @@
 
         <!-- We Offer Section Headings -->
         <div class="section-heading text-upper container">
-            <h3><?php the_field('we_offer_heading')?></h3>
             <h2><?php the_field('we_offer_heading')?></h2>
+            <p class="background-text"><?php the_field('we_offer_heading')?></p>
         </div>
 
         <!-- Skills Section Content -->

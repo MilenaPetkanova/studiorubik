@@ -1,5 +1,4 @@
-<!-- Get the header function -->
-<?php get_header() ?>
+<?php get_header(); ?>
 
 <!-- Main element -->
 <main class="single-client-page">
@@ -8,8 +7,8 @@
     <section class="container">
 
         <div class="section-heading text-upper">
-            <h3><?php the_title(); ?></h3>
             <h2><?php the_title(); ?></h2>
+            <p class="background-text"><?php the_title(); ?></p>
         </div>
 
         <article class="about-us__article two-column-content">
@@ -29,4 +28,4 @@
 </main>
 
 <!-- Get the footer function -->
-<?php get_footer() ?>
+<?php get_footer(); ?>

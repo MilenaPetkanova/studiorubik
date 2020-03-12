@@ -24,6 +24,8 @@ function portfolioPage() {
         // filter items when filter link is clicked
         $('#filters a').click(function () {
             var selector = $(this).attr('data-filter');
+            $('#filters').find('.is-checked').removeClass('is-checked');
+            $(this).addClass('is-checked');
             $container.isotope({
                 filter: selector
             });

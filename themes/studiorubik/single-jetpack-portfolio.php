@@ -48,13 +48,13 @@
     <!-- The Brief Section -->
     <section class="container brief">
         <!-- The Brief Section Headings -->
-        <div class="section-heading text-upper container">
-            <h3><?php the_field('the_brief_heading')?></h3>
+        <div class="section-heading text-upper">
             <h2><?php the_field('the_brief_heading')?></h2>
+            <p class="background-text"><?php the_field('the_brief_heading')?></p>
         </div>
 
         <!-- The Brief Section Content -->
-        <article class="about-us__article two-column-content container">
+        <article class="about-us__article two-column-content">
             <p><?php the_field('the_brief_text_area')?></p>
         </article>
 
@@ -70,13 +70,13 @@
     <!-- Our Angle Section -->
     <section class="container our-angle">
         <!-- Our Angle Section Headings -->
-        <div class="section-heading text-upper container">
-            <h3><?php the_field('our_angle_heading')?></h3>
+        <div class="section-heading text-upper">
             <h2><?php the_field('our_angle_heading')?></h2>
+            <p class="background-text"><?php the_field('our_angle_heading')?></p>
         </div>
 
         <!-- Our Angle Section Content -->
-        <article class="about-us__article two-column-content container">
+        <article class="about-us__article two-column-content">
             <p><?php the_field('our_angle_text_area')?></p>
         </article>
 
@@ -92,13 +92,13 @@
     <!-- The Outcome Section -->
     <section class="container our-angle">
         <!-- The Outcome Section Headings -->
-        <div class="section-heading text-upper container">
-            <h3><?php the_field('the_outcome_heading')?></h3>
+        <div class="section-heading text-upper">
             <h2><?php the_field('the_outcome_heading')?></h2>
+            <p class="background-text"><?php the_field('the_outcome_heading')?></p>
         </div>
 
         <!-- The Outcome Section Content -->
-        <article class="about-us__article two-column-content container">
+        <article class="about-us__article two-column-content">
             <p><?php the_field('the_outcome_text_area')?></p>
         </article>
 

@@ -131,6 +131,11 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
   margin-bottom: 7.5rem;
 }
 
+
+.team .three-column__grid {
+  justify-items: unset;
+}
+
 // Last Hexagon in the about us page
 .team .three-column__grid-item:last-of-type {
   //  Custom Background color for the last hexagon

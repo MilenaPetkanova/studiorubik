@@ -1,5 +1,4 @@
-<!-- Get the header function -->
-<?php get_header() ?>
+<?php get_header(); ?>
 
 <!-- Main element -->
 <main class="container page section with-sidebar">
@@ -15,5 +14,4 @@
 
 </main>
 
-<!-- Get the footer function -->
-<?php get_footer() ?>
+<?php get_footer(); ?>

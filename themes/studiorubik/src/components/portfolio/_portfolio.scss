@@ -1,6 +1,7 @@
 @import '../global/typography.scss';
 @import '../global/variables.scss';
 @import '../global/mixins.scss';
+
 /* force scrollbar, prevents initial gap */
 html {
     overflow-y: scroll;
@@ -25,6 +26,7 @@ html {
 
 .portfolio-item {
     float: left;
+
     figure {
         overflow: hidden;
         cursor: pointer;
@@ -107,11 +109,19 @@ html {
     display: inline-block;
     font-size: 1.8rem;
     font-family: "SohoGothicPro-Medium";
-    color:#8b8a8d;
+    color: #8b8a8d;
     max-width: 14rem;
     text-align: center;
     vertical-align: middle;
     margin-right: 7rem;
+
+    &:hover {
+        a {
+            color: $black;
+            transition: all 0.35s ease;
+        }
+
+    }
 }
 
 .portfolio-filters {
@@ -121,6 +131,11 @@ html {
 }
 
 .portfolio-filter-item-active {
-    color:$black;
+    color: $black;
 }
 
+
+.is-checked {
+    color: $black;
+    transition: all 0.35s ease;
+}

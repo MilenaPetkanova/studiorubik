@@ -38,8 +38,8 @@
 
             <!-- Clients Section Headings -->
             <div class="section-heading text-upper">
-                <h3><?php the_title(); ?></h3>
                 <h2><?php the_title(); ?></h2>
+                <p class="background-text"><?php the_title(); ?></p>
             </div>
 
             <p><?php get_template_part('template-parts/page','loop'); ?></p>
@@ -49,4 +49,4 @@
 </main>
 
 <!-- Get the footer function -->
-<?php get_footer() ?>
+<?php get_footer(); ?>
