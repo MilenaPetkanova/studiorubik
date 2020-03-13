@@ -1,39 +1,41 @@
-.expertise__workflow {
-    background-color: $gray;
-    padding: 0.4rem 0;
-}
+//.expertise__workflow {
+//    background-color: $gray;
+//    padding: 0.4rem 0;
+//}
 
 .workflow__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 108rem;
-    width: 95%;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 108rem;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .workflow__list .workflow__list-item {
-    // position: relative;
+  font-family: "SohoGothicPro-Bold";
+  font-size: 2.5rem;
+  letter-spacing: 2.975px;
 
-    svg {
-        position: relative;
-        top: 0.6rem;
-        transition: fill 0.5s ease;
+  svg {
+    position: relative;
+    top: 0.6rem;
+    //transition: fill 0.5s ease;
+  }
+
+  //&:hover+.workflow__list-item svg {
+  //
+  //    rect,
+  //    polygon {
+  //        fill: $gray;
+  //    }
+  //}
+
+  &:last-of-type {
+    &:after {
+      display: none;
     }
-
-    &:hover+.workflow__list-item svg {
-
-        rect,
-        polygon {
-            fill: $white;
-        }
-    }
-
-    &:last-of-type {
-        &:after {
-            display: none;
-        }
-    }
+  }
 }
 
 // @media(min-width: 768px) {
@@ -43,32 +45,32 @@
 
 // Expertise Grid
 .three-column__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0;
-    grid-row-gap: 0;
-    margin: 9rem auto;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  margin: 9rem auto;
+  align-items: center;
 
 
-    h5 {
-        margin: 0 auto;
-        display: table-cell;
-        vertical-align: middle;
+  h5 {
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
 
-    }
+  }
 
-    figcaption {
-        min-height: 5.5rem;
-        display: table;
-        margin: 0 auto;
-    }
+  figcaption {
+    min-height: 5.5rem;
+    display: table;
+    margin: 0 auto;
+  }
 
 }
 
 .grid-item__description {
-    max-width: 28rem;
-    margin: 0 auto;
-    word-break: break-all;
+  max-width: 28rem;
+  margin: 0 auto;
+  word-break: break-all;
 }

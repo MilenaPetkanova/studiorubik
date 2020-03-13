@@ -123,7 +123,7 @@
 
                <!-- Heading -->
                <li class="workflow__list-item">
-                  <h4><?php echo $expertise_workflow['first_heading'] ?></h4>
+                  <p><?php echo $expertise_workflow['first_heading'] ?></p>
                </li>
 
                <!-- Divider -->
@@ -132,7 +132,7 @@
 
                <!-- Heading -->
                <li class="workflow__list-item">
-                  <h4><?php echo $expertise_workflow['second_heading'] ?></h4>
+                  <p><?php echo $expertise_workflow['second_heading'] ?></p>
                </li>
 
                <!-- Divider -->
@@ -141,7 +141,7 @@
 
                <!-- Heading -->
                <li class="workflow__list-item">
-                  <h4><?php echo $expertise_workflow['third_heading'] ?></h4>
+                  <p><?php echo $expertise_workflow['third_heading'] ?></p>
                </li>
 
                <!-- Divider -->
@@ -150,7 +150,7 @@
 
                <!-- Heading -->
                <li class="workflow__list-item">
-                  <h4><?php echo $expertise_workflow['fourth_heading'] ?></h4>
+                  <p><?php echo $expertise_workflow['fourth_heading'] ?></p>
                </li>
             </ul>
 
