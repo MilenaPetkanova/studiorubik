@@ -39,7 +39,6 @@ $(document).ready(function () {
 
     // Init only on the About Us page
     if ($('body.page-template-page-about-us').length) {
-
         //Init the 3D Cube on the Landing Page
         teamProfiles();
     }
@@ -50,20 +49,36 @@ $(document).ready(function () {
         portfolioPage();
         $('.inner-filter').each(function () {
             console.log($(this).text());
-            var text = $(this).text().replace('-and-', '&');
+            var text = $(this).text().replace(' and ', ' & ');
             $(this).text(text);
         });
     }
 
-    // $('.loader-container').fadeOut();
+    // Init only on the Single Portfolio Page
+    if ($('.single-jetpack-portfolio').length) {
+
+        $('.services-misc a').each(function () {
+
+            var text = $(this).text().replace(' and ', ' & ');
+            $(this).text(text);
+
+            var theString = this.href.replace('/project-type/', '/portfolio/#filter=.');
+            var theStringMinusOne = theString.substring(0, theString.length - 1);
+            this.href = theStringMinusOne;
+        });
+    }
+
 
 });
+
+// initiating the isotope page
+
 
 // Run this when everything is ready loading ( images,  styles, etc)
 window.onload = function () {
     // Loader fade out
     $('.loader-container').fadeOut();
-}
+};
 
 
 //Google Maps
@@ -186,3 +201,5 @@ if ($('.page-template-contacts-page').length) {
     }
 
 }
+
+

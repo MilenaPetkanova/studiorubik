@@ -5,7 +5,7 @@ require get_template_directory() . '/inc/queries.php';
 
 
 // Creates and add the menus
-function studiorubik_menus(){
+function studiorubik_menus() {
     //Wordpress function
     register_nav_menus(array(
         'main-menu' => 'Main Menu',
@@ -20,7 +20,7 @@ function studiorubik_menus(){
 function studiorubik_scripts() {
 
     // Stylesheets
-    wp_enqueue_style('googlefont' , 'https: //fonts.googleapis.com/css?family=Montserrat:900&display=swap&subset=cyrillic-ext', array(), '1.0.0'); //Montserrat Font Family
+    wp_enqueue_style('googlefont', 'https: //fonts.googleapis.com/css?family=Montserrat:900&display=swap&subset=cyrillic-ext', array(), '1.0.0'); //Montserrat Font Family
     wp_enqueue_style('normalize', get_template_directory_uri() . '/vendors/normalize/normalize.min.css', array(), '8.0.1'); //Normalize CSS
     wp_enqueue_style('fontawesome', get_template_directory_uri() . '/vendors/fonts/fontawesome/font-awesome.min.css', array(), '4.7.0');
 
@@ -29,7 +29,6 @@ function studiorubik_scripts() {
         // Call Bx Slider only on the Front Page
         wp_enqueue_style('bxslidercss', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12'); // Bx Slider
     endif;
-
 
     wp_enqueue_style('style', get_stylesheet_uri(), array(), '1.0.0'); // Wordpress Stylesheet
     wp_enqueue_style('bundlecss', get_template_directory_uri() . '/dist/bundle.css', array(), '1.0.0'); //Main Style Bundle
@@ -41,21 +40,21 @@ function studiorubik_scripts() {
     // Bx Slider JavaScript
     if (is_front_page()):
         // Call Bx Slider only on the Front Page
-        wp_enqueue_script('bxsliderjs', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array(), '4.2.12' );
+        wp_enqueue_script('bxsliderjs', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array(), '4.2.12');
     endif;
 
     // IsotopeJS
     if (is_post_type_archive('jetpack-portfolio') || is_home() || is_front_page()) {
-        wp_enqueue_script('isotope', get_template_directory_uri() .'./vendors/isotope/isotope.pkgd.min.js', array(), '3.0.6', true);
-        wp_enqueue_script('imagesloaded',  get_template_directory_uri() .'./vendors/isotope/imagesloaded.pkgd.min.js', array(), '4.1.4', true);
+        wp_enqueue_script('isotope', get_template_directory_uri() . '/vendors/isotope/isotope.pkgd.min.js', array(), '3.0.6', true);
+        wp_enqueue_script('imagesloaded', get_template_directory_uri() . '/vendors/isotope/imagesloaded.pkgd.min.js', array(), '4.1.4', true);
     }
 
     // Runs only on Contact Page
     if (basename(get_page_template()) === 'contacts-page.php'):
 
         //Google Maps Scripts
-        wp_enqueue_script('googleapikey', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA6d0WAlGXpG9XRGySXBMk8ojaqvnYhqqQ', array(), '1.1.1',true);
-        wp_enqueue_script('googleapi', 'https: //maps.googleapis.com/maps/api/js', array(), '1.1.1',true);
+        wp_enqueue_script('googleapikey', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA6d0WAlGXpG9XRGySXBMk8ojaqvnYhqqQ', array(), '1.1.1', true);
+        wp_enqueue_script('googleapi', 'https: //maps.googleapis.com/maps/api/js', array(), '1.1.1', true);
 
     endif;
 
@@ -63,11 +62,13 @@ function studiorubik_scripts() {
     wp_enqueue_script('bundlejs', get_template_directory_uri() . '/dist/bundle.js', array(), null, true); //jQuery
 
 }
+
 add_action('wp_enqueue_scripts', 'studiorubik_scripts');
 
 
 //Enable custom features
-function studiorubik_setup() {
+function studiorubik_setup()
+{
 
     // Add menus
     add_action('init', 'studiorubik_menus');
@@ -85,7 +86,8 @@ function studiorubik_setup() {
 }
 
 //Create the Widget Zone
-function studiorubik_widgets() {
+function studiorubik_widgets()
+{
     register_sidebar(array(
         'name' => 'Sidebar',
         'id' => 'sidebar',
@@ -93,13 +95,14 @@ function studiorubik_widgets() {
         'after_title' => '</h5>'
     ));
 }
+
 add_action('widgets_init', 'studiorubik_widgets');
 
 //When the theme is activated and ready!
 add_action('after_setup_theme', 'studiorubik_setup');
 
-@ini_set( 'upload_max_size' , '1024M' );
-@ini_set( 'post_max_size', '50M');
-@ini_set( 'max_execution_time', '300' );
+@ini_set('upload_max_size', '1024M');
+@ini_set('post_max_size', '50M');
+@ini_set('max_execution_time', '300');
 
 ?>

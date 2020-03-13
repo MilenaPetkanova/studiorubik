@@ -9,7 +9,7 @@
         <!-- Clients Section Headings -->
         <div class="section-heading text-upper container">
             <h2><?php the_field('clients_section_heading')?></h2>
-            <p class="background-text"><?php the_field('clients_section_heading')?></h2>
+            <p class="background-text"><?php the_field('clients_section_heading')?></p>
         </div>
 
         <div class="container">
@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <!-- Render The clietns Grid -->
+        <!-- Render The Clients Grid -->
         <?php studiorubik_clients_list(); ?>
 
     </section>

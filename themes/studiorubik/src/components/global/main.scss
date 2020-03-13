@@ -4,191 +4,187 @@
 
 // Container, wrappers and common layout rules & utilities
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-    /* Now 10px = 1rem! */
-    font-family: SohoGothicPro Bold;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* Now 10px = 1rem! */
+    font-family: SohoGothicPro Bold, serif;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 header {
-    position: relative;
-    display: block;
+  position: relative;
+  display: block;
 }
 
 main {
-    position: relative;
-    display: block;
+  position: relative;
+  display: block;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 ul.hexagon-list {
-    list-style-image: url('./img/custom-li.svg');
+  list-style-image: url('./img/custom-li.svg');
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 figure {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 input,
 button {
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
 
 .container {
-    max-width: 144rem;
-    // /** 1440px **/
-    width: 95%;
-    margin: 0 auto;
+  max-width: 144rem;
+  // /** 1440px **/
+  width: 95%;
+  margin: 0 auto;
 }
 
 
 /** Utilities **/
 .hidden {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .fleft {
-    float: left;
+  float: left;
 }
 
 .fright {
-    float: right;
+  float: right;
 }
 
 .margin-bottom {
-    margin-bottom: 7rem;
+  margin-bottom: 7rem;
 }
 
 // Section Headings on the Landing Page
 .section-heading {
+  position: relative;
+  margin: 15rem auto 6rem auto;
+
+  h2 {
+      font-family: "SohoGothicPro-Bold", serif;
+    font-size: 3.5rem;
+    color: $black;
+    letter-spacing: 3.8px;
+    line-height: 1;
+    margin: 0;
+    @include centerY;
+  }
+
+  .background-text {
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 9.6rem;
+    line-height: 0.8;
+    letter-spacing: 1.2rem;
+    color: $gray;
     position: relative;
-    margin: 15rem auto 6rem auto;
+    margin: 0;
+    left: -2rem;
+    text-transform: uppercase;
 
-    h2 {
-        font-family: "SohoGothicPro-Bold";
-        font-size: 3.5rem;
-        color: $black;
-        letter-spacing: 3.8px;
-        line-height: 1;
-        margin: 0;
-        @include centerY;
-    }
+  }
 
-    .background-text {
-        display: inline;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: 9.6rem;
-        line-height: 0.8;
-        letter-spacing: 1.2rem;
-        color: $gray;
-        position: relative;
-        margin: 0;
-        left: -2rem;
-        text-transform: uppercase;
-
-    }
-
-    p {
-        text-transform: initial;
-        max-width: 50%;
-    }
+  p {
+    text-transform: initial;
+    max-width: 50%;
+  }
 }
 
 .portfolio__text {
-    max-width: 50%;
+  max-width: 50%;
 }
 
 .about-us__article {
-    // margin-bottom: 15rem;
+  // margin-bottom: 15rem;
 }
 
 .two-column-content p {
-    padding-right: 2rem;
-    margin-top: 0;
+  padding-right: 2rem;
+  margin-top: 0;
 }
-
-// .inner-page {
-//     background-color: magenta!important;
-// }
 
 // Section Headings on the Page
 .inner-page .section-heading {
-    h2 {
-        left: 0;
-    }
+  h2 {
+    left: 0;
+  }
 }
 
 .cf:before,
 .cf:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .cf:after {
-    clear: both;
+  clear: both;
 }
 
 // Remove empty paragraph tags
 p:empty {
-    @extend .hidden;
+  @extend .hidden;
 }
 
 // Page Template
 .two-column-content {
-    column-count: 2;
-    width: 100%;
+  column-count: 2;
+  width: 100%;
 
-    ul {
-        list-style-image: url('./img/custom-li.svg');
-        max-width: 66rem;
-        font-size: 1.6rem;
-    }
+  ul {
+    list-style-image: url('./img/custom-li.svg');
+    max-width: 66rem;
+    font-size: 1.6rem;
+  }
 }
 
 // Parallax global style rules
 .fixed-image-attribute {
-    rs-sbg {
-        background-attachment: fixed;
-    }
+  .rs-sbg {
+    background-attachment: fixed;
+  }
 
 }
 
 // About Us Page Template
 article p {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 
@@ -198,66 +194,68 @@ article p {
 // Media Element JS
 .mejs-container .mejs-controls,
 .mejs-overlay-play {
-    display: none !important;
-    @extend .hidden;
+  display: none !important;
+  @extend .hidden;
 }
 
 // Team Section Videos
 .team-video:hover {
-    transition: filter 0.5s ease-in-out;
-    -webkit-filter: grayscale(0%);
-    /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(0%);
-    /* FF 35+ */
+  transition: filter 0.5s ease-in-out;
+  -webkit-filter: grayscale(0%);
+  /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%);
+  /* FF 35+ */
 }
 
 .wp-block-image {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 //Single Page Styles
 
 .hero-section__content {
-    position: absolute;
-    top: 5%;
-    color: $white;
-    @include centerX;
+  position: absolute;
+  top: 5%;
+  color: $white;
+  @include centerX;
 
-    h1 {
-        font-family: "SohoGothicPro-Bold", sans-serif;
-        font-size: 3.5rem;
+  h1 {
+    font-family: "SohoGothicPro-Bold", sans-serif;
+    font-size: 3.5rem;
 
-        br {
-            display: none;
-        }
+    br {
+      display: none;
     }
+  }
 
-    p {
-        max-width: 70rem;
-    }
+  p {
+    max-width: 70rem;
+  }
 }
 
 .wp-block-separator {
-    border: none;
-    margin: 0;
-    padding: 1.75rem 0;
+  border: none;
+  margin: 0;
+  padding: 1.75rem 0;
 }
 
 /* Create two equal columns that floats next to each other */
 .col-2 {
-    float: left;
-    width: 50%;
+  float: left;
+  width: 50%;
 
-    &.content {
-        padding-left: 5%;
-    }
+  &.content {
+    padding-left: 5%;
+  }
 }
 
 // Contact Page
 #map {
-    width: 100%;
-    height: 600px;
+  width: 100%;
+  height: 600px;
 }
+
+
 
 @import './../../components/front-page/expertise/expertise';
 @import './../../components/front-page/clients/clients';
@@ -265,4 +263,4 @@ article p {
 @import './../../components/about-us/team';
 @import './../../components/clients-page/clients';
 @import './../../components/careers-page/careers';
-@import './../footer/footer-menu/footer-menu.scss'
+@import './../footer/footer-menu/footer-menu.scss';

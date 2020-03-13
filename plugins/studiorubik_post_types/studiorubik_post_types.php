@@ -100,7 +100,6 @@
             'items_list_navigation' => __('Navigate to Clients', 'gymfitness'),
             'filter_items_list' => __('Filter Clients', 'gymfitness'),
         );
-
         $args = array(
             'label' => __('Client', 'gymfitness'),
             'description' => __('Clients for StudioRubik Website', 'gymfitness'),
