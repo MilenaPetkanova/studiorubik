@@ -129,6 +129,9 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
 
 .team .three-column__grid-item {
   margin-bottom: 7.5rem;
+  &:last-of-type {
+    grid-area: 4 / 2 / 5 / 3;
+  }
 }
 
 

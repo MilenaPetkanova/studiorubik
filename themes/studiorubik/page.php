@@ -19,7 +19,7 @@
     <!-- This template part gets blog-loop.php from the template-parts folder and inserts it in the given page -->
     <?php get_template_part('template-parts/page','loop'); ?>
 
-    <h1 class="entry-title"><?php the_title(); ?></h1>
+    <h1 data-aos="fade-up" class="entry-title"><?php the_title(); ?></h1>
 </main>
 
 <!-- Get the footer function -->

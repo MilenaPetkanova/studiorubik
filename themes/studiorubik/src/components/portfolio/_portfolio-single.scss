@@ -44,17 +44,3 @@
     }
 }
 
-.loader-container {
-    position: fixed;
-    z-index: 999;
-    background-color: #fff;
-    width: 100vw;
-    height: 100vh;
-
-    video {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -60%);
-    }
-}

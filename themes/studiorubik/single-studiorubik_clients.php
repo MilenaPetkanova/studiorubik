@@ -6,7 +6,7 @@
     <!-- Clients Page Headings and content-->
     <section class="container">
 
-        <div class="section-heading text-upper">
+        <div data-aos="fade-up" class="section-heading text-upper">
             <h2><?php the_title(); ?></h2>
             <p class="background-text"><?php the_title(); ?></p>
         </div>

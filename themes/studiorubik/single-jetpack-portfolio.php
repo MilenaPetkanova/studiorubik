@@ -13,14 +13,10 @@
 			?>
         </section>
 
-        <section class="test-section">
-
-        </section>
-
         <!-- Section Containing: Client Name / Year / Services Provided & Video Lightbox-->
         <section class="misc-section text-upper">
             <!-- Misc. -->
-            <div class="container ">
+            <div data-aos="fade-up" class="container ">
 				<?php
 				$misc     = get_field( 'misc_section' );
 				$client   = $misc['client'];
@@ -55,13 +51,13 @@
         <!-- The Brief Section -->
         <section class="container brief">
             <!-- The Brief Section Headings -->
-            <div class="section-heading text-upper">
+            <div data-aos="fade-up" class="section-heading text-upper">
                 <h2><?php the_field( 'the_brief_heading' ) ?></h2>
                 <p class="background-text"><?php the_field( 'the_brief_heading' ) ?></p>
             </div>
 
             <!-- The Brief Section Content -->
-            <article class="about-us__article two-column-content">
+            <article class="two-column-content">
                 <p><?php the_field( 'the_brief_text_area' ) ?></p>
             </article>
 
@@ -77,7 +73,7 @@
         <!-- Our Angle Section -->
         <section class="container our-angle">
             <!-- Our Angle Section Headings -->
-            <div class="section-heading text-upper">
+            <div data-aos="fade-up" class="section-heading text-upper">
                 <h2><?php the_field( 'our_angle_heading' ) ?></h2>
                 <p class="background-text"><?php the_field( 'our_angle_heading' ) ?></p>
             </div>
@@ -99,7 +95,7 @@
         <!-- The Outcome Section -->
         <section class="container our-angle">
             <!-- The Outcome Section Headings -->
-            <div class="section-heading text-upper">
+            <div data-aos="fade-up" class="section-heading text-upper">
                 <h2><?php the_field( 'the_outcome_heading' ) ?></h2>
                 <p class="background-text"><?php the_field( 'the_outcome_heading' ) ?></p>
             </div>

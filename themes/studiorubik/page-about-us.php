@@ -24,7 +24,7 @@
     <section class="about-us">
 
         <!-- About Us Section Headings -->
-        <div class="section-heading text-upper container">
+        <div data-aos="fade-up" class="section-heading text-upper container">
             <h2><?php the_field('about_section_heading')?></h2>
             <p class="background-text"><?php the_field('about_section_heading')?></p>
         </div>
@@ -52,7 +52,7 @@
     <section class="mission-vision">
 
         <!-- Mission & Vision Section Headings -->
-        <div class="section-heading text-upper container">
+        <div data-aos="fade-up" class="section-heading text-upper container">
             <h2><?php the_field('mission_-_vission_section_heading')?></h2>
             <p class="background-text"><?php the_field('mission_-_vission_section_heading')?></p>
         </div>
@@ -67,7 +67,7 @@
     <!-- Values Section -->
     <section class="values">
         <!-- Our Values Section Headings -->
-        <div class="section-heading text-upper container">
+        <div data-aos="fade-up" class="section-heading text-upper container">
             <h2><?php the_field('our_values_section_heading')?></h2>
             <p class="background-text"><?php the_field('our_values_section_heading')?></p>
         </div>
@@ -221,7 +221,7 @@
     <section class="team">
 
         <!-- Team Section Headings -->
-        <div class="section-heading text-upper container">
+        <div data-aos="fade-up" class="section-heading text-upper container">
             <h2><?php the_field('team_section_heading')?></h2>
             <p class="background-text"><?php the_field('team_section_heading')?></p>
         </div>
@@ -542,7 +542,7 @@
     <section class="parallax">
 
         <!-- Creative Space Headings -->
-        <div class="section-heading text-upper container">
+        <div data-aos="fade-up" class="section-heading text-upper container">
             <h2><?php the_field('creative_space_heading')?></h2>
             <p class="background-text"><?php the_field('creative_space_heading')?></p>
         </div>

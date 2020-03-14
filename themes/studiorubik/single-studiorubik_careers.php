@@ -24,7 +24,7 @@
     <section class="tasks">
 
         <!-- Tasks Section Headings -->
-        <div class="section-heading text-upper container">
+        <div data-aos="fade-up" class="section-heading text-upper container">
             <h2><?php the_field('tasks_heading')?></h2>
             <p class="background-text"><?php the_field('tasks_heading')?></p>
         </div>
@@ -40,7 +40,7 @@
     <section class="tasks">
 
         <!-- Skills Section Headings -->
-        <div class="section-heading text-upper container">
+        <div data-aos="fade-up" class="section-heading text-upper container">
             <h2><?php the_field('skills_heading')?></h2>
             <p class="background-text"><?php the_field('skills_heading')?></p>
         </div>
@@ -56,7 +56,7 @@
     <section class="tasks">
 
         <!-- We Offer Section Headings -->
-        <div class="section-heading text-upper container">
+        <div data-aos="fade-up" class="section-heading text-upper container">
             <h2><?php the_field('we_offer_heading')?></h2>
             <p class="background-text"><?php the_field('we_offer_heading')?></p>
         </div>

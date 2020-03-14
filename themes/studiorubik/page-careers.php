@@ -7,7 +7,7 @@
     <section class="careers">
 
         <!-- Clients Section Headings -->
-        <div class="section-heading text-upper container">
+        <div data-aos="fade-up" class="section-heading text-upper container">
             <h2><?php the_field('careers_section_heading')?></h2>
             <p class="background-text"><?php the_field('careers_section_heading')?></p>
         </div>

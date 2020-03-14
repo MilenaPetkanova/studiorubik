@@ -34,7 +34,7 @@
          </div>
 
          <!-- Portfolio Section Text -->
-         <div data-aos="fade-zoom-in" class="portfolio__text">
+         <div data-aos="fade-zoom-in" data-aos-delay="300" class="portfolio__text">
             <p><?php the_field('portfolio_section_text')?></p>
          </div>
 
@@ -104,7 +104,7 @@
       <section class="expertise">
 
          <!-- Portoflio Section Headings -->
-         <div class="section-heading text-upper container">
+         <div data-aos="fade-up" class="section-heading text-upper container">
             <h2><?php the_field('expertise_section_heading')?></h2>
             <p class="background-text"><?php the_field('expertise_section_heading')?></p>
          </div>
@@ -317,7 +317,7 @@
       <section class="clients">
 
          <!-- Clients Section Headings -->
-         <div class="section-heading text-upper container">
+         <div data-aos="fade-up" class="section-heading text-upper container">
             <h2><?php the_field('clients_section_heading')?></h2>
             <p class="background-text"><?php the_field('clients_section_heading')?></p>
          </div>
@@ -609,7 +609,7 @@
       <section class="testimonials container">
 
          <!-- Testemonials Section Headings -->
-         <div class="section-heading text-upper">
+         <div data-aos="fade-up" class="section-heading text-upper">
             <h2><?php the_field('testimonials_section_heading')?></h2>
             <p class="background-text"><?php the_field('testimonials_section_heading')?></p>
          </div>

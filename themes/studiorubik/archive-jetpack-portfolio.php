@@ -34,7 +34,7 @@ get_header();
         <section class="container">
 
             <!-- Headings -->
-            <div class="section-heading text-upper">
+            <div data-aos="fade-up" class="section-heading text-upper">
                 <h2>The Process</h2>
                 <p class="background-text">The Process</p>
             </div>
