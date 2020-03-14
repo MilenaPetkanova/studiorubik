@@ -1,4 +1,4 @@
-import './_team.scss';
+// import './_team.scss';
 
 function teamProfiles() {
 

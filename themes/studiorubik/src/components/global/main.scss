@@ -1,266 +1,30 @@
-@import './typography.scss';
+@charset "UTF-8";
 @import './variables.scss';
+@import './typography.scss';
 @import './mixins.scss';
+@import './base.scss';
 
-// Container, wrappers and common layout rules & utilities
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  /* Now 10px = 1rem! */
-    font-family: SohoGothicPro Bold, serif;
-}
+@import './animations.scss';
+/* Header */
+@import '../burger-menu/burger-button';
+@import '../burger-menu/burger-menu';
 
-body {
-  overflow-x: hidden;
-}
+/* Utilities */
+@import './buttons';
+@import './animations';
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+/* Front Page */
+@import '../front-page/portfolio/cube'; //3D Cube
+@import '../front-page/services/services'; //Expertise & Services
+@import '../front-page/clients/clients'; //Clients
+@import '../front-page/testimonials/testimonials'; //Testimonials
 
-header {
-  position: relative;
-  display: block;
-}
+/* Inner Pages */
+@import './../../components/about-us/team';//About us
+@import './../../components/portfolio/portfolio'; //Portfolio Grid
+@import './../../components/portfolio/portfolio-single'; //Portfolio Single
+@import './../../components/careers-page/careers';//Careers
+@import './../../components/clients-page/clients';//Clients
 
-main {
-  position: relative;
-  display: block;
-}
-
-ul {
-  list-style: none;
-}
-
-ul.hexagon-list {
-  list-style-image: url('./img/custom-li.svg');
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-figure {
-  margin: 0 auto;
-}
-
-input,
-button {
-  border: none;
-  cursor: pointer;
-}
-
-.container {
-  max-width: 144rem;
-  // /** 1440px **/
-  width: 95%;
-  margin: 0 auto;
-}
-
-
-/** Utilities **/
-.hidden {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.fleft {
-  float: left;
-}
-
-.fright {
-  float: right;
-}
-
-.margin-bottom {
-  margin-bottom: 7rem;
-}
-
-// Section Headings on the Landing Page
-.section-heading {
-  position: relative;
-  margin: 15rem auto 6rem auto;
-
-  h2 {
-      font-family: "SohoGothicPro-Bold", serif;
-    font-size: 3.5rem;
-    color: $black;
-    letter-spacing: 3.8px;
-    line-height: 1;
-    margin: 0;
-    @include centerY;
-  }
-
-  .background-text {
-    display: inline;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 9.6rem;
-    line-height: 0.8;
-    letter-spacing: 1.2rem;
-    color: $gray;
-    position: relative;
-    margin: 0;
-    left: -2rem;
-    text-transform: uppercase;
-
-  }
-
-  p {
-    text-transform: initial;
-    max-width: 50%;
-  }
-}
-
-.portfolio__text {
-  max-width: 50%;
-}
-
-.about-us__article {
-  // margin-bottom: 15rem;
-}
-
-.two-column-content p {
-  padding-right: 2rem;
-  margin-top: 0;
-}
-
-// Section Headings on the Page
-.inner-page .section-heading {
-  h2 {
-    left: 0;
-  }
-}
-
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-// Remove empty paragraph tags
-p:empty {
-  @extend .hidden;
-}
-
-// Page Template
-.two-column-content {
-  column-count: 2;
-  width: 100%;
-
-  ul {
-    list-style-image: url('./img/custom-li.svg');
-    max-width: 66rem;
-    font-size: 1.6rem;
-  }
-}
-
-// Parallax global style rules
-.fixed-image-attribute {
-  .rs-sbg {
-    background-attachment: fixed;
-  }
-
-}
-
-// About Us Page Template
-article p {
-  margin: 0 auto;
-}
-
-
-//About Us Team
-
-
-// Media Element JS
-.mejs-container .mejs-controls,
-.mejs-overlay-play {
-  display: none !important;
-  @extend .hidden;
-}
-
-// Team Section Videos
-.team-video:hover {
-  transition: filter 0.5s ease-in-out;
-  -webkit-filter: grayscale(0%);
-  /* Ch 23+, Saf 6.0+, BB 10.0+ */
-  filter: grayscale(0%);
-  /* FF 35+ */
-}
-
-.wp-block-image {
-  margin-bottom: 0;
-}
-
-//Single Page Styles
-
-.hero-section__content {
-  position: absolute;
-  top: 5%;
-  color: $white;
-  @include centerX;
-
-  h1 {
-    font-family: "SohoGothicPro-Bold", sans-serif;
-    font-size: 3.5rem;
-
-    br {
-      display: none;
-    }
-  }
-
-  p {
-    max-width: 70rem;
-  }
-}
-
-.wp-block-separator {
-  border: none;
-  margin: 0;
-  padding: 1.75rem 0;
-}
-
-/* Create two equal columns that floats next to each other */
-.col-2 {
-  float: left;
-  width: 50%;
-
-  &.content {
-    padding-left: 5%;
-  }
-}
-
-// Contact Page
-#map {
-  width: 100%;
-  height: 600px;
-}
-
-
-
-@import './../../components/front-page/expertise/expertise';
-@import './../../components/front-page/clients/clients';
-@import './../../components/front-page/testimonials/testimonials';
-@import './../../components/about-us/team';
-@import './../../components/clients-page/clients';
-@import './../../components/careers-page/careers';
-@import './../footer/footer-menu/footer-menu.scss';
+/* Footer */
+@import '../footer/footer-menu/footer-menu'; //Footer Menu

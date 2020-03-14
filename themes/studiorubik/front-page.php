@@ -13,7 +13,7 @@
    <main class="landing-page section">
 
       <!-- Hero Section -->
-      <section class="hero-section">
+      <section  class="hero-section">
 
          <!-- Slider Revolution Video ACF -->
          <?php
@@ -28,13 +28,13 @@
       <section class="portfolio container" id="portfolio-cube">
 
          <!-- Portoflio Section Headings -->
-         <div class="section-heading text-upper">
+         <div data-aos="fade-up" class="section-heading text-upper">
             <h2><?php the_field('portfolio_section_heading')?></h2>
             <p class="background-text"><?php the_field('portfolio_section_heading')?></p>
          </div>
 
          <!-- Portfolio Section Text -->
-         <div class="portfolio__text">
+         <div data-aos="fade-zoom-in" class="portfolio__text">
             <p><?php the_field('portfolio_section_text')?></p>
          </div>
 

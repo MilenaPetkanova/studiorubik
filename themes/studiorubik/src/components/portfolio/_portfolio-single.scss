@@ -1,4 +1,8 @@
 .misc-section {
+
+    a:hover {
+        color:$black;
+    }
     p {
         font-family: "SohoGothicPro-Bold", sans-serif;
         display: inline-block;
@@ -24,7 +28,7 @@
 
         &:first-of-type {
             &:before {
-                content: url("./prev_project.svg");
+                content: url("../global/img/prev_project.svg");
                 vertical-align: middle;
                 padding-right: 1.5rem;
             }
@@ -32,7 +36,7 @@
 
         &:last-of-type {
             &:after {
-                content: url("./next_project.svg");
+                content: url("../global/img/next_project.svg");
                 vertical-align: middle;
                 padding-left: 1.5rem;
             }

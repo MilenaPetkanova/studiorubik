@@ -1,5 +1,5 @@
-import './_portfolio.scss';
-import './_portfolio-single.scss';
+// import './_portfolio.scss';
+// import './_portfolio-single.scss';
 
 function portfolioPage() {
 

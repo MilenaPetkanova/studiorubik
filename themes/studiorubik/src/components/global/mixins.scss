@@ -41,17 +41,3 @@
 
 //Animations
 
-//Fade Out
-.fadeOut {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.5s 0.5s,
-    opacity 0.5s linear;
-}
-
-//Fade In
-.fadeIn {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.5s linear;
-}
