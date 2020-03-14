@@ -67,7 +67,7 @@
         </div>
 
         <div class="container apply-button">
-            <a href="#" title="apply" class="button button--fill">apply</a>
+            <a data-aos="fade-up"  href="#" title="apply" class="button button--fill">apply</a>
         </div>
     </section>
 

@@ -94,7 +94,7 @@
          <div class="button-container">
 
             <!-- Button with fill -->
-            <a href="/portfolio" title="more projects" class="button button--fill">more projects</a>
+            <a data-aos="fade-up" data-aos-delay="300" href="/portfolio" title="more projects" class="button button--fill">more projects</a>
 
          </div>
 
@@ -310,7 +310,6 @@
                echo do_shortcode(get_field('parallax_shortcode'));
             }
          ?>
-
       </section>
 
       <!-- Clients Section -->
@@ -588,7 +587,7 @@
          <div class="button-container container">
 
             <!-- Button with fill -->
-            <a href="/clients" title="all clients" class="button button--fill">all clients</a>
+            <a data-aos="fade-up" data-aos-delay="300" href="/clients" title="all clients" class="button button--fill">all clients</a>
          </div>
       </section>
 
