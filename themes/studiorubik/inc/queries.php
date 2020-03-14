@@ -1,6 +1,6 @@
 <?php function studiorubik_clients_list($number = -1) { ?>
 
-    <div class="clients__grid container">
+    <div data-aos="fade-zoom-in" data-aos-delay="200" class="clients__grid container">
         <?php
             $args = array(
                 'post_type' => 'studiorubik_clients',
@@ -31,7 +31,7 @@
 
 function studiorubik_careers_list($number = -1) {?>
 
-    <div class="careers__grid container">
+    <div data-aos="fade-up" class="careers__grid container">
         <?php
             $args = array(
                 'post_type' => 'studiorubik_careers',

@@ -26,8 +26,7 @@
 
 				if ( $misc ): ?>
 
-                    <p class="client-misc"><b>client: </b><a
-                                href="/studiorubik_clients/<?php echo $slug ?>"><?php echo $client ?></a> <b>&nbsp;|&nbsp;</b>
+                    <p class="client-misc"><b>client: </b><a href="/studiorubik_clients/<?php echo $slug ?>"><?php echo $client ?></a> <b>&nbsp;|&nbsp;</b>
                     </p>
                     <p class="year-misc"><b>year: </b><?php echo $year ?> <b>&nbsp;|&nbsp;</b></p>
                     <p class="services-misc" id="services-misc">
@@ -57,9 +56,9 @@
             </div>
 
             <!-- The Brief Section Content -->
-            <article class="two-column-content">
+            <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
                 <p><?php the_field( 'the_brief_text_area' ) ?></p>
-            </article>
+            </div>
 
             <!-- The Brief Slider Revolution Video ACF -->
 			<?php
@@ -79,9 +78,9 @@
             </div>
 
             <!-- Our Angle Section Content -->
-            <article class="about-us__article two-column-content">
+            <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
                 <p><?php the_field( 'our_angle_text_area' ) ?></p>
-            </article>
+            </div>
 
             <!-- Our Angle Slider Revolution Video ACF -->
 			<?php
@@ -101,9 +100,9 @@
             </div>
 
             <!-- The Outcome Section Content -->
-            <article class="about-us__article two-column-content">
+            <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
                 <p><?php the_field( 'the_outcome_text_area' ) ?></p>
-            </article>
+            </div>
 
             <!-- The Outcome Slider Revolution Video ACF -->
 			<?php

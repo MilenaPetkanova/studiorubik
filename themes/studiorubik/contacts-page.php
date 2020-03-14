@@ -23,7 +23,7 @@
 
         <div class="hero-section__content container">
 
-            <p><?php the_field('hero_text')?></p>
+            <p ><?php the_field('hero_text')?></p>
         </div>
 
     </section>
@@ -42,7 +42,7 @@
                 <p class="background-text"><?php the_title(); ?></p>
             </div>
 
-            <p><?php get_template_part('template-parts/page','loop'); ?></p>
+            <p data-aos="fade-zoom-in" data-aos-delay="300"><?php get_template_part('template-parts/page','loop'); ?></p>
         </div>
     </section>
 

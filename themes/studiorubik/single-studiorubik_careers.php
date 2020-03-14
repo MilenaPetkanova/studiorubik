@@ -30,9 +30,9 @@
         </div>
 
         <!-- About Us Section Content -->
-        <article class="two-column-content container">
+        <div data-aos="fade-zoom-in" data-aos-delay="200" class="two-column-content container">
             <p><?php the_field('tasks_content')?></p>
-        </article>
+        </div>
 
     </section>
 
@@ -46,9 +46,9 @@
         </div>
 
         <!-- Skills Section Content -->
-        <article class="two-column-content container">
+        <div data-aos="fade-zoom-in" data-aos-delay="200" class="two-column-content container">
             <p><?php the_field('skills_content')?></p>
-        </article>
+        </div>
 
     </section>
 
@@ -62,9 +62,9 @@
         </div>
 
         <!-- Skills Section Content -->
-        <article class="two-column-content container">
+        <div data-aos="fade-zoom-in" data-aos-delay="200" class="two-column-content container">
             <p><?php the_field('we_offer_content')?></p>
-        </article>
+        </div>
 
         <div class="container apply-button">
             <a href="#" title="apply" class="button button--fill">apply</a>

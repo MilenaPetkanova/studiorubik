@@ -40,14 +40,14 @@ get_header();
             </div>
 
             <!-- Portfolio Section Text -->
-            <article class="two-column-content">
+            <div data-aos="fade-up" data-aos-delay="300" class="two-column-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet. </p>
                 <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                     magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
                     ea commodo consequat.</p>
-            </article>
+            </div>
 
         </section>
 

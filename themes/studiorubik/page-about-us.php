@@ -17,7 +17,6 @@
         if (get_field('slider_revolution_shortcode_-_hero_video')) {
             echo do_shortcode(get_field('slider_revolution_shortcode_-_hero_video'));
         } ?>
-
     </section>
 
     <!-- About Us Section -->
@@ -30,9 +29,9 @@
         </div>
 
         <!-- About Us Section Content -->
-        <article class="about-us__article two-column-content container">
+        <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content container">
             <p><?php the_field('about_us_text_area')?></p>
-        </article>
+        </div>
 
     </section>
 
@@ -58,9 +57,9 @@
         </div>
 
         <!-- Mission & Vision Section Content -->
-        <article class="mission-vision__article two-column-content container">
+        <div data-aos="fade-zoom-in" data-aos-delay="300" class="mission-vision__article two-column-content container">
             <p><?php the_field('mission_-_vision_text_area')?></p>
-        </article>
+        </div>
 
     </section>
 
@@ -76,7 +75,7 @@
         <div class="three-column__grid container text-center">
 
             <!-- Grid Item 1 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" class="three-column__grid-item">
 
                 <?php
                     $first_grid_item = get_field('first_grid_item');
@@ -99,7 +98,7 @@
             </div>
 
             <!-- Grid Item 2 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" class="three-column__grid-item">
 
                 <?php
                     $second_grid_item = get_field('second_grid_item');
@@ -122,7 +121,7 @@
             </div>
 
             <!-- Grid Item 3 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" class="three-column__grid-item">
 
                 <?php
                     $third_grid_item = get_field('third_grid_item');
@@ -145,7 +144,7 @@
             </div>
 
             <!-- Grid Item 4 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="300" class="three-column__grid-item">
 
                 <?php
                     $fourth_grid_item = get_field('fourth_grid_item');
@@ -168,7 +167,7 @@
             </div>
 
             <!-- Grid Item 5 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="300" class="three-column__grid-item">
 
                 <?php
                     $fifth_grid_item = get_field('fifth_grid_item');
@@ -191,7 +190,7 @@
             </div>
 
             <!-- Grid Item 6 -->
-            <div class="values__grid-item">
+            <div data-aos="fade-up" data-aos-delay="300" class="values__grid-item">
 
                 <?php
                     $sixth_grid_item = get_field('sixth_grid_item');
@@ -228,7 +227,7 @@
 
         <!-- Team Section Content -->
         <div class="container ">
-            <div class="two-column-content container">
+            <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content container">
                 <p><?php the_field('team_section_text_area')?></p>
             </div>
         </div>
@@ -237,7 +236,7 @@
         <div class="three-column__grid container text-center">
 
             <!-- Grid Item 1 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" class="three-column__grid-item">
 
                 <?php
 
@@ -267,7 +266,7 @@
             </div>
 
             <!-- Grid Item 2 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" class="three-column__grid-item">
 
                 <?php
 
@@ -298,7 +297,7 @@
             </div>
 
             <!-- Grid Item 3 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" class="three-column__grid-item">
 
                 <?php
 
@@ -328,7 +327,7 @@
             </div>
 
             <!-- Grid Item 4 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="300" class="three-column__grid-item">
 
                 <?php
 
@@ -358,7 +357,7 @@
             </div>
 
             <!-- Grid Item 5 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="300" class="three-column__grid-item">
 
                 <?php
 
@@ -389,7 +388,7 @@
             </div>
 
             <!-- Grid Item 6 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="300" class="three-column__grid-item">
 
                 <?php
 
@@ -418,7 +417,7 @@
             </div>
 
             <!-- Grid Item 7 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="400" class="three-column__grid-item">
 
                 <?php
 
@@ -447,7 +446,7 @@
             </div>
 
             <!-- Grid Item 8 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="400" class="three-column__grid-item">
 
                 <?php
 
@@ -476,7 +475,7 @@
             </div>
 
             <!-- Grid Item 9 -->
-            <div class="three-column__grid-item">
+            <div  data-aos="fade-up" data-aos-delay="400" class="three-column__grid-item">
 
                 <?php
 
@@ -505,7 +504,7 @@
             </div>
 
             <!-- Grid Item 10 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="500" class="three-column__grid-item">
 
                 <?php
 
@@ -547,9 +546,8 @@
             <p class="background-text"><?php the_field('creative_space_heading')?></p>
         </div>
 
-        <!-- Creative Space Content -->
         <div class="container ">
-            <div class="two-column-content container">
+            <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content container">
                 <p><?php the_field('creative_space_text_area')?></p>
             </div>
         </div>
@@ -563,7 +561,7 @@
     </section>
 
     <!-- Page Content Loop -->
-    <div class="page-content">
+    <div data-aos="fade-zoom-in" data-aos-delay="300" class="page-content">
         <?php get_template_part('template-parts/page','loop'); ?>
     </div>
 

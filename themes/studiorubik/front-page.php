@@ -34,7 +34,7 @@
          </div>
 
          <!-- Portfolio Section Text -->
-         <div data-aos="fade-zoom-in" data-aos-delay="300" class="portfolio__text">
+         <div data-aos="fade-zoom-in" data-aos-delay="200" class="portfolio__text">
             <p><?php the_field('portfolio_section_text')?></p>
          </div>
 
@@ -88,7 +88,7 @@
          </script>
 
          <!--Cube Visualisation-->
-         <div id="my3Dsurface" class="js3dsurface" data-facewidth="450"></div>
+         <div data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1500" id="my3Dsurface" class="js3dsurface" data-facewidth="450"></div>
 
          <!-- Button for the Projects Page -->
          <div class="button-container">
@@ -100,7 +100,7 @@
 
       </section>
 
-      <!-- Expertise Section -->
+      <!-- Services Section -->
       <section class="expertise">
 
          <!-- Portoflio Section Headings -->
@@ -122,34 +122,34 @@
             <ul class="workflow__list text-upper">
 
                <!-- Heading -->
-               <li class="workflow__list-item">
+               <li data-aos="fade-zoom-in" data-aos-delay="200"  class="workflow__list-item">
                   <p><?php echo $expertise_workflow['first_heading'] ?></p>
                </li>
 
                <!-- Divider -->
-               <li class="workflow__list-item svg-test"><img class="style-svg" alt="divider"
+               <li data-aos="fade-zoom-in" data-aos-delay="300"  class="workflow__list-item svg-test"><img class="style-svg" alt="divider"
                      src="<?php echo $divider_icon ?>" /></li>
 
                <!-- Heading -->
-               <li class="workflow__list-item">
+               <li data-aos="fade-zoom-in" data-aos-delay="500"  class="workflow__list-item">
                   <p><?php echo $expertise_workflow['second_heading'] ?></p>
                </li>
 
                <!-- Divider -->
-               <li class="workflow__list-item"><img class="style-svg" alt="divider" src="<?php echo $divider_icon ?>" />
+               <li data-aos="fade-zoom-in" data-aos-delay="700"  class="workflow__list-item"><img class="style-svg" alt="divider" src="<?php echo $divider_icon ?>" />
                </li>
 
                <!-- Heading -->
-               <li class="workflow__list-item">
+               <li data-aos="fade-zoom-in" data-aos-delay="900"  class="workflow__list-item">
                   <p><?php echo $expertise_workflow['third_heading'] ?></p>
                </li>
 
                <!-- Divider -->
-               <li class="workflow__list-item"><img class="style-svg" alt="divider" src="<?php echo $divider_icon ?>" />
+               <li data-aos="fade-zoom-in" data-aos-delay="1100"  class="workflow__list-item"><img class="style-svg" alt="divider" src="<?php echo $divider_icon ?>" />
                </li>
 
                <!-- Heading -->
-               <li class="workflow__list-item">
+               <li data-aos="fade-zoom-in" data-aos-delay="1300"   class="workflow__list-item">
                   <p><?php echo $expertise_workflow['fourth_heading'] ?></p>
                </li>
             </ul>
@@ -160,7 +160,7 @@
          <div class="three-column__grid container text-center">
 
             <!-- Grid Item 1 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="400"  class="three-column__grid-item">
 
                <?php
                   $first_grid_item = get_field('first_grid_item');
@@ -183,7 +183,7 @@
             </div>
 
             <!-- Grid Item 2 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="400"  class="three-column__grid-item">
 
                <?php
                   $second_grid_item = get_field('second_grid_item');
@@ -206,7 +206,7 @@
             </div>
 
             <!-- Grid Item 3 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="400"  class="three-column__grid-item">
 
                <?php
                   $third_grid_item = get_field('third_grid_item');
@@ -229,7 +229,7 @@
             </div>
 
             <!-- Grid Item 4 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="500"  class="three-column__grid-item">
 
                <?php
                   $fourth_grid_item = get_field('fourth_grid_item');
@@ -252,7 +252,7 @@
             </div>
 
             <!-- Grid Item 5 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="500"  class="three-column__grid-item">
 
                <?php
                   $fifth_grid_item = get_field('fifth_grid_item');
@@ -275,7 +275,7 @@
             </div>
 
             <!-- Grid Item 6 -->
-            <div class="three-column__grid-item">
+            <div data-aos="fade-up" data-aos-delay="500"  class="three-column__grid-item">
 
                <?php
                   $sixth_grid_item = get_field('sixth_grid_item');
@@ -324,7 +324,7 @@
 
          <div class="container">
             <!-- Clients Section Content -->
-            <div class="two-column-content container">
+            <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content container">
                <p><?php the_field('clients_section_text_area')?></p>
             </div>
          </div>
