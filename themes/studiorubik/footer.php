@@ -1,7 +1,7 @@
 <!-- Back to top Arrow -->
 <section class="back-to-top container cf">
     <a href="javascript:" id="return-to-top">
-        <div class="hexagon">
+        <div data-aos="fade-up" class="hexagon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28.8716" height="11.097" viewBox="0 0 28.8716 11.097"><title>back-to-top</title><rect x="0.0767" y="4.5993" width="16.1368" height="1.8985" transform="translate(17.9732 6.2811) rotate(150)" fill="#fff" stroke="#fff" stroke-miterlimit="10"/><polygon points="28.197 8.761 14.642 0.692 13.722 2.336 27.277 10.405 28.197 8.761" fill="#fff" stroke="#fff" stroke-miterlimit="10"/></svg>
         </div>
     </a>
@@ -16,7 +16,7 @@
     <section class="site-footer__menu  container">
 
         <!-- Footer Logo -->
-        <div class="site-footer__menu__list logo">
+        <div data-aos="fade-up" data-aos-delay="0" class="site-footer__menu__list logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="104.5168" height="115.5266" viewBox="0 0 104.5168 115.5266">
                 <title>footer-logo.svg</title>
                 <path
@@ -71,7 +71,7 @@
         </div>
 
         <!-- Footer Services -->
-        <div class="site-footer__menu__list footer-services">
+        <div data-aos="fade-up" data-aos-delay="350" class="site-footer__menu__list footer-services">
             <h5 class="text-upper">Services</h5>
             <?php
                     $args = array(
@@ -83,7 +83,7 @@
         </div>
 
         <!-- Footer Studio Navigation -->
-        <div class="site-footer__menu__list footer-studio">
+        <div data-aos="fade-up" data-aos-delay="350" class="site-footer__menu__list footer-studio">
             <h5 class="text-upper">The Studio</h5>
             <?php
                     $args = array(
@@ -95,7 +95,7 @@
         </div>
 
         <!-- Footer Legal Navigation -->
-        <div class="site-footer__menu__list footer-legal">
+        <div data-aos="fade-up" data-aos-delay="350" class="site-footer__menu__list footer-legal">
             <h5 class="text-upper">Legals</h5>
             <?php
                 $args = array(
@@ -107,7 +107,7 @@
         </div>
 
         <!-- Footer Newsletter -->
-        <div class="site-footer__menu__list footer-newsletter">
+        <div data-aos="fade-up" data-aos-delay="350" class="site-footer__menu__list footer-newsletter">
             <h5 class="text-upper">Newsletter</h5>
 
             <?php get_sidebar(); ?>
@@ -115,7 +115,7 @@
         </div>
 
         <!-- Footer Social Navigation -->
-        <div class="site-footer__menu__list footer-social">
+        <div data-aos="fade-up" data-aos-delay="350" class="site-footer__menu__list footer-social">
             <?php
             $args = array(
                 'theme_location' => 'social-menu',

@@ -1,11 +1,6 @@
 
 #return-to-top {
     float: right;
-    &:hover {
-        svg rect,polygon {
-            fill: magenta;
-        }
-    }
 }
 
 footer.site-footer {

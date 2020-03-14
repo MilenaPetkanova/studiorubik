@@ -34,7 +34,7 @@
          </div>
 
          <!-- Portfolio Section Text -->
-         <div data-aos="fade-zoom-in" data-aos-delay="200" class="portfolio__text">
+         <div data-aos="fade-zoom-in" data-aos-delay="400" class="portfolio__text">
             <p><?php the_field('portfolio_section_text')?></p>
          </div>
 
@@ -324,13 +324,13 @@
 
          <div class="container">
             <!-- Clients Section Content -->
-            <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content container">
+            <div data-aos="fade-zoom-in" data-aos-delay="100" class="two-column-content container">
                <p><?php the_field('clients_section_text_area')?></p>
             </div>
          </div>
 
          <!-- Clients Grid -->
-         <div class="clients__grid container">
+         <div data-aos="fade-up" class="clients__grid container">
 
             <!-- Grid Item 1 -->
             <div class="clients__grid-item">
@@ -590,7 +590,6 @@
             <!-- Button with fill -->
             <a href="/clients" title="all clients" class="button button--fill">all clients</a>
          </div>
-
       </section>
 
       <!-- Second Parallax -->
@@ -628,7 +627,7 @@
             ?>
 
             <!-- Single Testimonial render -->
-            <li class="slide testimonial text-center">
+            <li data-aos="fade-up" class="slide testimonial text-center">
 
                <blockquote>
                   <?php the_content(); ?>
