@@ -613,7 +613,7 @@
          </div>
 
          <!-- Testimonials Container -->
-         <ul class="testimonials-list">
+         <ul  class="testimonials-list">
 
             <?php
                // Query the Testimonaials
@@ -626,7 +626,7 @@
             ?>
 
             <!-- Single Testimonial render -->
-            <li data-aos="fade-up" class="slide testimonial text-center">
+            <li class="slide testimonial text-center">
 
                <blockquote>
                   <?php the_content(); ?>

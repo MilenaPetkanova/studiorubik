@@ -43,7 +43,7 @@
 		endif;
 
 		// IsotopeJS & Images Loaded
-		if ( is_post_type_archive( 'jetpack-portfolio' ) || is_home() || is_front_page() ) {
+		if ( is_post_type_archive( 'jetpack-portfolio' ) || basename( get_page_template()) === 'page-case-studies.php' || is_home() || is_front_page() ) {
 			wp_enqueue_script( 'isotope', get_template_directory_uri() . '/vendors/isotope/isotope.pkgd.min.js', array(), '3.0.6', true );
 			wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/vendors/isotope/imagesloaded.pkgd.min.js', array(), '4.1.4', true );
 		}

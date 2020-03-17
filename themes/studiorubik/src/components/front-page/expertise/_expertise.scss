@@ -1,7 +1,10 @@
-//.expertise__workflow {
-//    background-color: $gray;
-//    padding: 0.4rem 0;
-//}
+.expertise {
+  background-color:magenta;
+
+  .three-column__grid {
+    background-color: magenta;
+  }
+}
 
 .workflow__list {
   display: flex;
