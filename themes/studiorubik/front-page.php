@@ -632,11 +632,11 @@
                   <?php the_content(); ?>
                </blockquote>
 
-               <footer class="testimonial-footer">
+               <div class="testimonial-footer">
                   <?php the_post_thumbnail('thumbnail') ?>
                   <h3 class="text-upper"><?php the_title(); ?></h3>
-                  <a href="#" title="see project" class="button button--fill">see project</a>
-               </footer>
+                  <a href="<?php the_field('testimonial_link')?>" title="see project" class="button button--fill">see project</a>
+               </div>
 
             </li>
 

@@ -32,7 +32,8 @@ $(document).ready(function () {
             slideWidth: 480,
             minSlides: 2,
             maxSlides: 5,
-            controls: false
+            controls: false,
+            touchEnabled: false
         });
 
     }
