@@ -17,7 +17,7 @@ get_header();
                                                                 title="All" data-filter="*" class="active">All
                         projects</a></li>
                 <?php
-                $terms = get_terms('category', array('parent' => 45)); // you can use any taxonomy, instead of just 'category'
+                $terms = get_terms('category', array('parent' => 42)); // you can use any taxonomy, instead of just 'category'
                 $count = count($terms); //How many are they?
                 if ($count > 0) {  //If there are more than 0 terms
                     foreach ($terms as $term) {  //for each term:

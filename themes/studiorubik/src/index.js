@@ -44,7 +44,7 @@ $(document).ready(function () {
     }
 
     // Init only on the Portfolio Page
-    if ($('.portfolio-page-template').length || $('.page-template-cases-jetpack-portfolio').length) {
+    if ($('.portfolio-page-template').length || $('.page-template-cases-jetpack-portfolio').length || $('.case-studies').length) {
         //Init the Isotope Grid
         portfolioPage();
         $('.inner-filter').each(function () {
@@ -226,18 +226,18 @@ jQuery(function ($) {
 
     var $container = $('#isotope-list'); //The ID for the list with all the blog posts
     $container.isotope({ //Isotope options, 'item' matches the class in the PHP
-        itemSelector : '.item',
-        layoutMode : 'masonry'
+        itemSelector: '.item',
+        layoutMode: 'masonry'
     });
 
     //Add the class selected to the item that is clicked, and remove from the others
     var $optionSets = $('#filters'),
         $optionLinks = $optionSets.find('a');
 
-    $optionLinks.click(function(){
+    $optionLinks.click(function () {
         var $this = $(this);
         // don't proceed if already selected
-        if ( $this.hasClass('selected') ) {
+        if ($this.hasClass('selected')) {
             return false;
         }
         var $optionSet = $this.parents('#filters');
@@ -246,7 +246,7 @@ jQuery(function ($) {
 
         //When an item is clicked, sort the items.
         var selector = $(this).attr('data-filter');
-        $container.isotope({ filter: selector });
+        $container.isotope({filter: selector});
 
         return false;
     });

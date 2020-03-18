@@ -68,22 +68,22 @@
          <!-- Push images from ACF into Javascript Variables -->
          <script>
             const area1 =
-               '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image1 ?>"/><p class="area-description"><?php echo $area1['
+               '<a href="<?php echo $area1['area_link'] ?>" target="_blank"><img src="<?php echo $image1 ?>"/><p class="area-description"><?php echo $area1['
             area_name '] ?></p></a>';
             const area2 =
-               '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image2 ?>"/><p class="area-description"><?php echo $area2['
+               '<a href="<?php echo $area2['area_link'] ?>" target="_blank"><img src="<?php echo $image2 ?>"/><p class="area-description"><?php echo $area2['
             area_name '] ?></p></a>';
             const area3 =
-               '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image3 ?>"/><p class="area-description"><?php echo $area3['
+               '<a href="<?php echo $area3['area_link'] ?>" target="_blank"><img src="<?php echo $image3 ?>"/><p class="area-description"><?php echo $area3['
             area_name '] ?></p></a>';
             const area4 =
-               '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image4 ?>"/><p class="area-description"><?php echo $area4['
+               '<a href="<?php echo $area4['area_link'] ?>" target="_blank"><img src="<?php echo $image4 ?>"/><p class="area-description"><?php echo $area4['
             area_name '] ?></p></a>';
             const area5 =
-               '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image5 ?>"/><p class="area-description"><?php echo $area5['
+               '<a href="<?php echo $area5['area_link'] ?>" target="_blank"><img src="<?php echo $image5 ?>"/><p class="area-description"><?php echo $area5['
             area_name '] ?></p></a>';
             const area6 =
-               '<a href="https://studiorubik.com/phatbride_1.jpg" target="_blank"><img src="<?php echo $image6 ?>"/><p class="area-description"><?php echo $area6['
+               '<a href="<?php echo $area1['area_link'] ?>" target="_blank"><img src="<?php echo $image6 ?>"/><p class="area-description"><?php echo $area6['
             area_name '] ?></p></a>';
          </script>
 
