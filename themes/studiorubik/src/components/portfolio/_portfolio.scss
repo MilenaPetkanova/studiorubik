@@ -22,6 +22,7 @@ html {
 .portfolio-item,
 .portfolio-sizer {
   width: 25%;
+
 }
 
 .portfolio-item {
@@ -82,6 +83,15 @@ html {
         transform: translateY(-50%);
         font-size: 1.6rem;
         font-family: "Soho Gothic Pro", sans-serif;
+
+        a {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          left: 0;
+          top: 0;
+          z-index: 20;
+        }
       }
 
       &:hover {
