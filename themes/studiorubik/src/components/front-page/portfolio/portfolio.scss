@@ -30,7 +30,6 @@
                     visibility: visible;
                     opacity: 1;
                     transition: opacity 0.5s ease;
-
                 }
 
                 &:after {
@@ -80,9 +79,7 @@
     transform: translate(-50%, -100%);
     color: $white;
     text-transform: uppercase;
-    font-size: 2.8rem;
-    visibility: hidden;
-    opacity: 0;
+    font-size: 1.6rem;
     transition: visibility 0.5s 0.5s, opacity 0.5s ease;
     z-index: 1;
 }
