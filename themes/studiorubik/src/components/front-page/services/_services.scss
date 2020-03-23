@@ -81,5 +81,8 @@
 .grid-item__description {
   max-width: 28rem;
   margin: 0 auto;
-  word-break: break-all;
+  word-break: break-word;
+p {
+  text-align: justify;
+}
 }

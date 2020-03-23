@@ -101,8 +101,7 @@ p:empty {
 
 .section-heading {
   position: relative;
-  //margin: 15rem auto 6rem auto;
-  margin: 5rem auto 5rem auto;
+  margin: 12rem auto 5rem auto;
 
 
   h2 {
@@ -137,6 +136,7 @@ p:empty {
 }
 
 .two-column-content {
+  padding-bottom: 5rem;
   column-count: 2;
   width: 100%;
 
