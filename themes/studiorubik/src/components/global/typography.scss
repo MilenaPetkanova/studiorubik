@@ -67,7 +67,6 @@ h5 {
     font-weight: 700;
 }
 
-
 .soho-regular {
     font-family: "SohoGothicPro-Regular", sans-serif !important;
     font-weight: 400;
@@ -78,8 +77,21 @@ h5 {
     font-weight: 500;
 }
 
-
 .soho-bold {
     font-family: "SohoGothicPro-Bold", sans-serif !important;
     font-weight: 700;
+}
+
+@media only screen and (max-width: 768px)  {
+    .section-heading {
+        margin: 6rem auto 5rem auto;
+        h2 {
+            font-size: 2.5rem;
+            transform: none;
+            position: relative;
+        }
+        .background-text {
+            display: none;
+        }
+    }
 }

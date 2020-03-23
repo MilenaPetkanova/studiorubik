@@ -76,7 +76,7 @@ get_header( 'front' );
 
             <!--Cube Visualisation-->
             <div data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1500" id="my3Dsurface"
-                 class="js3dsurface" data-facewidth="450"></div>
+                 class="js3dsurface"></div>
 
             <!-- Button for the Projects Page -->
             <div class="button-container">

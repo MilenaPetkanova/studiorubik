@@ -7,7 +7,7 @@
 
 
   .three-column__grid {
-  align-items: baseline;
+    align-items: baseline;
 
   }
 }
@@ -47,11 +47,6 @@
   }
 }
 
-// @media(min-width: 768px) {
-//
-// }
-
-
 // Expertise Grid
 .three-column__grid {
   display: grid;
@@ -74,6 +69,7 @@
     min-height: 5.5rem;
     display: table;
     margin: 0 auto;
+    margin-top: 2rem;
   }
 
 }
@@ -82,7 +78,37 @@
   max-width: 28rem;
   margin: 0 auto;
   word-break: break-word;
-p {
-  text-align: justify;
+
+  p {
+    text-align: justify;
+  }
 }
+
+@media(max-width: 768px) {
+
+  .workflow__list {
+    display: block;
+    text-align: center;
+    padding-top: 2rem;
+    li {
+      svg {
+        transform: rotate(90deg);
+      }
+      p {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .three-column__grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .three-column__grid-item {
+    margin-bottom: 5rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }

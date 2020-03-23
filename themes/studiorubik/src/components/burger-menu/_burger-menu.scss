@@ -22,7 +22,6 @@
         }
     }
 
-
     &.hide-nav {
         .hamburger {
             opacity: 0;
@@ -199,7 +198,6 @@
     content: '\f167';
 }
 
-
 // Hide header on scroll
 .burger-visible {
     opacity: 1;
@@ -209,4 +207,22 @@
 .burger-invisible {
     opacity: 0;
     transition: opacity 0.5s ease-out;
+}
+
+
+
+@media only screen and (max-width: 768px)  {
+    #header-logo {
+        img {
+            width:4.5rem;
+        }
+    }
+
+    .hamburger {
+        padding: 1rem 0;
+    }
+
+    .site-header {
+        padding: 3rem 0;
+    }
 }

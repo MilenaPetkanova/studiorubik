@@ -24,13 +24,20 @@ $(document).ready(function () {
     if ($('body.home').length) {
 
         //Init the 3D Cube on the Landing Page
+        if ($(window).width() < 768) {
+            $('#my3Dsurface').data('facewidth', '210');
+        }
+        else {
+            $('#my3Dsurface').data('facewidth', '450');
+        }
+
         portfolioCube();
 
         //Init the bxSlider library on testimonials
         $('.testimonials-list').bxSlider({
             auto: true,
             slideWidth: 480,
-            minSlides: 2,
+            minSlides: 1,
             maxSlides: 5,
             controls: false,
             touchEnabled: false

@@ -255,3 +255,12 @@ input.tnp-submit {
     width: 0;
     border-top: 14.72px solid #000000;
 }
+
+@media only screen and (max-width: 768px) {
+    .button {
+        font-size: 1.4rem;
+        max-width: 14rem;
+        margin: 0 auto;
+        display: block;
+    }
+}

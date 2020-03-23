@@ -47,3 +47,12 @@
 
 }
 
+@media only screen and (max-width: 768px)  {
+    .clients {
+        margin-bottom: 5rem;
+    }
+    .clients__grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
