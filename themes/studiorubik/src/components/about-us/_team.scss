@@ -160,3 +160,27 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
     }
   }
 }
+
+@media only screen and (max-width: 768px)  {
+  .honeycomb-cell {
+    margin: 82.17857px 0 82.17857px 0;
+  }
+}
+
+@media only screen and (max-width: 480px)  {
+  .three-column__grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .team .three-column__grid {
+    display: block;
+  }
+
+  .honeycomb-cell {
+    margin: 82.17857px auto 82.17857px auto;
+  }
+  .team .three-column__grid-item {
+    margin-bottom: 22rem;
+  }
+}
