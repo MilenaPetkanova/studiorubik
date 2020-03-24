@@ -40,14 +40,14 @@
 		wp_nav_menu( $args );
 		?>
 
-        <div class="nav-contacts text-left">
+        <div class="nav-contacts">
 
-            <div class="">
+            <div class="nav-address">
                 <p>Address</p>
 
                 <span>
                         <p>Bulevard "Knyaginya Maria Luiza" 126,</p>
-                </span>
+                    </span>
 
                 <span>
                         <p>1233 Orlandovtsi, Sofia</p>
@@ -55,7 +55,7 @@
 
             </div>
 
-            <div class="">
+            <div class="contact">
 
                 <p>contacts</p>
 
@@ -74,17 +74,17 @@
             </div>
 
             <!-- Call the social menu -->
-			<?php
-			$args = array(
-				'theme_location'  => 'social-menu',
-				'container'       => 'div',
-				'container_id'    => 'social-menu',
-				'container_class' => 'social-menu',
-				'link_before'     => '<span class="hidden">',
-				'link_after'      => '</span>',
-			);
-			wp_nav_menu( $args );
-			?>
+		    <?php
+		    $args = array(
+			    'theme_location'  => 'social-menu',
+			    'container'       => 'div',
+			    'container_id'    => 'social-menu',
+			    'container_class' => 'social-menu',
+			    'link_before'     => '<span class="hidden">',
+			    'link_after'      => '</span>',
+		    );
+		    wp_nav_menu( $args );
+		    ?>
 
         </div>
     </nav>

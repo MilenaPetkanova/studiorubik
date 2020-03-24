@@ -132,6 +132,7 @@
     color: $white;
     padding-left: 8.4%;
     font-size: 1.8rem;
+    text-align: left;
 
     span {
         font-family: "SohoGothicPro-Regular";
@@ -209,13 +210,16 @@
     transition: opacity 0.5s ease-out;
 }
 
-
-
 @media only screen and (max-width: 768px)  {
     #header-logo {
         img {
             width:4.5rem;
         }
+    }
+
+    #burger-menu-container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
     }
 
     .hamburger {
@@ -224,5 +228,36 @@
 
     .site-header {
         padding: 3rem 0;
+    }
+
+    .main-menu {
+        border: none;
+        right:0;
+        min-width: 21rem;
+    }
+
+    #burger-menu-container ul li {
+        font-size: 2.5rem;
+        a {
+            padding-right: 0;
+            right: -1px;
+        }
+    }
+
+    .nav-address,.nav-contact {
+        display: none;
+    }
+
+    .nav-contacts {
+        text-align: right;
+        padding-left: 0;
+        min-width: 21rem;
+    }
+
+    .contact {
+        font-size: 1.4rem;
+        > p {
+            display: none;
+        }
     }
 }
