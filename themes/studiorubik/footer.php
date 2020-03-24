@@ -16,7 +16,7 @@
     <section class="site-footer__menu  container">
 
         <!-- Footer Logo -->
-        <div data-aos="fade-up" data-aos-delay="0" class="site-footer__menu__list logo">
+        <div class="site-footer__menu__list logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="104.5168" height="115.5266" viewBox="0 0 104.5168 115.5266">
                 <title>footer-logo.svg</title>
                 <path
@@ -71,7 +71,7 @@
         </div>
 
         <!-- Footer Services -->
-        <div data-aos="fade-up" data-aos-delay="350" class="site-footer__menu__list footer-services">
+        <div class="site-footer__menu__list footer-services">
             <h5 class="text-upper">Services</h5>
             <?php
                     $args = array(
@@ -83,7 +83,7 @@
         </div>
 
         <!-- Footer Studio Navigation -->
-        <div data-aos="fade-up" data-aos-delay="350" class="site-footer__menu__list footer-studio">
+        <div class="site-footer__menu__list footer-studio">
             <h5 class="text-upper">The Studio</h5>
             <?php
                     $args = array(
@@ -95,8 +95,8 @@
         </div>
 
         <!-- Footer Legal Navigation -->
-        <div data-aos="fade-up" data-aos-delay="350" class="site-footer__menu__list footer-legal">
-            <h5 class="text-upper">Legals</h5>
+        <div class="site-footer__menu__list footer-legal">
+            <h5 class="text-upper">Legal</h5>
             <?php
                 $args = array(
                     'theme_location' => 'legal',
@@ -107,15 +107,14 @@
         </div>
 
         <!-- Footer Newsletter -->
-        <div data-aos="fade-up" data-aos-delay="350" class="site-footer__menu__list footer-newsletter">
+        <div class="site-footer__menu__list footer-newsletter">
             <h5 class="text-upper">Newsletter</h5>
 
             <?php get_sidebar(); ?>
-
         </div>
 
         <!-- Footer Social Navigation -->
-        <div data-aos="fade-up" data-aos-delay="350" class="site-footer__menu__list footer-social">
+        <div class="site-footer__menu__list footer-social">
             <?php
             $args = array(
                 'theme_location' => 'social-menu',

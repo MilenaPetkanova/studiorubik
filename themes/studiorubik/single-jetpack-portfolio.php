@@ -42,7 +42,11 @@
 				?>
 
                 <!-- Button Calling the Case Study Lightbox -->
-                <a href="#" title="case study" class="wp-video-popup button button--transparent-black">case study</a>
+	            <?php if( $lightbox ): ?>
+                    <a href="#" title="case study" class="wp-video-popup button button--transparent-black">case study</a>
+	            <?php endif; ?>
+
+
             </div>
         </section>
 

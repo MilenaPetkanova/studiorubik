@@ -54,8 +54,6 @@ plugins/all-in-one-wp-migration/all-in-one-wp-migration.php
 plugins/advanced-custom-fields/
 plugins/amp/
 plugins/advanced-custom-fields/
-*.po
-*.mo
 languages/
+plugins/wordpress-seo
 plugins/upload-max-file-size/
-plugins/wordpress-seo/
