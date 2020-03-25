@@ -17,16 +17,20 @@
         <section class="misc-section text-upper">
             <!-- Misc. -->
             <div data-aos="fade-up" class="container ">
+
 				<?php
-				$misc     = get_field( 'misc_section' );
-				$client   = $misc['client'];
-				$slug     = $misc['client_slug'];
-				$year     = $misc['year'];
-				$lightbox = $misc['video_lightbox_shortcode'];
+				$misc      = get_field( 'misc_section' );
+				$client    = $misc['client'];
+				$slug      = $misc['client_slug'];
+				$year      = $misc['year'];
+				$lightbox  = $misc['video_lightbox_shortcode'];
+				$link      = $misc['pdf_button'];
+				$link_text = $misc['pdf_button_text'];
 
 				if ( $misc ): ?>
 
-                    <p class="client-misc"><b>client: </b><a href="/studiorubik_clients/<?php echo $slug ?>"><?php echo $client ?></a> <b>&nbsp;|&nbsp;</b>
+                    <p class="client-misc"><b>client: </b><a
+                                href="/studiorubik_clients/<?php echo $slug ?>"><?php echo $client ?></a> <b>&nbsp;|&nbsp;</b>
                     </p>
                     <p class="year-misc"><b>year: </b><?php echo $year ?> <b>&nbsp;|&nbsp;</b></p>
                     <p class="services-misc" id="services-misc">
@@ -36,17 +40,23 @@
 
                 <!-- Video Lightbox -->
 				<?php
-                    if ( $lightbox ) {
-                        echo do_shortcode( $lightbox );
-                    }
+				if ( $lightbox ) {
+					echo do_shortcode( $lightbox );
+				}
 				?>
 
-                <!-- Button Calling the Case Study Lightbox -->
-	            <?php if( $lightbox ): ?>
-                    <a href="#" title="case study" class="wp-video-popup button button--transparent-black">case study</a>
-	            <?php endif; ?>
+                <div class="button-container">
+                    <!-- Button Calling the Case Study Lightbox -->
+	                <?php if ( $lightbox ): ?>
+                        <a href="#" title="case study" class="wp-video-popup button button--transparent-black">case study</a>
+	                <?php endif; ?>
 
-
+                    <!-- Button Calling the PDF Lightbox -->
+	                <?php
+	                if ( $link ): ?>
+                        <a href="<?php echo esc_url( $link ); ?>" title="more" class="button button--transparent-black">more</a>
+	                <?php endif; ?>
+                </div>
             </div>
         </section>
 
@@ -63,13 +73,6 @@
             <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
                 <p><?php the_field( 'the_brief_text_area' ) ?></p>
             </div>
-
-            <!-- The Brief Slider Revolution Video ACF -->
-			<?php
-			if ( get_field( 'the_brief_slider_revolution_shortcode' ) ) {
-				echo do_shortcode( get_field( 'the_brief_slider_revolution_shortcode' ) );
-			}
-			?>
 
         </section>
 

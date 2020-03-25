@@ -74,20 +74,18 @@
             </div>
 
             <!-- Call the social menu -->
-		    <?php
-		    $args = array(
-			    'theme_location'  => 'social-menu',
-			    'container'       => 'div',
-			    'container_id'    => 'social-menu',
-			    'container_class' => 'social-menu',
-			    'link_before'     => '<span class="hidden">',
-			    'link_after'      => '</span>',
-		    );
-		    wp_nav_menu( $args );
-		    ?>
+			<?php
+			$args = array(
+				'theme_location'  => 'social-menu',
+				'container'       => 'div',
+				'container_id'    => 'social-menu',
+				'container_class' => 'social-menu',
+				'link_before'     => '<span class="hidden">',
+				'link_after'      => '</span>',
+			);
+			wp_nav_menu( $args );
+			?>
 
         </div>
     </nav>
 </header>
-
-
