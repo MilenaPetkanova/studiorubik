@@ -3,7 +3,8 @@
     Template Name: Page About Us
     */
 
-    get_header();
+get_header( 'front' );
+
 ?>
 
 <!-- Main element -->
