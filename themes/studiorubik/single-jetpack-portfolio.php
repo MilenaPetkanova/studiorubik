@@ -36,9 +36,9 @@
 
                 <!-- Video Lightbox -->
 				<?php
-				if ( $lightbox ) {
-					echo do_shortcode( $lightbox );
-				}
+                    if ( $lightbox ) {
+                        echo do_shortcode( $lightbox );
+                    }
 				?>
 
                 <!-- Button Calling the Case Study Lightbox -->

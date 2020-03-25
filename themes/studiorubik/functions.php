@@ -18,7 +18,7 @@
 	function studiorubik_scripts() {
 
 		/* Stylesheets */
-		wp_enqueue_style( 'googlefont', 'https: //fonts.googleapis.com/css?family=Montserrat:900&display=swap&subset=cyrillic-ext', array(), '1.0.0' ); //Montserrat Font Family
+		wp_enqueue_style( 'googlefont', 'https://fonts.googleapis.com/css?family=Montserrat:900&display=swap&subset=cyrillic-ext', array(), '1.0.0' ); //Montserrat Font Family
 		wp_enqueue_style( 'normalize', get_template_directory_uri() . '/vendors/normalize/normalize.min.css', array(), '8.0.1' ); //Normalize CSS
 		wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/vendors/fonts/fontawesome/font-awesome.min.css', array(), '4.7.0' ); //Font Awesome
 		wp_enqueue_style( 'aoscss', get_template_directory_uri() . '/vendors/aos/sass/aos.css', array(), '3.0.0' ); //AOS.js
@@ -52,7 +52,7 @@
 		if ( basename( get_page_template() ) === 'contacts-page.php' ):
 			//Google Maps Scripts
 			wp_enqueue_script( 'googleapikey', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA6d0WAlGXpG9XRGySXBMk8ojaqvnYhqqQ', array(), '1.1.1', true ); //API Key
-			wp_enqueue_script( 'googleapi', 'https: //maps.googleapis.com/maps/api/js', array(), '1.1.1', true ); //Google Maps API
+			wp_enqueue_script( 'googleapi', 'https://maps.googleapis.com/maps/api/js', array(), '1.1.1', true ); //Google Maps API
 		endif;
 
 		wp_enqueue_script( 'bundlejs', get_template_directory_uri() . '/dist/bundle.js', array(), null, true ); //Webpack Compiled Javascript File
