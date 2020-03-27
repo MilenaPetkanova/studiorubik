@@ -12,7 +12,7 @@
   }
 
   .three-column__grid-item {
-    padding-top:2rem;
+    padding-top: 2rem;
   }
 }
 
@@ -88,16 +88,36 @@
   }
 }
 
-@media(max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
+  .workflow__list .workflow__list-item {
+    font-size: 1.8rem;
+
+    svg {
+      top: 0.3rem;
+      width: 6px;
+    }
+  }
+
+   .three-column__grid {
+    margin: 2rem auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
   .workflow__list {
     display: block;
     text-align: center;
     padding-top: 2rem;
+
     li {
       svg {
         transform: rotate(90deg);
       }
+
       p {
         margin: 0 auto;
       }
@@ -111,8 +131,13 @@
 
   .three-column__grid-item {
     margin-bottom: 5rem;
+
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+
+  .grid-item__description {
+    max-width: 32rem;
   }
 }

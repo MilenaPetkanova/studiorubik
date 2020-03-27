@@ -316,7 +316,7 @@ get_header( 'front' );
 
             <div class="container">
                 <!-- Clients Section Content -->
-                <div data-aos="fade-zoom-in" data-aos-delay="100" class="two-column-content container">
+                <div data-aos="fade-zoom-in" data-aos-delay="100" class="two-column-content">
                     <p><?php the_field( 'clients_section_text_area' ) ?></p>
                 </div>
             </div>

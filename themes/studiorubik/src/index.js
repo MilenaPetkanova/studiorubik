@@ -24,7 +24,7 @@ $(document).ready(function () {
     if ($('body.home').length) {
 
         //Init the 3D Cube on the Landing Page
-        if ($(window).width() < 768) {
+        if ($(window).width() < 480) {
             $('#my3Dsurface').data('facewidth', '210');
         } else {
             $('#my3Dsurface').data('facewidth', '450');
@@ -75,7 +75,6 @@ $(document).ready(function () {
         });
     }
 
-
 });
 
 // Run this when everything is ready loading ( images,  styles, etc)
@@ -102,7 +101,7 @@ AOS.init({
     delay: 100, // values from 0 to 3000, with step 50ms
     duration: 1200, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
-    once: false, // whether animation should happen only once - while scrolling down
+    once: true, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
