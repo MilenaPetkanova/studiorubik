@@ -47,87 +47,94 @@
 
                 <div class="button-container">
                     <!-- Button Calling the Case Study Lightbox -->
-	                <?php if ( $lightbox ): ?>
-                        <a href="#" title="case study" class="wp-video-popup button button--transparent-black">case study</a>
-	                <?php endif; ?>
+					<?php if ( $lightbox ): ?>
+                        <a href="#" title="case study" class="wp-video-popup button button--transparent-black">case
+                            study</a>
+					<?php endif; ?>
 
                     <!-- Button Calling the PDF Lightbox -->
-	                <?php
-	                if ( $link ): ?>
+					<?php
+					if ( $link ): ?>
                         <a href="<?php echo esc_url( $link ); ?>" title="more" class="button button--transparent-black">more</a>
-	                <?php endif; ?>
+					<?php endif; ?>
                 </div>
             </div>
         </section>
 
 
         <!-- The Brief Section -->
-        <section class="brief">
-            <!-- The Brief Section Headings -->
-            <div data-aos="fade-up" class="container section-heading text-upper">
-                <h2><?php the_field( 'the_brief_heading' ) ?></h2>
-                <p class="background-text"><?php the_field( 'the_brief_heading' ) ?></p>
-            </div>
+		<?php
+		if ( get_field( 'the_brief_heading' ) ): ?>
+            <section class="brief">
+                <!-- The Brief Section Headings -->
+                <div data-aos="fade-up" class="container section-heading text-upper">
+                    <h2><?php the_field( 'the_brief_heading' ) ?></h2>
+                    <p class="background-text"><?php the_field( 'the_brief_heading' ) ?></p>
+                </div>
 
-            <!-- The Brief Section Content -->
-            <div data-aos="fade-zoom-in" data-aos-delay="300" class="container two-column-content">
-                <p><?php the_field( 'the_brief_text_area' ) ?></p>
-            </div>
+                <!-- The Brief Section Content -->
+                <div data-aos="fade-zoom-in" data-aos-delay="300" class="container two-column-content">
+                    <p><?php the_field( 'the_brief_text_area' ) ?></p>
+                </div>
 
-            <div data-aos="fade-zoom-in" data-aos-delay="300">
-	            <?php
-	            if ( get_field( 'the_brief_slider_revolution_shortcode' ) ) {
-		            echo do_shortcode( get_field( 'the_brief_slider_revolution_shortcode' ) );
-	            }
-	            ?>
-            </div>
+                <div data-aos="fade-zoom-in" data-aos-delay="300">
+					<?php
+					if ( get_field( 'the_brief_slider_revolution_shortcode' ) ) {
+						echo do_shortcode( get_field( 'the_brief_slider_revolution_shortcode' ) );
+					}
+					?>
+                </div>
 
-        </section>
+            </section>
+		<?php endif; ?>
 
         <!-- Our Angle Section -->
-        <section class="container our-angle">
-            <!-- Our Angle Section Headings -->
-            <div data-aos="fade-up" class="section-heading text-upper">
-                <h2><?php the_field( 'our_angle_heading' ) ?></h2>
-                <p class="background-text"><?php the_field( 'our_angle_heading' ) ?></p>
-            </div>
+		<?php
+		if ( get_field( 'our_angle_heading' ) ): ?>
+            <section class="container our-angle">
+                <!-- Our Angle Section Headings -->
+                <div data-aos="fade-up" class="section-heading text-upper">
+                    <h2><?php the_field( 'our_angle_heading' ) ?></h2>
+                    <p class="background-text"><?php the_field( 'our_angle_heading' ) ?></p>
+                </div>
 
-            <!-- Our Angle Section Content -->
-            <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
-                <p><?php the_field( 'our_angle_text_area' ) ?></p>
-            </div>
+                <!-- Our Angle Section Content -->
+                <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+                    <p><?php the_field( 'our_angle_text_area' ) ?></p>
+                </div>
 
-            <!-- Our Angle Slider Revolution Video ACF -->
-			<?php
-			if ( get_field( 'our_angle_slider_revolution_shortcode' ) ) {
-				echo do_shortcode( get_field( 'our_angle_slider_revolution_shortcode' ) );
-			}
-			?>
-
-        </section>
+                <!-- Our Angle Slider Revolution Video ACF -->
+				<?php
+				if ( get_field( 'our_angle_slider_revolution_shortcode' ) ) {
+					echo do_shortcode( get_field( 'our_angle_slider_revolution_shortcode' ) );
+				}
+				?>
+            </section>
+		<?php endif; ?>
 
         <!-- The Outcome Section -->
-        <section class="container our-angle">
-            <!-- The Outcome Section Headings -->
-            <div data-aos="fade-up" class="section-heading text-upper">
-                <h2><?php the_field( 'the_outcome_heading' ) ?></h2>
-                <p class="background-text"><?php the_field( 'the_outcome_heading' ) ?></p>
-            </div>
+		<?php
+		if ( get_field( 'the_outcome_heading' ) ): ?>
+            <section class="container our-angle">
+                <!-- The Outcome Section Headings -->
+                <div data-aos="fade-up" class="section-heading text-upper">
+                    <h2><?php the_field( 'the_outcome_heading' ) ?></h2>
+                    <p class="background-text"><?php the_field( 'the_outcome_heading' ) ?></p>
+                </div>
 
-            <!-- The Outcome Section Content -->
-            <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
-                <p><?php the_field( 'the_outcome_text_area' ) ?></p>
-            </div>
+                <!-- The Outcome Section Content -->
+                <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+                    <p><?php the_field( 'the_outcome_text_area' ) ?></p>
+                </div>
 
-            <!-- The Outcome Slider Revolution Video ACF -->
-			<?php
-			if ( get_field( 'the_outcome_slider_revolution_shortcode' ) ) {
-				echo do_shortcode( get_field( 'the_outcome_slider_revolution_shortcode' ) );
-			}
-			?>
-
-        </section>
-
+                <!-- The Outcome Slider Revolution Video ACF -->
+				<?php
+				if ( get_field( 'the_outcome_slider_revolution_shortcode' ) ) {
+					echo do_shortcode( get_field( 'the_outcome_slider_revolution_shortcode' ) );
+				}
+				?>
+            </section>
+		<?php endif; ?>
 
         <div class="page-content">
 			<?php get_template_part( 'template-parts/page', 'loop' ); ?>
