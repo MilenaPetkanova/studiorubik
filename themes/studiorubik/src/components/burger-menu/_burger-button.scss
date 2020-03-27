@@ -46,8 +46,6 @@ $hamburger-types: (spin) !default;
     transition-timing-function: linear;
     opacity: 1;
 
-
-
     // Normalize (<button>)
     font: inherit;
     color: inherit;
@@ -83,7 +81,21 @@ $hamburger-types: (spin) !default;
         .hamburger-inner::after {
             background-color: $white;
         }
+
+        .hamburger-inner::before {
+            opacity: 0;
+        }
+
+        .hamburger-inner::after {
+            left: 0;
+        }
+
     }
+
+    .hamburger-inner::before {
+        opacity: 1;
+    }
+
 }
 
 .hamburger-box {
@@ -115,6 +127,9 @@ $hamburger-types: (spin) !default;
     &::after {
         content: "";
         display: block;
+        //left: 1rem;
+        transform: translateX(1rem);
+        transition: all 0.3s;
     }
 
     &::before {
@@ -136,7 +151,7 @@ $hamburger-types: (spin) !default;
 }
 
 .hamburger--spin .hamburger-inner::before {
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.2s ease-in;
 }
 
 .hamburger--spin .hamburger-inner::after {
