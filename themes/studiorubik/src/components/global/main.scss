@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@import './variables.scss';
-@import './typography.scss';
-@import './mixins.scss';
+@import 'variables';
+@import 'typography';
+@import 'mixins';
 @import './base.scss';
 
 @import './animations.scss';
@@ -10,7 +10,7 @@
 @import '../burger-menu/burger-menu';
 
 /* Utilities */
-@import './buttons';
+@import 'buttons';
 @import './animations';
 
 /* Front Page */
