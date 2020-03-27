@@ -64,13 +64,13 @@
         <!-- The Brief Section -->
         <section class="brief">
             <!-- The Brief Section Headings -->
-            <div data-aos="fade-up" class="section-heading text-upper container">
+            <div data-aos="fade-up" class="container section-heading text-upper">
                 <h2><?php the_field( 'the_brief_heading' ) ?></h2>
                 <p class="background-text"><?php the_field( 'the_brief_heading' ) ?></p>
             </div>
 
             <!-- The Brief Section Content -->
-            <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+            <div data-aos="fade-zoom-in" data-aos-delay="300" class="container two-column-content">
                 <p><?php the_field( 'the_brief_text_area' ) ?></p>
             </div>
 
