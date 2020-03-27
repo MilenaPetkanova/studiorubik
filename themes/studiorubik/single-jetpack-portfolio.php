@@ -62,9 +62,9 @@
 
 
         <!-- The Brief Section -->
-        <section class="container brief">
+        <section class="brief">
             <!-- The Brief Section Headings -->
-            <div data-aos="fade-up" class="section-heading text-upper">
+            <div data-aos="fade-up" class="section-heading text-upper container">
                 <h2><?php the_field( 'the_brief_heading' ) ?></h2>
                 <p class="background-text"><?php the_field( 'the_brief_heading' ) ?></p>
             </div>
@@ -72,6 +72,14 @@
             <!-- The Brief Section Content -->
             <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
                 <p><?php the_field( 'the_brief_text_area' ) ?></p>
+            </div>
+
+            <div data-aos="fade-zoom-in" data-aos-delay="300">
+	            <?php
+	            if ( get_field( 'the_brief_slider_revolution_shortcode' ) ) {
+		            echo do_shortcode( get_field( 'the_brief_slider_revolution_shortcode' ) );
+	            }
+	            ?>
             </div>
 
         </section>
