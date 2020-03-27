@@ -4,6 +4,8 @@ html {
   font-size: 62.5%;
   /* Now 10px = 1rem! */
   font-family: SohoGothicPro Bold, serif;
+  /* force scrollbar, prevents initial gap */
+  overflow-y: scroll;
 }
 
 body {
@@ -11,9 +13,9 @@ body {
 }
 
 *,
-*:before,
-*:after {
-  box-sizing: inherit;
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 header {
@@ -76,9 +78,17 @@ button {
 }
 
 .hidden {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
+   display: none;
+   visibility: hidden;
+   opacity: 0;
+   transition: all 0.3ms;
+ }
+
+.visible {
+  display: initial;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3ms;
 }
 
 // Remove empty paragraph tags
@@ -209,10 +219,42 @@ article p {
 }
 
 @media only screen and (max-width: 768px)  {
+
+  .section-heading {
+    margin: 5rem auto 5rem auto;
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    .background-text {
+      font-size: 5.5rem;
+      left: -1rem;
+    }
+  }
+
   .two-column-content {
     column-count: 1;
   }
   .container {
     width: 90%!important;
   }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .section-heading {
+    margin: 6rem auto 5rem auto;
+
+    h2 {
+      font-size: 2.5rem;
+      transform: none;
+      position: relative;
+    }
+
+    .background-text {
+      display: none;
+    }
+  }
+
 }

@@ -1,6 +1,3 @@
-//@import '../global/_typography.scss';
-//@import '../global/_variables.scss';
-//@import '../global/_mixins.scss';
 $hexagon-width: 295px;
 $hexagon-height: $hexagon-width*.585;
 $hexagon-margin: 0;
@@ -8,12 +5,6 @@ $hexagon-title-color: $black;
 $hexagon-border-color:$white;
 $hexagon-image-color: rgba(255, 255, 255, 1);
 $viewport-thereshold: $hexagon-width+$hexagon-margin;
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 .honeycomb {
   display: flex;
@@ -31,7 +22,6 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
     height: $hexagon-height;
     margin: $hexagon-height/2.1 auto $hexagon-height/2.1;
     position: relative;
-    // padding: 0.5em;
     text-align: center;
     z-index: 1;
 
@@ -44,7 +34,7 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
       hyphens: auto;
       word-break: break-word;
       text-transform: uppercase;
-      color: #fff;
+      color: $white;
       opacity: 0;
       transition: opacity 350ms;
 
@@ -126,7 +116,6 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
   }
 }
 
-
 .team .three-column__grid-item {
   margin-bottom: 7.5rem;
   &:last-of-type {
@@ -137,7 +126,6 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
     margin-bottom: 2rem;
   }
 }
-
 
 .team .three-column__grid {
   justify-items: unset;

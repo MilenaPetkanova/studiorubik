@@ -1,10 +1,4 @@
-//.expertise__workflow {
-//    background-color: $gray;
-//    padding: 0.4rem 0;
-//}
-
 .expertise {
-
 
   .three-column__grid {
     align-items: baseline;
@@ -36,14 +30,6 @@
     //transition: fill 0.5s ease;
   }
 
-  //&:hover+.workflow__list-item svg {
-  //
-  //    rect,
-  //    polygon {
-  //        fill: $gray;
-  //    }
-  //}
-
   &:last-of-type {
     &:after {
       display: none;
@@ -61,7 +47,6 @@
   margin: 9rem auto;
   align-items: center;
 
-
   h5 {
     margin: 0 auto;
     display: table-cell;
@@ -75,7 +60,6 @@
     margin: 0 auto;
     margin-top: 2rem;
   }
-
 }
 
 .grid-item__description {
@@ -99,12 +83,11 @@
     }
   }
 
-   .three-column__grid {
+  .three-column__grid {
     margin: 2rem auto;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3rem;
   }
-
 }
 
 @media only screen and (max-width: 480px) {

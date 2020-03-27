@@ -1,11 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the navigation of the site/application.
 // -----------------------------------------------------------------------------
-//@import '../global/_typography.scss';
-//@import '../global/_variables.scss';
-//@import '../global/_mixins.scss';
 
-//Header
 .site-header {
     position: fixed;
     top: 0;
@@ -40,8 +36,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
     align-items: center;
     visibility: hidden;
     opacity: 0;
@@ -218,6 +214,10 @@
     #burger-menu-container ul li {
         font-size: 3rem;
     }
+
+    #burger-menu-container ul li a:after {
+        margin: 2.8rem 0 0 5%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -269,5 +269,9 @@
         > p {
             display: none;
         }
+    }
+
+    #burger-menu-container ul li a:after {
+        margin: 2.3rem 0 0 5%;
     }
 }

@@ -11,23 +11,30 @@ get_header();
     <main class="inner-page portfolio-page-template">
 
         <!-- Portfolio Filters -->
-        <section class="portfolio-filters">
-            <ul id="filters" class="container text-upper filter-button-group">
+        <section class="portfolio-filters ">
+            <ul id="filters" class="container text-upper filter-button-group dropdown">
 				<?php
 				$terms = get_terms( "jetpack-portfolio-type" ); //change to a different POST TYPE (Jetpack Portfolio Project/Category Type)
 				$count = count( $terms );
-				echo '<li class="portfolio-filter-item is-checked"><a class="inner-filter" href="javascript:void(0)" title="All" data-filter=".all" class="active">All projects</a></li>'; //default "All"
+				echo '<li class="portfolio-filter-item is-checked dropdown-content"><a class="inner-filter" href="javascript:void(0)" title="All" data-filter=".all" class="active">All projects</a></li>'; //default "All"
 				if ( $count > 0 ) {
 
 					foreach ( $terms as $term ) {
 
 						$termname = strtolower( $term->name );
 						$termname = str_replace( ' ', '-', $termname );
-						echo '<li class="portfolio-filter-item"><a class="inner-filter" href="javascript:void(0)" data-filter=".' . $termname . '">' . $term->name . '</a></li>'; //show our custom post type categories
+						echo '<li class="portfolio-filter-item dropdown-content"><a class="inner-filter" href="javascript:void(0)" data-filter=".' . $termname . '">' . $term->name . '</a></li>'; //show our custom post type categories
 					}
 				}
 				?>
             </ul>
+            <!--Dropdown Arrow-->
+            <svg id="dropdown_svg" class="hidden" xmlns="http://www.w3.org/2000/svg" width="21.65" height="8.44" viewBox="0 0 21.65 8.44">
+                <g>
+                    <polygon points="20.97 1.91 10.82 7.77 9.96 6.64 20.27 0.69 20.97 1.91" stroke="#000" stroke-miterlimit="10"/>
+                    <polygon points="0.67 1.91 10.53 7.77 11.35 6.64 1.35 0.69 0.67 1.91" stroke="#000" stroke-miterlimit="10"/>
+                </g>
+            </svg>
         </section>
 
         <!-- Display The Content -->

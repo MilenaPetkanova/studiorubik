@@ -52,6 +52,18 @@ $(document).ready(function () {
 
     // Init only on the Portfolio Page
     if ($('.portfolio-page-template').length || $('.page-template-cases-jetpack-portfolio').length || $('.case-studies').length) {
+
+        if ($(window).width() <= 768) {
+            $("#dropdown_svg").removeClass("hidden");
+            $('#dropdown_svg').on('click', function () {
+                $('.portfolio-filter-item').toggleClass('dropdown-active');
+                $(this).toggleClass('rotate');
+            });
+            $('.portfolio-filter-item').toggleClass('fadeOut ');
+        } else {
+
+        }
+
         //Init the Isotope Grid
         portfolioPage();
         $('.inner-filter').each(function () {
@@ -59,6 +71,8 @@ $(document).ready(function () {
             var text = $(this).text().replace(' and ', ' & ');
             $(this).text(text);
         });
+
+
     }
 
     // Init only on the Single Portfolio Page
