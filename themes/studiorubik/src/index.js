@@ -3,7 +3,6 @@ $ = jQuery.noConflict();
 
 import helloWorld from './components/global/main';
 import burgerMenu from './components/burger-menu/burger-menu';
-
 import portfolioCube from './components/front-page/portfolio/portfolio';
 import portfolioPage from './components/portfolio/portfolio';
 import teamProfiles from './components/about-us/team';
@@ -41,7 +40,6 @@ $(document).ready(function () {
             controls: false,
             touchEnabled: false
         });
-
     }
 
     // Init only on the About Us page
@@ -60,9 +58,7 @@ $(document).ready(function () {
                 $(this).toggleClass('rotate');
             });
             $('.portfolio-filter-item').toggleClass('fadeOut ');
-        } else {
-
-        }
+        } else {}
 
         //Init the Isotope Grid
         portfolioPage();
@@ -71,24 +67,18 @@ $(document).ready(function () {
             var text = $(this).text().replace(' and ', ' & ');
             $(this).text(text);
         });
-
-
     }
 
     // Init only on the Single Portfolio Page
     if ($('.single-jetpack-portfolio').length) {
-
         $('.services-misc a').each(function () {
-
             var text = $(this).text().replace(' and ', ' & ');
             $(this).text(text);
-
             var theString = this.href.replace('/project-type/', '/portfolio/#filter=.');
             var theStringMinusOne = theString.substring(0, theString.length - 1);
             this.href = theStringMinusOne;
         });
     }
-
 });
 
 // Run this when everything is ready loading ( images,  styles, etc)
@@ -108,7 +98,6 @@ AOS.init({
     disableMutationObserver: false, // disables automatic mutations' detections (advanced)
     debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
     throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     offset: 0, // offset (in px) from the original trigger point
     // delay: 1600, // values from 0 to 3000, with step 50ms
@@ -237,11 +226,9 @@ if ($('.page-template-contacts-page').length) {
             title: 'Snazzy!'
         });
     }
-
 }
 
 //Case Studies Isotope
-
 jQuery(function ($) {
 
     var $container = $('#isotope-list'); //The ID for the list with all the blog posts
@@ -270,5 +257,4 @@ jQuery(function ($) {
 
         return false;
     });
-
 });

@@ -1,15 +1,9 @@
-/* ---- grid ---- */
-
-/* clear fix */
 #portfolio:after {
   content: '';
   display: block;
   clear: both;
 }
 
-/* ---- .element-item ---- */
-
-/* 4 columns, percentage width */
 .portfolio-item,
 .portfolio-sizer {
   width: 25%;
@@ -108,11 +102,6 @@
             background: rgba(0, 0, 0, 0.4);
             content: '';
             transition: transform 0.35s;
-            //background-image: url("http://studiorubikdev.local/wp-content/uploads/2020/03/hexagon-hover.svg");
-            //background-repeat: no-repeat;
-            //background-position: center center;
-            //transition: all 10.35s ease;
-            //transition-delay: 11.1s;
           }
 
           h2 {
@@ -143,7 +132,6 @@
       color: $black;
       transition: all 0.35s ease;
     }
-
   }
 }
 
@@ -262,7 +250,6 @@
   .portfolio-item figure.grid-item-figure:hover svg {
     display: none;
   }
-
 }
 
 @media only screen and (max-width: 480px) {

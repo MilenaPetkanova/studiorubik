@@ -25,7 +25,6 @@
 			}
 			?>
         </section>
-
     </main>
 
     <!-- Get the footer function -->

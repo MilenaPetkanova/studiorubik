@@ -15,6 +15,7 @@
 
         <!-- Section Containing: Client Name / Year / Services Provided & Video Lightbox-->
         <section class="misc-section text-upper">
+
             <!-- Misc. -->
             <div data-aos="fade-up" class="container ">
 
@@ -61,11 +62,11 @@
             </div>
         </section>
 
-
         <!-- The Brief Section -->
 		<?php
 		if ( get_field( 'the_brief_heading' ) ): ?>
             <section class="brief">
+
                 <!-- The Brief Section Headings -->
                 <div data-aos="fade-up" class="container section-heading text-upper">
                     <h2><?php the_field( 'the_brief_heading' ) ?></h2>
@@ -86,14 +87,15 @@
 					}
 					?>
                 </div>
-
             </section>
 		<?php endif; ?>
 
         <!-- Our Angle Section -->
 		<?php
+
 		if ( get_field( 'our_angle_heading' ) ): ?>
             <section class="container our-angle">
+
                 <!-- Our Angle Section Headings -->
                 <div data-aos="fade-up" class="section-heading text-upper">
                     <h2><?php the_field( 'our_angle_heading' ) ?></h2>
@@ -116,8 +118,10 @@
 
         <!-- The Outcome Section -->
 		<?php
+
 		if ( get_field( 'the_outcome_heading' ) ): ?>
             <section class="container our-angle">
+
                 <!-- The Outcome Section Headings -->
                 <div data-aos="fade-up" class="section-heading text-upper">
                     <h2><?php the_field( 'the_outcome_heading' ) ?></h2>
@@ -146,7 +150,6 @@
 			<?php previous_post_link( '<strong class="fleft">%link</strong>' ); ?>
 			<?php next_post_link( '<strong class="fright">%link</strong>' ); ?>
         </section>
-
     </main>
 
     <!-- Get the footer function -->

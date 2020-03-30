@@ -35,7 +35,6 @@ get_header( 'front' );
                     <p><?php the_field( 'about_us_text_area' ) ?></p>
                 </div>
             </div>
-
         </section>
 
         <!-- First Parallax -->
@@ -47,7 +46,6 @@ get_header( 'front' );
 				echo do_shortcode( get_field( 'parallax_shortcode' ) );
 			}
 			?>
-
         </section>
 
         <!-- Mission & Vision Section -->
@@ -66,11 +64,11 @@ get_header( 'front' );
                     <p><?php the_field( 'mission_-_vision_text_area' ) ?></p>
                 </div>
             </div>
-
         </section>
 
         <!-- Values Section -->
         <section class="values">
+
             <!-- Our Values Section Headings -->
             <div data-aos="fade-up" class="section-heading text-upper container">
                 <h2><?php the_field( 'our_values_section_heading' ) ?></h2>
@@ -90,7 +88,7 @@ get_header( 'front' );
 
                     <!-- Grid Item Icon & Heading -->
                     <figure>
-                        <img class="style-svg" src="<?php echo $icon ?>"/>
+                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
                         <figcaption>
                             <h5 class="text-upper"><?php echo $first_grid_item['grid_item_heading'] ?></h5>
                         </figcaption>
@@ -100,7 +98,6 @@ get_header( 'front' );
                     <div class="grid-item__description">
                         <p><?php echo $first_grid_item['gird_item_description'] ?></p>
                     </div>
-
                 </div>
 
                 <!-- Grid Item 2 -->
@@ -113,7 +110,7 @@ get_header( 'front' );
 
                     <!-- Grid Item Icon & Heading -->
                     <figure>
-                        <img class="style-svg" src="<?php echo $icon ?>"/>
+                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
                         <figcaption>
                             <h5 class="text-upper"><?php echo $second_grid_item['grid_item_heading'] ?></h5>
                         </figcaption>
@@ -123,7 +120,6 @@ get_header( 'front' );
                     <div class="grid-item__description">
                         <p><?php echo $second_grid_item['gird_item_description'] ?></p>
                     </div>
-
                 </div>
 
                 <!-- Grid Item 3 -->
@@ -136,7 +132,7 @@ get_header( 'front' );
 
                     <!-- Grid Item Icon & Heading -->
                     <figure>
-                        <img class="style-svg" src="<?php echo $icon ?>"/>
+                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
                         <figcaption>
                             <h5 class="text-upper"><?php echo $third_grid_item['grid_item_heading'] ?></h5>
                         </figcaption>
@@ -146,7 +142,6 @@ get_header( 'front' );
                     <div class="grid-item__description">
                         <p><?php echo $third_grid_item['gird_item_description'] ?></p>
                     </div>
-
                 </div>
 
                 <!-- Grid Item 4 -->
@@ -159,7 +154,7 @@ get_header( 'front' );
 
                     <!-- Grid Item Icon & Heading -->
                     <figure>
-                        <img class="style-svg" src="<?php echo $icon ?>"/>
+                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
                         <figcaption>
                             <h5 class="text-upper"><?php echo $fourth_grid_item['grid_item_heading'] ?></h5>
                         </figcaption>
@@ -169,7 +164,6 @@ get_header( 'front' );
                     <div class="grid-item__description">
                         <p><?php echo $fourth_grid_item['gird_item_description'] ?></p>
                     </div>
-
                 </div>
 
                 <!-- Grid Item 5 -->
@@ -182,7 +176,7 @@ get_header( 'front' );
 
                     <!-- Grid Item Icon & Heading -->
                     <figure>
-                        <img class="style-svg" src="<?php echo $icon ?>"/>
+                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
                         <figcaption>
                             <h5 class="text-upper"><?php echo $fifth_grid_item['grid_item_heading'] ?></h5>
                         </figcaption>
@@ -192,7 +186,6 @@ get_header( 'front' );
                     <div class="grid-item__description">
                         <p><?php echo $fifth_grid_item['gird_item_description'] ?></p>
                     </div>
-
                 </div>
 
                 <!-- Grid Item 6 -->
@@ -205,7 +198,7 @@ get_header( 'front' );
 
                     <!-- Grid Item Icon & Heading -->
                     <figure>
-                        <img class="style-svg" src="<?php echo $icon ?>"/>
+                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
                         <figcaption>
                             <h5 class="text-upper"><?php echo $sixth_grid_item['grid_item_heading'] ?></h5>
                         </figcaption>
@@ -215,11 +208,8 @@ get_header( 'front' );
                     <div class="grid-item__description">
                         <p><?php echo $sixth_grid_item['gird_item_description'] ?></p>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
         <!-- Team Section -->
@@ -259,7 +249,8 @@ get_header( 'front' );
                             <!-- Video Element -->
                             <video loop="true" poster="<?php echo $poster_image ?>"
                                    class="myvideos honeycomb-cell__video"
-                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto">
+                            </video>
 
                             <!-- Name & Title -->
                             <div class="honeycomb-cell__title text-upper">
@@ -267,9 +258,7 @@ get_header( 'front' );
                                 <p class="description"><?php echo $person_description ?></p>
                             </div>
                         </div>
-
 					<?php endif; ?>
-
                 </div>
 
                 <!-- Grid Item 2 -->
@@ -290,18 +279,16 @@ get_header( 'front' );
                             <!-- Video Element -->
                             <video loop="true" poster="<?php echo $poster_image ?>"
                                    class="myvideos honeycomb-cell__video"
-                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto">
+                            </video>
 
                             <!-- Name & Title -->
                             <div class="honeycomb-cell__title text-upper">
                                 <p class="name"><?php echo $person_name ?></p>
                                 <p class="description"><?php echo $person_description ?></p>
                             </div>
-
                         </div>
-
 					<?php endif; ?>
-
                 </div>
 
                 <!-- Grid Item 3 -->
@@ -322,7 +309,8 @@ get_header( 'front' );
                             <!-- Video Element -->
                             <video loop="true" poster="<?php echo $poster_image ?>"
                                    class="myvideos honeycomb-cell__video"
-                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto">
+                            </video>
 
                             <!-- Name & Title -->
                             <div class="honeycomb-cell__title text-upper">
@@ -330,9 +318,7 @@ get_header( 'front' );
                                 <p class="description"><?php echo $person_description ?></p>
                             </div>
                         </div>
-
 					<?php endif; ?>
-
                 </div>
 
                 <!-- Grid Item 4 -->
@@ -353,16 +339,15 @@ get_header( 'front' );
                             <!-- Video Element -->
                             <video loop="true" poster="<?php echo $poster_image ?>"
                                    class="myvideos honeycomb-cell__video"
-                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto">
+                            </video>
 
                             <!-- Name & Title -->
                             <div class="honeycomb-cell__title text-upper">
                                 <p class="name"><?php echo $person_name ?></p>
                                 <p class="description"><?php echo $person_description ?></p>
-
                             </div>
                         </div>
-
 					<?php endif; ?>
                 </div>
 
@@ -384,18 +369,16 @@ get_header( 'front' );
                             <!-- Video Element -->
                             <video loop="true" poster="<?php echo $poster_image ?>"
                                    class="myvideos honeycomb-cell__video"
-                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto">
+                            </video>
 
                             <!-- Name & Title -->
                             <div class="honeycomb-cell__title text-upper">
                                 <p class="name"><?php echo $person_name ?></p>
                                 <p class="description"><?php echo $person_description ?></p>
                             </div>
-
                         </div>
-
 					<?php endif; ?>
-
                 </div>
 
                 <!-- Grid Item 6 -->
@@ -416,7 +399,8 @@ get_header( 'front' );
                             <!-- Video Element -->
                             <video loop="true" poster="<?php echo $poster_image ?>"
                                    class="myvideos honeycomb-cell__video"
-                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto">
+                            </video>
 
                             <!-- Name & Title -->
                             <div class="honeycomb-cell__title text-upper">
@@ -424,7 +408,6 @@ get_header( 'front' );
                                 <p class="description"><?php echo $person_description ?></p>
                             </div>
                         </div>
-
 					<?php endif; ?>
                 </div>
 
@@ -446,7 +429,8 @@ get_header( 'front' );
                             <!-- Video Element -->
                             <video loop="true" poster="<?php echo $poster_image ?>"
                                    class="myvideos honeycomb-cell__video"
-                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto">
+                            </video>
 
                             <!-- Name & Title -->
                             <div class="honeycomb-cell__title text-upper">
@@ -454,7 +438,6 @@ get_header( 'front' );
                                 <p class="description"><?php echo $person_description ?></p>
                             </div>
                         </div>
-
 					<?php endif; ?>
                 </div>
 
@@ -476,7 +459,8 @@ get_header( 'front' );
                             <!-- Video Element -->
                             <video loop="true" poster="<?php echo $poster_image ?>"
                                    class="myvideos honeycomb-cell__video"
-                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto">
+                            </video>
 
                             <!-- Name & Title -->
                             <div class="honeycomb-cell__title text-upper">
@@ -484,7 +468,6 @@ get_header( 'front' );
                                 <p class="description"><?php echo $person_description ?></p>
                             </div>
                         </div>
-
 					<?php endif; ?>
                 </div>
 
@@ -506,7 +489,8 @@ get_header( 'front' );
                             <!-- Video Element -->
                             <video loop="true" poster="<?php echo $poster_image ?>"
                                    class="myvideos honeycomb-cell__video"
-                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto"></video>
+                                   src="<?php echo $team_video['url']; ?>" width="auto" height="auto">
+                            </video>
 
                             <!-- Name & Title -->
                             <div class="honeycomb-cell__title text-upper">
@@ -514,7 +498,6 @@ get_header( 'front' );
                                 <p class="description"><?php echo $person_description ?></p>
                             </div>
                         </div>
-
 					<?php endif; ?>
                 </div>
 
@@ -546,11 +529,9 @@ get_header( 'front' );
                                 </a>
                             </div>
                         </div>
-
 					<?php endif; ?>
                 </div>
             </div>
-
         </section>
 
         <!-- Second Parallax -->
@@ -583,7 +564,6 @@ get_header( 'front' );
 
         <!-- Display the Sidebar -->
 		<?php get_sidebar(); ?>
-
     </main>
 
     <!-- Get the footer function -->

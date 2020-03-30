@@ -5,12 +5,15 @@
 <main class="single-career-page">
 
     <section class="hero-section">
+
 		<?php
+
 		if ( has_post_thumbnail() ):
 			the_post_thumbnail( 'blog', array( 'class' => 'featured-image' ) );
 		else:
 			echo '<h4 class="text-center">No feature image added</h4>';
 		endif;
+
 		?>
 
         <div class="hero-section__content container">
@@ -35,7 +38,6 @@
                 <p><?php the_field( 'tasks_content' ) ?></p>
             </div>
         </div>
-
     </section>
 
     <!-- Skills Section -->
@@ -53,7 +55,6 @@
                 <p><?php the_field( 'skills_content' ) ?></p>
             </div>
         </div>
-
     </section>
 
     <!-- We Offer Section -->
@@ -76,7 +77,6 @@
             <a data-aos="fade-up" href="#" title="apply" class="button button--fill">apply</a>
         </div>
     </section>
-
 </main>
 
 <!-- Get the footer function -->

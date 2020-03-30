@@ -112,7 +112,6 @@ p:empty {
   position: relative;
   margin: 5rem auto;
 
-
   h2 {
     font-family: "SohoGothicPro-Bold", serif;
     font-size: 3.5rem;
@@ -135,7 +134,6 @@ p:empty {
     margin: 0;
     left: -2rem;
     text-transform: uppercase;
-
   }
 
   p {
@@ -252,7 +250,6 @@ article p {
 @media only screen and (max-width: 800px) {
 
   .section-heading {
-    //margin: 5rem auto;
 
     h2 {
       font-size: 3rem;
@@ -267,16 +264,11 @@ article p {
   .two-column-content {
     column-count: 1;
   }
-  //
-  //.container {
-  //  width: 90% !important;
-  //}
 }
 
 @media only screen and (max-width: 480px) {
 
   .section-heading {
-    //margin: 5rem auto 5rem auto;
 
     h2 {
       font-size: 2.5rem;
@@ -288,5 +280,4 @@ article p {
       display: none;
     }
   }
-
 }

@@ -9,7 +9,6 @@ get_header();
 
 ?>
 
-
     <!-- Main element -->
     <main class="inner-page case-studies-single-post">
 
@@ -25,6 +24,7 @@ get_header();
 
         <!-- Section Containing: Client Name / Year / Services Provided & Video Lightbox-->
         <section class="misc-section text-upper">
+
             <!-- Misc. -->
             <div data-aos="fade-up" class="container ">
 				<?php
@@ -51,13 +51,10 @@ get_header();
 					echo do_shortcode( $lightbox );
 				}
 				?>
-
                 <!-- Button Calling the Case Study Lightbox -->
                 <!--                <a href="#" title="case study" class="wp-video-popup button button--transparent-black">case study</a>-->
             </div>
         </section>
-
     </main>
-
 
 <?php get_footer(); ?>

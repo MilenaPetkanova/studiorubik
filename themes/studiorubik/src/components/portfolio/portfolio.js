@@ -78,11 +78,9 @@ function portfolioPage() {
 
         $(window).on('hashchange', onHashchange);
 
-// trigger event handler to init Isotope
+        // trigger event handler to init Isotope
         onHashchange();
     });
-
-
 }
 
 export default portfolioPage;
