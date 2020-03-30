@@ -2,7 +2,7 @@
 
   .three-column__grid {
     align-items: baseline;
-
+    justify-items: center;
   }
 
   .three-column__grid-item {
@@ -43,8 +43,8 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0;
-  grid-row-gap: 0;
-  margin: 9rem auto;
+  grid-row-gap: 3rem;
+  margin: 6rem auto;
   align-items: center;
 
   h5 {
@@ -63,12 +63,12 @@
 }
 
 .grid-item__description {
-  max-width: 28rem;
+  max-width: 30rem;
   margin: 0 auto;
   word-break: break-word;
 
   p {
-    text-align: justify;
+    text-align: left;
   }
 }
 
