@@ -1,58 +1,77 @@
 .clients__grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 4rem;
-    padding: 4rem 0;
-    margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 4rem;
+  padding: 4rem 0;
+  margin-bottom: 4rem;
 }
 
 .clients {
 
-    .button--fill {
-        position: relative;
-        margin: 0 auto;
-        display: block;
-    }
+  .button--fill {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+  }
 
-    margin-bottom: 15rem;
+  margin-bottom: 15rem;
 }
 
 .clients__grid-item {
-    position: relative;
-    min-height: 13rem;
+  position: relative;
+  min-height: 13rem;
 
 
-    figure {
-        @include centerY;
+  figure {
+    @include centerY;
 
-        a {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: $white;
-            font-family: "SohoGothicPro-Bold";
-            letter-spacing: 0.9px;
-            font-size: 2rem;
-            width: 100%;
-            position: absolute;
-            @include centerXY;
-            opacity: 0;
-            transition: opacity 350ms;
+    a {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: $white;
+      font-family: "SohoGothicPro-Bold";
+      letter-spacing: 0.9px;
+      font-size: 2rem;
+      width: 100%;
+      position: absolute;
+      @include centerXY;
+      opacity: 0;
+      transition: opacity 350ms;
 
-            &:hover {
-                opacity: 1;
-                transition: opacity 350ms;
-            }
-        }
+      &:hover {
+        opacity: 1;
+        transition: opacity 350ms;
+      }
     }
+
+      img {
+          margin: 0 auto;
+          display: block;
+      }
+  }
 
 }
 
-@media only screen and (max-width: 768px)  {
-    .clients {
-        margin-bottom: 5rem;
-    }
+@media only screen and (max-width: 1100px) {
+  .clients__grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 3rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .clients {
+    margin-bottom: 5rem;
+  }
+  .clients__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
     .clients__grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 2rem;
     }
 }

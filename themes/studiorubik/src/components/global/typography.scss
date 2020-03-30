@@ -1,0 +1,97 @@
+// Soho  Gothic Regular
+@font-face {
+    font-family: "SohoGothicPro-Regular";
+    font-weight: 400;
+    src: url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Regular.woff2") format("woff2"), url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Regular.woff") format("woff");
+}
+
+// Soho  Gothic Medium
+@font-face {
+    font-family: "SohoGothicPro-Medium";
+    font-weight: 500;
+    src: url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Medium.woff2") format("woff2"), url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Medium.woff") format("woff");
+}
+
+// Soho  Gothic Bold
+@font-face {
+    font-family: "SohoGothicPro-Bold";
+    font-weight: 700;
+    src: url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Bold.woff2") format("woff2"), url("../../../vendors/fonts/SohoGothicPro/SohoGothicPro-Bold.woff") format("woff");
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* Now 10px = 1rem! */
+    font-family: "SohoGothicPro-Regular";
+}
+
+body {
+    font-family: "SohoGothicPro-Regular";
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+h4 {
+    font-family: "SohoGothicPro-Bold";
+    font-size: 3.5rem;
+    letter-spacing: 2.975px;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.text-lower {
+    text-transform: lowercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.soho-regular {
+    font-family: "SohoGothicPro-Regular", sans-serif !important;
+    font-weight: 400;
+}
+
+.soho-medium {
+    font-family: "SohoGothicPro-Medium", sans-serif !important;
+    font-weight: 500;
+}
+
+.soho-bold {
+    font-family: "SohoGothicPro-Bold", sans-serif !important;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 800px)  {
+    .section-heading {
+        margin: 6rem auto 5rem auto;
+        h2 {
+            font-size: 2.5rem;
+            transform: none;
+            position: relative;
+        }
+        .background-text {
+            display: none;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 #my3Dsurface {
   width: 100%;
-  min-height: 65rem;
+  min-height: 70rem;
   margin: 0 auto;
   color: #222222;
 
@@ -101,10 +101,6 @@
   z-index: 1;
 }
 
-
-.portfolio__text h3:last-of-type  {
-  margin-bottom: 0;
-}
 //@media only screen and (min-width: 768px) {
 //
 //  .portfolio__text {
@@ -114,7 +110,7 @@
 //
 //}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
 
 }
 

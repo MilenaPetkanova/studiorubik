@@ -2,7 +2,7 @@
 
   .three-column__grid {
     align-items: baseline;
-    justify-items: center;
+
   }
 
   .three-column__grid-item {
@@ -37,6 +37,9 @@
   }
 }
 
+.expertise__workflow {
+  margin-top: 7rem;
+}
 // Expertise Grid
 .three-column__grid {
   display: grid;
@@ -44,7 +47,7 @@
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0;
   grid-row-gap: 3rem;
-  margin: 6rem auto;
+  margin: 9rem auto;
   align-items: center;
 
   h5 {
@@ -57,22 +60,21 @@
   figcaption {
     min-height: 5.5rem;
     display: table;
-    margin: 0 auto;
-    margin-top: 2rem;
+    margin: 2rem auto 0 auto;
   }
 }
 
 .grid-item__description {
-  max-width: 30rem;
+  max-width: 28rem;
   margin: 0 auto;
   word-break: break-word;
 
   p {
-    text-align: left;
+    text-align: justify;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
 
   .workflow__list .workflow__list-item {
     font-size: 1.8rem;

@@ -78,11 +78,11 @@ button {
 }
 
 .hidden {
-   display: none;
-   visibility: hidden;
-   opacity: 0;
-   transition: all 0.3ms;
- }
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3ms;
+}
 
 .visible {
   display: initial;
@@ -110,7 +110,7 @@ p:empty {
 
 .section-heading {
   position: relative;
-  margin: 12rem auto 6rem auto;
+  margin: 12rem auto 5rem auto;
 
 
   h2 {
@@ -218,7 +218,7 @@ article p {
   height: 600px;
 }
 
-@media only screen and (max-width: 768px)  {
+@media only screen and (max-width: 800px) {
 
   .section-heading {
     margin: 5rem auto 5rem auto;
@@ -237,7 +237,7 @@ article p {
     column-count: 1;
   }
   .container {
-    width: 90%!important;
+    width: 90% !important;
   }
 }
 
