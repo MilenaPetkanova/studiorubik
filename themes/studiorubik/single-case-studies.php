@@ -53,7 +53,7 @@ get_header();
 				?>
 
                 <!-- Button Calling the Case Study Lightbox -->
-                <a href="#" title="case study" class="wp-video-popup button button--transparent-black">case study</a>
+                <!--                <a href="#" title="case study" class="wp-video-popup button button--transparent-black">case study</a>-->
             </div>
         </section>
 

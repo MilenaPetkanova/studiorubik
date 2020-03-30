@@ -24,25 +24,47 @@
 }
 
 .post-navigation {
+  margin: 7rem auto;
+
   strong {
     font-size: 1.8rem;
     font-family: "SohoGothicPro-Bold", sans-serif;
     color: #8b8a8d;
+    position: relative;
 
     &:first-of-type {
+
       &:before {
         content: url("../global/img/prev_project.svg");
-        vertical-align: middle;
-        padding-right: 1.5rem;
+        @include centerY;
+        padding-top: 0.5rem;
+      }
+
+
+      a {
+        padding-left: 3.5rem;
       }
     }
 
     &:last-of-type {
+
       &:after {
         content: url("../global/img/next_project.svg");
-        vertical-align: middle;
-        padding-left: 1.5rem;
+        @include centerY;
+        padding-top: 0.5rem;
       }
+
+      a {
+        padding-right: 1.5rem;
+      }
+    }
+
+    &.fleft:after {
+      display: none;
+    }
+
+    &.fright:before {
+      display: none;
     }
   }
 }
