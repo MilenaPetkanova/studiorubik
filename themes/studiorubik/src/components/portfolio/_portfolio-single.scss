@@ -1,48 +1,49 @@
 .misc-section {
+  margin-top: 4rem;
 
-    a:hover {
-        color:$black;
-    }
+  a:hover {
+    color: $black;
+  }
 
-    p {
-        font-family: "SohoGothicPro-Bold", sans-serif;
-        display: inline-block;
-        color: #8b8a8d;
-        font-size: 2rem;
-    }
+  p {
+    font-family: "SohoGothicPro-Bold", sans-serif;
+    display: inline-block;
+    color: #8b8a8d;
+    font-size: 2rem;
+  }
 
-    b {
-        color: #000000;
-    }
+  b {
+    color: #000000;
+  }
 
-    .button {
-        display: inline-block;
-        margin-top: 5rem;
-        margin-right: 2rem;
-    }
+  .button {
+    display: inline-block;
+    margin-top: 5rem;
+    margin-right: 2rem;
+  }
 }
 
 .post-navigation {
-    strong {
-        font-size: 1.8rem;
-        font-family: "SohoGothicPro-Bold", sans-serif;
-        color: #8b8a8d;
+  strong {
+    font-size: 1.8rem;
+    font-family: "SohoGothicPro-Bold", sans-serif;
+    color: #8b8a8d;
 
-        &:first-of-type {
-            &:before {
-                content: url("../global/img/prev_project.svg");
-                vertical-align: middle;
-                padding-right: 1.5rem;
-            }
-        }
-
-        &:last-of-type {
-            &:after {
-                content: url("../global/img/next_project.svg");
-                vertical-align: middle;
-                padding-left: 1.5rem;
-            }
-        }
+    &:first-of-type {
+      &:before {
+        content: url("../global/img/prev_project.svg");
+        vertical-align: middle;
+        padding-right: 1.5rem;
+      }
     }
+
+    &:last-of-type {
+      &:after {
+        content: url("../global/img/next_project.svg");
+        vertical-align: middle;
+        padding-left: 1.5rem;
+      }
+    }
+  }
 }
 

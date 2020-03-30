@@ -175,6 +175,7 @@ p:empty {
     list-style-image: url('./img/custom-li.svg');
     max-width: 66rem;
     font-size: 1.6rem;
+    padding-left: 2rem;
   }
 
   p {
@@ -200,6 +201,10 @@ article p {
 
 .wp-block-image {
   margin-bottom: 0;
+
+  img {
+    display: block;
+  }
 }
 
 .hero-section__content {

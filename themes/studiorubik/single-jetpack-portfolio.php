@@ -101,10 +101,8 @@
                 </div>
 
                 <!-- Our Angle Section Content -->
-                <div class="container">
-                    <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
-                        <p><?php the_field( 'our_angle_text_area' ) ?></p>
-                    </div>
+                <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+                    <p><?php the_field( 'our_angle_text_area' ) ?></p>
                 </div>
 
                 <!-- Our Angle Slider Revolution Video ACF -->
@@ -127,10 +125,8 @@
                 </div>
 
                 <!-- The Outcome Section Content -->
-                <div class="container">
-                    <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
-                        <p><?php the_field( 'the_outcome_text_area' ) ?></p>
-                    </div>
+                <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+                    <p><?php the_field( 'the_outcome_text_area' ) ?></p>
                 </div>
 
                 <!-- The Outcome Slider Revolution Video ACF -->
