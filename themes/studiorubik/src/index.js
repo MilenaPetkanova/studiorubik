@@ -53,7 +53,7 @@ $(document).ready(function () {
     // Init only on the Portfolio Page
     if ($('.portfolio-page-template').length || $('.page-template-cases-jetpack-portfolio').length || $('.case-studies').length) {
 
-        if ($(window).width() <= 768) {
+        if ($(window).width() <= 800) {
             $("#dropdown_svg").removeClass("hidden");
             $('#dropdown_svg').on('click', function () {
                 $('.portfolio-filter-item').toggleClass('dropdown-active');

@@ -150,7 +150,7 @@
 .portfolio-filters {
   background-color: $gray;
   padding: 2.3rem 0;
-
+  transition: all 0.5s;
 }
 
 .portfolio-filter-item-active {
@@ -162,6 +162,13 @@
   transition: all 0.35s ease;
 }
 
+@media only screen and (max-width: 1500px) {
+  .portfolio-filter-item {
+    font-size: 1.6rem;
+    margin-right: 2.5%;
+  }
+}
+
 @media only screen and (max-width: 800px) {
 
   #dropdown_svg {
@@ -169,12 +176,12 @@
     top: 4.5rem;
     right: 5rem;
     transform: rotateZ(90deg);
-    transition: all 0.3s;
+    transition: all 0.5s;
     z-index: 99;
 
     &.rotate {
       transform: rotateZ(0);
-      transition: all 0.3s;
+      transition: all 0.5s;
     }
   }
 
@@ -240,6 +247,7 @@
       left: 3rem;
       text-align: left;
       top: -5rem;
+
       &:after {
         content: '';
         position: absolute;
