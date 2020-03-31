@@ -46,7 +46,7 @@
 				}
 				?>
 
-                <div class="button-container">
+                <div class="button-container cf">
                     <!-- Button Calling the Case Study Lightbox -->
 					<?php if ( $lightbox ): ?>
                         <a href="#" title="case study" class="wp-video-popup button button--transparent-black">case

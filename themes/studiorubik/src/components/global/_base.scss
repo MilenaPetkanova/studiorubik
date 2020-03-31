@@ -227,6 +227,10 @@ article p {
   padding: 1.75rem 0;
 }
 
+.attachment-fixed rs-sbg {
+  background-attachment: fixed !important;
+}
+
 /* two equal columns that floats next to each other */
 .col-2 {
   float: left;
