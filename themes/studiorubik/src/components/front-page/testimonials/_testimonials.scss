@@ -1,60 +1,66 @@
 .bx-wrapper {
-    background: transparent;
-    box-shadow: none;
-    border: none;
+  background: transparent;
+  box-shadow: none;
+  border: none;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-    position: relative;
-    width: 15px;
-    height: 8.66px;
-    background-color: #ffffff;
-    margin: 4.33px 0.5rem;
-    border-left: solid 2px #333333;
-    border-right: solid 2px #333333;
-    border-radius: 0;
+  position: relative;
+  width: 15px;
+  height: 8.66px;
+  background-color: #ffffff;
+  margin: 4.33px 0.5rem;
+  border-left: solid 2px #333333;
+  border-right: solid 2px #333333;
+  border-radius: 0;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:before,
 .bx-wrapper .bx-pager.bx-default-pager a:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 10.61px;
-    height: 10.61px;
-    -webkit-transform: scaleY(0.5774) rotate(-45deg);
-    -ms-transform: scaleY(0.5774) rotate(-45deg);
-    transform: scaleY(0.5774) rotate(-45deg);
-    background-color: inherit;
-    left: 0.1967px;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 10.61px;
+  height: 10.61px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 0.1967px;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:before {
-    top: -5.3033px;
-    border-top: solid 2.8284px #333333;
-    border-right: solid 2.8284px #333333;
+  top: -5.3033px;
+  border-top: solid 2.8284px #333333;
+  border-right: solid 2.8284px #333333;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:after {
-    bottom: -5.3033px;
-    border-bottom: solid 2.8284px #333333;
-    border-left: solid 2.8284px #333333;
+  bottom: -5.3033px;
+  border-bottom: solid 2.8284px #333333;
+  border-left: solid 2.8284px #333333;
 }
 
 .testimonial blockquote {
-    max-width: 340px;
-    margin: 0 auto;
+  max-width: 340px;
+  margin: 0 auto;
 }
 
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
-    bottom: unset;
+  bottom: unset;
 }
 
 .testimonial-footer h3 {
-    font-size: 1.8rem;
-    color: #8b8a8d;
-    font-family: "SohoGothicPro-Bold", sans-serif;
-    letter-spacing: 1.36px;
+  font-size: 1.8rem;
+  color: #8b8a8d;
+  font-family: "SohoGothicPro-Bold", sans-serif;
+  letter-spacing: 1.36px;
+}
+
+@media only screen and (max-width: 960px) {
+  .bx-wrapper .bx-pager {
+    padding-top: 8rem;
+  }
 }
 

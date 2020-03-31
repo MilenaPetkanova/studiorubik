@@ -3,275 +3,282 @@
 // -----------------------------------------------------------------------------
 
 .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 8;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5rem 0;
-    &.show-nav {
-        .hamburger {
-            opacity: 1;
-            transition: opacity .5s cubic-bezier(.694, .048, .335, 1);
-        }
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem 0;
 
-    &.hide-nav {
-        .hamburger {
-            opacity: 0;
-            transition: opacity .5s cubic-bezier(.694, .048, .335, 1);
-        }
+  &.show-nav {
+    .hamburger {
+      opacity: 1;
+      transition: opacity .5s cubic-bezier(.694, .048, .335, 1);
     }
+  }
+
+  &.hide-nav {
+    .hamburger {
+      opacity: 0;
+      transition: opacity .5s cubic-bezier(.694, .048, .335, 1);
+    }
+  }
 }
 
 .inner-page-header {
-    position: relative;
+  position: relative;
 }
 
 // Burger Menu
 #burger-menu-container {
-    font-family: "SohoGothicPro-Bold";
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0;
-    grid-row-gap: 0;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    text-align: center;
-    background: $menu-bg;
-    @include scale(1.5);
+  font-family: "SohoGothicPro-Bold";
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: $menu-bg;
+  @include scale(1.5);
+  @include transition($time, $timing);
+
+  .social-menu {
+    ul li a:hover:after {
+      display: none;
+    }
+  }
+
+  &.opened {
+    visibility: visible;
+    opacity: 1;
+    @include scale(1);
     @include transition($time, $timing);
+  }
 
-    .social-menu {
-        ul li a:hover:after {
-            display: none;
-        }
-    }
+  ul {
+    margin: 0 auto;
 
-    &.opened {
-        visibility: visible;
-        opacity: 1;
-        @include scale(1);
-        @include transition($time, $timing);
-    }
+    li {
+      display: block;
+      margin: 0 auto;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.94;
 
-    ul {
+      a {
+        position: relative;
+        z-index: 4;
+        width: 100%;
         margin: 0 auto;
+        color: $menu-links;
+        // color: magenta;
+        text-decoration: none;
+        letter-spacing: 1.6px;
+        @include transition($time, $timing);
 
-        li {
-            display: block;
-            margin: 0 auto;
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.94;
-
-            a {
-                position: relative;
-                z-index: 4;
-                width: 100%;
-                margin: 0 auto;
-                color: $menu-links;
-                // color: magenta;
-                text-decoration: none;
-                letter-spacing: 1.6px;
-                @include transition($time, $timing);
-
-                &:after {
-                    content: " ";
-                    position: absolute;
-                    width: 0%;
-                    height: 5px;
-                    margin: 3.4rem 0 0 5%;
-                    right: 0;
-                    background: $white;
-                    @include transition($time, $timing);
-                }
-
-                &:hover {
-                    color: $white;
-
-                    &:after {
-                        width: 115%;
-                    }
-                }
-            }
+        &:after {
+          content: " ";
+          position: absolute;
+          width: 0%;
+          height: 5px;
+          margin: 3.4rem 0 0 5%;
+          right: 0;
+          background: $white;
+          @include transition($time, $timing);
         }
+
+        &:hover {
+          color: $white;
+
+          &:after {
+            width: 115%;
+          }
+        }
+      }
     }
+  }
 }
 
 #menu-main-menu {
-    position: relative;
+  position: relative;
 
-    li a {
-        padding-right: 8.4%;
-    }
+  li a {
+    padding-right: 8.4%;
+  }
 }
 
 .main-menu {
-    border-right: 4px solid $white;
-    padding: 40px 0px;
-    position: relative;
-    right: -2px;
+  border-right: 4px solid $white;
+  padding: 40px 0px;
+  position: relative;
+  right: -2px;
 }
 
 .nav-contacts {
-    color: $white;
-    padding-left: 8.4%;
-    font-size: 1.8rem;
-    text-align: left;
+  color: $white;
+  padding-left: 8.4%;
+  font-size: 1.8rem;
+  text-align: left;
 
-    span {
-        font-family: "SohoGothicPro-Regular";
-        line-height: 0.7;
-    }
+  span {
+    font-family: "SohoGothicPro-Regular";
+    line-height: 0.7;
+  }
 
-    >div {
-        margin-bottom: 4.5rem;
-    }
+  > div {
+    margin-bottom: 4.5rem;
+  }
 }
 
 //Social Icons
 .social-menu {
 
-    li {
-        display: inline;
+  li {
+    display: inline;
 
-        a {
+    a {
 
-            &:before {
-                font-family: 'FontAwesome';
-                font-weight: normal;
-                display: inline-block;
-                vertical-align: top;
-                padding: 0 5px;
-                content: '\f08e';
-                font-size: 30px;
-                -webkit-font-smoothing: antialiazed;
-            }
-        }
+      &:before {
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 5px;
+        content: '\f08e';
+        font-size: 30px;
+        -webkit-font-smoothing: antialiazed;
+      }
+    }
+  }
+
+  #menu-social-menu li,
+  #menu-social-menu-1 li {
+    display: inline;
+
+    &::after {
+      display: none;
     }
 
-    #menu-social-menu li,
-    #menu-social-menu-1 li {
-        display: inline;
-
-        &::after {
-            display: none;
-        }
-
-        a {
-            color: $white;
-        }
-
-        &:hover a {
-            color: $menu-links;
-        }
+    a {
+      color: $white;
     }
+
+    &:hover a {
+      color: $menu-links;
+    }
+  }
 }
 
 .social-menu li a[href*="facebook.com"]::before {
-    content: '\f09a';
+  content: '\f09a';
 }
 
 .social-menu li a[href*="vimeo.com"]::before {
-    content: '\f27d';
+  content: '\f27d';
 }
 
 .social-menu li a[href*="instagram.com"]::before {
-    content: '\f16d';
+  content: '\f16d';
 }
 
 .social-menu li a[href*="youtube.com"]::before {
-    content: '\f167';
+  content: '\f167';
 }
 
 // Hide header on scroll
 .burger-visible {
-    opacity: 1;
-    transition: opacity 0.5s ease-out;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
 }
 
 .burger-invisible {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 
-@media only screen and (max-width: 800px)  {
-    .nav-contacts {
-        font-size: 1.4rem;
-    }
+@media only screen and (max-width: 960px) {
+  .nav-contacts {
+    font-size: 1.4rem;
+  }
 
-    #burger-menu-container ul li {
-        font-size: 3rem;
-    }
+  #burger-menu-container ul li {
+    font-size: 3rem;
+  }
 
-    #burger-menu-container ul li a:after {
-        margin: 2.8rem 0 0 5%;
-    }
+  #burger-menu-container ul li a:after {
+    margin: 2.8rem 0 0 5%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    #header-logo {
-        img {
-            width:4.5rem;
-        }
-    }
 
-    #burger-menu-container {
-        grid-template-columns: repeat(1, 1fr);
-        justify-items: center;
+  .hamburger-box {
+    right: 1rem;
+  }
+  #header-logo {
+    img {
+      width: 4.5rem;
     }
+  }
 
-    .hamburger {
-        padding: 1rem 0;
-    }
+  #burger-menu-container {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
 
-    .site-header {
-        padding: 3rem 0;
-    }
+  .hamburger {
+    padding: 1rem 0;
+  }
 
-    .main-menu {
-        border: none;
-        right:0;
-        min-width: 21rem;
-    }
+  .site-header {
+    padding: 3rem 0;
+  }
 
-    #burger-menu-container ul li {
-        font-size: 2.5rem;
-        a {
-            padding-right: 0;
-            right: -1px;
-        }
-    }
+  .main-menu {
+    border: none;
+    right: 0;
+    min-width: 21rem;
+  }
 
-    .nav-address,.nav-contact {
-        display: none;
-    }
+  #burger-menu-container ul li {
+    font-size: 2.5rem;
 
-    .nav-contacts {
-        text-align: right;
-        padding-left: 0;
-        min-width: 21rem;
+    a {
+      padding-right: 0;
+      right: -1px;
     }
+  }
 
-    .contact {
-        font-size: 1.4rem;
-        > p {
-            display: none;
-        }
-    }
+  .nav-address, .nav-contact {
+    display: none;
+  }
 
-    #burger-menu-container ul li a:after {
-        margin: 2.3rem 0 0 5%;
+  .nav-contacts {
+    text-align: right;
+    padding-left: 0;
+    min-width: 21rem;
+  }
+
+  .contact {
+    font-size: 1.4rem;
+
+    > p {
+      display: none;
     }
+  }
+
+  #burger-menu-container ul li a:after {
+    margin: 2.3rem 0 0 5%;
+  }
 }

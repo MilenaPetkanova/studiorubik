@@ -81,17 +81,3 @@ h5 {
   font-family: "SohoGothicPro-Bold", sans-serif !important;
   font-weight: 700;
 }
-
-@media only screen and (max-width: 800px) {
-  .section-heading {
-    h2 {
-      font-size: 2.5rem;
-      transform: none;
-      position: relative;
-    }
-
-    .background-text {
-      display: none;
-    }
-  }
-}

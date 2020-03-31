@@ -44,12 +44,11 @@
       }
     }
 
-      img {
-          margin: 0 auto;
-          display: block;
-      }
+    img {
+      margin: 0 auto;
+      display: block;
+    }
   }
-
 }
 
 @media only screen and (max-width: 1100px) {
@@ -59,19 +58,26 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 960px) {
+
   .clients {
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
   }
+
   .clients__grid {
     grid-template-columns: repeat(3, 1fr);
+    padding: 0;
   }
 }
 
-
 @media only screen and (max-width: 480px) {
-    .clients__grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2rem;
-    }
+
+  .clients__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .clients__grid-item img {
+    max-width: 85%;
+  }
 }

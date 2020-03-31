@@ -2,7 +2,6 @@
 
   .three-column__grid {
     align-items: baseline;
-
   }
 
   .three-column__grid-item {
@@ -75,7 +74,7 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 960px) {
 
   .workflow__list .workflow__list-item {
     font-size: 1.8rem;
@@ -87,7 +86,7 @@
   }
 
   .three-column__grid {
-    margin: 2rem auto;
+    margin: 5rem auto 7rem auto;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3rem;
   }
@@ -125,5 +124,11 @@
 
   .grid-item__description {
     max-width: 32rem;
+  }
+
+  .expertise__workflow {
+
+    margin: 6rem auto 7rem auto;
+
   }
 }

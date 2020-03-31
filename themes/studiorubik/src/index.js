@@ -24,7 +24,7 @@ $(document).ready(function () {
 
         //Init the 3D Cube on the Landing Page
         if ($(window).width() < 480) {
-            $('#my3Dsurface').data('facewidth', '210');
+            $('#my3Dsurface').data('facewidth', '225');
         } else {
             $('#my3Dsurface').data('facewidth', '450');
         }
@@ -51,14 +51,15 @@ $(document).ready(function () {
     // Init only on the Portfolio Page
     if ($('.portfolio-page-template').length || $('.page-template-cases-jetpack-portfolio').length || $('.case-studies').length) {
 
-        if ($(window).width() <= 800) {
+        if ($(window).width() <= 960) {
             $("#dropdown_svg").removeClass("hidden");
             $('#dropdown_svg').on('click', function () {
                 $('.portfolio-filter-item').toggleClass('dropdown-active');
                 $(this).toggleClass('rotate');
             });
             $('.portfolio-filter-item').toggleClass('fadeOut ');
-        } else {}
+        } else {
+        }
 
         //Init the Isotope Grid
         portfolioPage();

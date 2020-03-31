@@ -1,5 +1,5 @@
 .misc-section {
-  margin-top: 4rem;
+  margin-top: 5rem;
 
   a:hover {
     color: $black;
@@ -9,7 +9,8 @@
     font-family: "SohoGothicPro-Bold", sans-serif;
     display: inline-block;
     color: #8b8a8d;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 0;
   }
 
   b {
@@ -18,8 +19,13 @@
 
   .button {
     display: inline-block;
-    margin-top: 5rem;
+    margin-top: 7rem;
     margin-right: 2rem;
+  }
+
+  .divider {
+    margin: 0 0.5rem;
+    vertical-align: text-top;
   }
 }
 
@@ -68,3 +74,27 @@
   }
 }
 
+@media only screen and (max-width: 960px) {
+
+  .misc-section p {
+    font-size: 1.6rem;
+  }
+
+  .single-project-page .section-heading {
+    margin: 5rem auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .single-project-page .section-heading {
+    margin: 6rem auto;
+  }
+  .misc-section {
+    margin-top: 4rem;
+
+    p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+  }
+}

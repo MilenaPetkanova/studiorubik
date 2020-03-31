@@ -30,12 +30,12 @@
 
 				if ( $misc ): ?>
 
-                    <p class="client-misc"><b>client: </b><a
-                                href="/studiorubik_clients/<?php echo $slug ?>"><?php echo $client ?></a> <b>&nbsp;|&nbsp;</b>
+                    <p class="client-misc"><b>client &nbsp;:&nbsp; </b><a
+                                href="/studiorubik_clients/<?php echo $slug ?>"><?php echo $client ?></a> <b class="divider">&nbsp;|&nbsp;</b>
                     </p>
-                    <p class="year-misc"><b>year: </b><?php echo $year ?> <b>&nbsp;|&nbsp;</b></p>
+                    <p class="year-misc"><b>year &nbsp;:&nbsp; </b><?php echo $year ?> <b class="divider">&nbsp;|&nbsp;</b></p>
                     <p class="services-misc" id="services-misc">
-                        <b>services: </b><?php the_terms( $post->ID, 'jetpack-portfolio-type' ); ?>
+                        <b>services &nbsp;:&nbsp; </b><?php the_terms( $post->ID, 'jetpack-portfolio-type' ); ?>
                     </p>
 				<?php endif; ?>
 
