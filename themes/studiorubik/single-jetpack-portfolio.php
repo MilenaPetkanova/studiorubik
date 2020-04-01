@@ -31,9 +31,11 @@
 				if ( $misc ): ?>
 
                     <p class="client-misc"><b>client &nbsp;:&nbsp; </b><a
-                                href="/studiorubik_clients/<?php echo $slug ?>"><?php echo $client ?></a> <b class="divider">&nbsp;|&nbsp;</b>
+                                href="/studiorubik_clients/<?php echo $slug ?>"><?php echo $client ?></a> <b
+                                class="divider">&nbsp;|&nbsp;</b>
                     </p>
-                    <p class="year-misc"><b>year &nbsp;:&nbsp; </b><?php echo $year ?> <b class="divider">&nbsp;|&nbsp;</b></p>
+                    <p class="year-misc"><b>year &nbsp;:&nbsp; </b><?php echo $year ?> <b
+                                class="divider">&nbsp;|&nbsp;</b></p>
                     <p class="services-misc" id="services-misc">
                         <b>services &nbsp;:&nbsp; </b><?php the_terms( $post->ID, 'jetpack-portfolio-type' ); ?>
                     </p>
@@ -142,13 +144,14 @@
             </section>
 		<?php endif; ?>
 
-        <div class="page-content">
+        <section class="page-content">
 			<?php get_template_part( 'template-parts/page', 'loop' ); ?>
-        </div>
+        </section>
 
+        <!--Next & Previous Post Navigation-->
         <section class="container post-navigation text-upper cf">
-			<?php previous_post_link( '<strong class="fleft">%link</strong>' ); ?>
-			<?php next_post_link( '<strong class="fright">%link</strong>' ); ?>
+			<?php previous_post_link( '<strong class="fleft"><svg xmlns="http://www.w3.org/2000/svg" width="18.6648" height="50.3104" viewBox="0 0 18.6648 50.3104"><title>prev_project</title><rect x="-5.0228" y="34.6622" width="28.7104" height="3.3777" transform="translate(36.1471 10.0934) rotate(60)" fill="#8b8a8d" stroke="#8b8a8d" stroke-miterlimit="10"/><polygon points="15.047 0.674 0.692 24.791 3.617 26.429 17.973 2.312 15.047 0.674" fill="#8b8a8d" stroke="#8b8a8d" stroke-miterlimit="10"/></svg>%link</strong>' ); ?>
+			<?php next_post_link( '<strong class="fright">%link<svg xmlns="http://www.w3.org/2000/svg" width="18.6648" height="50.3104" viewBox="0 0 18.6648 50.3104"><title>next_project</title><rect x="-5.0228" y="12.2705" width="28.7104" height="3.3777" transform="translate(1.9094 29.0212) rotate(-120)" fill="#8b8a8d" stroke="#8b8a8d" stroke-miterlimit="10"/><polygon points="3.617 49.636 17.973 25.519 15.047 23.881 0.692 47.998 3.617 49.636" fill="#8b8a8d" stroke="#8b8a8d" stroke-miterlimit="10"/></svg></strong>' ); ?>
         </section>
     </main>
 

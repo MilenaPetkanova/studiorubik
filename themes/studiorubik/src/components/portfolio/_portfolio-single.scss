@@ -40,42 +40,34 @@
     font-family: "SohoGothicPro-Bold", sans-serif;
     color: #8b8a8d;
     position: relative;
+    transition: all 0.3s;
+    display: table;
 
-    &:first-of-type {
+    a {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 1.5rem 0.7rem 1.5rem;
+    }
 
-      &:before {
-        content: url("../global/img/prev_project.svg");
-        @include centerY;
-        padding-top: 0.5rem;
-      }
-
-      a {
-        padding-left: 3.5rem;
+    svg {
+      rect, polygon {
+        transition: all 0.3s;
       }
     }
 
-    &:last-of-type {
+    &:hover {
+      color: $black;
 
-      &:after {
-        content: url("../global/img/next_project.svg");
-        @include centerY;
-        padding-top: 0.5rem;
+      svg {
+        rect, polygon {
+          fill: $black;
+          stroke: $black;
+        }
       }
-
-      a {
-        padding-right: 1.5rem;
-      }
-    }
-
-    &.fleft:after {
-      display: none;
-    }
-
-    &.fright:before {
-      display: none;
     }
   }
 }
+
 
 @media only screen and (max-width: 960px) {
 
