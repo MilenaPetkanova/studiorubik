@@ -28,11 +28,15 @@ get_header();
 				}
 				?>
             </ul>
+
             <!--Dropdown Arrow-->
-            <svg id="dropdown_svg" class="hidden" xmlns="http://www.w3.org/2000/svg" width="21.65" height="8.44" viewBox="0 0 21.65 8.44">
+            <svg id="dropdown_svg" class="hidden" xmlns="http://www.w3.org/2000/svg" width="21.65" height="8.44"
+                 viewBox="0 0 21.65 8.44">
                 <g>
-                    <polygon points="20.97 1.91 10.82 7.77 9.96 6.64 20.27 0.69 20.97 1.91" stroke="#000" stroke-miterlimit="10"/>
-                    <polygon points="0.67 1.91 10.53 7.77 11.35 6.64 1.35 0.69 0.67 1.91" stroke="#000" stroke-miterlimit="10"/>
+                    <polygon points="20.97 1.91 10.82 7.77 9.96 6.64 20.27 0.69 20.97 1.91" stroke="#000"
+                             stroke-miterlimit="10"/>
+                    <polygon points="0.67 1.91 10.53 7.77 11.35 6.64 1.35 0.69 0.67 1.91" stroke="#000"
+                             stroke-miterlimit="10"/>
                 </g>
             </svg>
         </section>

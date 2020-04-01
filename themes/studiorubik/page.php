@@ -13,7 +13,6 @@
                 echo '<h4 class="text-center">No feature image added</h4>';
             endif;
         ?>
-
     </section>
 
     <!-- This template part gets blog-loop.php from the template-parts folder and inserts it in the given page -->

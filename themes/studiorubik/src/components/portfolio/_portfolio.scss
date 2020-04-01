@@ -197,8 +197,7 @@
     z-index: 1;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.8s 0.8s,
-    opacity 0.5s linear;
+    transition: none;
   }
 
   .show-dropdown {
@@ -214,11 +213,12 @@
     transition: opacity 0.8s linear;
   }
 
-  .dropdown-content:first-of-type {
+  .is-checked {
     position: relative;
     opacity: 1;
     display: block;
     visibility: visible;
+    pointer-events: none;
   }
 
   .portfolio-item,
@@ -255,6 +255,25 @@
 
   .portfolio-item figure.grid-item-figure:hover svg {
     display: none;
+  }
+
+  .case-studies {
+
+    .portfolio-item figure.grid-item-figure h2 {
+      top: -4rem;
+      text-align: left;
+      padding-left: 3rem;
+    }
+
+    .portfolio-item figure.grid-item-figure h2 a:after {
+      content: '';
+      position: absolute;
+      background-image: url('./img/mobile_heading_arrow-gray.svg');
+      background-repeat: no-repeat;
+      width: 1rem;
+      height: 2.5rem;
+      margin-left: 0.5rem;
+    }
   }
 }
 

@@ -2,7 +2,7 @@ $hexagon-width: 295px;
 $hexagon-height: $hexagon-width*.585;
 $hexagon-margin: 0;
 $hexagon-title-color: $black;
-$hexagon-border-color:$white;
+$hexagon-border-color: $white;
 $hexagon-image-color: rgba(255, 255, 255, 1);
 $viewport-thereshold: $hexagon-width+$hexagon-margin;
 
@@ -109,7 +109,7 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
   }
 }
 
-@media (max-width:#{2*$viewport-thereshold}) {
+@media (max-width: #{2*$viewport-thereshold}) {
   .honeycomb-cell {
     margin: #{$hexagon-margin/2 + $hexagon-height/2} $hexagon-margin;
   }
@@ -117,6 +117,7 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
 
 .team .three-column__grid-item {
   margin-bottom: 7.5rem;
+
   &:last-of-type {
     grid-area: 4 / 2 / 5 / 3;
   }
@@ -148,13 +149,13 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
   }
 }
 
-@media only screen and (max-width: 800px)  {
-  .honeycomb-cell {
-    margin: 82.17857px 0 82.17857px 0;
+@media only screen and (max-width: 960px) {
+  .team .three-column__grid-item:last-of-type {
+    grid-area: auto;
   }
 }
 
-@media only screen and (max-width: 480px)  {
+@media only screen and (max-width: 480px) {
   .three-column__grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
