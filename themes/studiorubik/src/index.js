@@ -24,7 +24,7 @@ $(document).ready(function () {
 
         //Init the 3D Cube on the Landing Page
         if ($(window).width() < 480) {
-            $('#my3Dsurface').data('facewidth', '225');
+            $('#my3Dsurface').data('facewidth', '250');
         } else {
             $('#my3Dsurface').data('facewidth', '450');
         }

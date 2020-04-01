@@ -21,7 +21,6 @@ get_header( 'front' );
 				echo do_shortcode( get_field( 'slider_revolution_shortcode_-_hero_video' ) );
 			}
 			?>
-
         </section>
 
         <!-- Portfolio Section -->
@@ -38,45 +37,31 @@ get_header( 'front' );
                 <p><?php the_field( 'portfolio_section_text' ) ?></p>
             </div>
 
-            <!-- Portfolio Cube ACF Varibales -->
+            <!-- 3D Cube ACF Fields -->
 			<?php
-			// First Area
-			$area1  = get_field( 'area_1' );
-			$image1 = wp_get_attachment_image_src( $area1['area_image'], 'square' )[0];
-			//Second Area
-			$area2  = get_field( 'area_2' );
-			$image2 = wp_get_attachment_image_src( $area2['area_image'], 'square' )[0];
 
-			//Third Area
-			$area3  = get_field( 'area_3' );
-			$image3 = wp_get_attachment_image_src( $area3['area_image'], 'square' )[0];
-
-			//Fourth Area
-			$area4  = get_field( 'area_4' );
-			$image4 = wp_get_attachment_image_src( $area4['area_image'], 'square' )[0];
-
-			//Fifth Area
-			$area5  = get_field( 'area_5' );
-			$image5 = wp_get_attachment_image_src( $area5['area_image'], 'square' )[0];
-
-			//Sixth Area
-			$area6  = get_field( 'area_6' );
-			$image6 = wp_get_attachment_image_src( $area6['area_image'], 'square' )[0];
+			$area1 = get_field( 'area_1' );
+			$area2 = get_field( 'area_2' );
+			$area3 = get_field( 'area_3' );
+			$area4 = get_field( 'area_4' );
+			$area5 = get_field( 'area_5' );
+			$area6 = get_field( 'area_6' );
 			?>
 
             <!-- Push images from ACF into Javascript Variables -->
             <script>
-                const area1 = '<a href="<?php echo $area1['area_link'] ?>" target="_blank"><img src="<?php echo $image1 ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area1['area_name'] ?></p></a>';
-                const area2 = '<a href="<?php echo $area2['area_link'] ?>" target="_blank"><img src="<?php echo $image2 ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area2['area_name'] ?></p></a>';
-                const area3 = '<a href="<?php echo $area3['area_link'] ?>" target="_blank"><img src="<?php echo $image3 ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area3['area_name'] ?></p></a>';
-                const area4 = '<a href="<?php echo $area4['area_link'] ?>" target="_blank"><img src="<?php echo $image4 ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area4['area_name'] ?></p></a>';
-                const area5 = '<a href="<?php echo $area5['area_link'] ?>" target="_blank"><img src="<?php echo $image5 ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area5['area_name'] ?></p></a>';
-                const area6 = '<a href="<?php echo $area6['area_link'] ?>" target="_blank"><img src="<?php echo $image6 ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area6['area_name'] ?></p></a>';
+                const area1 = '<a href="<?php echo $area1['area_link'] ?>" target="_blank"><img src="<?php echo esc_url( $area1['area_image']['url'] ); ?>" alt="<?php echo esc_attr( $area1['area_image']['alt'] ); ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area1['area_name'] ?></p></a>';
+                const area2 = '<a href="<?php echo $area2['area_link'] ?>" target="_blank"><img src="<?php echo esc_url( $area2['area_image']['url'] ); ?>" alt="<?php echo esc_attr( $area2['area_image']['alt'] ); ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area2['area_name'] ?></p></a>';
+                const area3 = '<a href="<?php echo $area3['area_link'] ?>" target="_blank"><img src="<?php echo esc_url( $area3['area_image']['url'] ); ?>" alt="<?php echo esc_attr( $area3['area_image']['alt'] ); ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area3['area_name'] ?></p></a>';
+                const area4 = '<a href="<?php echo $area4['area_link'] ?>" target="_blank"><img src="<?php echo esc_url( $area4['area_image']['url'] ); ?>" alt="<?php echo esc_attr( $area4['area_image']['alt'] ); ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area4['area_name'] ?></p></a>';
+                const area5 = '<a href="<?php echo $area5['area_link'] ?>" target="_blank"><img src="<?php echo esc_url( $area5['area_image']['url'] ); ?>" alt="<?php echo esc_attr( $area5['area_image']['alt'] ); ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area5['area_name'] ?></p></a>';
+                const area6 = '<a href="<?php echo $area6['area_link'] ?>" target="_blank"><img src="<?php echo esc_url( $area6['area_image']['url'] ); ?>" alt="<?php echo esc_attr( $area6['area_image']['alt'] ); ?>"/><img class="hexagon-svg" src="<?php the_field( 'hexagon_hover' ); ?>"/><p class="area-description"><?php echo $area6['area_name'] ?></p></a>';
             </script>
 
             <!--Cube Visualisation-->
             <div data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1500" id="my3Dsurface"
-                 class="js3dsurface"></div>
+                 class="js3dsurface">
+            </div>
 
             <!-- Button for the Projects Page -->
             <div class="button-container">
@@ -85,7 +70,6 @@ get_header( 'front' );
                 <a data-aos="fade-up" data-aos-delay="300" href="/portfolio" title="more projects"
                    class="button button--fill">more projects</a>
             </div>
-
         </section>
 
         <!-- Services Section -->
@@ -116,9 +100,7 @@ get_header( 'front' );
 
                     <!-- Divider -->
                     <li data-aos="fade-zoom-in" data-aos-delay="300" class="workflow__list-item svg-test"><img
-                                class="style-svg" alt="divider"
-                                src="<?php echo $divider_icon ?>"/></li>
-
+                                class="style-svg" alt="divider" src="<?php echo $divider_icon ?>"/></li>
                     <!-- Heading -->
                     <li data-aos="fade-zoom-in" data-aos-delay="500" class="workflow__list-item">
                         <p><?php echo $expertise_workflow['second_heading'] ?></p>
@@ -146,7 +128,6 @@ get_header( 'front' );
                         <p><?php echo $expertise_workflow['fourth_heading'] ?></p>
                     </li>
                 </ul>
-
             </div>
 
             <!-- Expertise Grid -->
@@ -195,7 +176,6 @@ get_header( 'front' );
                     <div class="grid-item__description">
                         <p class="text-left"><?php echo $second_grid_item['gird_item_description'] ?></p>
                     </div>
-
                 </div>
 
                 <!-- Grid Item 3 -->
@@ -218,7 +198,6 @@ get_header( 'front' );
                     <div class="grid-item__description">
                         <p class="text-left"><?php echo $third_grid_item['gird_item_description'] ?></p>
                     </div>
-
                 </div>
 
                 <!-- Grid Item 4 -->
@@ -241,7 +220,6 @@ get_header( 'front' );
                     <div class="grid-item__description">
                         <p class="text-left"><?php echo $fourth_grid_item['gird_item_description'] ?></p>
                     </div>
-
                 </div>
 
                 <!-- Grid Item 5 -->
@@ -264,7 +242,6 @@ get_header( 'front' );
                     <div class="grid-item__description">
                         <p class="text-left"><?php echo $fifth_grid_item['gird_item_description'] ?></p>
                     </div>
-
                 </div>
 
                 <!-- Grid Item 6 -->
@@ -287,11 +264,8 @@ get_header( 'front' );
                     <div class="grid-item__description">
                         <p class="text-left"><?php echo $sixth_grid_item['gird_item_description'] ?></p>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
         <!-- First Parallax -->
@@ -314,8 +288,8 @@ get_header( 'front' );
                 <p class="background-text"><?php the_field( 'clients_section_heading' ) ?></p>
             </div>
 
+            <!-- Clients Section Content -->
             <div class="container">
-                <!-- Clients Section Content -->
                 <div data-aos="fade-zoom-in" data-aos-delay="100" class="two-column-content">
                     <p><?php the_field( 'clients_section_text_area' ) ?></p>
                 </div>
@@ -324,255 +298,190 @@ get_header( 'front' );
             <!-- Clients Grid -->
             <div data-aos="fade-up" class="clients__grid container">
 
+				<?php
+				$clients_grid = get_field( 'clients_grid' );
+				?>
+
                 <!-- Grid Item 1 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 2 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_2'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_2']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_2']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 3 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_3'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_3']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_3']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 4 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_4'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_4']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_4']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 5 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_5'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_5']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_5']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 6 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_6'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_6']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_6']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 7 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_7'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_7']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_7']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 8 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_8'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_8']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_8']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
+
                 <!-- Grid Item 9 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_9'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_9']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_9']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 10 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_10'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_10']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_10']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 11 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_11'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_11']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_11']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 12 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_12'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_12']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_12']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 13 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_13'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_13']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_13']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
 
                 <!-- Grid Item 14 -->
                 <div class="clients__grid-item">
 
-					<?php
-					$clients_grid = get_field( 'clients_grid' );
-					$logo         = wp_get_attachment_image_src( $clients_grid['client_image_14'], 'full' )[0];
-					?>
-
                     <!-- Grid ItemImage -->
                     <figure>
-                        <img class="" src="<?php echo $logo ?>"/>
+                        <img class="" src="<?php echo esc_url( $clients_grid['client_image_14']['url'] ); ?>"
+                             alt="<?php echo esc_attr( $clients_grid['client_image_14']['alt'] ); ?>"/>
                         <a href="#">
                             <h5 class="text-upper text-center">see <br> projects</h5>
                         </a>
                     </figure>
-
                 </div>
             </div>
 
@@ -594,7 +503,6 @@ get_header( 'front' );
 				echo do_shortcode( get_field( 'parallax_shortcode_2' ) );
 			}
 			?>
-
         </section>
 
         <!-- Testimonials Section -->
