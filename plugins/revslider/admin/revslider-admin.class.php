@@ -423,7 +423,7 @@ class RevSliderAdmin extends RevSliderFunctionsAdmin {
 			add_action('admin_notices', array($this, 'add_plugins_page_notices'));
 		}
 		
-		//add_action('admin_init', array($this, 'merge_addon_notices'), 99);
+		add_action('admin_init', array($this, 'merge_addon_notices'), 99);
 		add_action('admin_init', array($this, 'add_suggested_privacy_content'), 15);
 	}
 
@@ -469,6 +469,7 @@ class RevSliderAdmin extends RevSliderFunctionsAdmin {
 			if(!empty($o)){
 				foreach($o as $ok => $f){
 					if(!isset($f['function'])) continue;
+					if(!is_array($f['function'])) continue;
 					if(!isset($f['function'][0])) continue;
 					if(!is_object($f['function'][0])) continue;
 					

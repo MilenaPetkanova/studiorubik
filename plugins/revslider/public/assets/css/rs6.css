@@ -1308,6 +1308,8 @@ rs-navmask,
 rs-tabs,
 rs-arrow 					{	display:block;}
 
+rs-navmask 					{ direction: ltr !important }
+
 .tp-thumbs.navbar,
 .tp-bullets.navbar,
 .tp-tabs.navbar					{	border:none; min-height: 0; margin:0; border-radius: 0; }

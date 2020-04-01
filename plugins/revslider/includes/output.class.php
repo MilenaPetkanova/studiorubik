@@ -1909,7 +1909,7 @@ class RevSliderOutput extends RevSliderFunctions {
 						
 						$link = 'href="'.$image_link.'"';
 						$link .= ($link_open_in !== '') ? ' target="'.$link_open_in.'"' : '';
-						$link .= ($link_follow === 'nofollow') ? ' rel="nofollow"' : '';
+						$link .= ($link_follow === 'nofollow') ? ' rel="nofollow'.(($link_open_in === '_blank') ? ' noopener' : '').'"' : ($link_open_in === '_blank') ? ' rel="noopener"' : '';
 					}
 					
 					break;
@@ -6342,8 +6342,8 @@ rs-module .material-icons {
 		$html .= RS_T6.'<div class="rs_error_message_content">'.esc_html($message);
 		$html .= (!empty($url)) ? '<br>'.__('Please follow this link to edit the Slider:', 'revslider') : '';
 		$html .= '</div>'."\n";
-		$html .= (!empty($url)) ? RS_T6.'<a href="'.$url.'" target="_blank" class="rs_error_message_button">Edit Module : "'.$this->slider->get_alias().'"</a>'."\n" : '';
-		$html .= (!empty($page_url)) ? RS_T6.'<a href="'.$page_url.'" target="_blank" class="rs_error_message_button">Edit Page</a>'."\n" : '';
+		$html .= (!empty($url)) ? RS_T6.'<a href="'.$url.'" target="_blank" rel="noopener" class="rs_error_message_button">Edit Module : "'.$this->slider->get_alias().'"</a>'."\n" : '';
+		$html .= (!empty($page_url)) ? RS_T6.'<a href="'.$page_url.'" target="_blank" rel="noopener" class="rs_error_message_button">Edit Page</a>'."\n" : '';
 		$html .= RS_T5.'</div>'."\n";
 		$html .= ($this->rs_module_wrap_closed === false) ? RS_T4.'</rs-module>'."\n" : '';
 		$html .= ($this->rs_module_closed === false) ? RS_T3.'</rs-module-wrap>'."\n" : '';
