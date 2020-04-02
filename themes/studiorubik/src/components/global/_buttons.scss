@@ -1,12 +1,9 @@
-//@import './_variables.scss';
-//@import './_mixins.scss';
-
 .button {
   text-transform: uppercase;
 }
 
 input.tnp-submit {
-  font-family: "SohoGothicPro-Bold";
+  font-family: "SohoGothicPro-Bold", sans-serif;
   padding: 1.3rem;
   background-color: $black;
   color: $white;
@@ -14,10 +11,11 @@ input.tnp-submit {
 
 // Hover Button Block
 .button {
-  font-family: "SohoGothicPro-Bold";
+  font-family: "SohoGothicPro-Bold", sans-serif;
   color: transparent;
   position: relative;
-  display: inline-block;
+  //display: inline-block;
+  display: block;
   padding: 1.4rem 4.7rem;
   max-height: 5.8rem;
   max-width: 17.5rem;
@@ -219,50 +217,46 @@ input.tnp-submit {
 }
 
 //Back to top
-.back-to-top.container {
-  margin: 5rem auto 5rem auto;
+main .back-to-top.container {
+  margin: 5.2rem auto 5.2rem auto;
 }
 
 .back-to-top__hexagon {
-  position: relative;
-  width: 51px;
-  height: 29.44px;
-  background-color: #000000;
-  margin: 14.72px 0;
-
   svg {
-    position: absolute;
-    @include centerXY;
+    display: block;
   }
 }
 
 #return-to-top {
   transition: all 0.3s;
+  float: right;
+  position: relative;
+  z-index: 10;
 
   &:hover {
     opacity: 0.75;
   }
 }
 
-.back-to-top__hexagon:before,
-.back-to-top__hexagon:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 25.5px solid transparent;
-  border-right: 25.5px solid transparent;
-}
-
-.back-to-top__hexagon:before {
-  bottom: 100%;
-  border-bottom: 14.72px solid #000000;
-}
-
-.back-to-top__hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 14.72px solid #000000;
-}
+//.back-to-top__hexagon:before,
+//.back-to-top__hexagon:after {
+//  content: "";
+//  position: absolute;
+//  width: 0;
+//  border-left: 25.5px solid transparent;
+//  border-right: 25.5px solid transparent;
+//}
+//
+//.back-to-top__hexagon:before {
+//  bottom: 100%;
+//  border-bottom: 14.72px solid #000000;
+//}
+//
+//.back-to-top__hexagon:after {
+//  top: 100%;
+//  width: 0;
+//  border-top: 14.72px solid #000000;
+//}
 
 @media only screen and (max-width: 960px) {
   .button {

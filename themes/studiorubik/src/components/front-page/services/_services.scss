@@ -2,10 +2,7 @@
 
   .three-column__grid {
     align-items: baseline;
-  }
-
-  .three-column__grid-item {
-    padding-top: 2rem;
+    margin-bottom: 8rem;
   }
 }
 
@@ -15,7 +12,7 @@
   align-items: center;
   max-width: 108rem;
   width: 95%;
-  margin: 0 auto;
+  margin: 0 auto 8rem auto;
 }
 
 .workflow__list .workflow__list-item {
@@ -26,7 +23,11 @@
   svg {
     position: relative;
     top: 0.6rem;
-    //transition: fill 0.5s ease;
+  }
+
+  p {
+    display: inline-block;
+    margin: 0;
   }
 
   &:last-of-type {
@@ -36,10 +37,6 @@
   }
 }
 
-.services__workflow {
-  margin-top: 7rem;
-}
-
 //Services Grid
 .three-column__grid {
   display: grid;
@@ -47,13 +44,15 @@
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0;
   grid-row-gap: 3rem;
-  margin: 9rem auto;
+  margin: 0 auto;
+  //margin: 9rem auto;
   align-items: center;
+  background: magenta;
 
   figcaption, .caption {
-    min-height: 5.5rem;
+    height: 5.1rem;
     display: table;
-    margin: 2rem auto 0 auto;
+    margin: 2rem auto 2rem auto;
   }
 
   h5 {
@@ -66,10 +65,10 @@
 .grid-item__description {
   max-width: 28rem;
   margin: 0 auto;
-  word-break: break-word;
+  //word-break: break-word;
 
   p {
-    text-align: justify;
+    text-align: left;
   }
 }
 
@@ -85,13 +84,13 @@
   }
 
   .three-column__grid {
-    //margin: 5rem auto 7rem auto;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3rem;
   }
 }
 
 @media only screen and (max-width: 480px) {
+
   .workflow__list {
     display: block;
     text-align: center;

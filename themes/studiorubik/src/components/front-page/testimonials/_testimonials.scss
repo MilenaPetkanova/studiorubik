@@ -1,7 +1,21 @@
+*, html {
+  padding: 0;
+  margin: 0;
+}
+
+.testimonials {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
 .bx-wrapper {
   background: transparent;
   box-shadow: none;
   border: none;
+  margin-bottom: 0;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
@@ -43,10 +57,13 @@
 
 .testimonial blockquote {
   max-width: 34rem;
-  margin: 0 auto;
+  margin: 0;
+  min-height: 7rem;
+  max-height: 7rem;
+  overflow: hidden;
 
   p {
-    min-height: 6.6rem;
+    margin: 0 auto;
   }
 }
 
@@ -55,16 +72,41 @@
   bottom: unset;
 }
 
-.testimonial-footer h3 {
-  font-size: 1.8rem;
-  color: #8b8a8d;
-  //font-family: "SohoGothicPro-Bold", sans-serif;
-  letter-spacing: 1.36px;
+.testimonial-footer {
+
+  .testimonial-name, .testimonial-position {
+    font-family: "SohoGothicPro-Bold", sans-serif;
+    font-size: 1.8rem;
+    color: #8b8a8d;
+    letter-spacing: 1.36px;
+  }
+
+  .testimonial-name {
+    margin: 1.8rem auto 0 auto;
+  }
+
+  .testimonial-position {
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .button {
+    display: block;
+  }
 }
 
+.bx-wrapper .bx-pager {
+  color: $black;
+  padding-top: 6rem;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a::before {
+
+  top: -5.3033px;
+  border-top: solid 0.2rem $black;
+  border-right: solid 0.2rem $black;
+
+}
 @media only screen and (max-width: 960px) {
-  .bx-wrapper .bx-pager {
-    padding-top: 8rem;
-  }
+
 }
 

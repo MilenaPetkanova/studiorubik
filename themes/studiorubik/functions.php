@@ -25,7 +25,7 @@ function studiorubik_scripts() {
 
 	//Run only on the Front Page
 	if ( is_front_page() ):
-		wp_enqueue_style( 'bxslidercss', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12' ); // Bx Slider
+		wp_enqueue_style( 'bxslidercss', get_template_directory_uri() . '/vendors/bxSlider/jquery.bxslider.css', array(), '4.2.12' ); // Bx Slider
 	endif;
 
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.0.0' ); // Wordpress Stylesheet
@@ -35,11 +35,12 @@ function studiorubik_scripts() {
 	wp_deregister_script( 'jquery' ); //Deregister old jQuery
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true ); //register external jQuery
 	wp_enqueue_script( 'aosjs', get_template_directory_uri() . '/vendors/aos/js/aos.min.js', array(), '3.0.0', true ); //AOS.js
+//	wp_enqueue_script( 'aosjs', get_template_directory_uri() . '/vendors/aos/js/aos.min.js', array(), '3.0.0', true ); //AOS.js
 
 	//Run Only on the Front Page
-	if ( is_front_page() ):
+	if ( is_home() || is_front_page() ):
 		// Call Bx Slider only on the Front Page
-		wp_enqueue_script( 'bxsliderjs', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array(), '4.2.12' ); //BxSlider.js
+		wp_enqueue_script( 'bxsliderjs', get_template_directory_uri() . '/vendors/bxSlider/jquery.bxslider.min.js', array(), '4.2.12', true ); //BxSlider.js
 	endif;
 
 	// IsotopeJS & Images Loaded
@@ -86,7 +87,7 @@ function studiorubik_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Register new image size
-	add_image_size( 'square', 450, 450, true );
+	add_image_size( 'square', 480, 480, true );
 	add_image_size( 'mediumSize', 700, 400, true );
 	add_image_size( 'portrait', 350, 724, true );
 }

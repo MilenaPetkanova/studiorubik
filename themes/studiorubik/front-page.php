@@ -33,8 +33,10 @@ get_header( 'front' );
             </div>
 
             <!-- Portfolio Section Text -->
-            <div data-aos="fade-zoom-in" data-aos-delay="400" class="portfolio__text container">
-                <p><?php the_field( 'portfolio_section_text' ) ?></p>
+            <div class="container">
+                <div data-aos="fade-zoom-in" data-aos-delay="100" class="single-column-content ">
+                    <p><?php the_field( 'portfolio_section_text' ) ?></p>
+                </div>
             </div>
 
             <!-- 3D Cube ACF Fields -->
@@ -290,7 +292,7 @@ get_header( 'front' );
 
             <!-- Clients Section Content -->
             <div class="container">
-                <div data-aos="fade-zoom-in" data-aos-delay="100" class="two-column-content">
+                <div data-aos="fade-zoom-in" data-aos-delay="100" class="single-column-content">
                     <p><?php the_field( 'clients_section_text_area' ) ?></p>
                 </div>
             </div>
@@ -506,59 +508,76 @@ get_header( 'front' );
         </section>
 
         <!-- Testimonials Section -->
-        <section class="testimonials container">
+        <section class="testimonials">
 
-            <!-- Testemonials Section Headings -->
-            <div data-aos="fade-up" class="section-heading text-upper">
+            <!-- Testimonials Section Headings -->
+            <div data-aos="fade-up" class="section-heading text-upper container">
                 <h2><?php the_field( 'testimonials_section_heading' ) ?></h2>
                 <p class="background-text"><?php the_field( 'testimonials_section_heading' ) ?></p>
             </div>
 
-            <!-- Testimonials Container -->
-            <ul class="testimonials-list">
+            <!-- Testimonials Slider -->
+            <div class="container">
+                <ul class="testimonials-list">
+					<?php
+					//Testimonaials Query
+					$args         = array(
+						'post_type'      => 'testimonials',
+						'posts_per_page' => 10
+					);
+					$testimonials = new WP_Query( $args );
+					while ( $testimonials->have_posts() ): $testimonials->the_post();
+						?>
 
-				<?php
-				// Query the Testimonaials
-				$args         = array(
-					'post_type'      => 'testimonials',
-					'posts_per_page' => 10
-				);
-				$testimonials = new WP_Query( $args );
-				while ( $testimonials->have_posts() ): $testimonials->the_post();
-					?>
+                        <!-- Single Testimonial render -->
+                        <li class="slide testimonial text-left">
 
-                    <!-- Single Testimonial render -->
-                    <li class="slide testimonial text-center">
+                            <blockquote>
+								<?php the_content(); ?>
+                            </blockquote>
 
-                        <blockquote>
-							<?php the_content(); ?>
-                        </blockquote>
-
-                        <div class="testimonial-footer">
-							<?php the_post_thumbnail( 'thumbnail' ) ?>
-                            <h3 class="text-upper"><?php the_title(); ?></h3>
-                            <a href="<?php the_field( 'testimonial_link' ) ?>" title="see project"
-                               class="button button--fill">see project</a>
-                        </div>
-
-                    </li>
-
-				<?php endwhile;
-				wp_reset_postdata(); ?>
-            </ul>
-
+                            <div class="testimonial-footer">
+								<?php the_post_thumbnail( 'thumbnail' ) ?>
+                                <p class="testimonial-name text-upper"><?php the_title(); ?></p>
+                                <p class="testimonial-position text-upper">CEO</p>
+                                <a href="<?php the_field( 'testimonial_link' ) ?>" title="see project"
+                                   class="button button--fill">see project</a>
+                            </div>
+                        </li>
+					<?php endwhile;
+					wp_reset_postdata(); ?>
+                </ul>
+            </div>
         </section>
+
+        <!-- Back to top Arrow -->
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="back-to-top container cf">
+            <a href="javascript:" id="return-to-top">
+                <div class="back-to-top__hexagon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="46.2204" viewBox="0 0 40 46.2204">
+                        <title>40px-back-to-top</title>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Desktop_-_About_us" data-name="Desktop - About us">
+                                <polygon points="40 34.665 20 46.22 0 34.665 0 11.555 20 0 40 11.555 40 34.665"/>
+                                <g>
+                                    <rect x="8.5973" y="22.3566" width="12.8104" height="1.5071"
+                                          transform="translate(39.5502 35.623) rotate(150)" fill="#fff" stroke="#fff"
+                                          stroke-miterlimit="10"/>
+                                    <polygon points="30.921 25.66 20.161 19.255 19.43 20.56 30.19 26.965 30.921 25.66"
+                                             fill="#fff" stroke="#fff" stroke-miterlimit="10"/>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </a>
+        </div>
 
         <!-- Page Content Block -->
         <section>
-
-            <!-- Content Render -->
 			<?php the_content(); ?>
-
         </section>
-
     </main>
 <?php endwhile; ?>
-
     <!-- Get the footer function -->
-<?php get_footer(); ?>
+<?php get_footer( 'front' ); ?>

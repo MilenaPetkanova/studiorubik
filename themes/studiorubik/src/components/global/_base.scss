@@ -90,6 +90,7 @@ p:empty {
   margin-bottom: 7rem;
 }
 
+//Section Headings
 .section-heading {
   position: relative;
   margin: 5rem auto;
@@ -125,9 +126,11 @@ p:empty {
 }
 
 .landing-page {
+
   .section-heading {
-    margin-top: 12rem;
+    margin: 12rem auto 6.5rem auto;
   }
+
 }
 
 .case-studies {
@@ -135,6 +138,14 @@ p:empty {
     margin: 7rem auto 6rem auto;
   }
 }
+
+.clients {
+  .section-heading {
+    margin: 12rem auto 6rem auto;
+  }
+}
+
+
 
 .single-project-page {
   .section-heading {
@@ -156,7 +167,25 @@ p:empty {
 
   p {
     padding-right: 2.5rem;
-    margin-top: 0;
+    margin: 0 auto;
+  }
+}
+
+.single-column-content {
+  column-count: 1;
+  width: 100%;
+  margin-bottom: 7rem;
+  background: red;
+
+  ul {
+    list-style-image: url('./img/custom-li.svg');
+    max-width: 66rem;
+    font-size: 1.6rem;
+    padding-left: 2rem;
+  }
+
+  p {
+    margin: 0 auto;
   }
 }
 

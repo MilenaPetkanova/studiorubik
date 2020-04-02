@@ -3,11 +3,12 @@
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 4rem;
-  padding: 4rem 0;
+  //padding: 4rem 0;
   margin-bottom: 4rem;
 }
 
 .clients {
+  margin-bottom: 15rem;
 
   .button--fill {
     position: relative;
@@ -15,7 +16,9 @@
     display: block;
   }
 
-  margin-bottom: 15rem;
+  .button-container {
+    padding-top:  2rem;
+  }
 }
 
 .clients__grid-item {
@@ -66,7 +69,6 @@
 
   .clients__grid {
     grid-template-columns: repeat(3, 1fr);
-    padding: 0;
   }
 }
 

@@ -101,12 +101,20 @@
   z-index: 1;
 }
 
-@media only screen and (max-width:480px)  {
-  .portfolio__text {
-    > * {
-      font-size: 1.6rem;
-    }
+#portfolio-cube {
+  .single-column-content {
+    margin-bottom: 0;
+    background: yellow;
   }
+}
+
+@media only screen and (max-width:480px)  {
+
+  //.portfolio__text {
+  //  > * {
+  //    font-size: 1.6rem;
+  //  }
+  //}
 
   #my3Dsurface {
     min-height: 35rem;

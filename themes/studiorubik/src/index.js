@@ -34,11 +34,13 @@ $(document).ready(function () {
         //Init the bxSlider library on testimonials
         $('.testimonials-list').bxSlider({
             auto: true,
-            slideWidth: 480,
+            slideWidth: 555,
             minSlides: 1,
-            maxSlides: 5,
+            maxSlides: 3,
             controls: false,
-            touchEnabled: false
+            touchEnabled: false,
+            autoHover: true,
+            adaptiveHeight: false
         });
     }
 

@@ -19,10 +19,6 @@
 			?>
         </div>
 
-        <!--        Codepen Demo-->
-
-
-
         <!--        Hero Content-->
         <div class="hero-section__content">
             <h1 class="entry-title"><?php the_title(); ?></h1>
