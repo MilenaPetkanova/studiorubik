@@ -179,26 +179,6 @@ article p {
   }
 }
 
-.hero-section__content {
-  position: absolute;
-  top: 5%;
-  color: $white;
-  @include centerX;
-
-  h1 {
-    font-family: "SohoGothicPro-Bold", sans-serif;
-    font-size: 3.5rem;
-
-    br {
-      display: none;
-    }
-  }
-
-  p {
-    max-width: 70rem;
-  }
-}
-
 .wp-block-separator {
   border: none;
   margin: 0;

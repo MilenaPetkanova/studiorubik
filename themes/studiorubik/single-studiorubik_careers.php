@@ -3,20 +3,28 @@
 
 <!-- Main element -->
 <main class="single-career-page">
-
+<!--    Hero Section-->
     <section class="hero-section">
 
-		<?php
+        <!--        Hero Image-->
+        <div class="hero-section__image">
+			<?php
+			if ( has_post_thumbnail() ):
+                //the_post_thumbnail( 'blog', array( 'class' => 'featured-image' ) );
+				$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+				echo '<div  style="background: url('. $url.')"></div>';
+			else:
+				echo '<h4 class="text-center">No feature image added</h4>';
+			endif;
+			?>
+        </div>
 
-		if ( has_post_thumbnail() ):
-			the_post_thumbnail( 'blog', array( 'class' => 'featured-image' ) );
-		else:
-			echo '<h4 class="text-center">No feature image added</h4>';
-		endif;
+        <!--        Codepen Demo-->
 
-		?>
 
-        <div class="hero-section__content container">
+
+        <!--        Hero Content-->
+        <div class="hero-section__content">
             <h1 class="entry-title"><?php the_title(); ?></h1>
             <p><?php get_template_part( 'template-parts/page', 'loop' ); ?></p>
             <a href="#" title="apply" class="button button--transparent-white">apply</a>

@@ -21,7 +21,7 @@
 
   .heading {
     color: $white;
-    font-size: 2.5rem;
+    font-size: 2rem;
     display: block;
     font-family: "SohoGothicPro-Bold", sans-serif;
   }
@@ -35,12 +35,10 @@
   }
 }
 
-.careers__grid-item .heading {
-  font-size: 2rem;
-}
-
 @media only screen and (max-width: 600px) {
   .careers__grid {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+//careers__grid-item

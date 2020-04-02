@@ -67,7 +67,6 @@ get_header();
             <div class="portfolio-sizer"></div>
 
 			<?php
-
 			//list all projects from Jetpack Portfolio
 			$args = array( 'post_type' => 'jetpack-portfolio', 'posts_per_page' => - 1 );
 			$loop = new WP_Query( $args );
@@ -116,7 +115,6 @@ get_header();
 			endwhile;
 			wp_reset_query();
 			?>
-
         </section><!-- #portfolio -->
     </main>
 

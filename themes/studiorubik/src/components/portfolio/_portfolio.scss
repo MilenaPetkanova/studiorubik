@@ -31,29 +31,12 @@
     svg {
       @include centerXY;
       z-index: 1;
-      opacity: 0;
+      opacity: 0; //change me to 0
       transition: opacity 0.35s;
     }
 
     figcaption {
       color: white;
-
-      h2 {
-        font-size: 2.5rem;
-        margin: 0 auto;
-
-        span {
-          font-weight: 700;
-        }
-      }
-
-      > a {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
 
       &::before,
       &::after {
@@ -64,24 +47,13 @@
     &.grid-item-figure {
 
       h2 {
-        position: absolute;
-        width: 100%;
+        @include centerXY;
         text-align: center;
-        opacity: 0;
+        opacity: 0; //change me to 0
         transition: opacity 0.35s;
-        top: 50%;
-        transform: translateY(-50%);
         font-size: 1.6rem;
-        //font-family: "Soho Gothic Pro", sans-serif;
-
-        a {
-          width: 100%;
-          height: 100%;
-          position: relative;
-          left: 0;
-          top: 0;
-          z-index: 20;
-        }
+        margin: 0 auto;
+        max-width: 15rem;
       }
 
       &:hover {
@@ -122,9 +94,14 @@
   }
 }
 
+.portfolio-filters {
+  background-color: $gray;
+  padding: 1.3rem 0; //1.3rem 0;
+  transition: all 0.4s;
+}
+
 .portfolio-filter-item {
   display: inline-block;
-  font-size: 1.7rem;
   font-family: "SohoGothicPro-Medium";
   color: #8b8a8d;
   max-width: 14rem;
@@ -140,12 +117,6 @@
   }
 }
 
-.portfolio-filters {
-  background-color: $gray;
-  padding: 2.3rem 0;
-  transition: all 0.5s;
-}
-
 .portfolio-filter-item-active {
   color: $black;
 }
@@ -158,20 +129,22 @@
 @media only screen and (max-width: 1500px) {
 
   .portfolio-filter-item {
-    font-size: 1.6rem;
     margin-right: 2.5%;
   }
+}
 
-  .portfolio-item figure.grid-item-figure h2 {
-    font-size: 1.4rem;
+@media only screen and (max-width: 1280px) {
+  .portfolio-filter-item {
+    margin-right: 1.5%;
   }
 }
+
 
 @media only screen and (max-width: 960px) {
 
   #dropdown_svg {
     position: absolute;
-    top: 4.5rem;
+    top: 3.5rem;
     right: 5rem;
     transform: rotateZ(90deg);
     transition: all 0.5s;
@@ -190,7 +163,6 @@
   }
 
   .grid-item-figure {
-
     figcaption {
       position: relative;
       bottom: 3rem;
@@ -243,13 +215,14 @@
 
     h2 {
       opacity: 1;
-      //text-transform: uppercase;
       text-align: left;
-      font-size: 1.6rem;
+      //font-size: 1.6rem;
       color: #8b8a8d;
       padding-left: 2rem;
       display: block;
-      //width: unset;
+      max-width: 100%;
+      width: 100%;
+
 
       &:after {
         content: '';

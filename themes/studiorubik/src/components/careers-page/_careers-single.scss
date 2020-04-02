@@ -1,0 +1,28 @@
+.hero-section__image {
+  position: relative;
+
+  img {
+    display: block;
+  }
+}
+
+.hero-section__content {
+  color: $white;
+  position: absolute;
+  top: 0;
+
+  h1 {
+    font-family: "SohoGothicPro-Bold", sans-serif;
+    font-size: 3.5rem;
+
+    br {
+      display: none;
+    }
+  }
+
+  p {
+    max-width: 70rem;
+  }
+}
+
+//Codepen Demo
