@@ -6,12 +6,12 @@
 
 .bx-wrapper .bx-pager.bx-default-pager a {
   position: relative;
-  width: 15px;
+  width: 1.5rem;
   height: 8.66px;
   background-color: #ffffff;
   margin: 4.33px 0.5rem;
-  border-left: solid 2px #333333;
-  border-right: solid 2px #333333;
+  border-left: solid 0.2rem #333333;
+  border-right: solid 0.2rem #333333;
   border-radius: 0;
 }
 
@@ -42,8 +42,12 @@
 }
 
 .testimonial blockquote {
-  max-width: 340px;
+  max-width: 34rem;
   margin: 0 auto;
+
+  p {
+    min-height: 6.6rem;
+  }
 }
 
 .bx-wrapper .bx-pager,
@@ -54,7 +58,7 @@
 .testimonial-footer h3 {
   font-size: 1.8rem;
   color: #8b8a8d;
-  font-family: "SohoGothicPro-Bold", sans-serif;
+  //font-family: "SohoGothicPro-Bold", sans-serif;
   letter-spacing: 1.36px;
 }
 

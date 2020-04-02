@@ -1,23 +1,4 @@
 // Container, wrappers and common layout rules & utilities
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  /* Now 10px = 1rem! */
-  font-family: SohoGothicPro Bold, serif;
-  /* force scrollbar, prevents initial gap */
-  overflow-y: scroll;
-}
-
-body {
-  overflow-x: hidden;
-  z-index: 1; //maybe remove after development
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 header {
   position: relative;
@@ -117,7 +98,7 @@ p:empty {
     font-family: "SohoGothicPro-Bold", serif;
     font-size: 3.5rem;
     color: $black;
-    letter-spacing: 3.8px;
+    letter-spacing: 2.975px;
     line-height: 1;
     margin: 0;
     @include centerY;
@@ -128,13 +109,13 @@ p:empty {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 9.6rem;
+    text-transform: inherit;
     line-height: 0.8;
-    letter-spacing: 1.2rem;
+    letter-spacing: 8.16px;
     color: $gray;
     position: relative;
     margin: 0;
     left: -2rem;
-    text-transform: uppercase;
   }
 
   p {
@@ -159,10 +140,6 @@ p:empty {
   .section-heading {
     margin: 7rem auto;
   }
-
-  //.two-column-content {
-  //  margin-bottom: 1rem;
-  //}
 }
 
 .two-column-content {
@@ -245,7 +222,7 @@ article p {
 // Contact Page
 #map {
   width: 100%;
-  height: 600px;
+  height: 60rem;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -258,7 +235,7 @@ article p {
 
     h2 {
       font-size: 2.5rem;
-      top: calc(50% - 2px);
+      top: calc(50% - 0.2rem);
     }
 
     .background-text {

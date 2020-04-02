@@ -1,4 +1,4 @@
-$hexagon-width: 295px;
+$hexagon-width: 29.5rem;
 $hexagon-height: $hexagon-width*.585;
 $hexagon-margin: 0;
 $hexagon-title-color: $black;
@@ -42,7 +42,7 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
         font-family: "SohoGothicPro-Bold", sans-serif;
         font-size: 1.8rem;
         margin: 0 auto;
-        letter-spacing: 2px;
+        letter-spacing: 0.2rem;
         margin-bottom: 0.5rem;
       }
 

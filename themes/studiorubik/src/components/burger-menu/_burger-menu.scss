@@ -82,7 +82,6 @@
         width: 100%;
         margin: 0 auto;
         color: $menu-links;
-        // color: magenta;
         text-decoration: none;
         letter-spacing: 1.6px;
         @include transition($time, $timing);
@@ -91,7 +90,7 @@
           content: " ";
           position: absolute;
           width: 0%;
-          height: 5px;
+          height: 0.5rem;
           margin: 3.4rem 0 0 5%;
           right: 0;
           background: $white;
@@ -119,10 +118,10 @@
 }
 
 .main-menu {
-  border-right: 4px solid $white;
-  padding: 40px 0px;
+  border-right: 0.4rem solid $white;
+  padding: 4rem 0;
   position: relative;
-  right: -2px;
+  right: -0.2rem;
 }
 
 .nav-contacts {
@@ -154,9 +153,9 @@
         font-weight: normal;
         display: inline-block;
         vertical-align: top;
-        padding: 0 5px;
+        padding: 0 0.5rem;
         content: '\f08e';
-        font-size: 30px;
+        font-size: 3rem;
         -webkit-font-smoothing: antialiazed;
       }
     }

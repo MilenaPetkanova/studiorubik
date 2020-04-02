@@ -2,7 +2,10 @@
   margin-top: 5rem;
 
   a:hover {
-    color: $black;
+
+    &:not(.button):hover {
+      color: $black;
+    }
   }
 
   p {

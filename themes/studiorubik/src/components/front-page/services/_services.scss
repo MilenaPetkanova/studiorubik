@@ -1,4 +1,4 @@
-.expertise {
+.services {
 
   .three-column__grid {
     align-items: baseline;
@@ -36,11 +36,11 @@
   }
 }
 
-.expertise__workflow {
+.services__workflow {
   margin-top: 7rem;
 }
 
-// Expertise Grid
+//Services Grid
 .three-column__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -50,17 +50,16 @@
   margin: 9rem auto;
   align-items: center;
 
+  figcaption, .caption {
+    min-height: 5.5rem;
+    display: table;
+    margin: 2rem auto 0 auto;
+  }
+
   h5 {
     margin: 0 auto;
     display: table-cell;
     vertical-align: middle;
-
-  }
-
-  figcaption {
-    min-height: 5.5rem;
-    display: table;
-    margin: 2rem auto 0 auto;
   }
 }
 
@@ -81,7 +80,7 @@
 
     svg {
       top: 0.3rem;
-      width: 6px;
+      width: 0.6rem;
     }
   }
 
@@ -126,7 +125,7 @@
     max-width: 32rem;
   }
 
-  .expertise__workflow {
+  .services__workflow {
 
     margin: 6rem auto 7rem auto;
 

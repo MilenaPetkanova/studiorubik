@@ -24,22 +24,21 @@ get_header( 'front' );
         </section>
 
         <!-- Portfolio Section -->
-        <section class="portfolio container" id="portfolio-cube">
+        <section class="portfolio" id="portfolio-cube">
 
             <!-- Portoflio Section Headings -->
-            <div data-aos="fade-up" class="section-heading text-upper">
+            <div data-aos="fade-up" class="section-heading text-upper container">
                 <h2><?php the_field( 'portfolio_section_heading' ) ?></h2>
                 <p class="background-text"><?php the_field( 'portfolio_section_heading' ) ?></p>
             </div>
 
             <!-- Portfolio Section Text -->
-            <div data-aos="fade-zoom-in" data-aos-delay="400" class="portfolio__text">
+            <div data-aos="fade-zoom-in" data-aos-delay="400" class="portfolio__text container">
                 <p><?php the_field( 'portfolio_section_text' ) ?></p>
             </div>
 
             <!-- 3D Cube ACF Fields -->
 			<?php
-
 			$area1 = get_field( 'area_1' );
 			$area2 = get_field( 'area_2' );
 			$area3 = get_field( 'area_3' );
@@ -64,38 +63,39 @@ get_header( 'front' );
             </div>
 
             <!-- Button for the Projects Page -->
-            <div class="button-container">
+            <div class="container">
 
                 <!-- Button with fill -->
                 <a data-aos="fade-up" data-aos-delay="300" href="/portfolio" title="more projects"
-                   class="button button--fill">more projects</a>
+                   class="button button--fill">more projects
+                </a>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section class="expertise">
+        <section class="services">
 
             <!-- Portoflio Section Headings -->
             <div data-aos="fade-up" class="section-heading text-upper container">
-                <h2><?php the_field( 'expertise_section_heading' ) ?></h2>
-                <p class="background-text"><?php the_field( 'expertise_section_heading' ) ?></p>
+                <h2><?php the_field( 'services_section_heading' ) ?></h2>
+                <p class="background-text"><?php the_field( 'services_section_heading' ) ?></p>
             </div>
 
             <!-- Workflow Headings -->
-            <div class="expertise__workflow">
+            <div class="services__workflow">
 
-                <!-- Get the Expertise Field and register the SVG Divider -->
+                <!-- Get the Services Field and register the SVG Divider -->
 				<?php
-				$expertise_workflow = get_field( 'expertise_workflow' );
-				$divider_icon       = wp_get_attachment_image_src( $expertise_workflow['svg_divider'], 'full' )[0];
+				$services_workflow = get_field( 'services_workflow' );
+				$divider_icon      = wp_get_attachment_image_src( $services_workflow['svg_divider'], 'full' )[0];
 				?>
 
-                <!-- Expertise Heading List -->
+                <!-- Services Heading List -->
                 <ul class="workflow__list text-upper">
 
                     <!-- Heading -->
                     <li data-aos="fade-zoom-in" data-aos-delay="200" class="workflow__list-item">
-                        <p><?php echo $expertise_workflow['first_heading'] ?></p>
+                        <p><?php echo $services_workflow['first_heading'] ?></p>
                     </li>
 
                     <!-- Divider -->
@@ -103,7 +103,7 @@ get_header( 'front' );
                                 class="style-svg" alt="divider" src="<?php echo $divider_icon ?>"/></li>
                     <!-- Heading -->
                     <li data-aos="fade-zoom-in" data-aos-delay="500" class="workflow__list-item">
-                        <p><?php echo $expertise_workflow['second_heading'] ?></p>
+                        <p><?php echo $services_workflow['second_heading'] ?></p>
                     </li>
 
                     <!-- Divider -->
@@ -114,7 +114,7 @@ get_header( 'front' );
 
                     <!-- Heading -->
                     <li data-aos="fade-zoom-in" data-aos-delay="900" class="workflow__list-item">
-                        <p><?php echo $expertise_workflow['third_heading'] ?></p>
+                        <p><?php echo $services_workflow['third_heading'] ?></p>
                     </li>
 
                     <!-- Divider -->
@@ -125,12 +125,12 @@ get_header( 'front' );
 
                     <!-- Heading -->
                     <li data-aos="fade-zoom-in" data-aos-delay="1300" class="workflow__list-item">
-                        <p><?php echo $expertise_workflow['fourth_heading'] ?></p>
+                        <p><?php echo $services_workflow['fourth_heading'] ?></p>
                     </li>
                 </ul>
             </div>
 
-            <!-- Expertise Grid -->
+            <!-- Services Grid -->
             <div class="three-column__grid container text-center">
 
                 <!-- Grid Item 1 -->

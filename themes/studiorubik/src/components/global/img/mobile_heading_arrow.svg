@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="9.58" height="24.58" viewBox="0 0 9.58 24.58">
-  <title>mobile_heading_arrow</title>
-  <g>
-    <rect x="-2.02" y="6.18" width="13.62" height="1.6" transform="translate(1.14 14.62) rotate(-120)" fill="#fff" stroke="#fff" stroke-miterlimit="10"/>
-    <polygon points="2.08 23.91 8.89 12.47 7.5 11.69 0.69 23.13 2.08 23.91" fill="#fff" stroke="#fff" stroke-miterlimit="10"/>
-  </g>
+    <title>mobile_heading_arrow</title>
+    <g>
+        <rect x="-2.02" y="6.18" width="13.62" height="1.6" transform="translate(1.14 14.62) rotate(-120)" fill="#fff"
+              stroke="#fff" stroke-miterlimit="10"/>
+        <polygon points="2.08 23.91 8.89 12.47 7.5 11.69 0.69 23.13 2.08 23.91" fill="#fff" stroke="#fff"
+                 stroke-miterlimit="10"/>
+    </g>
 </svg>

@@ -83,16 +83,14 @@ get_header( 'front' );
 
 					<?php
 					$first_grid_item = get_field( 'first_grid_item' );
-					$icon            = wp_get_attachment_image_src( $first_grid_item['grid_item_icon'], 'full' )[0];
 					?>
 
                     <!-- Grid Item Icon & Heading -->
-                    <figure>
-                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
-                        <figcaption>
+                    <div>
+                        <div class="caption">
                             <h5 class="text-upper"><?php echo $first_grid_item['grid_item_heading'] ?></h5>
-                        </figcaption>
-                    </figure>
+                        </div>
+                    </div>
 
                     <!-- Grid Item Description -->
                     <div class="grid-item__description">
@@ -105,16 +103,14 @@ get_header( 'front' );
 
 					<?php
 					$second_grid_item = get_field( 'second_grid_item' );
-					$icon             = wp_get_attachment_image_src( $second_grid_item['grid_item_icon'], 'full' )[0];
 					?>
 
                     <!-- Grid Item Icon & Heading -->
-                    <figure>
-                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
-                        <figcaption>
+                    <div>
+                        <div class="caption">
                             <h5 class="text-upper"><?php echo $second_grid_item['grid_item_heading'] ?></h5>
-                        </figcaption>
-                    </figure>
+                        </div>
+                    </div>
 
                     <!-- Grid Item Description -->
                     <div class="grid-item__description">
@@ -127,16 +123,14 @@ get_header( 'front' );
 
 					<?php
 					$third_grid_item = get_field( 'third_grid_item' );
-					$icon            = wp_get_attachment_image_src( $third_grid_item['grid_item_icon'], 'full' )[0];
 					?>
 
                     <!-- Grid Item Icon & Heading -->
-                    <figure>
-                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
-                        <figcaption>
+                    <div>
+                        <div class="caption">
                             <h5 class="text-upper"><?php echo $third_grid_item['grid_item_heading'] ?></h5>
-                        </figcaption>
-                    </figure>
+                        </div>
+                    </div>
 
                     <!-- Grid Item Description -->
                     <div class="grid-item__description">
@@ -149,16 +143,14 @@ get_header( 'front' );
 
 					<?php
 					$fourth_grid_item = get_field( 'fourth_grid_item' );
-					$icon             = wp_get_attachment_image_src( $fourth_grid_item['grid_item_icon'], 'full' )[0];
 					?>
 
                     <!-- Grid Item Icon & Heading -->
-                    <figure>
-                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
-                        <figcaption>
+                    <div>
+                        <div class="caption">
                             <h5 class="text-upper"><?php echo $fourth_grid_item['grid_item_heading'] ?></h5>
-                        </figcaption>
-                    </figure>
+                        </div>
+                    </div>
 
                     <!-- Grid Item Description -->
                     <div class="grid-item__description">
@@ -171,16 +163,14 @@ get_header( 'front' );
 
 					<?php
 					$fifth_grid_item = get_field( 'fifth_grid_item' );
-					$icon            = wp_get_attachment_image_src( $fifth_grid_item['grid_item_icon'], 'full' )[0];
 					?>
 
                     <!-- Grid Item Icon & Heading -->
-                    <figure>
-                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
-                        <figcaption>
+                    <div>
+                        <div class="caption">
                             <h5 class="text-upper"><?php echo $fifth_grid_item['grid_item_heading'] ?></h5>
-                        </figcaption>
-                    </figure>
+                        </div>
+                    </div>
 
                     <!-- Grid Item Description -->
                     <div class="grid-item__description">
@@ -193,16 +183,14 @@ get_header( 'front' );
 
 					<?php
 					$sixth_grid_item = get_field( 'sixth_grid_item' );
-					$icon            = wp_get_attachment_image_src( $sixth_grid_item['grid_item_icon'], 'full' )[0];
 					?>
 
                     <!-- Grid Item Icon & Heading -->
-                    <figure>
-                        <img alt="<?php echo get_the_title(); ?>" class="style-svg" src="<?php echo $icon ?>"/>
-                        <figcaption>
+                    <div>
+                        <div class="caption">
                             <h5 class="text-upper"><?php echo $sixth_grid_item['grid_item_heading'] ?></h5>
-                        </figcaption>
-                    </figure>
+                        </div>
+                    </div>
 
                     <!-- Grid Item Description -->
                     <div class="grid-item__description">

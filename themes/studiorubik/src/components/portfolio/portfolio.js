@@ -58,10 +58,12 @@ function portfolioPage() {
 
         function onHashchange() {
             var hashFilter = getHashFilter();
+            var $filterButtonGroup = $('.portfolio-filter-item');
             if (!hashFilter && isIsotopeInit) {
                 return;
             }
             isIsotopeInit = true;
+
             // filter isotope
             $container.isotope({
                 itemSelector: '.portfolio-item',
@@ -69,11 +71,13 @@ function portfolioPage() {
                 // use filterFns
                 filter: filterFns[hashFilter] || hashFilter
             });
+
             // set selected class on button
-            // if (hashFilter) {
-            //     $filterButtonGroup.find('.is-checked').removeClass('is-checked');
-            //     $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
-            // }
+            if (hashFilter && $(window).width() > 960) {
+                $('.portfolio-filter-item').removeClass('is-checked');
+                $filterButtonGroup.find('.is-checked').removeClass('is-checked');
+                $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+            }
         }
 
         $(window).on('hashchange', onHashchange);

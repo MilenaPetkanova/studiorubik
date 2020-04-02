@@ -66,9 +66,9 @@
 
 .js3dsurface {
   cursor: pointer;
-  -webkit-perspective: 700px;
-  perspective: 700px;
-  -ms-perspective: 700px;
+  -webkit-perspective: 70rem;
+  perspective: 70rem;
+  -ms-perspective: 70rem;
   position: relative;
   display: block;
   overflow: hidden;
@@ -103,7 +103,6 @@
 
 @media only screen and (max-width:480px)  {
   .portfolio__text {
-    width: 100%;
     > * {
       font-size: 1.6rem;
     }

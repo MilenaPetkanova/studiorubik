@@ -16,11 +16,10 @@ get_header();
 				<?php
 				$terms = get_terms( "jetpack-portfolio-type" ); //change to a different POST TYPE (Jetpack Portfolio Project/Category Type)
 				$count = count( $terms );
-				echo '<li class="portfolio-filter-item is-checked dropdown-content"><a class="inner-filter" href="javascript:void(0)" title="All" data-filter=".all" class="active">All projects</a></li>'; //default "All"
+				echo '<li class="portfolio-filter-item dropdown-content is-checked"><a class="inner-filter active" href="javascript:void(0)" title="All" data-filter=".all">All projects</a></li>'; //default "All"
 				if ( $count > 0 ) {
 
 					foreach ( $terms as $term ) {
-
 						$termname = strtolower( $term->name );
 						$termname = str_replace( ' ', '-', $termname );
 						echo '<li class="portfolio-filter-item dropdown-content"><a class="inner-filter" href="javascript:void(0)" data-filter=".' . $termname . '">' . $term->name . '</a></li>'; //show our custom post type categories
@@ -59,11 +58,10 @@ get_header();
                     magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
                     ea commodo consequat.</p>
             </div>
-
         </section>
 
         <!-- Isotope Grid -->
-        <section id="portfolio">
+        <section id="portfolio" class="text-upper">
 
             <!-- Sizing element for isotope.js -->
             <div class="portfolio-sizer"></div>
@@ -108,7 +106,7 @@ get_header();
 				echo '<svg xmlns="http://www.w3.org/2000/svg" width="178" height="204.97" viewBox="0 0 178 204.97"><polygon points="176.5 152.86 89 203.24 1.5 152.86 1.5 52.11 89 1.73 176.5 52.11 176.5 152.86" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/></svg>';
 
 				// The Figure Caption Containing the heading element
-				echo '<figcaption><h2><a>' . get_the_title() . '</a></h2></figcaption>';
+				echo '<figcaption><h2>' . get_the_title() . '</h2></figcaption>';
 
 				echo '</figure>';
 

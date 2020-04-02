@@ -2,12 +2,13 @@
   float: right;
 }
 
+
 footer.site-footer {
   background-image: url('./footer.gif');
 
   #menu-social-menu-1 li {
     display: block;
-    max-width: 50px;
+    max-width: 5rem;
     padding: 0;
 
     a {
@@ -40,7 +41,7 @@ footer.site-footer {
     // Heading Title
     h5 {
       font-size: 1.6rem;
-      font-family: "SohoGothicPro-Bold";
+      //font-family: "SohoGothicPro-Bold";
       background-color: $black;
       max-width: 15rem;
       margin-top: 0;
@@ -61,7 +62,6 @@ footer.site-footer {
         a::after {
           width: 100%;
         }
-
       }
 
       a {
@@ -70,7 +70,7 @@ footer.site-footer {
         &:after {
           content: '';
           width: 0;
-          height: 1px;
+          height: 0.1rem;
           display: block;
           background: $white;
           transition: 300ms;
@@ -83,7 +83,6 @@ footer.site-footer {
       display: flex;
       align-self: center;
     }
-
   }
 }
 
@@ -116,7 +115,7 @@ footer.site-footer {
         .tnp-field-email input {
           background-color: transparent;
           border: none;
-          border-bottom: 3px solid $white;
+          border-bottom: 03rem solid $white;
         }
 
         input.tnp-email {
@@ -135,7 +134,6 @@ footer.site-footer {
       }
     }
   }
-
 }
 
 .tnp-field label {
@@ -143,7 +141,6 @@ footer.site-footer {
 }
 
 .copywrite {
-
   color: $white;
   font-size: 1rem;
   padding: 0;
@@ -164,18 +161,15 @@ footer.site-footer {
 
   .footer-services {
     order: 1;
-    //padding-right: 1.5rem;
     margin-bottom: 4.5rem;
   }
 
   .footer-studio {
     order: 2;
-    //padding-left: 1.5rem;
   }
 
   .footer-legal {
     order: 3;
-    //padding-right: 1.5rem;
     margin-bottom: 5rem;
   }
 
@@ -187,14 +181,13 @@ footer.site-footer {
 
   .footer-social {
     order: 4;
-    //padding-left: 1.5rem;
     margin-bottom: 5rem;
   }
 
   footer.site-footer #menu-social-menu-1 li {
     display: inline-block;
     max-width: 50%;
-    width: calc(50% - 2px);
+    width: calc(50% - 0.2rem);
     margin: 1rem auto;
   }
 
@@ -202,10 +195,6 @@ footer.site-footer {
     background-color: $black;
     max-width: 15rem;
     padding-top: 0.5rem;
-
-    //ul {
-    //  float: left;
-    //}
   }
 
   .site-footer__menu .site-footer__menu__list {
@@ -293,5 +282,4 @@ footer.site-footer {
   .social-menu li a:before {
     font-size: 2.5rem;
   }
-
 }

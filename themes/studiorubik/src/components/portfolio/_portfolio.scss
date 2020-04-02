@@ -25,7 +25,7 @@
 
     img {
       width: 100%;
-      transform: scale3d(1.02, 1.02, 1);
+      transform: scale3d(1.03, 1.03, 1);
     }
 
     svg {
@@ -72,7 +72,7 @@
         top: 50%;
         transform: translateY(-50%);
         font-size: 1.6rem;
-        font-family: "Soho Gothic Pro", sans-serif;
+        //font-family: "Soho Gothic Pro", sans-serif;
 
         a {
           width: 100%;
@@ -156,9 +156,14 @@
 }
 
 @media only screen and (max-width: 1500px) {
+
   .portfolio-filter-item {
     font-size: 1.6rem;
     margin-right: 2.5%;
+  }
+
+  .portfolio-item figure.grid-item-figure h2 {
+    font-size: 1.4rem;
   }
 }
 
@@ -182,6 +187,14 @@
     position: relative;
     font-size: 1.6rem;
     margin-right: 0;
+  }
+
+  .grid-item-figure {
+
+    figcaption {
+      position: relative;
+      bottom: 3rem;
+    }
   }
 
   .dropdown {
@@ -226,21 +239,17 @@
     width: 33.3%;
   }
 
-  .portfolio-item figure figcaption {
-    position: relative;
-  }
+  .portfolio-item figure.grid-item-figure {
 
-  .portfolio-item figure.grid-item-figure h2 {
-    opacity: 1;
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    color: #8b8a8d;
-
-    a:nth-of-type(2) {
-      position: absolute;
-      left: 3rem;
+    h2 {
+      opacity: 1;
+      //text-transform: uppercase;
       text-align: left;
-      top: -5rem;
+      font-size: 1.6rem;
+      color: #8b8a8d;
+      padding-left: 2rem;
+      display: block;
+      //width: unset;
 
       &:after {
         content: '';
@@ -248,7 +257,15 @@
         background-image: url('./img/mobile_heading_arrow-gray.svg');
         width: 1rem;
         height: 2.5rem;
-        margin-left: 0.5rem;
+        margin-left: 0.7rem;
+      }
+    }
+
+    &:hover h2 {
+      color: $white;
+
+      &:after {
+        background-image: url('./img/mobile_heading_arrow.svg');
       }
     }
   }
@@ -256,24 +273,12 @@
   .portfolio-item figure.grid-item-figure:hover svg {
     display: none;
   }
+}
 
-  .case-studies {
-
-    .portfolio-item figure.grid-item-figure h2 {
-      top: -4rem;
-      text-align: left;
-      padding-left: 3rem;
-    }
-
-    .portfolio-item figure.grid-item-figure h2 a:after {
-      content: '';
-      position: absolute;
-      background-image: url('./img/mobile_heading_arrow-gray.svg');
-      background-repeat: no-repeat;
-      width: 1rem;
-      height: 2.5rem;
-      margin-left: 0.5rem;
-    }
+@media only screen and (max-width: 700px) {
+  .portfolio-item,
+  .portfolio-sizer {
+    width: 50%;
   }
 }
 
