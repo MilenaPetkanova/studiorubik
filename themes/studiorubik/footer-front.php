@@ -1,5 +1,5 @@
 <!--Front Page Footer-->
-<footer class="site-footer">
+<footer class="site-footer front-page__footer">
 
     <section class="site-footer__cta">
         <!-- TO DO -->

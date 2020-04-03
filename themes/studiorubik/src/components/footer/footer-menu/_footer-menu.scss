@@ -27,7 +27,7 @@ footer.site-footer {
   .site-footer__menu__list {
     flex: 0 0 50%;
     position: relative;
-    display: flex;
+    //display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -36,7 +36,7 @@ footer.site-footer {
     // Heading Title
     h5 {
       font-size: 1.6rem;
-      //font-family: "SohoGothicPro-Bold";
+      margin-bottom: 2.5rem;
       background-color: $black;
       max-width: 15rem;
       margin-top: 0;

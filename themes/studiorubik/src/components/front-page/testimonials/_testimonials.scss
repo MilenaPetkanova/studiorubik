@@ -114,5 +114,12 @@
 
 @media only screen and (max-width: 480px) {
 
+  .bx-wrapper {
+    margin: 0 auto;
+  }
+
+  .bx-wrapper .bx-pager {
+    padding-top: 4.1rem;
+  }
 }
 

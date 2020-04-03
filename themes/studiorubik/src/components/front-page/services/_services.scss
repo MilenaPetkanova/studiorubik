@@ -47,7 +47,7 @@
   margin: 0 auto;
   //margin: 9rem auto;
   align-items: center;
-  background: magenta;
+  //background: magenta;
 
   figcaption, .caption {
     height: 5.1rem;
@@ -74,6 +74,10 @@
 
 @media only screen and (max-width: 960px) {
 
+  .services .three-column__grid {
+    margin-bottom: 6.5rem;
+  }
+
   .workflow__list .workflow__list-item {
     font-size: 1.8rem;
 
@@ -86,15 +90,31 @@
   .three-column__grid {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3rem;
+
   }
 }
 
 @media only screen and (max-width: 480px) {
 
+  .inner-page .values {
+
+    .three-column__grid-item {
+      margin-bottom: 0;
+    }
+
+    .three-column__grid figcaption, .three-column__grid .caption {
+      margin: 2rem auto 1.5rem auto;
+    }
+  }
+
   .workflow__list {
     display: block;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 0.5rem;
+
+    .workflow__list-item p {
+      margin: 2.5rem auto 2rem auto;
+    }
 
     li {
       svg {
@@ -121,12 +141,7 @@
   }
 
   .grid-item__description {
-    max-width: 32rem;
+    max-width: 100%;
   }
 
-  .services__workflow {
-
-    margin: 6rem auto 7rem auto;
-
-  }
 }

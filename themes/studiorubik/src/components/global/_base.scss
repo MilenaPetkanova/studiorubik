@@ -93,7 +93,8 @@ p:empty {
 //Section Headings
 .section-heading {
   position: relative;
-  margin: 5rem auto;
+  margin: 6rem auto;
+
 
   h2 {
     font-family: "SohoGothicPro-Bold", serif;
@@ -173,7 +174,7 @@ p:empty {
   column-count: 1;
   width: 100%;
   margin-bottom: 7rem;
-  background: red;
+  //background: red;
 
   ul {
     list-style-image: url('./img/custom-li.svg');
@@ -238,7 +239,12 @@ article p {
 
 @media only screen and (max-width: 960px) {
 
+  .landing-page .section-heading {
+    margin: 7rem auto 4.5rem auto;
+  }
+
   .section-heading {
+    margin: 6.5rem auto 3.5rem auto;
 
     h2 {
       font-size: 2.8rem;
@@ -284,13 +290,13 @@ article p {
 @media only screen and (max-width: 480px) {
 
   .landing-page .section-heading {
-    margin: 6.5rem auto 6rem auto;
+    margin: 6.5rem auto 3rem auto;
   }
 
   .section-heading {
 
     h2 {
-      font-size: 2.2rem;
+      font-size: 2.7rem;
       letter-spacing: 1.87px;
       transform: none;
       position: relative;
@@ -302,7 +308,7 @@ article p {
   }
 
   .two-column-content {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
 
   .post-navigation {
@@ -312,4 +318,7 @@ article p {
   #rubik-animation-1 {
     max-width: 15rem;
   }
+}
+
+@media only screen and (max-width: 320px) {
 }

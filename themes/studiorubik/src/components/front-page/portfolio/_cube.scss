@@ -104,14 +104,20 @@
 #portfolio-cube {
   .single-column-content {
     margin-bottom: 0;
-    background: yellow;
   }
 }
 
-@media only screen and (max-width:480px)  {
+@media only screen and (max-width: 960px) {
+  #portfolio-cube {
+    .button {
+      margin: 7rem auto;
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
 
   #my3Dsurface {
-    min-height: 35rem;
+    min-height: 41rem;
   }
 }
 

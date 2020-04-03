@@ -241,7 +241,7 @@
 @media only screen and (max-width: 480px) {
 
   .site-header {
-    padding: 1.2rem 0;
+    padding: 5% 0;
   }
 
   #header-logo {
@@ -256,7 +256,7 @@
   }
 
   .hamburger {
-    padding: 2rem 0 0 0;
+    padding: 3.5% 0 0 0;
   }
 
   .main-menu {
@@ -311,7 +311,8 @@
   }
 }
 
-@media only screen and (orientation: portrait) and (max-height: 568px) {
+//Portrait
+@media only screen and (orientation: portrait) and (max-height: 660px) {
 
   #burger-menu-container ul li {
     font-size: 2.5rem;
@@ -331,10 +332,12 @@
   }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 812px) {
+//Landscape
+
+@media only screen and (orientation: landscape) and (max-width: 896px) {
 
   .site-header {
-    padding: 1rem 0;
+    padding: 5% 0;
   }
 
   #header-logo {
@@ -344,8 +347,9 @@
   }
 
   .hamburger {
-    padding: 2rem 0 0 0;
+    padding: 2.5% 0 0 0;
   }
+
   .main-menu {
     padding: 0;
     right: 0;
@@ -358,5 +362,11 @@
 
   .nav-contacts > div {
     margin-bottom: 2.4rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 660px) {
+  .nav-contacts p {
+    margin: 1rem 0;
   }
 }

@@ -129,6 +129,7 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
 
 .team .three-column__grid {
   justify-items: unset;
+  padding-top: 2rem;
 }
 
 // Last Hexagon in the about us page
@@ -150,12 +151,28 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
 }
 
 @media only screen and (max-width: 960px) {
+
+  .honeycomb {
+    &-cell {
+
+      flex: 0 1 25rem;
+
+      max-width: 25rem;
+
+      height: 14.625rem;
+
+      margin: 6.96429rem auto 6.96429rem;
+    }
+  }
+
   .team .three-column__grid-item:last-of-type {
     grid-area: auto;
   }
+
 }
 
 @media only screen and (max-width: 480px) {
+
   .three-column__grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
@@ -168,7 +185,18 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
   .honeycomb-cell {
     margin: 82.17857px auto 82.17857px auto;
   }
+
   .team .three-column__grid-item {
     margin-bottom: 22rem;
+  }
+
+
+  .honeycomb-cell__title {
+    opacity: 1;
+  }
+
+  &::after {
+    opacity: 1;
+
   }
 }

@@ -1,22 +1,14 @@
-<!--Inner Pages Footer-->
-<footer class="site-footer">
+<!-- Back to top Arrow -->
+<div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="back-to-top btp-inner-page container cf">
+    <a href="javascript:" id="return-to-top">
+        <div class="back-to-top__hexagon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="43.375" height="50.12"><path d="M43.375 37.6L21.688 50.12 0 37.6V12.53L21.688 0l21.687 12.53V37.6z"/><g fill="#fff" stroke="#fff" stroke-miterlimit="10"><path d="M9.845 26.825l12.03-6.946.817 1.415-12.03 6.946z"/><path d="M33.53 26.825L21.862 19.88l-.793 1.415 11.668 6.945.793-1.415z"/></g></svg>
+        </div>
+    </a>
+</div>
 
-    <!-- Back to top Arrow -->
-    <div data-aos="fade-up" class="back-to-top container cf">
-        <a href="javascript:" id="return-to-top">
-            <div class="back-to-top__hexagon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28.8716" height="11.097" viewBox="0 0 28.8716 11.097">
-                    <title>
-                        back-to-top</title>
-                    <rect x="0.0767" y="4.5993" width="16.1368" height="1.8985"
-                          transform="translate(17.9732 6.2811) rotate(150)" fill="#fff" stroke="#fff"
-                          stroke-miterlimit="10"/>
-                    <polygon points="28.197 8.761 14.642 0.692 13.722 2.336 27.277 10.405 28.197 8.761" fill="#fff"
-                             stroke="#fff" stroke-miterlimit="10"/>
-                </svg>
-            </div>
-        </a>
-    </div>
+<!--Inner Pages Footer-->
+<footer class="site-footer inner-page__footer">
 
     <section class="site-footer__cta">
         <!-- TO DO -->

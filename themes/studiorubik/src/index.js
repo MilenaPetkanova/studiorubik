@@ -39,7 +39,7 @@ $(document).ready(function () {
 
         if (width < 480) {
             maxSlides = 1;
-            slideWidth = 320;
+            slideWidth = 360;
         } else if (width <= 960) {
             maxSlides = 2;
             slideWidth = 320;
