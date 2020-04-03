@@ -1,0 +1,91 @@
+[data-scroll] {
+  will-change: transform;
+}
+
+.smooth-scroll-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  counter-reset: figure;
+}
+
+.item {
+  max-width: 100%;
+  position: relative;
+  will-change: transform;
+}
+
+.item__img-wrap {
+  --aspect-ratio: 1/1.5;
+  overflow: hidden;
+  width: 100vw;
+  padding-bottom: calc(100% / (var(--aspect-ratio)));
+  max-width: 100%;
+  will-change: transform;
+}
+
+.item:first-child .item__img-wrap {
+  --aspect-ratio: 1919/650;
+  --image: url(http://studiorubikdev.local/wp-content/uploads/2020/03/career-background.jpg);
+}
+
+.item:nth-child(2) .item__img-wrap {
+  --aspect-ratio: 1909/999;
+  --image: url(https://www.dev.studiorubik.com/wp-content/uploads/2020/02/about-us-1.jpg);
+}
+
+.item:nth-child(3) .item__img-wrap {
+  --aspect-ratio: 1646/862;
+  --image: url(https://www.dev.studiorubik.com/wp-content/uploads/2020/03/summeradventure-SCREENSHOT.png);
+}
+
+.item:nth-child(4) .item__img-wrap {
+  --aspect-ratio: 1757/953;
+  --image: url(https://www.dev.studiorubik.com/wp-content/uploads/2020/03/ropeswings-screesnhot.png);
+}
+
+.item:nth-child(5) .item__img-wrap {
+  --aspect-ratio: 1920/700;
+  --image: url(https://www.dev.studiorubik.com/wp-content/uploads/2020/03/summer-adventure-slider3.jpg);
+}
+
+.item:nth-child(6) .item__img-wrap {
+  --aspect-ratio: 2560/1707;
+  --image: url(https://www.dev.studiorubik.com/wp-content/uploads/2020/03/0R8A8829-scaled.jpg);
+}
+
+.item:nth-child(7) .item__img-wrap {
+  --aspect-ratio: 2048/1367;
+  --image: url(https://www.dev.studiorubik.com/wp-content/uploads/2020/03/43552471_553189881791845_4389506230628909056_n.jpg);
+}
+
+.item:nth-child(8) .item__img-wrap {
+
+  --aspect-ratio: 1000/562;
+  --image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/8.jpg);
+}
+
+.item__img {
+  --overflow: 60px;
+  height: calc(100% + (2 * var(--overflow)));
+  top: calc( -1 * var(--overflow));
+  width: 100%;
+  position: absolute;
+  background-image: var(--image);
+  background-size: cover;
+  background-position: 50% 0%;
+  will-change: transform;
+}
+
+.item__img--t1 {
+  --overflow: 80px;
+}
+
+.item__img--t2 {
+  --overflow: 100px;
+}
+
+.item__img--t3 {
+  --overflow: 120px;
+}

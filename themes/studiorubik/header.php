@@ -8,7 +8,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body data-scroll <?php body_class(); ?>>
 
 <!-- Call the page Loader -->
 <?php get_template_part( 'template-parts/page', 'loader' ); ?>
