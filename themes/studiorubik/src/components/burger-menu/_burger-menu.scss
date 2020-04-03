@@ -310,3 +310,53 @@
     height: 0.4rem
   }
 }
+
+@media only screen and (orientation: portrait) and (max-height: 568px) {
+
+  #burger-menu-container ul li {
+    font-size: 2.5rem;
+  }
+
+  .nav-contacts .social-menu {
+    margin-bottom: 2rem;
+    top: 1rem;
+  }
+
+  .main-menu, .nav-contacts {
+    width: 21rem
+  }
+
+  #burger-menu-container ul li a::after {
+    margin: 2.1rem 0 0 5%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 812px) {
+
+  .site-header {
+    padding: 1rem 0;
+  }
+
+  #header-logo {
+    img {
+      width: 5rem;
+    }
+  }
+
+  .hamburger {
+    padding: 2rem 0 0 0;
+  }
+  .main-menu {
+    padding: 0;
+    right: 0;
+  }
+
+  #burger-menu-container ul li {
+    font-size: 2.5rem;
+    line-height: 1.75;
+  }
+
+  .nav-contacts > div {
+    margin-bottom: 2.4rem;
+  }
+}
