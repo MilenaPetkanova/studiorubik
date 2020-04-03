@@ -110,16 +110,31 @@
 
 @media only screen and (max-width: 960px) {
 
+  .bx-wrapper {
+    margin: 0 auto;
+  }
+  .testimonial-footer .button {
+    float: left;
+  }
+  .slide.testimonial {
+    margin-right: 3.5rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
 
-  .bx-wrapper {
-    margin: 0 auto;
-  }
 
   .bx-wrapper .bx-pager {
     padding-top: 4.1rem;
+  }
+
+  .testimonial-footer .button {
+    float: none;
+  }
+
+  .slide.testimonial {
+    margin-right: 0;
+    text-align: center;
   }
 }
 

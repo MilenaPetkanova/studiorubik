@@ -74,7 +74,42 @@
   }
 }
 
+@media only screen and (orientation: landscape) and (max-width: 896px) {
+
+  .clients-inner-page, .careers-inner-page {
+
+    .section-heading {
+      margin-top: 0;
+    }
+
+    .two-column-content {
+      margin-bottom: 0;
+    }
+  }
+
+  .careers-inner-page {
+    .two-column-content {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 480px) {
+
+  .clients {
+
+    .section-heading {
+      margin: 4.5rem auto 3rem auto;
+    }
+
+    .single-column-content {
+      margin-bottom: 6.5rem;
+    }
+
+    .two-column-content {
+      margin-bottom: 1.5rem;
+    }
+  }
 
   .clients__grid {
     grid-template-columns: repeat(2, 1fr);

@@ -46,7 +46,7 @@ function studiorubik_careers_list( $number = - 1 ) { ?>
             <div class="careers__grid-item">
                 <!-- Display The Title -->
                 <a class="text-center text-upper heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                <a class="button button--transparent-white" title="apply" href="<?php the_permalink(); ?>">apply</a>
+                <a class="button button--transparent-white careers-button" title="apply" href="<?php the_permalink(); ?>">apply</a>
             </div>
 		<?php endwhile;
 		wp_reset_postdata(); ?>

@@ -79,14 +79,16 @@
   }
 
   .single-project-page .section-heading {
-    margin: 5rem auto;
+    margin: 7.5rem auto 5rem auto;
   }
 }
 
 @media only screen and (max-width: 480px) {
+
   .single-project-page .section-heading {
-    margin: 6rem auto;
+    margin: 6.5rem auto 3.5rem auto;
   }
+
   .misc-section {
     margin-top: 4rem;
 

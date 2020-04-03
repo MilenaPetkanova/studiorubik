@@ -135,6 +135,10 @@
   .three-column__grid-item {
     margin-bottom: 5rem;
 
+    .caption {
+      margin: 0 auto 2rem auto;
+    }
+
     &:last-of-type {
       margin-bottom: 0;
     }

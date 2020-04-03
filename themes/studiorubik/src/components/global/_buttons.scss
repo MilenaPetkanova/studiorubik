@@ -238,6 +238,7 @@ input.tnp-submit {
 }
 
 @media only screen and (max-width: 960px) {
+
   .button {
     font-size: 1.4rem;
     max-width: 16rem;
@@ -250,6 +251,10 @@ input.tnp-submit {
         line-height: 5rem;
       }
     }
+  }
+
+  .careers__grid .button {
+    height: 5rem;
   }
 
   .button::after, .button::before {
