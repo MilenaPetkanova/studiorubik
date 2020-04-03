@@ -31,16 +31,36 @@ $(document).ready(function () {
 
         portfolioCube();
 
-        //Init the bxSlider library on testimonials
+        //Testimonials Slider
+
+        var maxSlides;
+        var slideWidth;
+        var width = $(window).width();
+
+        if (width < 480) {
+            maxSlides = 1;
+            slideWidth = 320;
+        } else if (width <= 960) {
+            maxSlides = 2;
+            slideWidth = 320;
+        } else if (width <= 1440) {
+            maxSlides = 3;
+            slideWidth = 450;
+        } else {
+            maxSlides = 3;
+            slideWidth = 555;
+        }
+
         $('.testimonials-list').bxSlider({
             auto: true,
-            slideWidth: 555,
             minSlides: 1,
             maxSlides: 3,
             controls: false,
             touchEnabled: false,
             autoHover: true,
-            adaptiveHeight: false
+            adaptiveHeight: false,
+            maxSlides: maxSlides,
+            slideWidth: slideWidth
         });
     }
 

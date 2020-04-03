@@ -554,21 +554,7 @@ get_header( 'front' );
         <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="back-to-top container cf">
             <a href="javascript:" id="return-to-top">
                 <div class="back-to-top__hexagon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="46.2204" viewBox="0 0 40 46.2204">
-                        <title>40px-back-to-top</title>
-                        <g id="Layer_2" data-name="Layer 2">
-                            <g id="Desktop_-_About_us" data-name="Desktop - About us">
-                                <polygon points="40 34.665 20 46.22 0 34.665 0 11.555 20 0 40 11.555 40 34.665"/>
-                                <g>
-                                    <rect x="8.5973" y="22.3566" width="12.8104" height="1.5071"
-                                          transform="translate(39.5502 35.623) rotate(150)" fill="#fff" stroke="#fff"
-                                          stroke-miterlimit="10"/>
-                                    <polygon points="30.921 25.66 20.161 19.255 19.43 20.56 30.19 26.965 30.921 25.66"
-                                             fill="#fff" stroke="#fff" stroke-miterlimit="10"/>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="43.375" height="50.12"><path d="M43.375 37.6L21.688 50.12 0 37.6V12.53L21.688 0l21.687 12.53V37.6z"/><g fill="#fff" stroke="#fff" stroke-miterlimit="10"><path d="M9.845 26.825l12.03-6.946.817 1.415-12.03 6.946z"/><path d="M33.53 26.825L21.862 19.88l-.793 1.415 11.668 6.945.793-1.415z"/></g></svg>
                 </div>
             </a>
         </div>

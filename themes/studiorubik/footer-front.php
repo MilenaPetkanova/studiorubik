@@ -101,7 +101,6 @@
         <!-- Footer Newsletter -->
         <div class="site-footer__menu__list footer-newsletter">
             <h5 class="text-upper">Newsletter</h5>
-
 			<?php get_sidebar(); ?>
         </div>
 
@@ -118,17 +117,12 @@
 			wp_nav_menu( $args );
 			?>
         </div>
-
     </section>
 
     <section class="copywrite text-center">
         <p>&copy;studiorubik.com | all rights reserved</p>
     </section>
-
 </footer>
-
 <?php wp_footer(); ?>
-
 </body>
-
 </html>

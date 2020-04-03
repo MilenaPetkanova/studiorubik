@@ -145,8 +145,6 @@ p:empty {
   }
 }
 
-
-
 .single-project-page {
   .section-heading {
     margin: 7rem auto;
@@ -234,27 +232,25 @@ article p {
   height: 60rem;
 }
 
-@media only screen and (max-width: 1440px) {
-
-}
+//@media only screen and (max-width: 1440px) {
+//
+//}
 
 @media only screen and (max-width: 960px) {
 
   .section-heading {
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       top: calc(50% - 0.2rem);
+      letter-spacing: 0.25rem;
     }
 
     .background-text {
-      font-size: 5rem;
+      font-size: 6rem;
       left: -1rem;
+      letter-spacing: 0.8rem;
     }
-  }
-
-  .landing-page .section-heading {
-    margin-top: 10rem;
   }
 
   .two-column-content {
@@ -287,10 +283,15 @@ article p {
 
 @media only screen and (max-width: 480px) {
 
+  .landing-page .section-heading {
+    margin: 6.5rem auto 6rem auto;
+  }
+
   .section-heading {
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
+      letter-spacing: 1.87px;
       transform: none;
       position: relative;
     }
@@ -299,6 +300,8 @@ article p {
       display: none;
     }
   }
+
+
 
   .two-column-content {
     margin-bottom: 5rem;

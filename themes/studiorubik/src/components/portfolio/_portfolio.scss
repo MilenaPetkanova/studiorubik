@@ -96,7 +96,7 @@
 
 .portfolio-filters {
   background-color: $gray;
-  padding: 1.3rem 0; //1.3rem 0;
+  padding: 1.1rem 0; //1.3rem 0;
   transition: all 0.4s;
 }
 
@@ -255,8 +255,20 @@
 }
 
 @media only screen and (max-width: 480px) {
+
   .portfolio-item,
   .portfolio-sizer {
     width: 100%;
   }
+
+  .dropdown-content {
+    padding: 0.2rem 0;
+    min-width: 13rem;
+  }
+
+  #dropdown_svg {
+    top: 2.1rem;
+    right: 3rem
+  }
+
 }

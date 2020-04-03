@@ -44,7 +44,7 @@ input.tnp-submit {
   }
 }
 
-//Transparent Button Modifier
+//utton Modifiers
 .button--transparent {
 
   // Top element(transparent)
@@ -86,7 +86,6 @@ input.tnp-submit {
     }
   }
 }
-
 .button--transparent-white {
   border: 0.4rem solid $white;
 
@@ -129,7 +128,6 @@ input.tnp-submit {
     }
   }
 }
-
 .button--transparent-black {
   border: 0.4rem solid $black;
 
@@ -172,8 +170,6 @@ input.tnp-submit {
     }
   }
 }
-
-//Button with fill Modifier
 .button--fill {
 
   // Top element black
@@ -237,26 +233,6 @@ main .back-to-top.container {
     opacity: 0.75;
   }
 }
-
-//.back-to-top__hexagon:before,
-//.back-to-top__hexagon:after {
-//  content: "";
-//  position: absolute;
-//  width: 0;
-//  border-left: 25.5px solid transparent;
-//  border-right: 25.5px solid transparent;
-//}
-//
-//.back-to-top__hexagon:before {
-//  bottom: 100%;
-//  border-bottom: 14.72px solid #000000;
-//}
-//
-//.back-to-top__hexagon:after {
-//  top: 100%;
-//  width: 0;
-//  border-top: 14.72px solid #000000;
-//}
 
 @media only screen and (max-width: 960px) {
   .button {

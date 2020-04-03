@@ -1,7 +1,6 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the navigation of the site/application.
 // -----------------------------------------------------------------------------
-
 .site-header {
   position: fixed;
   top: 0;
@@ -73,7 +72,6 @@
       display: block;
       margin: 0 auto;
       font-size: 3.5rem;
-      font-weight: 700;
       line-height: 1.94;
 
       a {
@@ -129,6 +127,11 @@
   padding-left: 8.4%;
   font-size: 1.8rem;
   text-align: left;
+
+  p {
+    margin: 1.8rem 0;
+  }
+
 
   span {
     font-family: "SohoGothicPro-Regular";
@@ -207,12 +210,27 @@
 }
 
 @media only screen and (max-width: 960px) {
+
+  .site-header {
+    padding: 3rem 0;
+  }
+
   .nav-contacts {
     font-size: 1.4rem;
+    padding-left: 6%;
+
+    p {
+      margin: 1.4rem 0;
+    }
+  }
+
+  #menu-main-menu li a {
+    padding-right: 6%;
   }
 
   #burger-menu-container ul li {
     font-size: 3rem;
+    line-height: 1.9;
   }
 
   #burger-menu-container ul li a:after {
@@ -222,13 +240,13 @@
 
 @media only screen and (max-width: 480px) {
 
-  .hamburger-box {
-    right: 1rem;
+  .site-header {
+    padding: 1.2rem 0;
   }
 
   #header-logo {
     img {
-      width: 4.5rem;
+      width: 4.6rem;
     }
   }
 
@@ -238,25 +256,24 @@
   }
 
   .hamburger {
-    padding: 1rem 0;
-  }
-
-  .site-header {
-    padding: 3rem 0;
+    padding: 2rem 0 0 0;
   }
 
   .main-menu {
     border: none;
     right: 0;
-    min-width: 21rem;
+    min-width: unset;
+    max-width: 100%;
+    width: 25rem;
+    padding: 0;
   }
 
   #burger-menu-container ul li {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    line-height: 1.8;
 
     a {
       padding-right: 0;
-      right: -1px;
     }
   }
 
@@ -267,7 +284,17 @@
   .nav-contacts {
     text-align: right;
     padding-left: 0;
-    min-width: 21rem;
+    min-width: unset;
+    max-width: 100%;
+    width: 25rem;
+
+    .social-menu {
+      margin-bottom: 5.5rem;
+    }
+
+    .contact {
+      margin: 0;
+    }
   }
 
   .contact {
@@ -279,6 +306,7 @@
   }
 
   #burger-menu-container ul li a:after {
-    margin: 2.3rem 0 0 5%;
+    margin: 2.7rem 0 0 5%;
+    height: 0.4rem
   }
 }
