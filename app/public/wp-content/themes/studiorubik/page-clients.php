@@ -14,7 +14,7 @@
 
         <div class="container">
             <!-- Clients Section Content -->
-            <div class="two-column-content container">
+            <div class="single-column-content container">
                 <p><?php the_field('clients_section_text_area')?></p>
             </div>
         </div>

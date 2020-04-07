@@ -31,7 +31,7 @@ get_header( 'front' );
 
             <!-- About Us Section Content -->
             <div class="container">
-                <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+                <div data-aos="fade-zoom-in" data-aos-delay="300" class="single-column-content">
                     <p><?php the_field( 'about_us_text_area' ) ?></p>
                 </div>
             </div>
@@ -60,7 +60,7 @@ get_header( 'front' );
             <!-- Mission & Vision Section Content -->
             <div class="container">
                 <div data-aos="fade-zoom-in" data-aos-delay="300"
-                     class="mission-vision__article two-column-content">
+                     class="mission-vision__article single-column-content">
                     <p><?php the_field( 'mission_-_vision_text_area' ) ?></p>
                 </div>
             </div>
@@ -211,7 +211,7 @@ get_header( 'front' );
 
             <!-- Team Section Content -->
             <div class="container">
-                <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+                <div data-aos="fade-zoom-in" data-aos-delay="300" class="single-column-content">
                     <p><?php the_field( 'team_section_text_area' ) ?></p>
                 </div>
             </div>
@@ -532,7 +532,7 @@ get_header( 'front' );
             </div>
 
             <div class="container">
-                <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+                <div data-aos="fade-zoom-in" data-aos-delay="300" class="single-column-content">
                     <p><?php the_field( 'creative_space_text_area' ) ?></p>
                 </div>
             </div>

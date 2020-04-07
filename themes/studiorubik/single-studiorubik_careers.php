@@ -38,7 +38,7 @@
 
         <!-- About Us Section Content -->
         <div class="container">
-            <div data-aos="fade-zoom-in" data-aos-delay="200" class="two-column-content">
+            <div data-aos="fade-zoom-in" data-aos-delay="200" class="single-column-content">
                 <p><?php the_field( 'tasks_content' ) ?></p>
             </div>
         </div>
@@ -55,7 +55,7 @@
 
         <!-- Skills Section Content -->
         <div class="container">
-            <div data-aos="fade-zoom-in" data-aos-delay="200" class="two-column-content">
+            <div data-aos="fade-zoom-in" data-aos-delay="200" class="single-column-content">
                 <p><?php the_field( 'skills_content' ) ?></p>
             </div>
         </div>
@@ -72,7 +72,7 @@
 
         <!-- Skills Section Content -->
         <div class="container">
-            <div data-aos="fade-zoom-in" data-aos-delay="200" class="two-column-content">
+            <div data-aos="fade-zoom-in" data-aos-delay="200" class="single-column-content">
                 <p><?php the_field( 'we_offer_content' ) ?></p>
             </div>
         </div>

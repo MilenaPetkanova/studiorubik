@@ -75,7 +75,7 @@ get_header( 'front' );
         </section>
 
         <!-- Services Section -->
-        <section class="services">
+        <section id="services" class="services">
 
             <!-- Portoflio Section Headings -->
             <div data-aos="fade-up" class="section-heading text-upper container">

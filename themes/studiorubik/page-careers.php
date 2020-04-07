@@ -13,7 +13,7 @@
         </div>
 
         <div class="container">
-            <div data-aos="fade-up" data-aos-delay="300" class="two-column-content">
+            <div data-aos="fade-up" data-aos-delay="300" class="single-column-content">
 				<?php get_template_part( 'template-parts/page', 'loop' ); ?>
             </div>
         </div>

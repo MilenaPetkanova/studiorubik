@@ -11,7 +11,7 @@
                 <p class="background-text"><?php the_title(); ?></p>
             </div>
 
-            <div data-aos="fade-up" class="two-column-content">
+            <div data-aos="fade-up" class="single-column-content">
                 <p><?php get_template_part( 'template-parts/page', 'loop' ); ?></p>
             </div>
         </section>

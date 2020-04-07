@@ -77,7 +77,7 @@
 
                 <!-- The Brief Section Content -->
                 <div class="container">
-                    <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+                    <div data-aos="fade-zoom-in" data-aos-delay="300" class="single-column-content">
                         <p><?php the_field( 'the_brief_text_area' ) ?></p>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                 </div>
 
                 <!-- Our Angle Section Content -->
-                <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+                <div data-aos="fade-zoom-in" data-aos-delay="300" class="single-column-content">
                     <p><?php the_field( 'our_angle_text_area' ) ?></p>
                 </div>
 
@@ -131,7 +131,7 @@
                 </div>
 
                 <!-- The Outcome Section Content -->
-                <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+                <div data-aos="fade-zoom-in" data-aos-delay="300" class="single-column-content">
                     <p><?php the_field( 'the_outcome_text_area' ) ?></p>
                 </div>
 

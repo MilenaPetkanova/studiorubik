@@ -14,7 +14,7 @@
 
         <div class="container">
             <!-- Clients Section Content -->
-            <div data-aos="fade-zoom-in" data-aos-delay="300" class="two-column-content">
+            <div data-aos="fade-zoom-in" data-aos-delay="300" class="single-column-content">
                 <p><?php the_field( 'clients_section_text_area' ) ?></p>
             </div>
         </div>
