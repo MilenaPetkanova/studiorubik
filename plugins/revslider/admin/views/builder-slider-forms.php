@@ -274,6 +274,7 @@ $api = 'revapi'; // . $slider_id;
 				<div class="form_inner_header"><i class="material-icons">settings_input_component</i><?php _e('Advanced Settings', 'revslider');?></div>
 				<div class="collapsable">
 					
+
 					<div class="_nvojcm_ carouselunavailable standardavailable sceneavailable">
 						<!-- SLIDER MIN HEIGHT AND MAX WIDTH -->
 						<longoption class="slidermaxwidth"><i class="material-icons rcw">unfold_more</i><label_a><?php _e('Max Width', 'revslider');?></label_a><input data-allowed="px,%,none" data-min="0" data-numeric="true"  id="sr_size_maxwidth" data-r="size.maxWidth" data-evt="updatesliderlayout"  type="text"  class="sliderinput valueduekeyboard " placeholder="none"></longoption>
@@ -294,7 +295,14 @@ $api = 'revapi'; // . $slider_id;
 					<div class="carouselavailable standardunavailable sceneunavailable">
 						<longoption><i class="material-icons">tab_unselected</i><label_a><?php _e('Force Overflow Hidden', 'revslider');?></label_a><input type="checkbox"  id="sr_forceOvHid" class="easyinit sliderinput" data-r="size.overflowHidden"/></longoption>
 						<longoption class="usefullheight"><i class="material-icons">unfold_more</i><label_a><?php _e('Use Full Height for Content', 'revslider');?></label_a><input type="checkbox"  id="sr_forceOvHid" class="easyinit sliderinput" data-r="size.useFullScreenHeight"/></longoption>	
-					</div>
+					</div>	
+					<div class="div20"></div>
+					<div class="carouselavailable standardavailable sceneavailable">
+						<label_a><?php _e('Perspective', 'revslider');?></label_a><select data-evt="updatePerspective" id="global_pers_type" class="sliderinput tos2 nosearchbox easyinit" data-r="general.perspectiveType" data-show=".global_perspecitve_*val*_settings" data-hide=".global_perspective_settings"> <option value="isometric"><?php _e('Isometric (Global)', 'revslider');?></option><option value="global"><?php _e('3D Uniform (Global)', 'revslider');?></option><option value="local"><?php _e('3D Individual (Local)', 'revslider');?></option></select>
+						<div class="global_perspecitve_global_settings global_perspective_settings">
+							<longoption><label_icon class="ui_perspective"></label_icon><label_a><?php _e('Layer Perspective Globally', 'revslider');?></label_a><input data-allowed="px" data-min="0" data-numeric="true"  id="global_layers_perspectives" data-r="general.perspective"  type="text"  class="sliderinput valueduekeyboard callEvent"  data-evt="updatePerspective" placeholder="none"></longoption>						
+						</div>
+					</div>			
 				</div>
 				<div class="div5"></div>
 			</div>

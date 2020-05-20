@@ -956,6 +956,7 @@ class RevSliderSlider extends RevSliderFunctions {
 	private function duplicate_slider($title = false, $prefix = false){
 		global $wpdb;
 		
+		$old_slider_id = $this->id;
 		//select a slider and then duplicate it
 		$select = $wpdb->prepare("SELECT title, alias, params, type, settings FROM ". $wpdb->prefix . RevSliderFront::TABLE_SLIDER ." WHERE id = %s", array($this->id));
 		$wpdb->query("INSERT INTO ". $wpdb->prefix . RevSliderFront::TABLE_SLIDER ." (title, alias, params, type, settings) (".$select.")");
@@ -1076,24 +1077,15 @@ class RevSliderSlider extends RevSliderFunctions {
 		}
 		
 		//change the javascript api ID to the correct one
-		$c_slider	= new RevSliderSlider();
+		$c_slider = new RevSliderSliderImport();
 		$c_slider->init_by_id($slider_last_id);
-		$cus_js		= $c_slider->get_param(array('codes', 'javascript'), '');
-		
-		if(strpos($cus_js, 'revapi') !== false){
-			if(preg_match_all('/revapi[0-9]*/', $cus_js, $results)){
-				if(isset($results[0]) && !empty($results[0])){
-					foreach($results[0] as $replace){
-						$cus_js = str_replace($replace, 'revapi'.$slider_last_id, $cus_js);
-					}
-				}
-				
-				$c_slider->update_params(array('codes' => array('javascript' => $cus_js, 'css' => $c_slider->get_param(array('codes', 'css'), ''))));
-			}
-		}
 		
 		$upd = new RevSliderPluginUpdate();
 		$upd->upgrade_slider_to_latest($c_slider);
+		
+		$c_slider->update_css_and_javascript_ids($old_slider_id, $slider_last_id, $this->map);
+		$c_slider->update_color_ids($this->map);
+		
 		
 		return $slider_last_id;
 	}

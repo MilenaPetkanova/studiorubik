@@ -2775,7 +2775,7 @@ class RevSliderSlide extends RevSliderFunctions {
 		$encoded = '';
 		while ($num >= $base_count){
 			$div = $num / $base_count;
-			$mod = ($num - ($base_count * intval($div)));
+			$mod = intval($num - ($base_count * intval($div)));
 			$encoded = $alphabet[$mod] . $encoded;
 			$num = intval($div);
 		}
