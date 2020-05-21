@@ -81,6 +81,57 @@ footer.site-footer {
   }
 }
 
+.site-footer__cta {
+  background-color: $black;
+  padding: 2.3rem 0;
+
+  p {
+    color: $white;
+    font-family: "SohoGothicPro-Regular";
+    font-size: 1.8rem;
+    letter-spacing: 1.53px;
+
+    .drop-a-line {
+      font-family: "SohoGothicPro-Bold";
+      font-size: 2.5rem;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 2rem;
+      transition: margin .15s linear;
+      letter-spacing: 2.125px;
+      line-height: 1.4;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 7px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .drop-a-line {
+      margin: 0 3.5rem;
+      transition: margin .15s linear;
+    }
+  }
+}
+
+.copywrite {
+  color: $white;
+  font-size: 1rem;
+  padding: 0;
+
+  p {
+    margin: 0;
+    padding: 0.8rem;
+    background-color: $black;
+    display: inline-block
+  }
+}
+
 @media only screen and (min-width: 960px) {
 
   .site-footer__menu {
@@ -120,19 +171,6 @@ footer.site-footer {
         }
       }
     }
-  }
-}
-
-.copywrite {
-  color: $white;
-  font-size: 1rem;
-  padding: 0;
-
-  p {
-    margin: 0;
-    padding: 0.8rem;
-    background-color: $black;
-    display: inline-block
   }
 }
 

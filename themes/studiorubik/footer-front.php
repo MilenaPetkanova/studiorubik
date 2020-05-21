@@ -1,8 +1,17 @@
 <!--Front Page Footer-->
 <footer class="site-footer front-page__footer">
 
-    <section class="site-footer__cta">
+    <section class="site-footer__cta text-center text-upper">
+
         <!-- TO DO -->
+        <!--		--><?php //echo do_shortcode( '[contact-form-7 id="1829" title="Footer Contact Form"]' ); ?>
+        <p>
+            <span>let's work</span>
+            <span class="drop-a-line">drop us <br>a line</span>
+            <span>together</span>
+        </p>
+<!--        <a data-toggle="modal" data-effect="fade">Fade</a>-->
+
     </section>
 
     <section class="site-footer__menu  container">
@@ -123,6 +132,8 @@
         <p>&copy;studiorubik.com | all rights reserved</p>
     </section>
 </footer>
+
 <?php wp_footer(); ?>
+
 </body>
 </html>

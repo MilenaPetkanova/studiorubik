@@ -58,7 +58,7 @@ function studiorubik_scripts() {
 
 	wp_enqueue_script( 'bundlejs', get_template_directory_uri() . '/dist/bundle.js', array(), null, true ); //Webpack Compiled Javascript File
 
-	//Run Only on Smooth Scroll Page
+	//Run Only on Smooth Scroll Page [WIP]
 	$classes = get_body_class();
 	if ( in_array( 'page-id-1824', $classes ) || in_array( 'page-id-1825', $classes ) ) {
 		wp_enqueue_script( 'smoothscrolljs', get_template_directory_uri() . '/dist/smoothScroll.js', array(), null, true ); // smoothScroll Compiled Javascript File
@@ -100,6 +100,12 @@ function studiorubik_setup() {
 
 //When the theme is activated and ready!
 add_action( 'after_setup_theme', 'studiorubik_setup' );
+
+
+//ACF Options Page
+if ( function_exists( 'acf_add_options_page' ) ) {
+	acf_add_options_page();
+}
 
 @ini_set( 'upload_max_size', '1024M' );
 @ini_set( 'post_max_size', '50M' );

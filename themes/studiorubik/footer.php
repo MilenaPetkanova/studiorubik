@@ -2,7 +2,13 @@
 <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="back-to-top btp-inner-page container cf">
     <a href="javascript:" id="return-to-top">
         <div class="back-to-top__hexagon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="43.375" height="50.12"><path d="M43.375 37.6L21.688 50.12 0 37.6V12.53L21.688 0l21.687 12.53V37.6z"/><g fill="#fff" stroke="#fff" stroke-miterlimit="10"><path d="M9.845 26.825l12.03-6.946.817 1.415-12.03 6.946z"/><path d="M33.53 26.825L21.862 19.88l-.793 1.415 11.668 6.945.793-1.415z"/></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="43.375" height="50.12">
+                <path d="M43.375 37.6L21.688 50.12 0 37.6V12.53L21.688 0l21.687 12.53V37.6z"/>
+                <g fill="#fff" stroke="#fff" stroke-miterlimit="10">
+                    <path d="M9.845 26.825l12.03-6.946.817 1.415-12.03 6.946z"/>
+                    <path d="M33.53 26.825L21.862 19.88l-.793 1.415 11.668 6.945.793-1.415z"/>
+                </g>
+            </svg>
         </div>
     </a>
 </div>
@@ -10,8 +16,17 @@
 <!--Inner Pages Footer-->
 <footer class="site-footer inner-page__footer">
 
-    <section class="site-footer__cta">
+    <section class="site-footer__cta text-center text-upper">
+
         <!-- TO DO -->
+        <!--		--><?php //echo do_shortcode( '[contact-form-7 id="1829" title="Footer Contact Form"]' ); ?>
+        <p>
+            <span>let's work</span>
+            <span class="drop-a-line">drop us <br>a line</span>
+            <span>together</span>
+        </p>
+        <!--        <a data-toggle="modal" data-effect="fade">Fade</a>-->
+
     </section>
 
     <section class="site-footer__menu  container">
