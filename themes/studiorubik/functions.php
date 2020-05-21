@@ -17,7 +17,7 @@ function studiorubik_menus() {
 // Add Stylesheets and Javascript files
 function studiorubik_scripts() {
 
-	/* Stylesheets */
+	/*====== Stylesheets ======*/
 	wp_enqueue_style( 'googlefont', 'https://fonts.googleapis.com/css?family=Montserrat:900&display=swap&subset=cyrillic-ext', array(), '1.0.0' ); //Montserrat Font Family
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/vendors/normalize/normalize.min.css', array(), '8.0.1' ); //Normalize CSS
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/vendors/fonts/fontawesome/font-awesome.min.css', array(), '4.7.0' ); //Font Awesome
@@ -31,14 +31,14 @@ function studiorubik_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.0.0' ); // Wordpress Stylesheet
 	wp_enqueue_style( 'bundlecss', get_template_directory_uri() . '/dist/bundle.css', array(), '1.0.0' ); //Webpack Main Style Bundle
 
-	/* JavaScript */
+	/*====== JavaScript ======*/
 	wp_deregister_script( 'jquery' ); //Deregister old jQuery
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true ); //register external jQuery
 	wp_enqueue_script( 'aosjs', get_template_directory_uri() . '/vendors/aos/js/aos.min.js', array(), '3.0.0', true ); //AOS.js
-//	wp_enqueue_script( 'aosjs', get_template_directory_uri() . '/vendors/aos/js/aos.min.js', array(), '3.0.0', true ); //AOS.js
 
 	//Run Only on the Front Page
 	if ( is_home() || is_front_page() ):
+
 		// Call Bx Slider only on the Front Page
 		wp_enqueue_script( 'bxsliderjs', get_template_directory_uri() . '/vendors/bxSlider/jquery.bxslider.min.js', array(), '4.2.12', true ); //BxSlider.js
 	endif;
@@ -58,6 +58,12 @@ function studiorubik_scripts() {
 
 	wp_enqueue_script( 'bundlejs', get_template_directory_uri() . '/dist/bundle.js', array(), null, true ); //Webpack Compiled Javascript File
 
+	//Run Only on Smooth Scroll Page
+	$classes = get_body_class();
+	if ( in_array( 'page-id-1824', $classes ) || in_array( 'page-id-1825', $classes ) ) {
+		wp_enqueue_script( 'smoothscrolljs', get_template_directory_uri() . '/dist/smoothScroll.js', array(), null, true ); // smoothScroll Compiled Javascript File
+		wp_enqueue_style( 'smoothscrollcss', get_template_directory_uri() . '/dist/smoothScroll.css', array(), '1.0.0' ); // smoothScroll Compiled CSS File
+	}
 }
 
 add_action( 'wp_enqueue_scripts', 'studiorubik_scripts' );

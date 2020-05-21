@@ -7,7 +7,8 @@ const {
 module.exports = {
 
     entry: {
-        'bundle': './src/index.js'
+        'bundle': './src/index.js',
+        'smoothScroll': './src/smoothScroll.js'
     },
 
     // entry: './src/index.js',

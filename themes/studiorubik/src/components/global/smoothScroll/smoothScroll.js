@@ -1,3 +1,5 @@
+import './_smoothScroll.scss';
+
 function smoothScroll() {
     // helper functions
     const MathUtils = {
@@ -9,7 +11,7 @@ function smoothScroll() {
 
     // body element
     // const body = document.body;
-    const body =  document.querySelector("html");
+    const body = document.querySelector("html");
     const header = $('.site-header');
     const footer = $('.site-footer');
 
@@ -266,7 +268,12 @@ function smoothScroll() {
         // Get the scroll position
         getPageYScroll();
         // Initialize the Smooth Scrolling
-        new SmoothScroll();
+
+        if ($('.page-template-default').length) {
+            console.log('smoothScroll initiated');
+            new SmoothScroll();
+        }
+
     });
 }
 

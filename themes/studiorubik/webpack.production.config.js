@@ -7,7 +7,8 @@ const {
 module.exports = {
 
     entry: {
-        'bundle': './src/index.js'
+        'bundle': './src/index.js',
+        'smoothScroll': './src/smoothScroll.js'
     },
 
     // entry: './src/index.js',
@@ -41,11 +42,11 @@ module.exports = {
     module: {
 
         rules: [{
-                test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                    'file-loader'
-                ]
-            },
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [
+                'file-loader'
+            ]
+        },
 
             {
                 test: /\.css$/,

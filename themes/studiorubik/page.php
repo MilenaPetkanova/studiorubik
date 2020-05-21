@@ -1,4 +1,3 @@
-<!-- Get the header function -->
 <?php get_header() ?>
 
 <!-- Main element -->
@@ -22,7 +21,7 @@
 
     <h1 data-aos="fade-up" class="entry-title"><?php the_title(); ?></h1>
 
-    <!--    SmoothScrol-->
+    <!--SmoothScroll-->
     <section>
         <div data-scroll>
 
@@ -128,5 +127,4 @@
     </section>
 </main>
 
-<!-- Get the footer function -->
 <?php get_footer() ?>

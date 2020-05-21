@@ -3,7 +3,6 @@ $ = jQuery.noConflict();
 
 import helloWorld from './components/global/main';
 import burgerMenu from './components/burger-menu/burger-menu';
-import smoothScroll from './components/global/smoothScroll/smoothScroll';
 import portfolioCube from './components/front-page/portfolio/portfolio';
 import portfolioPage from './components/portfolio/portfolio';
 import teamProfiles from './components/about-us/team';
@@ -19,21 +18,21 @@ $(document).ready(function () {
 
     // Initiate the Burger Menu
     burgerMenu();
-    // smoothScroll();
 
     // Init only on the landing page
     if ($('body.home').length) {
 
-        //Init the 3D Cube on the Landing Page
+        //Change The Face Width of the Portfolio Cube on the Landing Page
         if ($(window).width() < 480) {
             $('#my3Dsurface').data('facewidth', '255');
         } else {
             $('#my3Dsurface').data('facewidth', '450');
         }
 
+        //Initiate The Portfolio Cube on the Landing Page
         portfolioCube();
 
-        //Testimonials Slider
+        //Landing Page Testimonials Slider
         var maxSlides;
         var slideWidth;
         var width = $(window).width();
@@ -55,7 +54,7 @@ $(document).ready(function () {
         $('.testimonials-list').bxSlider({
             auto: true,
             minSlides: 1,
-            maxSlides: 3,
+            // maxSlides: 3,
             controls: false,
             touchEnabled: false,
             autoHover: true,
@@ -67,7 +66,8 @@ $(document).ready(function () {
 
     // Init only on the About Us page
     if ($('body.page-template-page-about-us').length) {
-        //Init the 3D Cube on the Landing Page
+
+        //Play the Background Video on Team Member Hover
         teamProfiles();
     }
 
@@ -123,7 +123,7 @@ $(document).ready(function () {
 
 
         //Change with this!!!!!!
-        if ($("#portfolio")[0]){
+        if ($("#portfolio")[0]) {
 
             // Do something if class exists
 
