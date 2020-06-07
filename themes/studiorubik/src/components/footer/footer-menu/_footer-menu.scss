@@ -87,12 +87,12 @@ footer.site-footer {
 
   p {
     color: $white;
-    font-family: "SohoGothicPro-Regular";
+    font-family: "SohoGothicPro-Regular",sans-serif;
     font-size: 1.8rem;
     letter-spacing: 1.53px;
 
     .drop-a-line {
-      font-family: "SohoGothicPro-Bold";
+      font-family: "SohoGothicPro-Bold",sans-serif;
       font-size: 2.5rem;
       display: inline-block;
       vertical-align: middle;
@@ -116,6 +116,135 @@ footer.site-footer {
       margin: 0 3.5rem;
       transition: margin .15s linear;
     }
+  }
+}
+
+//Copy Pasta from bundle.css
+
+/* Contact section */
+.contacts-section .logo {
+  padding: 60px 0;
+}
+
+.contacts-section form {
+  padding: 60px;
+}
+
+.contacts-section form p {
+  width: 240px;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 40px;
+}
+
+.contacts-section form p:nth-child(4), .contacts-section form p:nth-child(5), .wpcf7-response-output {
+  width: 525px;
+}
+
+.contacts-section form label {
+  padding: 5px;
+  display: none;
+}
+
+.contacts-section form input, .contacts-section form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid #000;
+  padding: 5px;
+}
+
+.contacts-section form input:focus, .contacts-section form textarea:focus {
+  background: #000;
+  color: #fff;
+  outline: none;
+}
+
+.contacts-section form .button {
+  padding: 15px;
+  margin-top: 15px;
+  background: #000;
+  color: #fff;
+  border: 3px solid #000;
+}
+
+.contacts-section form .button:hover {
+  transition: all .3s ease-in-out;
+  background: #fff;
+  color: #000;
+}
+
+@media only screen and (max-width: 1200px) {
+  .contacts-section .col-2 {
+    float: none;
+    grid-row-start: auto !important;
+  }
+  .contacts-section form {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .contacts-section form p {
+    width: 300px;
+  }
+  .contacts-section form p:nth-child(4), .contacts-section form p:nth-child(5), .wpcf7-response-output {
+    width: 300px;
+  }
+}
+
+/* Mailchimp form */
+#mc_embed_signup {
+  max-width: 23rem;
+  margin-bottom: 0.5rem;
+}
+
+#mc_embed_signup .email {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  background: #000;
+  color: #fff;
+  outline: none;
+}
+
+#mc_embed_signup input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #000 inset;
+  -webkit-text-fill-color: #fff;
+}
+
+#mc_embed_signup input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px #000 inset;
+  -webkit-text-fill-color: #fff;
+}
+
+#mc_embed_signup ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#mc_embed_signup :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#mc_embed_signup ::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#mc_embed_signup .button {
+  padding: 0;
+  width: 50%;
+  font-size: 12px;
+  font-family: "SohoGothicPro-Regular", sans-serif;
+  text-transform: capitalize;
+  background: #000;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1100px) {
+  #mc_embed_signup {
+    max-width: 13.5rem;
+    margin: 0.5rem auto;
   }
 }
 

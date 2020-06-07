@@ -58,12 +58,6 @@ function studiorubik_scripts() {
 
 	wp_enqueue_script( 'bundlejs', get_template_directory_uri() . '/dist/bundle.js', array(), null, true ); //Webpack Compiled Javascript File
 
-	//Run Only on Smooth Scroll Page [WIP]
-	$classes = get_body_class();
-	if ( in_array( 'page-id-1824', $classes ) || in_array( 'page-id-1825', $classes ) ) {
-		wp_enqueue_script( 'smoothscrolljs', get_template_directory_uri() . '/dist/smoothScroll.js', array(), null, true ); // smoothScroll Compiled Javascript File
-		wp_enqueue_style( 'smoothscrollcss', get_template_directory_uri() . '/dist/smoothScroll.css', array(), '1.0.0' ); // smoothScroll Compiled CSS File
-	}
 }
 
 add_action( 'wp_enqueue_scripts', 'studiorubik_scripts' );
