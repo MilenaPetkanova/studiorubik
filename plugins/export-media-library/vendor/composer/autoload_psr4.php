@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'ZipStream\\' => array($vendorDir . '/maennchen/zipstream-php/src'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'MyCLabs\\Enum\\' => array($vendorDir . '/myclabs/php-enum/src'),
     '' => array($baseDir . '/lib'),
