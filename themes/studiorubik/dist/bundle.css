@@ -622,6 +622,16 @@ article p {
   #burger-menu-container ul li a::after {
     margin: 2.1rem 0 0 5%; } }
 
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+  #burger-menu-container ul {
+    top: 4rem; }
+    #burger-menu-container ul li {
+      line-height: 1.65; } }
+
+@media only screen and (orientation: portrait) and (max-width: 320px) {
+  .nav-contacts .contact {
+    display: none; } }
+
 @media only screen and (orientation: landscape) and (max-width: 896px) {
   .site-header {
     padding: 5% 0; }
@@ -864,7 +874,7 @@ input.tnp-submit {
         z-index: 20;
         opacity: 0;
         transition: opacity 0.35s;
-        transform: translate(-50%, -135%); }
+        transform: translate(-50%, -50%); }
       #my3Dsurface .f a:after {
         background: rgba(0, 0, 0, 0);
         position: absolute;
@@ -1509,7 +1519,8 @@ input.tnp-submit {
     width: 100%; }
   .dropdown-content {
     padding: 0.2rem 0;
-    min-width: 13rem; }
+    min-width: 13rem;
+    max-width: 13rem; }
   #dropdown_svg {
     top: 2.1rem;
     right: 3rem; } }
@@ -1567,11 +1578,21 @@ input.tnp-submit {
 @media only screen and (max-width: 480px) {
   .single-project-page .section-heading {
     margin: 6.5rem auto 3.5rem auto; }
+  .button.ari-fancybox-pdf:before {
+    line-height: 5rem; }
   .misc-section {
     margin-top: 4rem; }
+    .misc-section .button {
+      max-width: 14rem; }
     .misc-section p {
       font-size: 1.5rem;
       margin-top: 1rem; } }
+
+@media only screen and (orientation: portrait) and (max-width: 320px) {
+  .misc-section .button {
+    max-width: 13rem;
+    min-width: 13rem;
+    margin-right: 1rem; } }
 
 .careers__grid {
   display: grid;
@@ -1605,15 +1626,19 @@ input.tnp-submit {
   .careers__grid {
     grid-template-columns: repeat(1, 1fr); } }
 
-.hero-section__image {
+.hero-section__image-container {
   position: relative; }
-  .hero-section__image img {
-    display: block; }
+  .hero-section__image-container .hero-section__image {
+    min-height: 60vh;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; }
 
 .hero-section__content {
   color: #FFFFFF;
   position: absolute;
-  top: 0; }
+  top: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%); }
   .hero-section__content h1 {
     font-family: "SohoGothicPro-Bold", sans-serif;
     font-size: 3.5rem; }
@@ -1621,6 +1646,25 @@ input.tnp-submit {
       display: none; }
   .hero-section__content p {
     max-width: 70rem; }
+  .hero-section__content .button {
+    margin-top: 4rem; }
+
+.tasks .container .single-column-content {
+  column-count: 2; }
+
+@media only screen and (orientation: portrait) and (max-width: 800px) {
+  .hero-section__image-container .hero-section__image {
+    min-height: 35vh; }
+  .hero-section__content {
+    top: 1rem; }
+  .single-career-page .button {
+    padding: 1rem 4.7rem; } }
+
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+  .hero-section__content h1 {
+    font-size: 2.5rem; }
+  .tasks .container .single-column-content {
+    column-count: 1; } }
 
 .clients-inner-page .clients,
 .single-client-page .clients {
@@ -1743,11 +1787,11 @@ footer.site-footer {
   padding: 2.3rem 0; }
   .site-footer__cta p {
     color: #FFFFFF;
-    font-family: "SohoGothicPro-Regular",sans-serif;
+    font-family: "SohoGothicPro-Regular", sans-serif;
     font-size: 1.8rem;
     letter-spacing: 1.53px; }
     .site-footer__cta p .drop-a-line {
-      font-family: "SohoGothicPro-Bold",sans-serif;
+      font-family: "SohoGothicPro-Bold", sans-serif;
       font-size: 2.5rem;
       display: inline-block;
       vertical-align: middle;
@@ -1965,6 +2009,12 @@ footer.site-footer {
   footer .social-menu, footer .social-menu ul {
     background: transparent; } }
 
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+  .site-footer__cta p {
+    font-size: 1.6rem; }
+  .site-footer__cta p .drop-a-line {
+    font-size: 2rem; } }
+
 @media only screen and (max-width: 360px) {
   .site-footer__menu .site-footer__menu__list li, .site-footer__menu .site-footer__menu__list h5 {
     max-width: 13.5rem; }
@@ -1974,6 +2024,10 @@ footer.site-footer {
       padding: 0.75rem 0; }
   .social-menu li a:before {
     font-size: 2.5rem; } }
+
+@media only screen and (max-width: 320px) {
+  .site-footer__cta p span {
+    display: none; } }
 
 .loader-container {
   position: fixed;

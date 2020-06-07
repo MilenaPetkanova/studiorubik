@@ -332,6 +332,24 @@
   }
 }
 
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+  #burger-menu-container ul {
+    top: 4rem;
+
+    li {
+      line-height: 1.65;
+    }
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 320px) {
+
+  .nav-contacts .contact {
+    display: none;
+  }
+
+}
+
 //Landscape
 
 @media only screen and (orientation: landscape) and (max-width: 896px) {

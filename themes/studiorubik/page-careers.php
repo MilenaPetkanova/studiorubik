@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <!-- Render The clietns Grid -->
+        <!-- Render The Clietns Grid -->
 		<?php studiorubik_careers_list(); ?>
     </section>
 

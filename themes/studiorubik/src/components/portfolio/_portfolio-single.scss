@@ -89,12 +89,32 @@
     margin: 6.5rem auto 3.5rem auto;
   }
 
+  .button.ari-fancybox-pdf:before {
+    line-height: 5rem;
+  }
+
   .misc-section {
     margin-top: 4rem;
+
+    .button {
+      max-width: 14rem;
+    }
 
     p {
       font-size: 1.5rem;
       margin-top: 1rem;
+    }
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 320px) {
+
+  .misc-section {
+
+    .button {
+      max-width: 13rem;
+      min-width: 13rem;
+      margin-right: 1rem;
     }
   }
 }
