@@ -550,20 +550,12 @@ get_header( 'front' );
             </div>
         </section>
 
-        <!-- Back to top Arrow -->
-        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="back-to-top container cf">
-            <a href="javascript:" id="return-to-top">
-                <div class="back-to-top__hexagon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="43.375" height="50.12"><path d="M43.375 37.6L21.688 50.12 0 37.6V12.53L21.688 0l21.687 12.53V37.6z"/><g fill="#fff" stroke="#fff" stroke-miterlimit="10"><path d="M9.845 26.825l12.03-6.946.817 1.415-12.03 6.946z"/><path d="M33.53 26.825L21.862 19.88l-.793 1.415 11.668 6.945.793-1.415z"/></g></svg>
-                </div>
-            </a>
-        </div>
-
         <!-- Page Content Block -->
         <section>
 			<?php the_content(); ?>
         </section>
     </main>
 <?php endwhile; ?>
+
     <!-- Get the footer function -->
-<?php get_footer( 'front' ); ?>
+<?php get_footer(); ?>

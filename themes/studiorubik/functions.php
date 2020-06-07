@@ -50,11 +50,11 @@ function studiorubik_scripts() {
 	wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/vendors/isotope/imagesloaded.pkgd.min.js', array(), '4.1.4', true );
 
 	// Runs only on Contact Page
-	if ( basename( get_page_template() ) === 'contacts-page.php' ):
-		//Google Maps Scripts
-		wp_enqueue_script( 'googleapikey', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA6d0WAlGXpG9XRGySXBMk8ojaqvnYhqqQ', array(), '1.1.1', true ); //API Key
-		wp_enqueue_script( 'googleapi', 'https://maps.googleapis.com/maps/api/js', array(), '1.1.1', true ); //Google Maps API
-	endif;
+	// if ( basename( get_page_template() ) === 'contacts-page.php' ):
+	// 	//Google Maps Scripts
+	// 	wp_enqueue_script( 'googleapikey', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA6d0WAlGXpG9XRGySXBMk8ojaqvnYhqqQ', array(), '1.1.1', true ); //API Key
+	// 	wp_enqueue_script( 'googleapi', 'https://maps.googleapis.com/maps/api/js', array(), '1.1.1', true ); //Google Maps API
+	// endif;
 
 	wp_enqueue_script( 'bundlejs', get_template_directory_uri() . '/dist/bundle.js', array(), null, true ); //Webpack Compiled Javascript File
 
